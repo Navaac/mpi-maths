@@ -60,8 +60,14 @@ Thumbs.db
 *.svg
 *.html
 
+# Directories for developpement / temp files
 test_exos/
 chapitre6/print_mode/
 scripts_anki/latex/
 scripts_anki/paquets/
 test_exos/
+
+# Some test files
+chapitre18_a4_12.pdf
+chapitre18_a5_12.pdf
+chapitre18_a5.pdf

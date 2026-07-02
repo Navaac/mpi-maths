@@ -12,7 +12,7 @@ param(
     [string]$Chapitres = "last",  # Ex: "1,3,5" ou "all" pour tous ou "last" (defaut) pour le dernier chapitre + integrale
     
     [string]$CoursRoot = "C:\Users\lucas\OneDrive\Documents\cours\prépa\MPI\Maths\cours",
-    [string]$DriveDestination = "G:\Mon Drive\cours_latex_MPI\MPI\Maths"
+    [string]$DriveDestination = "C:\Users\lucas\OneDrive\Documents\cours\prépa\MPI\Maths\test"
 )
 
 # Fonction pour compiler l'integrale du cours

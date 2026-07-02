@@ -14,7 +14,7 @@ On peut également compiler en ligne sur des sites comme overleaf.
 
 ## Aide 
 
-La page [wipipedia aide au formules tex](https://fr.wikipedia.org/wiki/Aide:Formules_TeX) contient à peu près tout ce qui est nécessaire pour écrire du latex. 
+La page [wikipedia aide au formules tex](https://fr.wikipedia.org/wiki/Aide:Formules_TeX) contient à peu près tout ce qui est nécessaire pour écrire du latex. 
 
 Vous pouvez également activer copilot dans vs code avec les suggestions. Il est vraiment très puissant et devine assez souvent ce que vous vouliez écrire, mais restez tout de même prudent, il a vite fait de dire des bêtises ...
 
