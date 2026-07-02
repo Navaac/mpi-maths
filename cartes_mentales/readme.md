@@ -1,0 +1,3 @@
+# Cartes mentales
+
+Voici différentes tentatives de faires des cartes mentales du cours, à voir si cela peut avoir un intérêt ou non. J'ai utilisé plusieurs logiciels, tels que Xmind (payant), markmap et peut être d'autres que j'ai oubliés. Il existe des extensions VS code pour ces deux là en tout cas, et markmap permet de créer une carte mentale à partir d'un fichier markdown (comme `test.md`), et globalement tout se fait tout seul.

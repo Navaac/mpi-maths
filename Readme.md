@@ -286,6 +286,10 @@ cours_.tex
 
 Pour compiler tout cela en automatique, je vous conseille vivement de vous créer un petit script python ou autre. Personnelement utilisant windows (hérésie je sais), j'avais un script powershell qui se trouve dans le dossier `compilation`, afin de tout compiler d'un coup. Attention : la compilation de l'intégrale prend plusieurs minutes sur mon ordi ...
 
+## Images
+
+Pour les images, celles-ci se trouvent dans le dossier du chapitre l'utilisant. Pour pouvoir compiler l'intégrale, il faut donc copier ces images dans le sous-dossier images du dossier `integrale`.
+
 
 ## Index
 
