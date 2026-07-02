@@ -66,9 +66,14 @@ scripts_anki/latex/
 scripts_anki/paquets/
 test_exos/
 __pycache__/
-anki_cache.json
+fiches_cours/version/
 
 # Some test files
 chapitre18_a4_12.pdf
 chapitre18_a5_12.pdf
 chapitre18_a5.pdf
+
+anki_cache.json
+
+test_images.py
+find_images.py
