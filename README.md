@@ -1,6 +1,6 @@
 # Projet 
 
-Ce cours latex est tapé par un élève de MPI* du lycée Champollion. Il regroupe l'ensemble du programme ainsi que des dépassements de celui-ci, notamment à travers la TD X-ENS.
+Ce cours latex est tapé par un élève de MPI* du lycée Champollion. Il regroupe l'ensemble du programme de MPI ainsi que des dépassements de celui-ci, notamment à travers les TD X-ENS.
 
 # Fonctionnement général du cours LaTeX
 
@@ -14,7 +14,7 @@ On peut également compiler en ligne sur des sites comme overleaf.
 
 ## Aide 
 
-La page wipipedia aide au formules tex (https://fr.wikipedia.org/wiki/Aide:Formules_TeX) contient à peu près tout ce qui est nécessaire pour écrire du latex. 
+La page [wipipedia aide au formules tex](https://fr.wikipedia.org/wiki/Aide:Formules_TeX) contient à peu près tout ce qui est nécessaire pour écrire du latex. 
 
 Vous pouvez également activer copilot dans vs code avec les suggestions. Il est vraiment très puissant et devine assez souvent ce que vous vouliez écrire, mais restez tout de même prudent, il a vite fait de dire des bêtises ...
 
@@ -44,7 +44,7 @@ Il existe également une variante des environnements permettant de mettre un tit
 Tous les environnements peuvent fonctionner dans ce mode en ajoutant simplement "nt" à la fin du mot (pour no title). 
 
 
-Il existe également les environnements "idée" pour mettre par exmple une idée du principe général des preuves. Ceux si cont affichés dans la marge au niveau de l'endroit où ils sont appelés. Ils s'utilisent comme suit : 
+Il existe également les environnements "idée" pour mettre par exemple une idée du principe général des preuves. Ceux si cont affichés dans la marge au niveau de l'endroit où ils sont appelés. Ils s'utilisent comme suit : 
 
 ```latex
 \idee{
@@ -95,7 +95,7 @@ Il existe différents niveaux de titres, dans cet ordre :
 
 Seuls les deux premiers sont affichés dans la table des matières. La profondeur de la table des matières peut être modifiée dans le fichier prépacours.cls, en augmentant ou diminuant le paramètre "tocdepth". Le fait que les subsubsection ne soient pas numérotés est une des personalisations de la classe.
 
-Pour afficher un titre sans que celui -ci n'apparaisse dans la table des matière, vous pouvez ajouter une étoile : 
+Pour afficher un titre sans que celui-ci n'apparaisse dans la table des matière, vous pouvez ajouter une étoile : 
 
 ```latex
 \section*{Titre non numéroté}
@@ -145,7 +145,7 @@ J'ai créé de nombreux raccourcis pour tous les opérateurs classiques comme Ve
 
 ## Métadonnées
 
-Avant de pouvoir compiler le fichier avec la clasee, il faut lui fournir un certain nombre de métadonnées, qui sont les suivantes : 
+Avant de pouvoir compiler le fichier avec la classe, il faut lui fournir un certain nombre de métadonnées, qui sont les suivantes : 
 
 ```latex
 \annee{2025-2026}
