@@ -6,11 +6,11 @@ Ce cours latex est tapé par un élève de MPI* du lycée Champollion. Il regrou
 
 ## Installation et compilation 
 
-J'utilise personnelement Miktex. Pour le faire fonctionner, il a d'abord fallu installer strawberry, puis miktex. Ensuite, vous pouvez l'utiliser en ligne de commande ou directement dans VS code avec l'extension latex workshop qui est vraiment bien. On peut aussi faire un script python qui gère la compilation.
+Sur Linux : TexLive (il faut par contre installer les bons packages), vous pouvez utiliser a peu près n'importe quel éditeur de texte, helix avec texlab fonctionne particulièrement bien.
 
-Je n'ai pas testé la compatibilité avec les autres logiciels LaTeX.
+Pour Windows (hérésie) :  Miktex. Pour le faire fonctionner, il a d'abord fallu installer strawberry, puis miktex. Ensuite, vous pouvez l'utiliser en ligne de commande ou directement dans VS code avec l'extension latex workshop qui est vraiment bien. On peut aussi faire un script python qui gère la compilation.
 
-On peut également compiler en ligne sur des sites comme overleaf. 
+La compilation en ligne sur des sites comme overleaf est aussi possible. 
 
 ## Aide 
 
