@@ -1,0 +1,80 @@
+{
+  "format_version": "1.0",
+  "note_types": [
+    {
+      "name": "maths",
+      "type": 0,
+      "css": "\n.card {\n  font-family: times new roman;\n  font-size: 25px;\n  text-align: center;\n  color: black;\n  background-color: white;\n}\n\n\n.card-header {\n    position: absolute;\n    top: 10px;\n    left: 10px;\n    font-size: 15px;\n    color: #333;\n}\n\n.cloze {\n font-weight: bold;\n color: blue;\n}",
+      "latex_pre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+      "latex_post": "\\end{document}",
+      "latex_svg": true,
+      "sort_field_index": 0,
+      "fields": [
+        {
+          "name": "Front",
+          "ord": 0,
+          "font": "Liberation Sans",
+          "size": 20,
+          "sticky": false,
+          "rtl": false,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false
+        },
+        {
+          "name": "type",
+          "ord": 1,
+          "font": "Arial",
+          "size": 15,
+          "sticky": false,
+          "rtl": false,
+          "description": "Proposition, définition, ....",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false
+        },
+        {
+          "name": "Back",
+          "ord": 2,
+          "font": "Arial",
+          "size": 20,
+          "sticky": false,
+          "rtl": false,
+          "description": "",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false
+        },
+        {
+          "name": "démo",
+          "ord": 3,
+          "font": "Arial",
+          "size": 20,
+          "sticky": false,
+          "rtl": false,
+          "description": "idée de la démo, remarque, ....",
+          "plainText": false,
+          "collapsed": false,
+          "excludeFromSearch": false
+        }
+      ],
+      "templates": [
+        {
+          "name": "Card 1",
+          "ord": 0,
+          "qfmt": "\n<div class=\"card-header\">\n        {{type}}\n</div>\n\n<br>\n\n{{Front}}\n",
+          "afmt": "{{FrontSide}}\n\n\n<hr id=answer>\n\n<br>\n\n\n{{Back}}\n\n<br>\n<br>\n\n<hr id=answer>\n\n<br>\n\n{{hint:démo}}",
+          "bqfmt": "",
+          "bafmt": ""
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "exported_at": "2026-07-02T17:56:33.155332Z",
+    "anki_version": "25.09.2",
+    "addon_version": "1.0.0",
+    "count": 1
+  }
+}

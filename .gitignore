@@ -55,7 +55,6 @@ Thumbs.db
 *.pkl
 *.cpython
 *expanded.tex
-*.json
 *.xmind
 *.svg
 *.html
@@ -66,6 +65,8 @@ chapitre6/print_mode/
 scripts_anki/latex/
 scripts_anki/paquets/
 test_exos/
+__pycache__/
+anki_cache.json
 
 # Some test files
 chapitre18_a4_12.pdf

@@ -3,7 +3,7 @@
 ## Windows
 ### Scripts
 Le script qui est à utiliser est le fichier `compilation_complet.ps1`, qui permet de compiler à la fois le fichier `chapitre_.tex`, le fichier `cours_.tex` et le fichier `TD_.tex`. 
-Lorsque le script est exécuté sans arguments, il compile automatiquement le dernier chapitre.
+Lorsque le script est exécuté sans arguments, il compile automatiquement le dernier chapitre, puis lance le script d'extraction des cartes anki.
 Sinon, on peut utiliser le paramètre `-chapitres`, auquel on passe la liste des chapitres à compiler. Donc `-chapitres "2, 6"` compilera les chapitres 2 et 6.
 On peut également faire `-chapitres "integrale"` ce qui lancera la compilation des fichiers intégrale. Attention, cela prendra plusieurs minutes !
 
