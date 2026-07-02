@@ -52,7 +52,6 @@ Thumbs.db
 *.swo
 
 # Used for tests and flashcards generated
-*.txt
 *.pkl
 *.cpython
 *expanded.tex
@@ -60,3 +59,9 @@ Thumbs.db
 *.xmind
 *.svg
 *.html
+
+test_exos/
+chapitre6/print_mode/
+scripts_anki/latex/
+scripts_anki/paquets/
+test_exos/

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script pour supprimer les annotations [cite: ...] des fichiers LaTeX.
+Script pour supprimer les annotations [cite: ...] des fichiers LaTeX mis par gemini
 Usage: python remove_citations.py <fichier.tex>
        python remove_citations.py <fichier.tex> -o <fichier_sortie.tex>
 """
