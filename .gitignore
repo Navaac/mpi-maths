@@ -66,7 +66,7 @@ scripts_anki/latex/
 scripts_anki/paquets/
 test_exos/
 __pycache__/
-fiches_cours/version/
+fiches_cours/versions/
 
 # Some test files
 chapitre18_a4_12.pdf
