@@ -23,6 +23,7 @@ parser = argparse.ArgumentParser(description="Compilation script for MPI math co
 
 parser.add_argument("-ch", "--chapitres", default="all", help="Chapters to compile, default : all.")
 parser.add_argument("-m", "--mode", default="chapitre", help="What to compile, default : chapitre, options : chapitre, cours, TD." )
+parser.add_argument("-he", "--halt_on_error", action='store_true', help="Wether the compilation stops or not when a file gets an error while compiling.")
 
 args = parser.parse_args()
 
@@ -63,7 +64,8 @@ def compile_file (file, output_dir, cwd_path) :
 
     if(result.returncode != 0) :
         print("ERROR : Compilation failed for ", file)
-        exit(1)
+        if args.halt_on_error:
+            exit(1)
     return
 
 def compile_chapters (targets, dir) :
