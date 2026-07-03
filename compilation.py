@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-from ctypes import c_int
 import argparse
 import subprocess
+import re
 from pathlib import Path
 
 CHAPTERS_LOCATION = "./"
@@ -34,8 +34,8 @@ target_dirs = [
 ]
 
 if args.chapitres.lower() != "all" and args.chapitres.lower() != "integrale" :
-    # parse args and so smh cool (filter the list)
-    print("ok boy")
+    target_numbers = {num.strip() for num in args.chapitres.split(",")}
+    target_dirs = [d for d in target_dirs if (m := re.search(r"(\d+)$", d.name)) and m.group(1) in target_numbers]
 
 build_dir = Path(BUILD_DIR).resolve()
 build_dir.mkdir(exist_ok=True)
@@ -51,7 +51,7 @@ def compile_file (file, output_dir, cwd_path) :
     
     result = subprocess.run(
                             [
-                                "pdflatex",
+                                LATEX_COMPILER,
                                 f"-output-directory={output_dir}",
                                 "-interaction=nonstopmode",
                                 "-halt-on-error",
