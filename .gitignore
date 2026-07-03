@@ -1,3 +1,10 @@
+build
+
+# Ignore build files
+cours[0-9]*.pdf
+TD[0-9]*.pdf
+chapitre[0-9]*.pdf
+
 # LaTeX temporary and build artifacts
 *.aux
 *.fdb_latexmk
@@ -36,10 +43,6 @@
 
 # latexmk/minted directories
 _minted*
-
-# Local build directories that can be regenerated
-**/output/
-**/%OUTDIR%/
 
 # Temporary files occasionally used during builds
 **/temp.tex

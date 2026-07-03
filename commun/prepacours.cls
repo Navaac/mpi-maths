@@ -142,7 +142,7 @@
   #1
 }
 
-\newcommand{\ampoule}{\includegraphics[height=1.2em]{C:/Users/lucas/OneDrive/Documents/cours/prépa/MPI/Maths/cours/commun/images/ampoule.png}} 
+\newcommand{\ampoule}{\includegraphics[height=1.2em]{ampoule.png}} 
 
 \newcommand{\idee}[1]{%
   \needspace{4\baselineskip}%
