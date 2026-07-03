@@ -6,11 +6,13 @@ Ce cours latex est tapé par un élève de MPI* du lycée Champollion. Il regrou
 
 ## Installation et compilation 
 
-Sur Linux : TexLive (il faut par contre installer les bons packages), vous pouvez utiliser a peu près n'importe quel éditeur de texte, helix avec texlab fonctionne particulièrement bien.
+Pour Linux : TexLive (il faut par contre installer les bons packages), vous pouvez utiliser a peu près n'importe quel éditeur de texte, helix avec texlab fonctionne particulièrement bien.
 
 Pour Windows (hérésie) :  Miktex. Pour le faire fonctionner, il a d'abord fallu installer strawberry, puis miktex. Ensuite, vous pouvez l'utiliser en ligne de commande ou directement dans VS code avec l'extension latex workshop qui est vraiment bien. On peut aussi faire un script python qui gère la compilation.
 
 La compilation en ligne sur des sites comme overleaf est aussi possible. 
+
+La compilation s'effectue principalement via le script `compilation.py`, qui a diverses options.
 
 ## Aide 
 
@@ -91,7 +93,7 @@ Il existe différents niveaux de titres, dans cet ordre :
 \paragraph{Plus vraiment un titre...}
 ```
 
-Seuls les deux premiers sont affichés dans la table des matières. La profondeur de la table des matières peut être modifiée dans le fichier prépacours.cls, en augmentant ou diminuant le paramètre "tocdepth". Le fait que les subsubsection ne soient pas numérotés est une des personalisations de la classe.
+Seuls les deux premiers sont affichés dans la table des matières. La profondeur de la table des matières peut être modifiée dans le fichier `prépacours.cls`, en augmentant ou diminuant le paramètre "tocdepth". Le fait que les subsubsection ne soient pas numérotés est une des personalisations de la classe.
 
 Pour afficher un titre sans que celui-ci n'apparaisse dans la table des matière, vous pouvez ajouter une étoile : 
 
@@ -103,7 +105,7 @@ Et de même pour les autres niveaux de titre.
 
 ## Commandes personalisées 
 
-J'ai également un fichier de raccourcis pour gagner du temps lorsque je tape, réunis dans le fichier "raccourcis.sty". En voici les principaux : 
+J'ai également un fichier de raccourcis pour gagner du temps lorsque je tape, réunis dans le fichier `raccourcis.sty`. En voici les principaux : 
 
 Pour les ensembles de nombres : 
 ```latex
@@ -111,7 +113,7 @@ Pour les ensembles de nombres :
 ```
 permettent d'obtenir le rendu des ensembles de nombres. 
 
-Pourles fonctions : 
+Pour les fonctions : 
 ```latex
 \fonction{nom de la fonction}{ensemble de départ}{ensemble d'arrivée}{variable}{formule}
 ```
@@ -136,10 +138,9 @@ Les raccourcis suivants permettent eux de laisser un espace vertical "large", "a
 
 La hauteur de l'espace vertical créé peut être modifiée dans le fichier des raccourcis, et d'autres peuvent également être ajoutés. 
 
-Un autre raccourci utile est \uindent. Celui-ci permet de créer un text qui va être souligné et indenté, avec un espace au dessus de celui-ci. Il est conseillé d'utiliser une commande pour laisser de l'espace vertical en dessous de celui-ci. 
+Un autre raccourci utile est `\uindent`. Celui-ci permet de créer un text qui va être souligné et indenté, avec un espace au dessus de celui-ci. Il est conseillé d'utiliser une commande pour laisser de l'espace vertical en dessous de celui-ci. 
 
-J'ai créé de nombreux raccourcis pour tous les opérateurs classiques comme Vect, Ker, Sp, rg, cov, ... Vous pouvez retrouver la liste exhaustive dans le fichier raccourcis.sty. 
-
+J'ai créé de nombreux raccourcis pour tous les opérateurs classiques comme Vect, Ker, Sp, rg, cov, ... Vous pouvez retrouver la liste exhaustive dans le fichier `raccourcis.sty`. 
 
 ## Métadonnées
 
@@ -157,7 +158,7 @@ La majorité de celles-ci sont réunis dans un fichier qui est simplement inclus
 
 ## Présentation 
 
-Pour que la page de garde avec la table des matières apparaisse, ainsi que la première page de cours avec le titre en grand, il faut utiliser la commande \pagedegarde au tout début du contenu du document. Cela donne donc quelque chose du type : 
+Pour que la page de garde avec la table des matières apparaisse, ainsi que la première page de cours avec le titre en grand, il faut utiliser la commande `\pagedegarde` au tout début du contenu du document. Cela donne donc quelque chose du type : 
 
 ```latex
 % métadonnées et importations
@@ -171,7 +172,6 @@ Pour que la page de garde avec la table des matières apparaisse, ainsi que la p
 \end{document}
 ```
 
-
 ## Exercies et corrections 
 
 Il y a également des environnements pour inclure des exos et leur correction. Pour cela, il existe des commandes permettant de passer du mode exos au mode cours, qui sont : 
@@ -180,7 +180,7 @@ Il y a également des environnements pour inclure des exos et leur correction. P
 \passerenmodecours
 ```
 
-Les différents modes sont uniquement destinés à modifier la taille des en tête et des marges normalement. 
+Les différents modes sont uniquement destinés à modifier la taille des en tête et des marges (normalement). 
 
 Il y a alors des environnement personalisés pour les exercies : 
 ```latex
@@ -198,7 +198,6 @@ et pour leur correction :
 ```
 
 Le champ "nb" permet de faire un lien vers l'exercice numéro "nb", pour ensuite permettre de passer de l'un à l'autre par un système de liens cliquables. 
-
 
 ## Template 
 
@@ -224,9 +223,9 @@ latex/
 └── ...
 ```
 
-Le fichier config.tex contient les métadonnées communes à tous les fichiers, prepacours.cls la classe personalisée, et réccourcis.sty les raccourcis. L'image ampoule.png est utilisée pour les environnements idee. 
+Le fichier `config.tex` contient les métadonnées communes à tous les fichiers, `prepacours.cls` la classe personalisée, et `raccourcis.sty` les raccourcis. L'image `ampoule.png` est utilisée pour les environnements idée. 
 
-Le fichier chapitre_.tex contient cela : 
+Le fichier `chapitre_.tex` contient cela : 
 ```latex
 \documentclass{../commun/prepacours}
 \usepackage{../commun/raccourcis}
@@ -247,7 +246,7 @@ Le fichier chapitre_.tex contient cela :
 \end{document}
 ```
 
-Le fichier TD_.tex (qui utilise une autre classe fonctionnant globalement de la même façon) 
+Le fichier `TD_.tex` (qui utilise une autre classe fonctionnant globalement de la même façon) 
 ```latex
 \documentclass{../../commun/prepacours_TD}
 \usepackage{../../commun/raccourcis}
@@ -264,7 +263,7 @@ Le fichier TD_.tex (qui utilise une autre classe fonctionnant globalement de la 
 
 ```
 
-cours_.tex 
+`cours_.tex` 
 ```latex
 \documentclass{../../commun/prepacours}
 \usepackage{../../commun/raccourcis}
@@ -281,13 +280,9 @@ cours_.tex
 \end{document}
 ```
 
-
-Pour compiler tout cela en automatique, je vous conseille vivement de vous créer un petit script python ou autre. Personnelement utilisant windows (hérésie je sais), j'avais un script powershell qui se trouve dans le dossier `compilation`, afin de tout compiler d'un coup. Attention : la compilation de l'intégrale prend plusieurs minutes sur mon ordi ...
-
 ## Images
 
 Pour les images, celles-ci se trouvent dans le dossier du chapitre l'utilisant. Pour pouvoir compiler l'intégrale, il faut donc copier ces images dans le sous-dossier images du dossier `integrale`.
-
 
 ## Index
 
