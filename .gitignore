@@ -4,6 +4,9 @@ build
 cours[0-9]*.pdf
 TD[0-9]*.pdf
 chapitre[0-9]*.pdf
+Integrale_TD.pdf
+Integrale_cours.pdf
+Integrale_MPI.pdf
 
 # LaTeX temporary and build artifacts
 *.aux
@@ -70,11 +73,14 @@ scripts_anki/paquets/
 test_exos/
 __pycache__/
 fiches_cours/versions/
+fiches_cours/output/
 
 # Some test files
 chapitre18_a4_12.pdf
 chapitre18_a5_12.pdf
 chapitre18_a5.pdf
+Integrale_cours_a4_11.pdf
+Integrale_cours_a4_12.pdf
 
 anki_cache.json
 
