@@ -4,9 +4,9 @@ build
 cours[0-9]*.pdf
 TD[0-9]*.pdf
 chapitre[0-9]*.pdf
-Integrale_TD.pdf
-Integrale_cours.pdf
-Integrale_MPI.pdf
+integrale_TD.pdf
+integrale_cours.pdf
+integrale_mpi.pdf
 
 # LaTeX temporary and build artifacts
 *.aux
