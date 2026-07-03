@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from ctypes import c_int
 import argparse
 import subprocess
 from pathlib import Path
@@ -10,6 +11,7 @@ BUILD_DIR = CHAPTERS_LOCATION + "build/"
 C_CHAPITRES_DIR = BUILD_DIR + "chapitres/"
 C_COURS_DIR = BUILD_DIR + "cours/"
 C_TD_DIR = BUILD_DIR + "TDs/"
+C_INTEGRALE_DIR = BUILD_DIR + "integrale/"
 
 LATEX_COMPILER = "pdflatex"
 GARBAGE_EXTENSIONS = {
@@ -17,7 +19,7 @@ GARBAGE_EXTENSIONS = {
     ".fls", ".fdb_latexmk", ".lof", ".lot", ".bcf", ".run.xml"
 }
 
-parser = argparse.ArgumentParser(description="Compilation script for MPI math courses.")
+parser = argparse.ArgumentParser(description="Compilation script for MPI math course.")
 
 parser.add_argument("-ch", "--chapitres", default="all", help="Chapters to compile, default : all.")
 parser.add_argument("-m", "--mode", default="chapitre", help="What to compile, default : chapitre, options : chapitre, cours, TD." )
@@ -35,7 +37,7 @@ if args.chapitres.lower() != "all" and args.chapitres.lower() != "integrale" :
     # parse args and so smh cool (filter the list)
     print("ok boy")
 
-build_dir = Path(BUILD_DIR)
+build_dir = Path(BUILD_DIR).resolve()
 build_dir.mkdir(exist_ok=True)
 
 def clean_dir (dir) :
@@ -85,32 +87,53 @@ def compile_TDs (targets, dir) :
 
     return
 
-match args.mode :
-    case "chapitre" :
-        c_chapters_dir = Path(C_CHAPITRES_DIR).resolve()
-        c_chapters_dir.mkdir(exist_ok=True)
-        
-        compile_chapters(target_dirs, c_chapters_dir)
-        compile_chapters(target_dirs, c_chapters_dir)
-        
-        clean_dir(c_chapters_dir)
-    case "cours" :
-        c_cours_dir = Path(C_COURS_DIR).resolve()
-        c_cours_dir.mkdir(exist_ok=True)
-        
-        compile_cours(target_dirs, c_cours_dir)
-        compile_cours(target_dirs, c_cours_dir)
+if args.chapitres == "integrale" :
+    c_integrale_dir = Path(C_INTEGRALE_DIR).resolve()
+    c_integrale_dir.mkdir(exist_ok=True)
 
-        clean_dir(c_cours_dir)
-    case "TD" :
-        c_TDs_dir = Path(C_TD_DIR).resolve()
-        c_TDs_dir.mkdir(exist_ok=True)
-        
-        compile_TDs(target_dirs, c_TDs_dir)
-        compile_TDs(target_dirs, c_TDs_dir)
+    match args.mode :
+        case "chapitre" :
+            compile_file(str(chapters_path) + "/integrale/integrale_mpi.tex", str(c_integrale_dir), str(chapters_path) + "/integrale/")
+            compile_file(str(chapters_path) + "/integrale/integrale_mpi.tex", str(c_integrale_dir), str(chapters_path) + "/integrale/")
+        case "cours" :
+            compile_file(str(chapters_path) + "/integrale/integrale_cours.tex", str(c_integrale_dir), str(chapters_path) + "/integrale/")
+            compile_file(str(chapters_path) + "/integrale/integrale_cours.tex", str(c_integrale_dir), str(chapters_path) + "/integrale/")
+        case "TD" :
+            compile_file(str(chapters_path) + "/integrale/integrale_TD.tex", str(c_integrale_dir), str(chapters_path) + "/integrale/")
+            compile_file(str(chapters_path) + "/integrale/integrale_TD.tex", str(c_integrale_dir), str(chapters_path) + "/integrale/")
+        case _ :
+            print("ERROR: invalid input for mode field.")
+            exit(1)
 
-        clean_dir(c_TDs_dir)
-    case _ :
-        print("ERROR: invalid input for mode field.")
+    clean_dir(c_integrale_dir)
+else :
+    match args.mode :
+        case "chapitre" :
+            c_chapters_dir = Path(C_CHAPITRES_DIR).resolve()
+            c_chapters_dir.mkdir(exist_ok=True)
+        
+            compile_chapters(target_dirs, c_chapters_dir)
+            compile_chapters(target_dirs, c_chapters_dir)
+        
+            clean_dir(c_chapters_dir)
+        case "cours" :
+            c_cours_dir = Path(C_COURS_DIR).resolve()
+            c_cours_dir.mkdir(exist_ok=True)
+        
+            compile_cours(target_dirs, c_cours_dir)
+            compile_cours(target_dirs, c_cours_dir)
+
+            clean_dir(c_cours_dir)
+        case "TD" :
+            c_TDs_dir = Path(C_TD_DIR).resolve()
+            c_TDs_dir.mkdir(exist_ok=True)
+        
+            compile_TDs(target_dirs, c_TDs_dir)
+            compile_TDs(target_dirs, c_TDs_dir)
+
+            clean_dir(c_TDs_dir)
+        case _ :
+            print("ERROR: invalid input for mode field.")
+            exit(1)
         
 print("Compilation finished, pdf are in the build subdir.")

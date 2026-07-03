@@ -1,7 +1,0 @@
-Enlever restrictions : 
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-.\compilation_drive.ps1 -Chapitres "all"
-
-Remettre les restrictions : 
-Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
