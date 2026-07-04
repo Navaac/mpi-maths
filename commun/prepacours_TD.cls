@@ -8,6 +8,7 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[french]{babel}
 \RequirePackage{amsmath,amsthm,amssymb}
+\RequirePackage{mathrsfs}
 \RequirePackage{xcolor}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{geometry}

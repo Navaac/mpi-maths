@@ -2,6 +2,7 @@
 
 import argparse
 import subprocess
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import re
 from pathlib import Path
 
@@ -24,6 +25,7 @@ parser = argparse.ArgumentParser(description="Compilation script for MPI math co
 parser.add_argument("-ch", "--chapitres", default="all", help="Chapters to compile, default : all.")
 parser.add_argument("-m", "--mode", default="chapitre", help="What to compile, default : chapitre, options : chapitre, cours, TD." )
 parser.add_argument("-he", "--halt_on_error", action='store_true', help="Wether the compilation stops or not when a file gets an error while compiling.")
+parser.add_argument("-a", "--all", action='store_true', help='Whether to compile all files or not.')
 
 args = parser.parse_args()
 
@@ -69,24 +71,33 @@ def compile_file (file, output_dir, cwd_path) :
     return
 
 def compile_chapters (targets, dir) :
-    for chapitre in targets :
-        chapter_number = int(chapitre.name.replace("chapitre", ""))
-        compile_file(str(chapitre) + "/chapitre" + str(chapter_number) + ".tex", str(dir), str(chapitre))
+    with ThreadPoolExecutor() as executor:
+        futures = [
+        executor.submit(compile_file, str(chap) + "/chapitre" + str(int(chap.name.replace("chapitre", ""))) + ".tex", str(dir), str(chap)) 
+        for chap in targets
+    ]
 
+    results = [fut.result() for fut in as_completed(futures)]
     return
 
 def compile_cours (targets, dir) :
-    for chapitre in targets :
-        chapter_number = int(chapitre.name.replace("chapitre", ""))
-        compile_file(str(chapitre) + "/cours/" + "cours" + str(chapter_number) + ".tex", str(dir), str(chapitre) + "/cours/")
-        
+    with ThreadPoolExecutor() as executor:
+        futures = [
+        executor.submit(compile_file, str(chap) + "/cours/cours" + str(int(chap.name.replace("chapitre", ""))) + ".tex", str(dir), str(chap) + "/cours/") 
+        for chap in targets
+    ]
+
+    results = [fut.result() for fut in as_completed(futures)]
     return  
 
 def compile_TDs (targets, dir) :
-    for chapitre in targets :
-        chapter_number = int(chapitre.name.replace("chapitre", ""))
-        compile_file(str(chapitre) + "/TD/" + "TD" + str(chapter_number) + ".tex", str(dir), str(chapitre) + "/TD/")
+    with ThreadPoolExecutor() as executor:
+        futures = [
+        executor.submit(compile_file, str(chap) + "/TD/TD" + str(int(chap.name.replace("chapitre", ""))) + ".tex", str(dir), str(chap) + "/TD/") 
+        for chap in targets
+    ]
 
+    results = [fut.result() for fut in as_completed(futures)]
     return
 
 if args.chapitres == "integrale" :
