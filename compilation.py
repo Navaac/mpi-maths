@@ -29,20 +29,6 @@ parser.add_argument("-a", "--all", action='store_true', help='Whether to compile
 
 args = parser.parse_args()
 
-chapters_path = Path(CHAPTERS_LOCATION).resolve()
-
-target_dirs = [
-    d for d in chapters_path.iterdir() 
-    if d.is_dir() and d.name.startswith("chapitre") and d.name != "chapitre0"
-]
-
-if args.chapitres.lower() != "all" and args.chapitres.lower() != "integrale" :
-    target_numbers = {num.strip() for num in args.chapitres.split(",")}
-    target_dirs = [d for d in target_dirs if (m := re.search(r"(\d+)$", d.name)) and m.group(1) in target_numbers]
-
-build_dir = Path(BUILD_DIR).resolve()
-build_dir.mkdir(exist_ok=True)
-
 def clean_dir (dir) :
     for file in dir.iterdir():
         if file.is_file() and file.suffix in GARBAGE_EXTENSIONS :
@@ -69,6 +55,82 @@ def compile_file (file, output_dir, cwd_path) :
         if args.halt_on_error:
             exit(1)
     return
+
+chapters_path = Path(CHAPTERS_LOCATION).resolve()
+
+target_dirs = [
+    d for d in chapters_path.iterdir() 
+    if d.is_dir() and d.name.startswith("chapitre") and d.name != "chapitre0"
+]
+
+build_dir = Path(BUILD_DIR).resolve()
+build_dir.mkdir(exist_ok=True)
+
+if args.all :
+    target_files = []
+    target_out_dirs = []
+    target_cwds = []
+
+    c_integrale_dir = Path(C_INTEGRALE_DIR).resolve()
+    c_integrale_dir.mkdir(exist_ok=True)
+    
+    c_chapters_dir = Path(C_CHAPITRES_DIR).resolve()
+    c_chapters_dir.mkdir(exist_ok=True)
+    
+    c_cours_dir = Path(C_COURS_DIR).resolve()
+    c_cours_dir.mkdir(exist_ok=True)
+    
+    c_TDs_dir = Path(C_TD_DIR).resolve()
+    c_TDs_dir.mkdir(exist_ok=True)
+    
+    target_files.append(str(chapters_path) + "/integrale/integrale_mpi.tex")
+    target_files.append(str(chapters_path) + "/integrale/integrale_cours.tex")
+    target_files.append(str(chapters_path) + "/integrale/integrale_TD.tex")
+
+    target_out_dirs.extend(str(c_integrale_dir) for _ in range(3))
+    target_cwds.extend(str(chapters_path) + "/integrale/" for _ in range(3))
+
+    for chap in target_dirs :
+        chap_int = str(int(chap.name.replace("chapitre", "")))
+
+        target_files.append(str(chap) + "/chapitre" + chap_int + ".tex")
+        target_out_dirs.append(str(c_chapters_dir))
+        target_cwds.append(str(chap))
+        
+        target_files.append(str(chap) + "/cours/cours" + chap_int + ".tex")
+        target_out_dirs.append(str(c_cours_dir))
+        target_cwds.append(str(chap) + "/cours/")
+        
+        target_files.append(str(chap) + "/TD/TD" + chap_int + ".tex")
+        target_out_dirs.append(str(c_TDs_dir))
+        target_cwds.append(str(chap) + "/TD/")
+        
+    with ThreadPoolExecutor() as executor:
+        futures = [
+            executor.submit(compile_file, file, dir_out, cw) 
+            for file, dir_out, cw in zip(target_files, target_out_dirs, target_cwds)
+        ]
+    
+        results = [fut.result() for fut in as_completed(futures)]
+        
+    with ThreadPoolExecutor() as executor:
+        futures = [
+            executor.submit(compile_file, file, out, c) 
+            for file, out, c in zip(target_files, target_out_dirs, target_cwds)
+         ]
+    
+        results = [fut.result() for fut in as_completed(futures)]
+        
+    clean_dir(c_integrale_dir)
+    clean_dir(c_chapters_dir)
+    clean_dir(c_cours_dir)
+    clean_dir(c_TDs_dir)
+    print("Compilation finished, pdf are in the build subdir.")
+    exit(0)
+
+if args.chapitres.lower() != "all" and args.chapitres.lower() != "integrale" :
+    target_numbers = {num.strip() for num in args.chapitres.split(",")}
+    target_dirs = [d for d in target_dirs if (m := re.search(r"(\d+)$", d.name)) and m.group(1) in target_numbers]
 
 def compile_chapters (targets, dir) :
     with ThreadPoolExecutor() as executor:
