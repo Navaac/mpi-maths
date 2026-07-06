@@ -6,7 +6,7 @@ Soit $E$ un $\K$-espace vectoriel.
 \section{Familles de vecteurs}
 \subsection{Bases }
 
-\begin{definition}{base}{}
+\begin{definition}{Base}{}
     Soit $I \neq \emptyset$ et $B = (e_i)_{i \in I}$ une famille de vecteurs de $E$. 
     On dit que $B$ est une \emph{base} de $E$ ssi elle est libre et génératrice, c'est-à-dire : 
     \begin{itemize}
@@ -28,11 +28,11 @@ Soit $E$ un $\K$-espace vectoriel.
 
 \subsection{Exemple 1, \texorpdfstring{$\K[X]$}{K[X]}}
 
-\begin{theoreme}{des degrés étagés}{}
+\begin{theoreme}{Des degrés étagés}{}
     Toute famille de polynômes non nuls de degrés deux à deux distincts est libre.
 \end{theoreme}
 
-\begin{theoreme}{des degrés echelonnés}{}
+\begin{theoreme}{Des degrés echelonnés}{}
     Soit $(P_i)_{i \in \N}$ famille de polynômes de $\K[X]$ tels que pour tout $i \in \N$,
 
     $\deg(P_i) = i$. Alors $(P_i)_{i \in \N}$ est une base de $\K[X]$.
@@ -185,7 +185,7 @@ $b_n(f) = \frac 1 \pi \int_{- \pi }^\pi f(x) \sin(nx) \mathrm{d}x$.
     Cela équivaut à $$\forall (u_1, \dots, u_p) \in F_1 \times \dots \times F_p, \, \sum_{j=1}^p u_j = 0 \implies \forall j \in \ninter 1 p, u_j = 0$$
 \end{definition}
 
-\begin{definition}{supplémentaire}{}
+\begin{definition}{Supplémentaire}{}
     On dit que $(F_1, \dots, F_p)$ sont des supplémentaires dans $E$ ssi leur somme 
     est directe et 
     $$E = \bigoplus_{j=1}^p F_j.$$
@@ -246,7 +246,7 @@ $b_n(f) = \frac 1 \pi \int_{- \pi }^\pi f(x) \sin(nx) \mathrm{d}x$.
 
 Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$. 
 
-\begin{theoreme}{base adaptée}{}
+\begin{theoreme}{Base adaptée}{}
     Soient $F_1, \dots, F_p$ des sous-espaces vectoriels de $E$ tels que $\displaystyle E = \bigoplus_{j=1}^p F_j$.
     Soit pour tout $j \in \ninter{1}{p}$, $B_j$ une base de $F_j$.
 
@@ -309,7 +309,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
     donc tous les $x_i$ sont nuls, et donc la somme est directe. 
 \end{proof}
 
-\begin{proposition}{dimension somme espaces vectoriels}{}
+\begin{proposition}{Dimension somme espaces vectoriels}{}
     Soient $E_1, \dots E_p$ des sous espaces vectoriels de $E$ et $\displaystyle S = \sum_{j=1}^p E_j$.
 
     Alors $\displaystyle \dim S \leqslant \sum_{j=1}^p \dim E_j$ avec égalité ssi la 
@@ -357,7 +357,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
 
 \subsection{Théorème du rang }
 
-\begin{theoreme}{du rang, dimension infinie}{}
+\begin{theoreme}{Du rang, dimension infinie}{}
     Soient $E$ et $F$ deux $\K$-espaces vectoriels de dimension quelconque et $u \in \mathscr L(E, F)$.
     On suppose qu'il existe $S$ un supplémentaire de $\ker(u)$ dans $E$, c'est-à-dire
     $E = \ker(u) \oplus S$.
@@ -388,7 +388,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
     Donc $y = \tilde u (s)$ et donc $\tilde u$ est surjective.
 \end{proof}
 
-\begin{theoreme}{du rang, dimension finie}{}
+\begin{theoreme}{Du rang, dimension finie}{}
     Soit $E$ un $\K$-espace vectoriel de dimension finie $n$, $F$ un $\K$-espace vectoriel, 
     et soit $u \in \mathscr L(E, F)$. Alors $\im u $ est de dimension finie appelée 
     rang de $u$ et notée $\rg(u)$ et on a :
@@ -406,7 +406,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
     et $\dim S = \dim \im (u)$ car isomorphisme.
 \end{proof}
 
-\begin{proposition}{polynômes d'interpolation de Lagrange}{}
+\begin{proposition}{Polynômes d'interpolation de Lagrange}{}
     Soient $\alpha_0, \dots, \alpha_n \in \K$ deux à deux distincts. 
     
     Alors $\fonction{f}{\K_n[X]}{\K^{n+1}}{P}{\left( P(\alpha_0), \dots, P(\alpha_n) \right)}$
@@ -446,7 +446,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
 
 \subsection{Formes linéaires}
 
-\begin{definition}{dual, LHP}{}
+\begin{definition}{Dual, LHP}{}
     L'espace vectoriel $\mathscr L(E, \K)$ des applications linéaires de $E$ dans $\K$ est appelé 
     espace dual de $E$ et noté $E^*$.
 
@@ -462,7 +462,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
     il existe une forme linéaire non nulle $f \in E^*$ telle que $H = \ker(f)$.
 \end{definition}
 
-\begin{proposition}{caractérisation hyperplan}{}
+\begin{proposition}{Caractérisation hyperplan}{}
     Soit $H$ un sous-espace vectoriel de $E$. $H$ est un hyperplan de $E$ ssi il existe $D$ droite de $E$ telle que 
     $E = H \oplus D$, c'est à dire ssi $\exists a \in E \setminus \{0_E\}, \, E = H \oplus \Vect a$ 
     et alors $\forall a \in E \setminus H, \, E = H \oplus \Vect a$.
@@ -552,7 +552,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
     Donc la base duale est $B^* = (e_1^*, e_2^*, e_3^*)$ avec
 \end{exemple}
 
-\begin{theoreme}{base antéduale}{}
+\begin{theoreme}{Base antéduale}{}
     Soit $C = (\varphi_1, \dots, \varphi_n)$ une base de $E^*$. Alors il existe une unique base $B$ de $E$ dont $C$
     est la base duale, c'est à dire telle que $C = B^*$. 
     $B$ est appelée base antéduale de $C$.
@@ -640,7 +640,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
 
 \subsection{Lien avec les sommes directes}
 
-\begin{theoreme}{application linéaire définie par morceaux}{}
+\begin{theoreme}{Application linéaire définie par morceaux}{}
     Soit $E$ un $\K$ espace vectoriel et $E_1, \dots, E_p$ des sous espaces vectoriels de $E$ tels que 
     $E = \bigoplus_{j=1}^p E_j$. Soit $F$ un $\K$ espace vectoriel et pour tout $j \in \ninter{1}{p}$,
     $u_j \in \mathscr L(E_j, F)$.
@@ -668,7 +668,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
 \section{Matrices }
 \subsection{Matrices de Vandermonde}
 
-\begin{definition}{matrice de Vandermonde et son déterminant}{}
+\begin{definition}{Matrice de Vandermonde et son déterminant}{}
     \index{Vandermonde!Déterminant}
     Soient $a_1, \dots, a_n \in \K$. On définit 
     $$ V (a_1, \dots, a_n) = \begin{pmatrix}
@@ -723,7 +723,7 @@ Soit $E$ un $\K$-espace vectoriel de dimension finie $n \geqslant 1$.
 
 \subsection{Déterminant d'une matrice carrée}
 
-\begin{proposition}{formule du déterminant (taille 2 et 3)}{}
+\begin{proposition}{Formule du déterminant (taille 2 et 3)}{}
     Pour $A = (a_{i,j})_{1 \leqslant i, j \leqslant n} \in M_n(\K)$, on a
     $\displaystyle \det A = \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{i=1}^n a_{\sigma(i), i}$
 
@@ -746,7 +746,7 @@ Pour le déterminant 3*3, règle de Sarus :
 
 \subsection{Matrices définies par blocs}
 
-\begin{definition}{matrice par blocs}{}
+\begin{definition}{Matrice par blocs}{}
     Soient $n, p \in \N^*$ et $N, P \geqslant 1$, $n_1, \dots, n_N, p_1, \dots, p_P \in \N^*$ tels que
     $n = \sum_{i=1}^N n_i$ et $p = \sum_{j=1}^P p_j$.
 
@@ -763,7 +763,7 @@ Pour le déterminant 3*3, règle de Sarus :
     \end{pmatrix} $$
 \end{definition}
 
-\begin{proposition}{interprétation des blocs par des applications linéaires}{}
+\begin{proposition}{Interprétation des blocs par des applications linéaires}{}
     On conserve les notations précédentes. Soit $E$ un $\K$-espace vectoriel de dimension $p$ et de base $B = (e_1, \dots, e_p)$,
     $F$ un $\K$-espace vectoriel de dimension $n$ et de base $C = (f_1, \dots, f_n)$.
 
@@ -786,7 +786,7 @@ Pour le déterminant 3*3, règle de Sarus :
 
 \subsubsection{Opérations par blocs de taille compatible }
 
-\begin{proposition}{combinaison linéaire de matrices par blocs}{}
+\begin{proposition}{Combinaison linéaire de matrices par blocs}{}
     Soient $A, B \in \mathscr M_{n, p}(\K)$ décomposées par blocs selon les mêmes partitions des entiers 
     $n = n_1 + \dots + n_N$ et $p = p_1 + \dots + p_P$.
 
@@ -799,7 +799,7 @@ Pour le déterminant 3*3, règle de Sarus :
     Ces matrices ont même taille et même coefs. 
 \end{proof}
 
-\begin{proposition}{produit de matrices par blocs}{}
+\begin{proposition}{Produit de matrices par blocs}{}
     Soient $A \in \mathscr M_{n, p}(\K)$ et $B \in \mathscr M_{p, q}(\K)$ décomposées par blocs selon la même 
     partition pour $p$ avec $p = p_1 + \dots + p_P$, $n = n_1 + \dots + n_N$ et $q = q_1 + \dots + q_Q$.
     
@@ -811,7 +811,7 @@ Pour le déterminant 3*3, règle de Sarus :
     Par calcul, non exigible.
 \end{proof}
 
-\begin{proposition}{transposition}{}
+\begin{proposition}{Transposition}{}
     Soit $A \in \mathscr M_{n, p}(\K)$ décomposée par blocs selon les partitions $n = n_1 + \dots + n_N$
     et $p = p_1 + \dots + p_P$. Alors les blocs de la matrice transposée $A^T \in \mathscr M_{p, n}(\K)$ selon 
     les partitions $p = p_1 + \dots + p_P$ et $n = n_1 + \dots + n_N$ s'obtiennent 
@@ -825,7 +825,7 @@ Pour le déterminant 3*3, règle de Sarus :
 
 \subsubsection{Déterminant}
 
-\begin{proposition}{transvection par blocs}{}
+\begin{proposition}{Transvection par blocs}{}
     Soit $A \in \mathscr M_{2n, p}(\K)$, avec $p = 2n$
     décomposée selon les partitions $2n = n + n$ et $p = p$, 
     c'est à dire $A = \begin{pmatrix}
@@ -865,7 +865,7 @@ Pour le déterminant 3*3, règle de Sarus :
     On a le même résultat pour les transvections par blocs de colonnes.
 \end{remarque}
 
-\begin{definition}{matrices triangulaires par blocs}{}
+\begin{definition}{Matrices triangulaires par blocs}{}
     Soit $A \in \mathscr M_{n}(\K)$ décomposée par blocs selon la partition $n = n_1 + \dots + n_N$
 
     $$A = \left( \begin{array}{c|c|c|c}
@@ -885,7 +885,7 @@ Pour le déterminant 3*3, règle de Sarus :
     
 \end{definition}
 
-\begin{theoreme}{déterminant matrice triangulaire par blocs }{}
+\begin{theoreme}{Déterminant matrice triangulaire par blocs }{}
     Le déterminant d'une matrice triangulaire par blocs est égal au produit 
     des déterminants des blocs diagonaux. 
 \end{theoreme}

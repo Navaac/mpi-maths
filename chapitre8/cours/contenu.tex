@@ -1,7 +1,7 @@
 \section{Généralités}
 \subsection{Anneaux}
 
-\begin{definition}{anneau}{}
+\begin{definition}{Anneau}{}
     \index{Anneau}
     Soit $A$ un ensemble non vide muni de deux lois de composition interne notées $+$ et
     $\cdot$ telles que : 
@@ -48,7 +48,7 @@
 \end{exemple}
 
 
-\begin{proposition}{anneau produit}{}
+\begin{proposition}{Anneau produit}{}
     \index{Anneau!produit}
     Soient $A_1, A_2, \ldots, A_n$ des anneaux et $A = A_1 \times A_2 \times \cdots \times A_n$.
 
@@ -81,7 +81,7 @@
 
 \subsection{Sous-anneaux}
 
-\begin{definition}{sous-anneau}{}
+\begin{definition}{Sous-anneau}{}
     \index{Sous-anneau}
     Soit $(A, +, \cdot)$ un anneau et $B \subset A$ non vide. On dit que $B$ est un 
     \textbf{sous-anneau} de $A$ ssi $(B, +, \cdot)$ est un anneau et $1_B = 1_A$.
@@ -95,7 +95,7 @@
     mais n'en est pas un sous-anneau car les neutres pour $\cap$ sont différents.  
 \end{exemple}
 
-\begin{proposition}{caractérisation sous-anneau}{}
+\begin{proposition}{Caractérisation sous-anneau}{}
     Soit $(A, +, \cdot)$ un anneau et $B \subset A$. Alors 
     $B$ est un sous-anneau de $A$ ssi : 
     \begin{itemize}
@@ -205,7 +205,7 @@ Il faudrait sinon parler d'idéal à gauche / à droite.}
 
 \end{exemple}
 
-\begin{theoreme}{idéal engendré par un élément}{}
+\begin{theoreme}{Idéal engendré par un élément}{}
     \index{Ideal@Idéal!engendre par un element@engendré par un élément}
     Soit $(A, +, \cdot)$ un anneau commutatif et $a \in A$. Alors
     $aA = \{a \cdot x \mid x \in A\}$ est un idéal de $A$, appelé
@@ -232,7 +232,7 @@ Il faudrait sinon parler d'idéal à gauche / à droite.}
     Donc $aA$ est un idéal de $A$.
 \end{proof}
 
-\begin{definition}{idéal principal}{}
+\begin{definition}{Idéal principal}{}
     \index{Ideal@Idéal!principal}
     Soit $I \subset A$ un idéal. On dit que $I$ est 
     est \textbf{principal} ssi $\exists a \in A$ tel que $I = aA$.
@@ -240,13 +240,13 @@ Il faudrait sinon parler d'idéal à gauche / à droite.}
     C'est à dire que $I$ est l'idéal engendré par un élément.
 \end{definition}
 
-\begin{definition}{anneau principal}{}
+\begin{definition}{Anneau principal}{}
     \index{Anneau!principal}
     On dit que $A$ est un \textbf{anneau principal} ssi tout
     idéal de $A$ est principal.
 \end{definition}
 
-\begin{proposition}{opérations sur les idéaux, LHP}{}
+\begin{proposition}{Opérations sur les idéaux, LHP}{}
     Soit $(A, +, \cdot)$ un anneau commutatif, et $I_1, I_2$ deux idéaux de $A$. Alors 
     $I_1 \cap I_2$ et $I_1 + I_2 = \{x + y \mid x \in I_1, y \in I_2\}$ sont des idéaux de $A$.
 \end{proposition}
@@ -283,7 +283,7 @@ Il faudrait sinon parler d'idéal à gauche / à droite.}
 \danger{Bien entendu, vous ne tomberez pas dans le piège classique fatal au topin lambda, 
 aka l'hypothèse d'intégrité (tips : une carte anki spécialement pour l'hypothèse).}
 
-\lvspace \avspace \begin{definition}{divisibilité}{}
+\lvspace \avspace \begin{definition}{Divisibilité}{}
     \index{Divisibilité}
     Soit $(A, +, \cdot)$ un \textbf{anneau commutatif intègre}. 
 
@@ -305,7 +305,7 @@ aka l'hypothèse d'intégrité (tips : une carte anki spécialement pour l'hypot
     Un anneau non intègre possède des diviseurs de zéro.
 \end{remarque}
 
-\begin{proposition}{propriétés divisibilité}{}
+\begin{proposition}{Propriétés divisibilité}{}
     Soit $(A, +, \cdot)$ un \textbf{anneau commutatif intègre}. 
 
     \begin{itemize}
@@ -334,7 +334,7 @@ aka l'hypothèse d'intégrité (tips : une carte anki spécialement pour l'hypot
     Suppposons 3. $b = 1b$ donc $b \in bA \subset aA$, d'où le 2.
 \end{proof}
 
-\begin{theoreme}{éléments associés}{}
+\begin{theoreme}{Éléments associés}{}
     \index{Elements associes@Éléments associés}
     Soit $(A, +, \cdot)$ un \textbf{anneau commutatif intègre}. 
     Soient $a, b \in A$. Alors les assertions suivantes sont équivalentes : 
@@ -372,7 +372,7 @@ aka l'hypothèse d'intégrité (tips : une carte anki spécialement pour l'hypot
 
 \subsection{Morphismes et anneaux}
 
-\begin{definition}{morphisme d'anneaux}{}
+\begin{definition}{Morphisme d'anneaux}{}
     \index{Morphisme!anneaux@d'anneaux}
     Soient $A, B$ deux anneaux et $\varphi : A \to B$. On dit que $\varphi$ est un
     \textbf{morphisme d'anneaux} ssi pour tous $a, b \in A$ :
@@ -410,7 +410,7 @@ aka l'hypothèse d'intégrité (tips : une carte anki spécialement pour l'hypot
     Pour + parce que morphisme de groupes, et par récurrence pour $\cdot$.
 \end{proof}
 
-\begin{proposition}{image d'un morphisme d'anneaux}{}
+\begin{proposition}{Image d'un morphisme d'anneaux}{}
     Soit $\varphi : A \to B$ un morphisme d'anneaux. 
 
     Alors son image $\varphi(A)$ est un sous-anneau de $B$.
@@ -429,7 +429,7 @@ aka l'hypothèse d'intégrité (tips : une carte anki spécialement pour l'hypot
 
 \end{proof}
 
-\begin{definition}{noyau d'un morphisme d'anneaux}{}
+\begin{definition}{Noyau d'un morphisme d'anneaux}{}
     Soit $\varphi : A \to B$ un morphisme d'anneaux. 
 
     On appelle \textbf{noyau} de $\varphi$ l'ensemble 
@@ -461,7 +461,7 @@ aka l'hypothèse d'intégrité (tips : une carte anki spécialement pour l'hypot
 
 Soit $(A, +, \cdot)$ un anneau.
 
-\begin{definition}{élément inversible}{}
+\begin{definition}{Élément inversible}{}
     Soit $a \in A$. On dit que $a$ est inversible ssi $\exists b \in A, \, ab = ba = 1_A$.
 
     On note alors $b = a^{-1}$. L'ensemble des éléments inversibles de $A$ est noté $A^*$.
@@ -471,7 +471,7 @@ Soit $(A, +, \cdot)$ un anneau.
     $2 \notin \Z^*$ et $-1 \in \Z^*$.
 \end{exemple}
 
-\begin{theoreme}{groupe des unités}{}
+\begin{theoreme}{Groupe des unités}{}
     L'ensemble $A^*$ des éléments inversibles de $A$ est un groupe pour $\cdot$, appelé 
     groupe des inversibles ou groupe des unités de $A$.
 \end{theoreme}
@@ -482,7 +482,7 @@ Soit $(A, +, \cdot)$ un anneau.
     Dans l'anneau $\K[X]$, où $\K$ est un corps, $\K[X]^* = \K^*$.
 \end{exemple}
 
-\begin{definition}{corps}{}
+\begin{definition}{Corps}{}
     Soit $A$ un anneau commutatif. 
     
     On dit que $(A, +, \cdot)$ est un corps 
@@ -493,7 +493,7 @@ Soit $(A, +, \cdot)$ un anneau.
     $\Q$, $\R$, $\C$, $\K(X)$ sont des corps.
 \end{exemple}
 
-\begin{definition}{sous-corps}{}
+\begin{definition}{Sous-corps}{}
     Soit $\K$ un corps et $L \subset K$. On dit que $L$ est un sous-corps de $\K$ (ou 
     que $\K$ est une extension de $L$) ssi $(L, +, \cdot)$ est un corps et 
     $1_L = 1_K$.
@@ -503,7 +503,7 @@ Soit $(A, +, \cdot)$ un anneau.
     que simultanément.}
 
 
-\lvspace \avspace \begin{proposition}{caractérisation sous-corps}{}
+\lvspace \avspace \begin{proposition}{Caractérisation sous-corps}{}
     $L$ est un sous-corps de $\K$ ssi :
     \begin{itemize}
         \item $1_K \in L$
@@ -568,7 +568,7 @@ Soit $(A, +, \cdot)$ un anneau.
 \section{L'anneau \texorpdfstring{$\Z$}{Z}}
 \subsection{Idéaux de \texorpdfstring{$\Z$}{Z}}
 
-\begin{theoreme}{idéaux de $\Z$}{}
+\begin{theoreme}{Idéaux de $\Z$}{}
     Les idéaux de $\Z$ sont les $a \Z$ où $a \in \Z$.
 
     En particulier, tous les idéaux de $\Z$ sont principaux donc $\Z$ est un anneau principal.
@@ -583,7 +583,7 @@ Soit $(A, +, \cdot)$ un anneau.
 
 \subsection{Arithmétique dans \texorpdfstring{$\Z$}{Z}}
 
-\begin{theoreme}{lien PGCD et idéaux dans $\Z$}{}
+\begin{theoreme}{Lien PGCD et idéaux dans $\Z$}{}
     Soient $a, b \in \Z$. Il existe un unique $c \in \N$ tel que $a \Z + b \Z = c \Z$. 
     De plus $c$ est l'unique naturel tel que $c \mid a $, $c \mid b$ et $\forall d \in \Z, $
     $\left. \begin{aligned}
@@ -612,7 +612,7 @@ Soit $(A, +, \cdot)$ un anneau.
 \end{proof}
 
 
-\begin{proposition}{généralisation du PGCD avec idéaux}{}
+\begin{proposition}{Généralisation du PGCD avec idéaux}{}
     Soient $c_1, \ldots, c_n \in \Z$. Alors $c_1 \Z + c_2 \Z + \cdots + c_n \Z$ est un 
     idéal de $\Z$, et donc il existe un unique $d \in \N$ tel que 
     \[
@@ -623,7 +623,7 @@ Soit $(A, +, \cdot)$ un anneau.
     on obtient l'associativité par def. 
 \end{proposition}
 
-\begin{proposition}{relation de Bézout}{}
+\begin{proposition}{Relation de Bézout}{}
     Soient $a, b \in \Z$, alors $\exists u, v \in \Z$ tels que 
     \[
         \pgcd(a, b) = au + bv.
@@ -636,7 +636,7 @@ Soit $(A, +, \cdot)$ un anneau.
     Donc il existe $u, v \in \Z$ tels que $d = au + bv$.
 \end{proof}
 
-\begin{theoreme}{lien PPCM et idéaux dans $\Z$}{}
+\begin{theoreme}{Lien PPCM et idéaux dans $\Z$}{}
     Soient $a, b \in \Z$. Alors $\exists ! m \in \N$ tel que $a \Z \cap b \Z = m \Z$.
 
     De plus, $m$ est l'unique naturel tel que $a \mid m$, $b \mid m$ et 
@@ -688,16 +688,16 @@ A chaque étape, on réalise la division euclidienne de $r_{i-1}$ par $r_i$
 
 \subsection{Nombres premiers}
 
-\begin{definition}{nombre premier}{}
+\begin{definition}{Nombre premier}{}
     Soit $p \in \N \setminus \{0, 1\}$. On dit que $p$ est un \textbf{nombre premier} ssi
     les seuls diviseurs de $p$ sont $1$ et $p$.
 \end{definition}
 
-\begin{proposition}{infinité des nombres premiers}{}
+\begin{proposition}{Infinité des nombres premiers}{}
     L'ensemble $\mathbb{P}$ des nombres premiers est infini.
 \end{proposition}
 
-\begin{theoreme}{décomposition en facteurs premiers}{}
+\begin{theoreme}{Décomposition en facteurs premiers}{}
     Tout $a \in \Z \setminus \{0, 1, -1\}$ se décompose de manière unique (à l'ordre des facteurs près) en un produit
     de nombres premiers, sous la forme : 
     \[
@@ -756,7 +756,7 @@ A chaque étape, on réalise la division euclidienne de $r_{i-1}$ par $r_i$
 
 Soit $n \geqslant 2$ un entier.
 
-\begin{theoreme}{structure de $\Z / n \Z$}{}
+\begin{theoreme}{Structure de $\Z / n \Z$}{}
     Soient $c, d, \in \Z/ n \Z$, $x \in c $ et $y \in d$. Alors 
     $\widehat{x \cdot y}$ ne dépend pas des choix de $x$ et $y$.
 
@@ -814,7 +814,7 @@ Soit $n \geqslant 2$ un entier.
 \end{exemple}
 
 
-\begin{theoreme}{éléments inversibles de $\Z / n \Z$}{}
+\begin{theoreme}{Éléments inversibles de $\Z / n \Z$}{}
     Soit $c \in \Z/n \Z$ et $x \in c$, avec $c \neq \hat 0$. 
     Alors les assertions suivantes sont équivalentes : 
     
@@ -847,7 +847,7 @@ Soit $n \geqslant 2$ un entier.
     $\Z/6\Z^* = \{\widehat{1}, \widehat{5}\}$.
 \end{exemple}
 
-\begin{theoreme}{corps $\Z/n\Z$}{}
+\begin{theoreme}{Corps $\Z/n\Z$}{}
     $\Z/n\Z$ est un corps ssi $n$ est premier. Pour $p \in \mathbb{P}$, ce corps est noté 
     $$\Z/p\Z = \mathbb{F}_p$$
 \end{theoreme}
@@ -919,7 +919,7 @@ Soit $n \geqslant 2$ un entier.
 
 \subsection{Théorème chinois }
 
-\begin{theoreme}{théorème chinois}{}
+\begin{theoreme}{Théorème chinois}{}
     Soient $n, k \geqslant 2$ premiers entre eux. Notons $\overline{.} \space $ les 
     classes dans $\Z / (n k) \Z$, $\widetilde{.}\space $ les classes dans $\Z / k \Z$ et 
     $\space \widehat{.} \space $ les classes dans $\Z / n \Z$.
@@ -966,7 +966,7 @@ Soit $n \geqslant 2$ un entier.
 
 \end{proof}
 
-\begin{proposition}{généralisation du théorème chinois}{}
+\begin{proposition}{Généralisation du théorème chinois}{}
     Soient $n_1, n_2, \ldots, n_k \geqslant 2$ entiers deux à deux premiers entre eux. 
     Alors $$\fonction{\varphi}{\Z / (n_1 n_2 \cdots n_k) \Z}{\Z / n_1 \Z \times \Z / n_2 \Z \times \cdots \times \Z / n_k \Z}{\overline x}{(\widehat x_1, \widehat x_2, \ldots, \widehat x_k)}$$
 
@@ -1058,7 +1058,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 
 \subsection{Indicatrice d'Euler }
 
-\begin{definition}{indicatrice d'Euler}{}
+\begin{definition}{Indicatrice d'Euler}{}
     On appelle indicatrice d'Euler l'application suivante : 
     $$\fonction{\varphi}{\N^* \setminus \{1 \}}{\N}{n}{\operatorname{card}((\zz n)^*)}$$
 
@@ -1093,7 +1093,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
     \end{array}
 \]
 
-\begin{theoreme}{multiplicativité de $\varphi$}{}
+\begin{theoreme}{Multiplicativité de $\varphi$}{}
     $\varphi$ est un fonction multiplicative, c'est à dire que 
     si $n \wedge k = 1$, avec $n, k \geqslant 2$, alors
     $$\varphi(nk) = \varphi(n) \times \varphi(k)$$
@@ -1148,7 +1148,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
 \end{proof}
 
 
-\begin{theoreme}{formule de $\varphi$}{}
+\begin{theoreme}{Formule de $\varphi$}{}
     Soit $n \geqslant 2$. Décomposons $\displaystyle n = \prod_{i = 1}^k p_i^{\alpha_i}$, où 
     $k \geqslant 1$, $(p_1, p_2, \ldots, p_k)$ est une suite strictement croissante de nombres premiers. 
     Alors $$\varphi(n) = n \prod_{i = 1}^k \left(1 - \frac 1 {p_i}\right)$$
@@ -1164,7 +1164,7 @@ Donc $x_0$ est une solution particulière de $(S)$.
     \end{align*}
 \end{proof}
 
-\begin{theoreme}{théorème d'Euler}{}
+\begin{theoreme}{Théorème d'Euler}{}
     Soit $n \geqslant 2$ et $a \in \Z$ tel que $a \wedge n = 1$.
     Alors $$a^{\varphi(n)} \equiv 1 [n]$$
 \end{theoreme}
@@ -1216,7 +1216,7 @@ Donc la sécurité de l'algo repose sur la difficulté à décomposer $n$ en fac
 
 Soit $\K$ un sous-corps de $\C$.
 
-\begin{theoreme}{idéaux de $\K[X]$}{}
+\begin{theoreme}{Idéaux de $\K[X]$}{}
     Tout idéal de $\K[X]$ se met sous la forme $I = P_0 \K[X]$, où $P_0$ est un polynôme
     unitaire ou nul, et $P_0$ est alors unique.
 
@@ -1329,7 +1329,7 @@ Soit $\K$ un sous-corps de $\C$.
 
 \subsection{Arithmétique dans \texorpdfstring{$\K [X]$}{K[X]}}
 
-\begin{theoreme}{pgcd dans $\K[X]$}{}
+\begin{theoreme}{Pgcd dans $\K[X]$}{}
     Soient $P, Q \in \K[X]$, alors $P\K[X] + Q \K[X] $ est un idéal de $\K[X]$, 
     donc il existe un unique polynôme $D \in \K[X]$ unitaire ou nul tel que
     $$P \K[X] + Q \K[X] = D \K[X]$$
@@ -1353,7 +1353,7 @@ Soit $\K$ un sous-corps de $\C$.
     Identique à celle dans $\Z$. 
 \end{proof}
 
-\begin{theoreme}{ppcm dans $\K[X]$}{}
+\begin{theoreme}{Ppcm dans $\K[X]$}{}
     Soient $P, Q \in \K[X]$. Alors $P\K[X] \cap Q \K[X]$ est un idéal de 
     $\K[X]$, donc il existe un unique polynôme $M \in \K[X]$ unitaire ou nul tel que
     $$P \K[X] \cap Q \K[X] = M \K[X]$$
@@ -1374,7 +1374,7 @@ Soit $\K$ un sous-corps de $\C$.
 
 \subsection{Irréductibles de \texorpdfstring{$\K[X]$}{K[X]}}
 
-\begin{definition}{irréductibles de $\K[X]$}{}
+\begin{definition}{Irréductibles de $\K[X]$}{}
     Soit $P \in \K[X]$ tel que $\deg P \geqslant 1$. On dit que $P$ est irréductible 
     dans $\K[X]$ ssi $\forall A, B \in \K[X], \, P = AB \Rightarrow \deg A = 0$ ou $\deg B = 0$.
 
@@ -1389,7 +1389,7 @@ Soit $\K$ un sous-corps de $\C$.
 \end{exemple}
 
 
-\begin{proposition}{caractérisation des irréductibles par les racines}{}
+\begin{proposition}{Caractérisation des irréductibles par les racines}{}
     Un polynôme de degré $\geqslant 2$ irréductible n'a pas de racine dans $\K$.
 \end{proposition}
 
@@ -1410,7 +1410,7 @@ Soit $\K$ un sous-corps de $\C$.
 
 $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 
-\begin{theoreme}{décomposition en irréductibles dans $\K[X]$}{}
+\begin{theoreme}{Décomposition en irréductibles dans $\K[X]$}{}
     Tout polynôme de degré $\geqslant 1$ se décompose de manière unique comme produit d'une constante 
     non nulle et de puissances de polynômes unitaires irréductibles. 
 
@@ -1495,7 +1495,7 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
     \end{array}$$
 \end{remarque}
 
-\begin{theoreme}{irréductibles de $\C[X]$}{}
+\begin{theoreme}{Irréductibles de $\C[X]$}{}
     Les irréductibles de $\C[X]$ sont les polynômes de degré $1$.
 \end{theoreme}
 
@@ -1539,7 +1539,7 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 \section{Algèbres} 
 \subsection{Définitions}
 
-\begin{definition}{algèbre}{}
+\begin{definition}{Algèbre}{}
     Soit $\K$ un corps, $A \neq \emptyset$ muni de 3 lois, avec $+$ et $\times$ des lci, 
     et $\cdot$ externe à opérateurs dans $\K$.
 
@@ -1561,14 +1561,14 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 
 \subsection{Sous-algèbre}
 
-\begin{definition}{sous-algèbre}{}
+\begin{definition}{Sous-algèbre}{}
     Soit $(A, +, \times, \cdot)$ une $\K$-algèbre, et $B \subset A$ non vide. 
 
     On dit que $B$ est une sous algèbre de $A$ ssi $(B, +, \times, \cdot)$ est une $\K$-algèbre 
     et $1_B = 1_A$, c'est à dire ssi $B$ est un sous-anneau et un sous-ev de $A$.
 \end{definition}
 
-\begin{proposition}{caractérisation des sous-algèbres}{}
+\begin{proposition}{Caractérisation des sous-algèbres}{}
     Soit $(A, +, \times, \cdot)$ une $\K$-algèbre, et $B \subset A$ non vide. 
 
     Alors $B$ est une sous-algèbre de $A$ ssi 
@@ -1580,7 +1580,7 @@ $\displaystyle a^n - b^n = \prod_{k = 0}^{n - 1} (a - b e^{\frac{2i\pi k} n})$
 
 \subsection{Morphismes d'algèbres}
 
-\begin{definition}{morphisme d'algèbres}{}
+\begin{definition}{Morphisme d'algèbres}{}
     Soient $A$ et $B$ deux $\K$-algèbres, et $\varphi : A \to B$.
 
     On dit que $\varphi$ est un morphisme d'algèbres ssi $\varphi$ est un 

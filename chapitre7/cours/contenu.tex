@@ -2,7 +2,7 @@
 \section{Groupes, sous-groupes et morphismes }
 \subsection{Groupe}
 
-\begin{definition}{groupe}{}
+\begin{definition}{Groupe}{}
     \index{Groupe}
     Soit $G$ un ensemble muni d'une loi de composition interne $\ast$. 
     On dit que $(G, \ast)$ est un \emph{groupe} ssi 
@@ -49,13 +49,13 @@
 
 \subsection{Sous-groupes}
 
-\begin{definition}{sous-groupe}{}
+\begin{definition}{Sous-groupe}{}
     \index{Sous-groupe}
     Soit $(G, \ast)$ un groupe et $H \subset G$. On dit que $H$ est un \emph{sous-groupe} de
     $(G, \ast)$ si $(H, \ast)$ est un groupe.
 \end{definition}
 
-\begin{proposition}{caractérisations des sous-groupes}{}
+\begin{proposition}{Caractérisations des sous-groupes}{}
     Soit $(G, \ast)$ un groupe et $H \subset G$. 
     Alors $H$ est un sous-groupe de $(G, \ast)$ ssi :
     \begin{itemize}
@@ -82,7 +82,7 @@
     \end{itemize}
 \end{remarque}
 
-\begin{theoreme}{intersection de sous-groupes}{}
+\begin{theoreme}{Intersection de sous-groupes}{}
     Soit $(G, \ast)$ un groupe. Soit $I \neq \emptyset$ et 
     $(H_i)_{i \in I}$ une famille de sous-groupes de $(G, \ast)$.
     Alors $\displaystyle \bigcap_{i \in I} H_i$ est un sous-groupe de $(G, \ast)$.
@@ -96,7 +96,7 @@
     $G_i$ est un sous-groupe de $(G, \ast)$, donc $x \ast y^{-1} \in H$
 \end{proof}
 
-\begin{proposition}{réunion de deux sous-groupes (LHP)}{}
+\begin{proposition}{Réunion de deux sous-groupes (LHP)}{}
     Soit $(G, \ast)$ un groupe et $G_1, G_2$ deux sous-groupes de $(G, \ast)$.
 
     Alors $G_1 \cup G_2$ est un sous-groupe de $(G, \ast)$ ssi $G_1 \subset G_2$ ou $G_2 \subset G_1$.
@@ -118,7 +118,7 @@
     Donc $G_1 \cup G_2$ pas stable par $\ast$. 
 \end{proof}
 
-\begin{theoreme}{sous-groupes de $(\Z, +)$}{}
+\begin{theoreme}{Sous-groupes de $(\Z, +)$}{}
     Les sous-groupes de $(\Z, +)$ sont les $n\Z$ où $n \in \N^*$.
     
 \end{theoreme}
@@ -162,14 +162,14 @@
 
 \subsection{Morphisme de groupes }
 
-\begin{definition}{morphisme de groupes}{}
+\begin{definition}{Morphisme de groupes}{}
     \index{Morphisme!de groupes}
     Soit $(G, \ast)$ et $(H, \top)$ deux groupes, et $\varphi : G \to H$ une application.
     On dit que $\varphi$ est un \emph{morphisme de groupes} de $(G, \ast)$ dans $(H, \top)$ ssi
     $$\forall x, y \in G, \varphi(x \ast y) = \varphi(x) \top \varphi(y)$$
 \end{definition}
 
-\begin{proposition}{propriétés des morphismes de groupes}{}
+\begin{proposition}{Propriétés des morphismes de groupes}{}
     Soit $\varphi : (G, \ast) \to (H, \top)$ un morphisme de groupes.
     Alors :
     \begin{itemize}
@@ -188,7 +188,7 @@
     la formule de Moivre.
 \end{exemple}
 
-\begin{theoreme}{noyau d'un morphisme de groupes}{}
+\begin{theoreme}{Noyau d'un morphisme de groupes}{}
     Soit $\varphi : (G, \ast) \to (H, \top)$ un morphisme de groupes. 
     Alors $\varphi^{-1}(\{e_H\})$ est un sous-groupe de $(G, \ast)$ appelé noyau de 
     $\varphi$ et noté $\ker \varphi$.
@@ -205,7 +205,7 @@
     \end{array}$$
 \end{exemple}
 
-\begin{theoreme}{injectivité d'un morphisme de groupes avec noyau}{}
+\begin{theoreme}{Injectivité d'un morphisme de groupes avec noyau}{}
     Soit $\varphi : (G, \ast) \to (H, \top)$ un morphisme de groupes.
     Alors $\varphi$ est injective ssi $\ker \varphi = \{e_G\}$.
 \end{theoreme}
@@ -215,20 +215,20 @@
     Il n'y a donc qu'à montrer que $\ker \varphi \subset \{e_G\}$ pour prouver l'injectivité de $\varphi$.
 \end{remarque}
 
-\begin{proposition}{image d'un morphisme de groupes}{}
+\begin{proposition}{Image d'un morphisme de groupes}{}
     Soit $\varphi : (G, \ast) \to (H, \top)$ un morphisme de groupes. Alors l'image directe de 
     $G$ par $\varphi$, est appelée image de $\varphi$ et notée $\im \varphi$. C'est un sous-groupe de $H$.
     $$\im \varphi = \varphi(G) = \{\varphi(x), x \in G\}$$
     
 \end{proposition}
 
-\begin{definition}{isomorphisme de groupes}{}
+\begin{definition}{Isomorphisme de groupes}{}
     \index{Isomorphisme!de groupes}
     Soit $\varphi : G \to H$ un morphisme de groupes. On dit que $\varphi$ est un isomorphisme 
     de groupes ssi $\varphi$ est une bijection. 
 \end{definition}
 
-\begin{theoreme}{nature réciproque isomorphisme de groupes}{}
+\begin{theoreme}{Nature réciproque isomorphisme de groupes}{}
     Soit $\varphi : G \to H$ un isomorphisme de groupes. Alors $\varphi^{-1} : H \to G$ est aussi un isomorphisme de
     groupes.
 \end{theoreme}
@@ -254,7 +254,7 @@
 
 Soit $n \in \N, \, n \geqslant 2$.
 
-\begin{definition}{congruence modulo n}{}
+\begin{definition}{Congruence modulo n}{}
     \index{Congruence}
     On dit que $a$ est congru à $b$ modulo $n$ et on note $a \equiv b [n]$ ssi
     $\exists k \in \Z, b - a = kn$, c'est à dire $n \mid b - a$.    
@@ -281,7 +281,7 @@ Soit $n \in \N, \, n \geqslant 2$.
 
 \end{proof}
 
-\begin{proposition}{reste division euclidienne avec congruences}{}
+\begin{proposition}{Reste division euclidienne avec congruences}{}
     Soit $k \in \Z$, alors $\exists ! x \in \ninter{0}{n-1}$ tel que $k \equiv x [n]$ 
     et $x$ est alors le reste de la division euclidienne de $k$ par $n$.
 \end{proposition}
@@ -303,13 +303,13 @@ Soit $n \in \N, \, n \geqslant 2$.
     Donc $x - r = 0$, donc $x = r$.
 \end{proof}
 
-\begin{definition}{classe d'équivalence modulo n}{}
+\begin{definition}{Classe d'équivalence modulo n}{}
     Pour $k \in \Z$, sa classe d'équivalence pour la relation de congruence modulo $n$ 
     est notée $\operatorname{cl}_n(k) = \hat k$. 
     $$\hat k = \{x \in \Z, x \equiv k [n]\}$$
 \end{definition}
 
-\begin{definition}{groupe Z/nZ}{}
+\begin{definition}{Groupe Z/nZ}{}
     \index{Groupe!Z/nZ}
     L'ensemble des classes d'équivalence pour cette relation est noté $\Z/n\Z$.
     $$\Z/n\Z = \{\hat k, k \in \Z\}$$
@@ -346,7 +346,7 @@ au dessus).}
 
 \subsection{Structure }
 
-\begin{proposition}{loi de composition interne sur Z/nZ}{}
+\begin{proposition}{Loi de composition interne sur Z/nZ}{}
     Soient $c, d \in \Z/n\Z$, et soient $x \in c$ et $y \in d$. 
 
     Alors $e = \widehat{x + y} \in \Z/n \Z$ et la valeur de $e$ ne dépend pas du choix de $x$
@@ -452,7 +452,7 @@ Soit $(G, \ast)$ un groupe et $a \in G$.
     Pour $p, n \in \Z$, $a^{p + n} = a^p \ast a^n$ déjà vu. 
 \end{proof}
 
-\begin{definition}{sous-groupe engendré}{}
+\begin{definition}{Sous-groupe engendré}{}
     \index{Sous-groupe!Engendre par un element@Engendré par un élément}
     Soit $a \in G$. 
     L'image du morphisme $\varphi_a$ est un sous-groupe de $(G, \ast)$ appelé
@@ -675,7 +675,7 @@ de même cardinal que $H$.}
 
 \section{Groupes monogènes et cycliques }
 
-\begin{definition}{groupe monogène et cyclique}{}
+\begin{definition}{Groupe monogène et cyclique}{}
     \index{Groupe!monogène}
     \index{Groupe!cyclique}
     Soit $(G, \ast)$ un groupe. On dit que $G$ est monogène ssi il existe $a \in G$ tel que 
@@ -698,7 +698,7 @@ de même cardinal que $H$.}
     $(\Z / 2 \Z) \times (\Z / 2 \Z)$ n'est pas monogène car tous ses éléments sont d'ordre $2$. 
 \end{exemple}
 
-\begin{theoreme}{isomorphisme des groupes monogènes}{}
+\begin{theoreme}{Isomorphisme des groupes monogènes}{}
     Tout groupe monogène infini est isomorphe à $(\Z, +)$.
 \end{theoreme}
 
@@ -718,7 +718,7 @@ de même cardinal que $H$.}
     Donc $\varphi_a$ est un isomorphisme de groupes.
 \end{proof}
 
-\begin{theoreme}{isomorphisme des groupes cycliques}{}
+\begin{theoreme}{Isomorphisme des groupes cycliques}{}
     Tout groupe cyclique de cardinal $n$ est isomorphe à $(\Z/n\Z, +)$.
 \end{theoreme}
 
@@ -822,7 +822,7 @@ de même cardinal que $H$.}
 
 \section{Sous-groupe engendré par une partie }
 
-\begin{definition}{sous-groupe engendré par une partie}{}
+\begin{definition}{Sous-groupe engendré par une partie}{}
     \index{Sous-groupe!Engendre par une partie@Engendré par une partie}
     Soit $(G, \ast)$ un groupe et $E \subset G$.
 
@@ -839,7 +839,7 @@ de même cardinal que $H$.}
     $\langle \emptyset \rangle = \{e_G\}$ et $\langle G \rangle = G$.
 \end{exemple}
 
-\begin{proposition}{sous-groupe engendré par un singleton}{}
+\begin{proposition}{Sous-groupe engendré par un singleton}{}
     Soit $a \in G, \langle \{a\} \rangle = \langle a \rangle$.
 \end{proposition}
 
@@ -855,7 +855,7 @@ de même cardinal que $H$.}
     Donc $b \in \langle \{a\} \rangle$, donc $\langle a \rangle \subset \langle \{a\} \rangle$.
 \end{proof}
 
-\begin{definition}{partie génératrice d'un groupe}{}
+\begin{definition}{Partie génératrice d'un groupe}{}
     On dit qu'une partie $A$ est génératrice de $(G, \ast)$ ssi $\langle A \rangle = G$.
 \end{definition}
 

@@ -7,7 +7,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
 \section{Dérivation }
 \subsection{Dérivée en un point}
 
-\begin{definition}{dérivable en un point}{}
+\begin{definition}{Dérivable en un point}{}
     Soit $a \in I$ et $f: I \to E$. On dit que $f$ est dérivable en $a$ ssi 
     \[\fonction{\Delta_a}{I \setminus \{a\}}{E}{t}{\frac{f(t) - f(a)}{t-a}}\]
     a une limite $\ell \in E$ en $a$. Cette limite est appelée dérivée (ou vecteur dérivé)
@@ -16,7 +16,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     On a alors : $\displaystyle \frac{f(a + h ) - f(a)}{h} \xrightarrow[h \to 0]{N} f'(a)$.
 \end{definition}
 
-\begin{proposition}{caractérisation de la dérivabilité}{}
+\begin{proposition}{Caractérisation de la dérivabilité}{}
     Soit $a \in I$ et $f: I \to E$. Alors $f$ est dérivable en $a$ ssi il existe $V \in E$
     et $\varepsilon : I \to E$, avec $\varepsilon(t) \xrightarrow[t \to a]{} 0$ telle que
     \[f(t) = f(a) + (t-a)V + (t-a)\varepsilon(t)\]
@@ -50,7 +50,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
 \end{proof}
 
 
-\begin{definition}{interprétation cinématique}{}
+\begin{definition}{Interprétation cinématique}{}
     Soit $f : I \to E$ courbe paramétrée. 
     
     $t$ instant et $f(t)$ posittion d'un point matériel à l'instant 
@@ -62,7 +62,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     $C = \{ f(t), \, t \in I\}$ support de la courbe paramétrée par $f$. 
 \end{definition}
 
-\begin{proposition}{lien avec une base }{}
+\begin{proposition}{Lien avec une base }{}
     Soit $B = (e_1, \ldots, e_n)$ une base de $E$, et soit 
     $\displaystyle \fonction{f}{I}{E}{t}{\sum_{i=1}^n f_i(t)e_i}$, où $f_i : I \to \R$.
 
@@ -80,7 +80,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     $\fonction f \R {\R^3} t {(\cos t, \sin t, t)}$ représente une hélice.
 \end{exemple}
 
-\begin{definition}{dérivabilité à droite et à gauche}{}
+\begin{definition}{Dérivabilité à droite et à gauche}{}
     Soit $f : I \to E$ et $a \in \mathring I$. 
 
     \avspace On définit $\fonction{f_g}{I \cap ]-\infty, a]}{E}{t}{f(t)}$ et 
@@ -98,7 +98,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     (resp. à droite par $\displaystyle f'_d(a) = \lim_{t \to a^+} \frac{f(t) - f(a)}{t-a}$).                                                    
 \end{definition}
 
-\begin{proposition}{dérivabilité en un point avec dérivées à gauche et à droite}{}
+\begin{proposition}{Dérivabilité en un point avec dérivées à gauche et à droite}{}
     $f$ est dérivable en $a$ ssi elle est dérivable à gauche et à droite en $a$ et
     
     $f'_g(a) = f'_d(a)$. 
@@ -108,7 +108,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     Coordonnée par coordonnée.
 \end{proof}
 
-\begin{definition}{point anguleux, LHP}{}
+\begin{definition}{Point anguleux, LHP}{}
     Soit $f : I \to E$, et $a \in \mathring{I }$. 
     On suppose que $f$ est dérivable à gauche et à droite en $a$ et que 
     $f'_g(a) \neq f'_d(a)$.
@@ -118,7 +118,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
 
 \subsection{Dérivabilité sur un intervalle}
 
-\begin{definition}{dérivable sur un intervalle}{}
+\begin{definition}{Dérivable sur un intervalle}{}
     Soit $f : I \to E$. On dit que $f$ est dérivable sur $I$ ssi elle l'est en tout $a \in I$. 
 
     On définit alors sa dérivée $\fonction{f'}{I}{E}{t}{f'(t)}$. 
@@ -126,7 +126,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     L'ensemble des fonctions dérivables de $I$ dans $E$ est noté $\mathscr D(I, E)$.
 \end{definition}
 
-\begin{definition}{fonction de classe $\mathscr C^1$}{}
+\begin{definition}{Fonction de classe $\mathscr C^1$}{}
     On dit que $f : I \to E$ est de classe $\mathscr C^1$ sur $I$ ssi 
     elle y est dérivable et si $f'$ est continue. 
 
@@ -188,7 +188,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     Donc $g \in \mathscr C^1(J, E)$ et $\displaystyle g'(u) = \sum_{i=1}^n \varphi'(u)f_i'(\varphi(u))e_i = \varphi'(u)f'(\varphi(u))$.
 \end{proof}
 
-\begin{theoreme}{composition par une application linéaire}{}
+\begin{theoreme}{Composition par une application linéaire}{}
     Soit $(F, N)$ un espace vectoriel normé de dimension finie, et $f$ dérivable en $a$
     (resp. sur $I$, resp. de classe $\mathscr C^1$ sur $I$) et $u \in \mathscr{L }(E, F)$.
 
@@ -245,7 +245,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     
 \end{exemple}
 
-\begin{theoreme}{composition par une application bilinéaire}{}
+\begin{theoreme}{Composition par une application bilinéaire}{}
     Soient $f : I \to E$, $g : I \to F$ et $B : E \times F \to G$ une application bilinéaire où 
     $(G, N'')$ est un espace vectoriel normé de dimension finie.
 
@@ -297,7 +297,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     $||f||^2 = \langle f, f \rangle$, donc $(||f||^2)' = \langle f', f \rangle + \langle f, f' \rangle = 2 \langle f, f' \rangle$.
 \end{proof}
 
-\begin{theoreme}{généralisation à une application n-linéaire}{}
+\begin{theoreme}{Généralisation à une application n-linéaire}{}
     Soient $(E_1, N_1), \ldots, (E_n, N_n), (F, N')$ des espaces vectoriels normés de dimension finie, et
     $f_i : I \to E_i$, $M : E_1 \times \cdots \times E_n \to F$ une application $n$-linéaire.
 
@@ -326,14 +326,14 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
 
 \subsection{Rappels : prolongement }
 
-\begin{theoreme}{limite de la dérivée}{}
+\begin{theoreme}{Limite de la dérivée}{}
     Soit $f : [a, b] \to \R$ continue sur $[a, b]$ et dérivable sur $]a, b]$. 
 
     Si $f'(t)$ a une limite finie $\ell$ en $a$, alors $f$ est dérivable en $a$ et $f'(a) = \ell$.
 
 \end{theoreme}
 
-\begin{theoreme}{prolongement des fonctions de classe $\mathscr C^1$}{}
+\begin{theoreme}{Prolongement des fonctions de classe $\mathscr C^1$}{}
     Soit $f \in \mathscr C^1(]a, b], \R)$ avec $f$ et $f'$ qui ont des limites finies 
     $\ell_1$ et $\ell_2$ en $a$. 
 
@@ -384,7 +384,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
 
 \subsection{Application de classe \texorpdfstring{$\mathscr C^k$}{Ck}}
 
-\begin{definition}{fonction de classe $\mathscr C^k$}{}
+\begin{definition}{Fonction de classe $\mathscr C^k$}{}
     Soit $f : I \to E$ et $k \in \N, \, k \geqslant 2$. On dit que $f$ est de calasse 
     $\mathscr C^k$ sur $I$ ssi $f, f', \ldots, f^{(k-1)}$ sont dérivables sur $I$ et $f^{(k)}$ est continue sur $I$.
 
@@ -392,7 +392,7 @@ $\K = \R$ ou $\C$, et $E$ est un $\K$-espace vectoriel normé
     $\mathscr C^k$ pour tout $k \in \N$.
 \end{definition}
 
-\begin{proposition}{classe $\mathscr C^k$ avec une base }{}
+\begin{proposition}{Classe $\mathscr C^k$ avec une base }{}
     Soit $B = (e_1, \ldots, e_n)$ une base de $E$, et soit
     $\fonction{f}{I}{E}{t}{\sum_{i=1}^n f_i(t)e_i}$ 
     
@@ -484,7 +484,7 @@ $$\begin{array}{c|c}
 \section{Intégration sur un segment }
 \subsection{Théorème définition }
 
-\begin{theoreme}{intégrale de $f \in \mathscr C^{pm}$ à valeurs dans un evn de dim finie}{}
+\begin{theoreme}{Intégrale de $f \in \mathscr C^{pm}$ à valeurs dans un evn de dim finie}{}
     Soit $f : [a, b] \to E$ et $B = (e_1, \ldots, e_n)$ une base de $E$.
 
     Notons $\displaystyle \forall t \in [a, b], \, f(t) = \sum_{i=1}^n f_i(t)e_i$.
@@ -542,7 +542,7 @@ $$\int_a^b f(t) dt = \int_a^b f = \int_{[a, b]} f \in E$$
 \subsection{Propriétés }
 
 
-\begin{proposition}{linéarité de l'intégrale }{}
+\begin{proposition}{Linéarité de l'intégrale }{}
     L'ensemble $\mathscr C^{pm}([a, b], E)$ est un $\K$-espace vectoriel et 
     $$ \fonction{}{\mathscr C^{pm}([a, b], E)}{E}{f}{\int_a^b f(t) dt}$$ 
     est linéaire. 
@@ -581,7 +581,7 @@ $$\int_a^b f(t) dt = \int_a^b f = \int_{[a, b]} f \in E$$
 \end{proposition}
 
 
-\begin{proposition}{relation de Chasles}{}
+\begin{proposition}{Relation de Chasles}{}
     Soit $f : I \to E$ cpm sur tout segment de $I$. Soient $a, b, c \in I$.
 
     Alors $\displaystyle \int_a^c f(t) dt = \int_a^b f(t) dt + \int_b^c f(t) dt$.
@@ -592,7 +592,7 @@ $$\int_a^b f(t) dt = \int_a^b f = \int_{[a, b]} f \in E$$
     Coordonnée par coordonnée.
 \end{proof}
 
-\begin{theoreme}{composition intégrale par une application linéaire}{}
+\begin{theoreme}{Composition intégrale par une application linéaire}{}
     Soit $f \in \mathscr C^{pm}([a, b], E)$, et soit $F$ un $\K$-evn de dim finie, et 
     $L \in \mathscr L(E, F)$.
 
@@ -629,7 +629,7 @@ $$\int_a^b f(t) dt = \int_a^b f = \int_{[a, b]} f \in E$$
 
 \subsection{Sommes de Riemann}
 
-\begin{definition}{somme de Riemann}{}
+\begin{definition}{Somme de Riemann}{}
     Soit $N \geqslant 2$ et $f \in \mathscr C^{pm}([a, b], E)$.
 
     On appelle somme de Riemann à gauche (resp. à droite) pour $f$ sur $[a, b]$ associée à la 
@@ -664,7 +664,7 @@ $$\int_a^b f(t) dt = \int_a^b f = \int_{[a, b]} f \in E$$
     \end{align*}
 \end{proof}
 
-\begin{theoreme}{inégalité triangulaire pour l'intégrale}{}
+\begin{theoreme}{Inégalité triangulaire pour l'intégrale}{}
     Munisson $E$ d'une norme $||\cdot||$. Soit $f \in \mathscr C^{pm}([a, b], E)$.
     
     Alors $||f|| \in \mathscr C^{pm}([a, b], \R)$ et

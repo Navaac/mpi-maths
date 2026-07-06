@@ -8,7 +8,7 @@ Soit $f : \Omega \to F$ une application et $a \in \Omega$.
 
 \subsection{Dérivées}
 
-\begin{definition}{dérivée selon un vecteur}{}
+\begin{definition}{Dérivée selon un vecteur}{}
     \index{Derivee@Dérivée!selon un vecteur}
     Soit $v \in E \setminus \{0\}$. On dit que $f$ possède en $a$ une dérivée selon le vecteur $v$ ssi 
     \[
@@ -31,7 +31,7 @@ Soit $f : \Omega \to F$ une application et $a \in \Omega$.
 \end{definition}
 
 
-\begin{definition}{dérivée partielle}{}
+\begin{definition}{Dérivée partielle}{}
     \index{Derivee@Dérivée!partielle}
     On fixe $B = (e_1, \ldots, e_p)$ une base de $E$ et on note pour $x \in E$, 
     $$x = \sum_{i=1}^p x_i e_i$$
@@ -128,7 +128,7 @@ Soit $f : \Omega \to F$ une application et $a \in \Omega$.
 
 \subsection{Différentiabilité en un point}
 
-\begin{theoreme}{différentiabilité}{}
+\begin{theoreme}{Différentiabilité}{}
     \index{Differentiabilite@Différentiabilité}
     Soit $f : \Omega \to F$ et $a \in \Omega$. 
 
@@ -168,7 +168,7 @@ Soit $f : \Omega \to F$ une application et $a \in \Omega$.
     $$\fonction{df(a)}{\R}{F}{h}{h f'(a)}$$
 \end{remarque}
 
-\begin{proposition}{différentiabilité et dérivées directionnelles}{}
+\begin{proposition}{Différentiabilité et dérivées directionnelles}{}
     Soit $f : \Omega \to F$ différentiable en $a \in \Omega$. Alors : 
     \begin{itemize}
         \item $f$ est continue en $a$
@@ -356,7 +356,7 @@ Soit $f : \Omega \to F$ une application et $a \in \Omega$.
     Donc $f$ est différentiable en tout $A$ et $df(A)(H) = AH + HA$.
 \end{exemple}
 
-\begin{proposition}{différentiabilité et composée}{}
+\begin{proposition}{Différentiabilité et composée}{}
     Soit $f : \Omega \subset E \to F$, soit $B = (c_1, \ldots, c_n)$ une base de $F$.
 
     Notons pour $x \in \Omega$, $\displaystyle f(x) = \sum_{i = 1 }^{n } f_i(x) c_i$.
@@ -405,7 +405,7 @@ Pour $j \in \ninter  1 p$, sa $j^{\text{ eme}}$ colonne est formée des coordonn
 de $df(a)(e_j)$ dans la base $B'$, et on a 
 $$df(a)(e_j) = \frac{\partial f}{\partial x_j} (a) = \sum_{i = 1 }^{n } \frac{\partial f_i}{\partial x_j} (a)$$
 
-\begin{definition}{matrice jacobienne}{}
+\begin{definition}{Matrice jacobienne}{}
     \index{Matrice Jacobienne}
     La matrice de $df(a)$ dans les bases $B$ et $B'$ est appelée matrice jacobienne de
     $f$ en $a$ dans ces bases, notée $J_{ac_{B, B'}}(f)(a)$ et elle vaut 
@@ -437,7 +437,7 @@ $$df(a)(e_j) = \frac{\partial f}{\partial x_j} (a) = \sum_{i = 1 }^{n } \frac{\p
 Soit $E$ un $\R$-espace vectoriel de dimension $p$ muni d'un produit scalaire et 
 $B = (e_1, \ldots, e_p)$ une base orthonormée de $E$
 
-\begin{definition}{forme linéaire}{}
+\begin{definition}{Forme linéaire}{}
     \index{Forme linéaire}
     Soit $f : \Omega \subset E \to \R$ différentiable en $a \in \Omega$. 
     Alors $df(a) \in \mathscr L(E, \R)$ est une forme linéaire. 
@@ -477,7 +477,7 @@ On note aussi $\nabla f(a) = \overrightarrow{\operatorname{grad}} f(a)$.
 
 Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
 
-\begin{proposition}{coordonnées du gradient dans une base orthonormée}{}
+\begin{proposition}{Coordonnées du gradient dans une base orthonormée}{}
     Soit $B = (e_1, \ldots, e_p)$ une base orthonormée de $E$, $f$ différentiable en $a$, alors 
     le vecteur gradient a pour coordonnées dans la base $B$ :
     $$\nabla f(a) = \begin{pmatrix}
@@ -497,7 +497,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
     Donc par unicité des coordonnées dans une base, on a $g_i = \frac{\partial f}{\partial x_i} (a)$.
 \end{proof}
 
-\begin{proposition}{direction de plus grande croissance}{}
+\begin{proposition}{Direction de plus grande croissance}{}
     Soit $f : \Omega \to \R$ différentiable en $a$ telle que 
     $\grad f(a) \neq \vec 0$. Alors $\grad f(a)$ est colinéaire et de même sens 
     que le vecteur unitaire $v$ pour lequel $D_v f(a)$ est maximum parmi les vecteurs unitaires de $E$.
@@ -521,7 +521,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
 
 \subsection{Différentiabilité sur un ouvert}
 
-\begin{definition}{différentiabilité sur un ouvert}{}
+\begin{definition}{Différentiabilité sur un ouvert}{}
     Soit $f : \Omega \subset E \to F$, on dit que $f$ est différentiable sur 
     $\Omega$ ssi elle est différentiable en tout $a \in \Omega$.
 
@@ -569,7 +569,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
 
 \subsection{Opérations }
 
-\begin{proposition}{linéarité de la différentielle}{}
+\begin{proposition}{Linéarité de la différentielle}{}
     Soient $f, g$ applications différentiables de $\Omega$ dans $F$ et $\alpha, \beta \in \R$.
     Alors $\alpha f + \beta g$ est différentiable sur $\Omega$ et
     $$d(\alpha f + \beta g)(a) = \alpha df(a) + \beta dg(a)$$   
@@ -598,7 +598,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
     $$d(\alpha f + \beta g) = \alpha df + \beta dg$$
 \end{proof}
 
-\begin{proposition}{composition par une application linéaire}{}
+\begin{proposition}{Composition par une application linéaire}{}
     Soit $f : \Omega \to F$, $u \in \mathscr L(F, G)$. Si 
     $f$ est différentiable sur $\Omega$, alors $u \circ f$ aussi et 
     $\forall a \in \Omega$, $d(u \circ f)(a) = u \circ df(a)$.
@@ -612,7 +612,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
     $(u \circ f)(a + h) = u(f(a)) + \underbrace{u(df(a)(h))}_{\in \mathscr L(E, G)} + ||h|| u(\varepsilon_f(h))$
 \end{proof}
 
-\begin{proposition}{composition par une application bilinéaire}{}
+\begin{proposition}{Composition par une application bilinéaire}{}
     Soit $f : \Omega \to F$, $g : \Omega \to G$ différentiables sur $\Omega$ et 
     $B : F \times G \to H$ bilinéaire. Alors $B(f, g)$ est différentiable sur $\Omega$ et 
     $\forall a \in \Omega$,
@@ -656,7 +656,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
     Donc $\varepsilon (h) \xrightarrow[h \to 0 ]{} 0$.
 \end{proof}
 
-\begin{proposition}{différentiabilité des applications multilinéaires}{}
+\begin{proposition}{Différentiabilité des applications multilinéaires}{}
     Soient $f_i : \Omega \to E_i$ pour $i \in \ninter{1}{k}$ applications différentiables sur 
     $\Omega$ et $M : E_1 \times \cdots \times E_k \to F$ une application $k$ linéaire, alors 
     
@@ -672,7 +672,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
     Comme pour le cas bilinéaire. 
 \end{proof}
 
-\begin{proposition}{composition de différentiables}{}
+\begin{proposition}{Composition de différentiables}{}
     Soit $\Omega \subset E$, $f : \Omega \to F$ différentiable sur $\Omega$ et
     $g : f(\Omega) \to G$ différentiable sur $f(\Omega)$. Alors 
     $g \circ f$ est différentiable sur $\Omega$ et
@@ -742,7 +742,7 @@ Ainsi $f(a + h) = f(a) + \langle \nabla f(a), h \rangle + \circ(h)$.
     $$\frac{\partial F}{\partial r } = \cos(\theta) \frac{\partial f }{\partial x }  + \sin(\theta) \frac{\partial f }{\partial y } $$
 \end{exemple}
 
-\begin{proposition}{différentiabilité des composées avec des arcs paramétrés}{}
+\begin{proposition}{Différentiabilité des composées avec des arcs paramétrés}{}
     Soit $f : \Omega \to F$ avec $\Omega \subset E$ et 
     $\gamma : I  \subset \R \to \Omega$ un arc paramétré à valeurs dans $\Omega$.
 
@@ -811,7 +811,7 @@ $df(a)$ de la tangente en $a$.
 
 \section{Applications de classe \texorpdfstring{$\mathscr C^1$}{C1}}
 
-\begin{definition}{classe $\mathscr{C}^1$}{}
+\begin{definition}{Classe $\mathscr{C}^1$}{}
     \index{Classe $\mathscr C^1$}
     Soit $f : \Omega \subset E \to F$ avec $\Omega$ un ouvert de $E$. 
     On dit que $f$ est de classe $\mathscr C^1$ sur $\Omega$ ssi elle est 
@@ -819,7 +819,7 @@ $df(a)$ de la tangente en $a$.
     est continue. 
 \end{definition}
 
-\begin{theoreme}{caractérisation de la classe $\mathscr C^1$}{}
+\begin{theoreme}{Caractérisation de la classe $\mathscr C^1$}{}
     Soit $B = (e_1, \ldots, e_p)$ une base de $E$ et notons $\forall x \in E$, 
     $x = \displaystyle \sum_{i = 1 }^{p } x_i e_i$.
 
@@ -881,7 +881,7 @@ $df(a)$ de la tangente en $a$.
 
 \subsection{Opérations algébriques }
 
-\begin{theoreme}{espace vectoriel de classe $\mathscr C^1$}{}
+\begin{theoreme}{Espace vectoriel de classe $\mathscr C^1$}{}
     Toute combinaison linéaire d'applications de classe $\mathscr C^1$ de $\Omega$ dans $F$
     l'est aussi. L'ensemble des applications de classe $\mathscr C^1$ de $\Omega$ dans $F$ 
     est un $\R$-espace vectoriel noté $\mathscr C^1(\Omega, F)$.
@@ -899,7 +899,7 @@ $df(a)$ de la tangente en $a$.
     est donc continue donc $\alpha f + \beta g \in \mathscr C^1(\Omega, F)$.
 \end{proof}
 
-\begin{proposition}{composition de classe $\mathscr C^1$}{}
+\begin{proposition}{Composition de classe $\mathscr C^1$}{}
     Toute composée d'applications de classe $\mathscr C^1$ est de classe $\mathscr C^1$.
 \end{proposition}
 
@@ -915,7 +915,7 @@ $df(a)$ de la tangente en $a$.
 
 \subsection{Intégration sur un chemin}
 
-\begin{theoreme}{intégration différentielle}{}
+\begin{theoreme}{Intégration différentielle}{}
     Soit $\gamma \in \mathscr C^1([0, 1], \Omega)$ et $f \in \mathscr C^1(\Omega, F)$. 
     Notons $\gamma(0) = a$ et $\gamma(1) = b$. Alors 
     $$f(b) - f(a) = \int_0^1 df(\gamma(t))(\gamma'(t)) dt$$
@@ -1027,7 +1027,7 @@ Alors $df \in \mathscr C(\Omega, \mathscr L(E, \R))$.
     En ce cas on dit que le champ de vecteurs associé à $\omega$ dérive d'un potentiel.
 \end{definition}
 
-\begin{definition}{lacet}{}
+\begin{definition}{Lacet}{}
     \index{Lacet}
     On appelle lacet toute application $\fonction \gamma {[0, 1]}{\Omega} t {x(t), y(t)}$ $\mathscr C^1$ 
     telle que $\gamma(0) = \gamma(1)$.
@@ -1083,7 +1083,7 @@ Alors $df \in \mathscr C(\Omega, \mathscr L(E, \R))$.
 
 \subsection{Exemples}
 
-\begin{proposition}{sous-espace affine}{}
+\begin{proposition}{Sous-espace affine}{}
     \index{Sous-espace affine}
     Soit $a \in E$, $F$ sous-espace vectoriel de $E$ non nul, et 
     $X = a + F = \{a + v, v \in F\}$ sous-espace affine de $E$ passant par $a$ 
@@ -1129,7 +1129,7 @@ Alors $df \in \mathscr C(\Omega, \mathscr L(E, \R))$.
     $\gamma(0) = x $ et $\gamma'(0) = v$ donc $v \in T_xX$.
 \end{proof} 
 
-\begin{proposition}{espace tangent à une sphère}{}
+\begin{proposition}{Espace tangent à une sphère}{}
     Soit $E$ un espace eulidien de dimension $n$ et $\omega \in E$, $R > 0$. 
 
     $$X = S(\omega, R) = \{x \in E, ||x - \omega|| = R\}$$ la sphère de centre $\omega$ et de rayon $R$.
@@ -1203,7 +1203,7 @@ Alors $df \in \mathscr C(\Omega, \mathscr L(E, \R))$.
 \end{proof}
 
 
-\begin{proposition}{espace tangent au graphe d'une fonction}{}
+\begin{proposition}{Espace tangent au graphe d'une fonction}{}
     Soit $\Omega$ un ouvert de $\mathbb{R}^2$, $I$ un intervalle réel, et $f : I \to \mathbb{R}$ une fonction de classe $\mathscr{C}^1$ telle que $\forall t \in I$, $(t, f(t)) \in \Omega$.
     
     On considère le graphe de $f$, noté $X$ :
@@ -1329,7 +1329,7 @@ Sauras-tu la / les trouver ?
 
 \subsection{Vecteurs tangents avec les lignes de niveau}
 
-\begin{theoreme}{ligne de niveau}{}
+\begin{theoreme}{Ligne de niveau}{}
     Soit $\Omega$ un ouvert de $E$ et $g \in \mathscr C^1(\Omega, \R)$. 
     Pour $a \in \mathbb R$ on considère la ligne de niveau de $g$ correspondante 
     $X_a = \{x \in \Omega, \, g(x) = a \} = g^{-1}(\{a\})$.
@@ -1471,7 +1471,7 @@ lignes de niveau. Le taupin avisé se rendra alors compte de son intérêt.
 On se place sur un espace euclidien de dimension $3$, $\,E = \R^3$.
 
 
-\begin{definition}{plan tangent à une surface}{}
+\begin{definition}{Plan tangent à une surface}{}
     \index{Plan tangent}
     Soit $\Omega$ un ouvert de $\R^3$ et $g : \Omega \to \R$ de classe $\mathscr C^1$.
     On pose alors $X = g^{-1}(\{0\})$.
@@ -1672,7 +1672,7 @@ $f(x) = \sum_{i=1}^n f_i(x) c_i$.
 
 \subsection{Dérivée partielles d'ordre \texorpdfstring{$k$}{k}}
 
-\begin{proposition}{dérivées partielles d'ordre k}{}
+\begin{proposition}{Dérivées partielles d'ordre k}{}
     On dit que $f$ admet des dérivées partielles d'ordre $k \geqslant 1$ si pour tous 
     $j_1, \dots, j_k \in \ninter{1}{p}$, les fonctions
     $$\pp{}{x_{j_1}} \left( \cdots \left( \pp{}{x_{j_{k - 1}}} \left( \pp{f}{x_{j_k}} \right) \right) \right)$$
@@ -1683,7 +1683,7 @@ $f(x) = \sum_{i=1}^n f_i(x) c_i$.
     $$\frac{\partial^k f}{\partial x_{j_1} \partial x_{j_2} \cdots \partial x_{j_k}} = \partial_{j_1} \partial_{j_2} \dots \partial_{j_k} f$$
 \end{proposition}
 
-\begin{definition}{classe $\mathscr C^k$}{}
+\begin{definition}{Classe $\mathscr C^k$}{}
     \index{Classe $\mathscr C^k$}
     Soit $f : \Omega \to F$. On dit que $f$ est de classe $\mathscr C^k$ sur $\Omega$ si 
     $f$ admet toutes ses dérivées partielles d'ordre $k$ et que ces fonctions sont continues 
@@ -1714,7 +1714,7 @@ $f(x) = \sum_{i=1}^n f_i(x) c_i$.
 
 \subsection{Théorème de Schwarz}
 
-\begin{theoreme}{de Schwarz}{}
+\begin{theoreme}{De Schwarz}{}
     Soit $f \in \mathscr C^2(\Omega, F)$.
 
     Alors pour tous $i, j \in \ninter{1}{p}$, on a 
@@ -1732,7 +1732,7 @@ $f(x) = \sum_{i=1}^n f_i(x) c_i$.
 
 \subsection{Opérations sur les fonctions de classe \texorpdfstring{$\mc k$}{Ck}}
 
-\begin{proposition}{opérations sur les applications de classe $\mathscr C^k$}{}
+\begin{proposition}{Opérations sur les applications de classe $\mathscr C^k$}{}
     Soient $f, g \in \mathscr C^k(\Omega, F)$ et $\alpha, \beta \in \R$, alors 
     $\alpha f + \beta g \in \mathscr C^k(\Omega, F)$ et pour tous 
     $j_1, \ldots, j_k \in \ninter{1}{p}$, on a :
@@ -1743,7 +1743,7 @@ $f(x) = \sum_{i=1}^n f_i(x) c_i$.
     Non exigible. 
 \end{proof}
 
-\begin{proposition}{composition d'applications de classe $\mathscr C^k$}{}
+\begin{proposition}{Composition d'applications de classe $\mathscr C^k$}{}
     Une composée d'applications de classe $\mathscr C^k$ est de classe $\mathscr C^k$.
 \end{proposition}
 
@@ -1829,7 +1829,7 @@ $f(x) = \sum_{i=1}^n f_i(x) c_i$.
 On appelle EDP (équation aux dérivées partielles) d'ordre $k$ une équation d'inconnue $f \in \mathscr C^k(\Omega, F)$
 faisant intervenir $f$ et certaines de ses dérivées partielles. 
 
-\begin{theoreme}{fonction constante le long des y}{}
+\begin{theoreme}{Fonction constante le long des y}{}
     Soit $\Omega$ un ouvert convexe de $\R^2$ et $f \in \mathscr C^1(\Omega, \R)$.
     Si $\pp f y = 0$ alors en notant $\alpha = \inf \{x \in \R, \exists y \in \R, (x, y) \in \Omega\}$
     et $\beta = \sup \{x \in \R, \exists y \in \R, (x, y) \in \Omega\}$, il existe
@@ -2087,7 +2087,7 @@ $$\Leftrightarrow \forall r, \theta, \, r \pp F r (r, \theta) = r \cos \theta$$
 
 \section{Optimisation }
 
-\begin{definition}{maximums et minimums locaux}{}
+\begin{definition}{Maximums et minimums locaux}{}
     \index{Extremum local}
     Soit $\Omega \subset E$ ouvert, $f : \Omega \to \R$ et $a \in \Omega$.
 
@@ -2097,20 +2097,20 @@ $$\Leftrightarrow \forall r, \theta, \, r \pp F r (r, \theta) = r \cos \theta$$
     Dans ce cas on dira que $f$ possède un extremum local en $a$. 
 \end{definition}
 
-\begin{definition}{maximum et minimum globaux}{}
+\begin{definition}{Maximum et minimum globaux}{}
     \index{Extremum global}
     On dit que $f$ présente un maximum global en $a$ ssi $\forall x \in \Omega$, $f(x) \leqslant f(a)$.
 
     De même pour le minimum global.
 \end{definition}
 
-\begin{definition}{point critique}{}
+\begin{definition}{Point critique}{}
     \index{Point critique}
     Soit $f$ différentiable de $\Omega$ dans $\R$ et $a \in \Omega$. On dit que $a$ est un point critique de $f$ ssi
     $df(a) = 0$ et donc ssi $\grad f(a) = 0$ ssi toutes les dérivées partielles de $f$ en $a$ sont nulles.
 \end{definition}
 
-\begin{theoreme}{condition nécessaire d'optimalité}{}
+\begin{theoreme}{Condition nécessaire d'optimalité}{}
     Soit $f : \Omega \to \mathbb R$ différentiable et $a \in \Omega$. 
 
     Si $f$ présente un extremum local en $a$, alors $a$ est un point critique de $f$.
@@ -2343,7 +2343,7 @@ une altitude constante.}
     Donc $df(\gamma(0))(\gamma'(0)) = 0$ et donc $df(x)(v) = 0$.
 \end{proof}
 
-\begin{theoreme}{d'optimisation sous contrainte}{}
+\begin{theoreme}{D'optimisation sous contrainte}{}
     Soient $f, g \in \mc 1 (\Omega, \R)$ et posons $X = g^{-1}(0)$.
     Soit $x \in X$ tel que $dg(x) \neq 0$. 
 
@@ -2528,7 +2528,7 @@ Donc $y(x - 3) - x(y - 2) = 0$ et donc $y = \frac 2 3 x$.
 
 \subsection{\'Etude au second ordre}
 
-\begin{definition}{matrice hessienne}{}
+\begin{definition}{Matrice hessienne}{}
     \index{Hessienne}
     Soit $\Omega \in \R^p$ et $B = (e_1, \ldots, e_p)$ une base orthonormée de $\R^p$
     telle que $\forall x \in \R^p$, $x = \ds \sum_{j = 1}^{p } x_j e_j$.
@@ -2540,7 +2540,7 @@ Donc $y(x - 3) - x(y - 2) = 0$ et donc $y = \frac 2 3 x$.
     Grâce au théorème de Schwarz, $H_f(x)$ est symétrique.
 \end{definition}
 
-\begin{proposition}{formule de Taylor-Young d'ordre 2}{}
+\begin{proposition}{Formule de Taylor-Young d'ordre 2}{}
     Soit $x \in \Omega$ et $h$ voisin de $0$ tel que $x + h \in \Omega$. Alors 
     $$f(x + h) = f(x) + \langle \grad f(x), h \rangle + \frac 1 2 \langle H_f(x) h, h \rangle + ||h||^2 \varepsilon(h) $$
 \end{proposition}
@@ -2553,7 +2553,7 @@ Donc $y(x - 3) - x(y - 2) = 0$ et donc $y = \frac 2 3 x$.
     Non exigible. 
 \end{proof}
 
-\begin{definition}{positivité et définie positivité d'une matrice symétrique}{}
+\begin{definition}{Positivité et définie positivité d'une matrice symétrique}{}
     \index{Matrice!symétrique!positive}
     \index{Matrice!symétrique!definie positive@définie positive}
     Soit $S \in S_n(\R)$ matrice symétrique réelle. 
@@ -2563,7 +2563,7 @@ Donc $y(x - 3) - x(y - 2) = 0$ et donc $y = \frac 2 3 x$.
     \end{itemize}
 \end{definition}
 
-\begin{theoreme}{condition nécessaire d'extremum local au second ordre}{}
+\begin{theoreme}{Condition nécessaire d'extremum local au second ordre}{}
     Soit $f \in \mc 2 (\Omega, \R)$ et $x \in \Omega$. Si $f$ possède un minimum local
     (resp max local) en $x$ alors : 
     \begin{itemize}
@@ -2595,7 +2595,7 @@ Donc $y(x - 3) - x(y - 2) = 0$ et donc $y = \frac 2 3 x$.
     Donc $f$ n'a pas de minimum local en $x$ (resp maximum local).
 \end{proof}
 
-\begin{theoreme}{condition suffisante d'extremum local au second ordre}{}
+\begin{theoreme}{Condition suffisante d'extremum local au second ordre}{}
     Soit $f \in \mc 2 (\Omega, \R)$ et $x \in \Omega$. Si 
     \begin{itemize}
         \item $\grad f(x) = 0$
@@ -2642,7 +2642,7 @@ Donc $y(x - 3) - x(y - 2) = 0$ et donc $y = \frac 2 3 x$.
     Donc on a un min local strict en $x$.
 \end{proof}
 
-\begin{proposition}{cas particulier $p=2$}{}
+\begin{proposition}{Cas particulier $p=2$}{}
     Soit $f : \Omega \to \R$ avec $\Omega \subset \R^2$ et 
     $a = \begin{pmatrix}
         x \\

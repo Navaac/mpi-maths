@@ -2,7 +2,7 @@ Soit $\K$ un sous-corps de $\C$ et $E$ un $\K$-espace vectoriel.
  
 \section{Sous-espaces stables}
 
-\begin{definition}{endomorphisme induit}{}
+\begin{definition}{Endomorphisme induit}{}
     \index{Endomorphisme!induit}
     Soit $u \in \mathscr L(E)$ et $F$ un sous-espace vectoriel de $E$. On dit que 
     $F$ est stable par $u$ ssi $\forall x \in F, u(x) \in F$.
@@ -13,7 +13,7 @@ Soit $\K$ un sous-corps de $\C$ et $E$ un $\K$-espace vectoriel.
 
 \subsection{Cas de la dimension finie}
 
-\begin{proposition}{supplémentaire et base adaptée}{}
+\begin{proposition}{Supplémentaire et base adaptée}{}
     \index{Supplementaire@Supplémentaire}
     \index{Base adaptée}
     Soit $E$ un $\K$-espace vectoriel de dimension finie $n$, $F$ un sous-espace vectoriel de $E$
@@ -25,7 +25,7 @@ Soit $\K$ un sous-corps de $\C$ et $E$ un $\K$-espace vectoriel.
 
 \end{proposition}
 
-\begin{proposition}{caractérisation matricielle de la stabilité}{}
+\begin{proposition}{Caractérisation matricielle de la stabilité}{}
     En reprenant les notations précédentes, soit $u \in \mathscr L(E)$ et $A = M_B(u) \in \mathscr M_n(\K)$. 
     Alors $F$ est stable par $u$ ssi 
     $\exists A' \in \mathscr M_{p}(\K), C \in \mathscr M_{p, n - p}(\K)$ et $D \in \mathscr M_{n - p}(\K)$ tels que
@@ -62,13 +62,13 @@ Soit $\K$ un sous-corps de $\C$ et $E$ un $\K$-espace vectoriel.
 
 Soit $E$ un $\K$-espace vectoriel non nul et $u \in \mathscr L(E)$.
 
-\begin{definition}{valeur propre}{}
+\begin{definition}{Valeur propre}{}
     \index{Valeur propre!d'un endomorphisme}
     Soit $\lambda \in \K$. On dit que $\lambda$ est une valeur propre de $u$ ssi
     $\exists x \in E$ tel que $\begin{cases} x \neq 0 \\ u(x) = \lambda x \end{cases}$.
 \end{definition}
 
-\begin{definition}{vecteur propre}{}
+\begin{definition}{Vecteur propre}{}
     \index{Vecteur propre!d'un endomorphisme}
     Soit $x \in E$. On dit que $x$ est un vecteur propre de $u$ ssi
     $\exists \lambda \in \K$ tel que $\begin{cases} x \neq 0 \\ u(x) = \lambda x \end{cases}$.
@@ -83,7 +83,7 @@ Soit $E$ un $\K$-espace vectoriel non nul et $u \in \mathscr L(E)$.
     car $2x$ l'est aussi par exemple.
 \end{remarque}
 
-\begin{definition}{espace propre}{}
+\begin{definition}{Espace propre}{}
     \index{Espace propre!d'un endomorphisme}
     Soit $\lambda \in \K$ une valeur propre de $u$. On appelle \emph{espace propre} 
     associé l'espace vectoriel 
@@ -98,13 +98,13 @@ Soit $E$ un $\K$-espace vectoriel non nul et $u \in \mathscr L(E)$.
     Si $\lambda$ n'est pas une valeur propre de $u$, alors $E_\lambda(u) = \{0\}$.
 \end{remarque}
 
-\begin{definition}{spectre}{}
+\begin{definition}{Spectre}{}
     \index{Spectre!d'un endomorphisme}
     Si $E$ est de dimension finie, l'ensemble des valeurs propres de $u$ est appelé spectre de $u$ 
     et noté $\Sp(u)$.
 \end{definition}
 
-\begin{definition}{équation aux éléments propres}{}
+\begin{definition}{Équation aux éléments propres}{}
     \index{Equation aux elements propres@\'Equation aux éléments propres!d'un endomorphisme}
     Soit $u \in \mathscr L(E)$. On appelle \emph{équation aux éléments propres} de $u$
     l'équation \\ 
@@ -232,7 +232,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \subsection{Droites stables }
 
-\begin{proposition}{droite stable et vecteur propre}{}
+\begin{proposition}{Droite stable et vecteur propre}{}
     Soit $u \in \mathscr L(E)$, $a \in E \setminus \{0\}$ et $D = \Vect(a)$ une droite de $E$. 
 
     Alors $D$ est stable par $u$ ssi $a$ est vecteur propre de $u$.
@@ -301,7 +301,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     Pour $\alpha \in \C$ notons $\fonction{f_\alpha}{\R}{\C}{x}{e^{\alpha x}}$.
 \end{exemple}
 
-\begin{theoreme}{somme de sous-espaces propres}{}
+\begin{theoreme}{Somme de sous-espaces propres}{}
     Une somme de sous-espaces propres associés à des valeurs propres deux à deux distinctes 
     d'un même endomorphisme est directe. 
 \end{theoreme}
@@ -325,7 +325,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     Donc $\forall i \in \ninter 1 k, x_i = 0$ et la somme est directe.
 \end{proof}
 
-\begin{theoreme}{nombre de valeurs propres d'un endomorphisme}{}
+\begin{theoreme}{Nombre de valeurs propres d'un endomorphisme}{}
     Soit $E$ un $\K$-espace vectoriel de dimension finie $n$ et soit $u \in \mathscr L(E)$.
 
     Alors $u$ possède au plus $n$ valeurs propres c'est-à-dire que $\Sp(u)$ est fini et 
@@ -351,7 +351,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \subsection{Stabilité de sous-espaces }
 
-\begin{proposition}{commutation et stabilité des sous-espaces propres}{}
+\begin{proposition}{Commutation et stabilité des sous-espaces propres}{}
     Soient $u, v \in \mathscr L(E)$ tel que $u \circ v = v \circ u$.
 
     Alors tout sous-espace propre de $u$ est stable par $v$.
@@ -375,7 +375,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     Donc $v(x) \in F$.
 \end{proof}
 
-\begin{proposition}{commutation et stabilité du noyau et de l'image}{}
+\begin{proposition}{Commutation et stabilité du noyau et de l'image}{}
     Soient $u, v \in \mathscr L(E)$ tel que $u \circ v = v \circ u$. Alors $\Ker(u)$ et
     $\im(u)$ sont stables par $v$.
 \end{proposition}
@@ -387,7 +387,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     $v(y) = v(u(x)) = u(v(x)) \in \im(u)$ donc $\im(u)$ est stable par $v$.
 \end{proof}
 
-\begin{proposition}{cas des sous-espaces propres}{}
+\begin{proposition}{Cas des sous-espaces propres}{}
     Soit $u \in \mathscr L(E)$ et $\lambda \in \K$ une valeur propre de $u$. 
     Alors l'espace propre $E_\lambda(u)$ est stable par $u$ et l'endomorphisme induit par $u$ 
     sur $E_\lambda(u)$ est l'homothétie de rapport $\lambda$.
@@ -405,21 +405,21 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     $$\fonction{u_A}{\K^n = \mathscr M_{n, 1}(\K)}{\K^n}{X}{AX}$$
 \end{definition}
 
-\begin{definition}{valeur propre d'une matrice}{}
+\begin{definition}{Valeur propre d'une matrice}{}
     \index{Valeur propre!d'une matrice}
     Soit $\lambda \in \K$. On dit que $\lambda$ est une valeur propre de $A$ ssi
     c'est une valeur propre de l'endomorphisme $u_A$, c'est à dire s'il existe 
     $X \in \K^n \setminus \{0\}$ tel que $AX = \lambda X$.
 \end{definition}
 
-\begin{definition}{vecteur propre d'une matrice}{}
+\begin{definition}{Vecteur propre d'une matrice}{}
     \index{Vecteur propre!d'une matrice}
     Soit $X \in \K^n$. On dit que $X$ est un vecteur propre de $A$ ssi
     c'est un vecteur propre de l'endomorphisme $u_A$, c'est à dire s'il existe 
     $\lambda \in \K$ tel que $AX = \lambda X$ et $X \neq 0$.
 \end{definition}
 
-\begin{definition}{espace propre d'une matrice}{}
+\begin{definition}{Espace propre d'une matrice}{}
     \index{Espace propre!d'une matrice}
     Soit $\lambda \in \K$ une valeur propre de $A$. On appelle \emph{espace propre} 
     associé l'espace vectoriel 
@@ -429,14 +429,14 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     \end{align}
 \end{definition}
 
-\begin{definition}{spectre d'une matrice}{}
+\begin{definition}{Spectre d'une matrice}{}
     \index{Spectre!d'une matrice}
     L'ensemble des valeurs propres de $A$ est appelé spectre de $A$ 
     et noté $\Sp(A)$.
     
 \end{definition}
 
-\begin{definition}{équation aux éléments propres d'une matrice}{}
+\begin{definition}{Équation aux éléments propres d'une matrice}{}
     \index{Equation aux elements propres@\'Equation aux éléments propres!d'une matrice}
     On appelle \emph{équation aux éléments propres} pour $A$ l'équation 
     $$AX = \lambda X$$
@@ -466,7 +466,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 \end{propositionnt}
 
 
-\begin{proposition}{matrices semblables et spectre}{}
+\begin{proposition}{Matrices semblables et spectre}{}
     Deux matrices semblables ont le même spectre.
 \end{proposition}
 
@@ -484,7 +484,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     Par ce qui précède, $A$ et $A'$ ont le même spectre.
 \end{proof}
 
-\begin{proposition}{spectre selon un sous-corps}{}
+\begin{proposition}{Spectre selon un sous-corps}{}
     Soit $\K \subset \K'$ sous-corps de $\K'$. 
     Soit $A \in \mathscr M_n(\K)$. Alors on peut voir $A$ comme une matrice de 
     $\mathscr M_n(\K')$ et les endomorphismes 
@@ -516,7 +516,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 \section{Polynôme caractéristique }
 \subsection{Polynôme caractéristique d'une matrice carrée}
 
-\begin{definition}{polynôme caractéristique d'une matrice}{}
+\begin{definition}{Polynôme caractéristique d'une matrice}{}
     \index{Polynôme caractéristique!d'une matrice}
     Soit $A \in \mathscr M_n (\K)$. On définit son polynôme caractéristique par : 
     \[
@@ -528,7 +528,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     On utilisera donc l'abus de notation $\chi_A(X) = \det (X I_n - A)$.
 \end{definition}
 
-\begin{theoreme}{propriétés du polynôme caractéristique}{}
+\begin{theoreme}{Propriétés du polynôme caractéristique}{}
     Soit $A \in \mathscr M_n (\K)$, alors $\deg \chi_A = n$, $\chi_A$ est unitaire et en notant $\displaystyle \chi_A = \sum_{k = 0 }^{n } a_kX^k$ on a : 
 
     \begin{itemize}
@@ -593,7 +593,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     \end{vmatrix} = \prod_{i = 1 }^{ n } (X - a_{i, i})$$
 \end{proof}
 
-\begin{definition}{matrice compagnon, HP}{}
+\begin{definition}{Matrice compagnon, HP}{}
     Soit $P$ polynôme unitaire de degré $n$. Notons 
     $\displaystyle P = X^n - \sum_{k = 0 }^{n - 1} a_k X^k$.
 
@@ -663,7 +663,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \subsection{Polynôme caractéristique d'un endomorphisme}
 
-\begin{theoreme}{polynôme caractéristique d'un endomorphisme}{}
+\begin{theoreme}{Polynôme caractéristique d'un endomorphisme}{}
     \index{Polynôme caractéristique!d'un endomorphisme}
     Soit $E$ un $\K$-espace vectoriel de dimension finie $n$ et $u \in \mathscr L(E)$.
 
@@ -708,7 +708,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \subsection{Lien avec les valeurs propres }
 
-\begin{theoreme}{valeurs propres et polynôme caractéristique}{}
+\begin{theoreme}{Valeurs propres et polynôme caractéristique}{}
     Les valeurs propres d'un endomorphisme en dimension finie (respectivement d'une matrice carrée) 
     sont les racines de son polynôme caractéristique.
 \end{theoreme}
@@ -825,7 +825,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     \end{align}
 \end{proof}
 
-\begin{definition}{multiplicité d'une valeur propre}{}
+\begin{definition}{Multiplicité d'une valeur propre}{}
     \index{Multiplicité!d'une valeur propre}
     Soit $u \in \mathscr L(E)$ et $\lambda \in \Sp(u)$,
     alors $\lambda $ est racine de $\chi_u$.
@@ -905,7 +905,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 \end{exemple}
 
 
-\begin{proposition}{polynôme caractéristique scindé}{}
+\begin{proposition}{Polynôme caractéristique scindé}{}
     Comme $\K \subset \C$, on pourra toujours se ramener au cas de $\chi_A$ complexe, en 
     considérant les valeurs propres complexes.
 
@@ -987,7 +987,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \section{Endomorphismes et matrices carrées diagonalisables}
 
-\begin{definition}{endomorphisme diagonalisable}{}
+\begin{definition}{Endomorphisme diagonalisable}{}
     \index{Endomorphisme!diagonalisable}
     Soit $u \in \mathscr L(E)$ où $E$ est de dimension finie. On dit que $u$ est diagonalisable ssi il existe 
     $B$ une base de $E$ telle que $M_B(u)$ est une matrice diagonale ssi il existe 
@@ -1024,7 +1024,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \subsection{Caractérisation}
 
-\begin{theoreme}{caractérisation d'un endomorphisme diagonalisable}{}
+\begin{theoreme}{Caractérisation d'un endomorphisme diagonalisable}{}
     Soit $u \in \mathscr L(E)$ et $\Sp(u) = \{\lambda_1, \ldots, \lambda_p\}$.
 
     Alors $u$ est diagonalisable ssi $E$ est la somme des sous-espaces propres de $u$ :
@@ -1063,7 +1063,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 \end{proof}
 
 
-\begin{theoreme}{caractérisation par les multiplicités}{}
+\begin{theoreme}{Caractérisation par les multiplicités}{}
     Soit $u \in \mathscr L(E)$ tel que $\Sp(u) = \{\lambda_1, \ldots, \lambda_p\}$.
 
     $u$ est diagonalisable ssi $\chi_u$ est scindé et $\forall \lambda \in \Sp(u), \, m_\lambda = \dim E_\lambda(u)$.
@@ -1086,7 +1086,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 \end{proof}
 
 
-\begin{proposition}{diagonalisabilité et polynôme caractéristique}{}
+\begin{proposition}{Diagonalisabilité et polynôme caractéristique}{}
     Soit $u \in \mathscr L(E)$. Si $\chi_u$ est scindé à racines simples, alors $u$ est diagonalisable.
 \end{proposition}
 
@@ -1101,13 +1101,13 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \subsection{Diagonalisation d'une matrice carrée }
 
-\begin{definition}{matrice diagonalisable}{}
+\begin{definition}{Matrice diagonalisable}{}
     \index{Matrice!diagonalisable}
     Soit $A \in \mathscr M_n(\K)$. On dit que $A$ est diagonalisable ssi $A$ est semblable à une matrice diagonale
     ssi $\exists P \in GL_n(\K), \, \exists D \in \mathscr M_n(\K)$ diagonale, telle que $A = P D P^{-1}$.
 \end{definition}
 
-\begin{proposition}{lien diagonalisabilité matrice et endomorphisme}{}
+\begin{proposition}{Lien diagonalisabilité matrice et endomorphisme}{}
     Soit $u \in \mathscr L(E)$, $B$ base de $E$ et $A = M_B(u)$. Alors $u$ est diagonalisable ssi $A$ est diagonalisable.
 \end{proposition}
 
@@ -1116,7 +1116,7 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
     ssi $\exists P \in GL_n(\K)$ telle que $A = P D P^{-1}$ ($P$ matrice de passage de $B$ à $B'$).
 \end{proof}
 
-\begin{theoreme}{théorème spectral}{}
+\begin{theoreme}{Théorème spectral}{}
     Toute matrice symétrique réelle $A$ est diagonalisable avec matrice de passage $P$ orthogonale
     c'est à dire telle que $P^{-1} = P^\top$.    
 \end{theoreme}
@@ -1184,12 +1184,12 @@ Un endomorphisme peut avoir une infinité de valeurs propres :
 
 \subsection{Applications }
 
-\begin{proposition}{puissance d'une matrice diagonalisable}{}
+\begin{proposition}{Puissance d'une matrice diagonalisable}{}
     Soit $A \in \mathscr M_n(\K)$ diagonalisable. Notons $A = PDP^{-1}$ avec $P \in GL_n(\K)$ et $D$ diagonale.
     Alors par récurrence, $$\forall k \in \N, \, A^k = P D^k P^{-1}$$
 \end{proposition}
 
-\begin{proposition}{suites récurrentes et matrices}{}
+\begin{proposition}{Suites récurrentes et matrices}{}
     Soient $(u_n)_{n \in \N}, (v_n)_{n \in \N}$ et $(w_n)_{n \in \N}$ définies par leur 
     premier terme et une relation de récurrence du type 
     $$\forall n \in \N : \begin{cases}
@@ -1389,7 +1389,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 \section{Endomorphismes et matrices carrées trigonalisables}
 \subsection{Définitions}
 
-\begin{definition}{endomorphisme trigonalisable}{}
+\begin{definition}{Endomorphisme trigonalisable}{}
     \index{Endomorphisme!trigonalisable}
     Un endomorphisme d'un $\K$-espace vectoriel est dit trigonalisble ssi il existe 
     $B$ une base de $E$ dans laquelle sa matrice est triangulaire supérieure.
@@ -1414,12 +1414,12 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     On dit (HP) que $(F_1, \dots, F_n)$ forment un drapeau complet de sous-espaces vectoriels stables par $u$.
 \end{propositionnt}
 
-\begin{definition}{matrice trigonalisable}{}
+\begin{definition}{Matrice trigonalisable}{}
     \index{Matrice!trigonalisable}
     Une matrice carrée est trigonalisable ssi elle est semblable à une matrice triangulaire supérieure.
 \end{definition}
 
-\begin{proposition}{lien trigonalisabilité matrice et endomorphisme}{}
+\begin{proposition}{Lien trigonalisabilité matrice et endomorphisme}{}
     Soit $u \in \mathscr L(E)$, $B$ une base de $E$, et $A = M_B(u)$.
 
     Alors $u$ est trigonalisable ssi $A$ est trigonalisable.
@@ -1561,7 +1561,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 
 \subsection{Trace et déterminant }
 
-\begin{proposition}{trace et déterminant d'un endomorphisme trigonalisable}{}
+\begin{proposition}{Trace et déterminant d'un endomorphisme trigonalisable}{}
     Soit $u \in \mathscr L(E)$ (resp $A \in \mathscr M_n(\K)$) tel que $\chi_u$ (resp $\chi_A$) soit scindé, 
     c'est-à-dire que $u$ (resp $A$) est trigonalisable.
 
@@ -1675,7 +1675,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 \section{Polynômes d'endomorphismes et de matrices carrées}
 \subsection{Morphisme d'algèbre }
 
-\begin{theoreme}{morphisme d'algèbre polynôme}{}
+\begin{theoreme}{Morphisme d'algèbre polynôme}{}
     Soit $E$ un $\K$-espace vectoriel, $u \in \mathscr L(E)$ et 
     $P = \displaystyle \sum_{k = 0 }^{ N } a_k X^k \in \K[X]$.
 
@@ -1761,7 +1761,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 
 \subsection{Polynôme minimal }
 
-\begin{theoreme}{polynôme minimal d'endomorphismes}{}
+\begin{theoreme}{Polynôme minimal d'endomorphismes}{}
     \index{Polynôme!minimal}
     Soit $E$ un $\K$-espace vectoriel de dimension finie et $u \in \mathscr L(E)$.\\
     Alors $\ker \varphi_u  = \{P \in \K[X], P(u) = 0\} \neq \{0\}$ donc il existe un unique 
@@ -1789,7 +1789,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     $\K[X]$ est un anneau principal, donc $\ker \varphi_u$ est engendré par un unique polynôme unitaire
 \end{proof}
 
-\begin{theoreme}{polynôme minimal matriciel}{}
+\begin{theoreme}{Polynôme minimal matriciel}{}
     Soit $E$ un $\K$-espace vectoriel de dimension finie et $A \in \mathscr M_n(\K)$. \\
     Alors $\ker \varphi_A = \{P \in \K[X], P(A) = 0\} \neq \{0\}$ donc il existe un unique
     polynôme unitaire appelé polynôme minimal de $A$ et noté $\mu_A$ tel que
@@ -1801,7 +1801,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     Identique à la preuve précédente.
 \end{proof}
 
-\begin{theoreme}{lien polynôme minimal endomorphisme et matrice}{}
+\begin{theoreme}{Lien polynôme minimal endomorphisme et matrice}{}
     Soit $E$ un $\K$-espace vectoriel de dimension finie, $u \in \mathscr L(E)$, $B$ une base de $E$ et $A = M_B(u)$.
     Alors $\mu_u = \mu_A$.
 \end{theoreme}
@@ -1930,7 +1930,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 
 \subsection{Lien avec le polynôme caractéristique}
 
-\begin{proposition}{polynôme minimal et polynôme caractéristique}{}
+\begin{proposition}{Polynôme minimal et polynôme caractéristique}{}
     Soient $E$ un $\K$-espace vectoriel, $u \in \mathscr L(E)$, $x \in E$ et 
     $\lambda \in \K$. Supposons que $u(x) = \lambda x$. Alors $(P(u))(x) = P(\lambda)\cdot x$.
 \end{proposition}
@@ -1947,7 +1947,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     Alors $(P(u))(x) = \sum_{k = 0 }^{ N } a_k u^k(x) = \sum_{k = 0 }^{ N } a_k \lambda^k x = P(\lambda) \cdot x$.
 \end{proof}
 
-\begin{proposition}{polynôme minimal et valeurs propres}{}
+\begin{proposition}{Polynôme minimal et valeurs propres}{}
     Soit $P \in \K[X], \, u \in \mathscr L(E)$. Si $P$ annule $u$, alors toute valeur propre de 
     $u$ est racine de $P$.
 \end{proposition}
@@ -1966,7 +1966,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     $p$ qui sont $0$ et $1$ sont bien racines de $P$.
 \end{exemple}
 
-\begin{proposition}{polynôme minimal et valeurs propres}{}
+\begin{proposition}{Polynôme minimal et valeurs propres}{}
     Soit $E$ un $\K$-espace vectoriel de dimension finie, et $u \in \mathscr L(E)$ de polynôme minimal $\mu_u$.
 
     Alors les racines de $\mu_u$ dans $\K$ sont les valeurs propres de $u$.
@@ -2140,7 +2140,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     $$E = \bigoplus_{i = 1 }^{ k } \ker P_i(u)$$
 \end{corollaire}
 
-\begin{theoreme}{caractérisation de la diagonalisabilité}{}
+\begin{theoreme}{Caractérisation de la diagonalisabilité}{}
     Soit $E$ un $\K$-espace vectoriel de dimension finie et $u \in \mathscr L(E)$. 
     Alors les assertions suivantes sont équivalentes :
     \begin{enumerate}
@@ -2210,7 +2210,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     $\mu_A = X^2 (X - 7)$.
 \end{exemple}
 
-\begin{proposition}{polynôme minimal et sous-espace stable}{}
+\begin{proposition}{Polynôme minimal et sous-espace stable}{}
     Soit $u \in \mathscr L(E)$ avec $E$ un $\K$-espace vectoriel de dimension finie. 
 
     Soit $F$ sous-espace vectoriel de $E$ stable par $u$, et $\tilde u$ l'endomorphisme induit. 
@@ -2262,7 +2262,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
     $B = B_1 \cup \dots \cup B_p$ base de $E$ donc $M_B(u)$ et $M_B(v)$ sont diagonales.
 \end{proof}
 
-\begin{theoreme}{caractérisation de la trigonalisabilité}{}
+\begin{theoreme}{Caractérisation de la trigonalisabilité}{}
     Soit $u \in \mathscr L(E)$, alors les assertions suivantes sont équivalentes :  
     \begin{enumerate}
         \item $u$ est trigonalisable
@@ -2290,7 +2290,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 
 \subsection{Nilpotence}
 
-\begin{definition}{endomorphisme et matrice nilpotent}{}
+\begin{definition}{Endomorphisme et matrice nilpotent}{}
     \index{Endomorphisme!nilpotent}
     \index{Matrice!nilpotente}
     Soit $E$ un $\K$-espace vectoriel de dimension finie et $u \in \mathscr L(E)$. 
@@ -2303,7 +2303,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 \end{definition}
 
 
-\begin{proposition}{polynôme minimal et nilpotence}{}
+\begin{proposition}{Polynôme minimal et nilpotence}{}
     Soit $u \in \mathscr L(E)$, alors $u$ est nilpotent d'ordre $k$ ssi $\mu_u = X^k$.
     De même pour les matrices.
 \end{proposition}
@@ -2393,7 +2393,7 @@ On cherche $B$ avec des coefficients dans $\mathscr C(A)$.
 
 Dans toute cette partie, on suppose que le polynôme caractéristique est scindé.
 
-\begin{definition}{sous-espace caractéristique}{}
+\begin{definition}{Sous-espace caractéristique}{}
     \index{Sous-espace!caractéristique}
     Soit $u \in \mathscr L(E)$, $\K$-espace vectoriel de dimension finie. Supposons
     que $\chi_u$ est scindé, $\displaystyle \chi_u = \prod_{i = 1 }^{ p } (X - \lambda_i)^{m_i}$.
@@ -2407,7 +2407,7 @@ Dans toute cette partie, on suppose que le polynôme caractéristique est scind�
     On a en particulier $E_{\lambda_i}(u) \subset C_{\lambda_i} $
 \end{definition}
 
-\begin{theoreme}{somme directe des sous-espaces caractéristiques}{}
+\begin{theoreme}{Somme directe des sous-espaces caractéristiques}{}
     Soit $u \in \mathscr L(E)$ tel que $\chi_u$ est scindé. Notons 
     $\chi_u = \displaystyle \prod_{i = 1 }^{ p } (X - \lambda_i)^{m_i}$ avec 
     $\lambda_1, \ldots, \lambda_p$ valeurs propres distinctes de $u$
@@ -2677,7 +2677,7 @@ $n_0 \circ d = d \circ n_0$.
 
 
 
-\begin{theoreme}{décomposition de Dunford}{}
+\begin{theoreme}{Décomposition de Dunford}{}
     Pour $u \in \mathscr L(E)$ tel que $\chi_u$ scindé, alors il existe des endomorphismes 
     $d, n_0 \in \mathscr L(E)$ uniques tels que 
     \begin{itemize}

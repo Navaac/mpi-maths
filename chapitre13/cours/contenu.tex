@@ -26,7 +26,7 @@ Soit $\Omega$ un ensemble non vide appelé univers.
 
 \subsection{Tribu }
 
-\begin{definition}{tribu}{}
+\begin{definition}{Tribu}{}
     Soit $\mathcal A \subset \mathscr P(\Omega)$. On dit que $\mathcal A$ est une tribu (ou une $\sigma$-algèbre)
     ssi 
     \begin{enumerate}
@@ -97,7 +97,7 @@ n'a aucun sens (à montrer à Quibel un jour).
 
 \subsection{Probabilité}
 
-\begin{definition}{espace probabilisé}{}
+\begin{definition}{Espace probabilisé}{}
     Soit $(\Omega, \mathcal A)$ un espace probabilisable. On appelle probabilité 
     sur cet espace toute application $\fonction{P}{\mathcal A}{[0, 1]}{A}{P(A)}$
     vérifiant :
@@ -111,7 +111,7 @@ n'a aucun sens (à montrer à Quibel un jour).
     On dit alors que $(\Omega, \mathcal A, P)$ est un espace probabilisé. 
 \end{definition}
 
-\begin{proposition}{propriétés des probabilités}{}
+\begin{proposition}{Propriétés des probabilités}{}
     \begin{itemize}
         \item $P(\emptyset) = 0$
         \item Si $A, B \in \mathcal A$, $P(\bar A) = 1 - P(A)$
@@ -147,7 +147,7 @@ n'a aucun sens (à montrer à Quibel un jour).
 
 \subsubsection{Exemple fondamental : espaces probabilisés discrets }
 
-\begin{definition}{espace probabilisé discret}{}
+\begin{definition}{Espace probabilisé discret}{}
     Soit $\Omega$ un ensemble non vide. On appelle distribution de probabilités 
     discrète sur $\Omega$ toute famille de $\R^+$ indexée par $\Omega$, sommable 
     et de somme égale à 1.     
@@ -157,7 +157,7 @@ n'a aucun sens (à montrer à Quibel un jour).
     $$ \sum_{\omega \in \Omega } p_\omega = 1$$
 \end{definition}
 
-\begin{proposition}{support d'une distribution de probas discrète}{}
+\begin{proposition}{Support d'une distribution de probas discrète}{}
     Une distribution de probas discrète $(p_\omega)_{\omega \in \Omega}$
     est de support au plus dénombrable, c'est-à-dire que 
     $\{\omega \in \Omega \mid p_\omega \neq 0 \}$ est au plus dénombrable.
@@ -167,7 +167,7 @@ n'a aucun sens (à montrer à Quibel un jour).
     Le support d'une famille sommable est au plus dénombrable.
 \end{proof}
 
-\begin{theoreme}{espace probabilisé discret}{}
+\begin{theoreme}{Espace probabilisé discret}{}
     Soit $\Omega \neq \emptyset$ et $(p_\omega)_{\omega \in \Omega}$ une distribution de probabilités discrète
     sur $\Omega$. En posant $\mathcal A = \mathscr P(\Omega)$ et
     $\fonction{P}{\mathscr P(\Omega)}{[0, 1]}{A}{P(A) = \sum_{\omega \in A} p_\omega }$
@@ -251,7 +251,7 @@ n'a aucun sens (à montrer à Quibel un jour).
 
 Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
-\begin{theoreme}{continuité croissante}{}
+\begin{theoreme}{Continuité croissante}{}
     Soit $(A_n)_{n \in \N}$ une suite croissante d'évènements, c'est à dire telle que $\forall n \in \N$, 
     $A_n \subset A_{n+1}$. Alors $$P(A_n) \xrightarrow[n \to + \infty]{} P\left( \bigcup_{n \in \N} A_n \right)$$
 \end{theoreme}
@@ -293,7 +293,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     avec $\displaystyle A = \bigcup_{k \in \N} A_k = \bigcup_{k \in \N} c_k$.
 \end{proof}
 
-\begin{theoreme}{continuité décroissante}{}
+\begin{theoreme}{Continuité décroissante}{}
     Soit $(B_n)_{n \in \N}$ une suite décroissante d'évènements c'est à dire telle que $\forall n \in \N, \, B_{n + 1} \subset B_n$.
     Alors $$\displaystyle P(B_n) \xrightarrow[n \to + \infty]{} P\left( \bigcap_{n \in \N} B_n \right)$$
 \end{theoreme}
@@ -351,7 +351,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Evènements négligeables et presque sûrs }
 
-\begin{definition}{évènements presque sûrs et négligeables}{}
+\begin{definition}{Évènements presque sûrs et négligeables}{}
     Soit $A \in \mathcal A$. On dit que $A$ est un évènement négligeable ssi $P(A) = 0$.
 
     On dit que $A$ est un évènement presque sûr ssi $P(A) = 1$.
@@ -385,7 +385,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \end{proof}
 
-\begin{definition}{système quasi-complet d'évènements}{}
+\begin{definition}{Système quasi-complet d'évènements}{}
     Soit $(A_n)_{n \in I}$ une famille d'évènements avec $I$ au plus dénombrable. On dit que cette famille
     finie est un système quasi-complet d'évènements ssi 
     \begin{itemize}
@@ -400,7 +400,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
 
-\begin{theoreme}{probabilité conditionnelle}{}
+\begin{theoreme}{Probabilité conditionnelle}{}
     Soit $B \in \mathcal A$ tel que $P(B) \neq 0$. Pour $A \in \mathcal A$, on pose 
     $$P_B(A) = P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
 
@@ -429,7 +429,7 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
 
 \subsection{Formule des probabilités somposées }
 
-\begin{theoreme}{formule des probabilités composées}{}
+\begin{theoreme}{Formule des probabilités composées}{}
     Soient $A_1, \dots, A_n \in \mathcal A$ tel que $P(A_1 \cap \dots \cap A_{n - 1}) \neq 0$,
     alors $$P(A_1 \cap \dots A_n) = P(A_1) \cdot P(A_2 \mid A_1) \cdot P(A_3 \mid A_1 \cap A_2) \cdots P(A_n \mid A_1 \cap \dots \cap A_{n - 1})$$
 \end{theoreme}
@@ -440,7 +440,7 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
 
 \subsection{Formules des probabilités totales }
 
-\begin{theoreme}{formule des probabilités totales}{}
+\begin{theoreme}{Formule des probabilités totales}{}
     Soit $I$ un ensemble au plus dénombrable et $(A_n)_{n \in I}$ un système quasi-complet d'évènements.
     Soit $B \in \mathcal A$, alors 
     $$P(B) = \sum_{n \in I} P(B \cap A_n)$$
@@ -467,7 +467,7 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
 
 \subsection{Formule de Bayes}
 
-\begin{theoreme}{formule de Bayes}{}
+\begin{theoreme}{Formule de Bayes}{}
     Soient $A, B \in \mathcal A$ tels que $P(A) \neq 0$ et $P(B) \neq 0$.
     Alors 
     $$ P(A \mid B) = \frac{P(A) \cdot P(B \mid A)}{P(B)} $$
@@ -484,12 +484,12 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
 \end{corollaire}
 
 \subsection{Evènements indépendants}
-\begin{definition}{indépendance}{}
+\begin{definition}{Indépendance}{}
     Soient $A, B \in \mathcal A$. On dit que $A$ et $B$ sont indépendants ssi 
     $$ P(A \cap B) = P(A) \cdot P(B) $$
 \end{definition}
 
-\begin{proposition}{caractérisation de l'indépendance}{}
+\begin{proposition}{Caractérisation de l'indépendance}{}
     Soient $A, B \in \mathcal A$ tels que $P(B) \neq 0$. 
 
     Alors $A$ et $B$ sont indépendants ssi $P(A \mid B) = P(A)$.
@@ -503,7 +503,7 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
     $ \frac{P(A \cap B)  }{P(B) } = P(A) $ donc $P(A \cap B) = P(A) \cdot P(B)$
 \end{proof}
 
-\begin{proposition}{indépendance avec le contraire}{}
+\begin{proposition}{Indépendance avec le contraire}{}
     Si $A$ et $B$ sont indépendants, alors $A$ et $\overline B$ sont indépendants. 
 \end{proposition}
 
@@ -517,7 +517,7 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
     donc $P(A \cap \bar B) = P(A) - P(A \cap B) = P(A) - P(A) \cdot P(B) = P(A) \cdot (1 - P(B)) = P(A) \cdot P(\bar B)$
 \end{proof}
 
-\begin{definition}{indépendance mutuelle}{}
+\begin{definition}{Indépendance mutuelle}{}
     Soit $I$ un ensemble non vide, et soit $(A_i)_{i \in I}$ une famille d'évènements.
 
     On dit que ces évènements sont mutuellement indépendants ssi pour tout
@@ -529,7 +529,7 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
     $A_{j_1}$ et $A_{j_2}$ sont indépendants. Les évènements sont donc deux à deux indépendants.
 \end{definition}
 
-\begin{proposition}{lien indépendance mutuelle et deux à deux}{}
+\begin{proposition}{Lien indépendance mutuelle et deux à deux}{}
     L'indépendance d'évènements deux à deux n'implique pas l'indépendance mutuelle.
 \end{proposition}
 
@@ -566,7 +566,7 @@ Soit $(\Omega, \mathcal A , P)$ un espace probabilisé.
 
 Soit $(\Omega, \mathcal A, P)$ un espace probabilisé et $E \neq \emptyset$. 
 
-\begin{definition}{variable aléatoire discrète}{}
+\begin{definition}{Variable aléatoire discrète}{}
     On appelle variable aléatoire discrète sur $(\Omega, \mathcal A, P)$ à valeurs dans $E$
     toute application $\fonction{X}{\Omega}{E}{\omega}{X(\omega)}$ telle que 
     \begin{itemize}
@@ -602,14 +602,14 @@ est une tribu, donc $\displaystyle \bigsqcup_{i \in I} X^{-1}(\{x_i\}) \in \math
 Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, X(\omega = x_i)\} = \{\omega \in \Omega, X(\omega) \in A\}$
 
 
-\begin{definition}{évènements associés à une variable aléatoire}{}
+\begin{definition}{Évènements associés à une variable aléatoire}{}
     On notera alors $(X \in A) = X^{-1}(A) = \{\omega \in \Omega, X(\omega) \in A\}$ et donc 
 
     $$\displaystyle (X \in A) = \bigsqcup_{i \in I} (X = x_i)$$
     
 \end{definition}
 
-\begin{definition}{notations pour les variables aléatoires réelles}{}
+\begin{definition}{Notations pour les variables aléatoires réelles}{}
     Soit $\fonction{X}{\Omega}{\R}{\omega}{X(\omega)}$ une variable aléatoire réelle discrète.
 
     Alors pour tout $a \in \R$, on utilise les notations suivantes : 
@@ -627,7 +627,7 @@ Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, 
 
 \subsection{Loi d'une variable aléatoire discrète }
 
-\begin{theoreme}{loi d'une variable aléatoire discrète}{}
+\begin{theoreme}{Loi d'une variable aléatoire discrète}{}
     Soit $X : \Omega \to E$ une variable aléatoire discrète. On considère l'espace probabilisable 
     $(X(\Omega), \mathscr P(X(\Omega)))$, et la fonction 
     $$\fonction{P_X}{\mathscr P(X(\Omega))}{[0, 1]}{A}{P(X^{-1}(A)) = P(X \in A)}$$
@@ -672,7 +672,7 @@ Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, 
 
 \end{proof}
 
-\begin{definition}{égalité de lois}{}
+\begin{definition}{Égalité de lois}{}
     Soit $X$ variable aléatoire discrète définie sur $(\Omega, \mathcal A, P)$, $Y$ variable aléatoire discrète définie 
     sur $(\Omega', \mathcal A', P')$ à valeurs dans $E$.
 
@@ -683,7 +683,7 @@ Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, 
 
 \subsection{Composition}
 
-\begin{theoreme}{composition de variables aléatoires discrètes}{}
+\begin{theoreme}{Composition de variables aléatoires discrètes}{}
     Soit $F$ un ensemble non vide, $f : E \to F$ et $X : \Omega \to E$ une variable aléatoire discrète, 
     alors la composée $f \circ X : \Omega \to F$ est une variable aléatoire discrète notée $f(X)$.
 \end{theoreme}
@@ -720,7 +720,7 @@ Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, 
 
 \subsection{Variables aléatoires indépendantes }
 
-\begin{definition}{indépendance de variables aléatoires discrètes}{}
+\begin{definition}{Indépendance de variables aléatoires discrètes}{}
     Soit $I \neq \emptyset$, et soit $(X_n)_{n \in I}$ des variables aléatoires discrètes. 
 
     On dit que ces variables aléatoires discrètes sont mutuellement indépendantes
@@ -732,7 +732,7 @@ Or $\bigsqcup_{i \in I} X^{-1}(\{x_i\}) = \{\omega \in \Omega, \exists i \in I, 
 \end{definition}
 
 
-\begin{proposition}{indépendance des évènements associés}{}
+\begin{proposition}{Indépendance des évènements associés}{}
     Soient $(X_n)_{n \in I}$ des variables aléatoires discrètes mutuellement indépendantes et 
     $(A_n)_{n \in I}$ une famille de parties des $X_n(\Omega)$. 
 
@@ -755,7 +755,7 @@ Preuve inutile
     \end{align}
 \end{proof}
 
-\begin{theoreme}{existence de suites de variables aléatoires indépendantes}{}
+\begin{theoreme}{Existence de suites de variables aléatoires indépendantes}{}
     Soit $(L_i)_{i \in \N}$ une suite de lois de variables aléatoires discrètes. Alors il existe 
     $(\Omega, \mathcal A, P)$ un espace probabilisé et $(X_i)_{i \in \N}$ une suite de variables aléatoires discrètes mutuellement indépendantes
     sur $\Omega$ telles que $\forall i \in \N, \, X_i \sim L_i$. 
@@ -772,7 +772,7 @@ Preuve inutile
 
 \subsection{Lois usuelles}
 
-\begin{definition}{loi uniforme}{}
+\begin{definition}{Loi uniforme}{}
     Soit $n \geqslant 1$ et $E$ un ensemble fini de cardinal $n$. Une variable aléatoire $X$ suit la 
     loi uniforme sur $E$ ssi 
     \begin{itemize}
@@ -784,7 +784,7 @@ Preuve inutile
 \end{definition}
 
 
-\begin{definition}{loi de Bernoulli}{}
+\begin{definition}{Loi de Bernoulli}{}
     Soit $p \in ]0, 1[$. Une variable aléatoire discrète suit la loi de Bernoulli de paramètre 
     $p$ ssi 
     \begin{itemize}
@@ -795,7 +795,7 @@ Preuve inutile
     On note alors $X \sim \mathcal B(p)$.
 \end{definition}
 
-\begin{definition}{loi binomiale}{}
+\begin{definition}{Loi binomiale}{}
     Soit $p \in ]0, 1[$ et $n \geqslant 1$. Une variable aléatoire suit la loi binomiale de 
     paramètres $n$ et $p$ ssi 
     \begin{itemize}
@@ -810,7 +810,7 @@ Preuve inutile
     alors $\displaystyle X = \sum_{i = 1 }^{ n } X_i$ suit la loi $\mathcal B(n, p)$.
 \end{remarque}
 
-\begin{definition}{loi géométrique}{}
+\begin{definition}{Loi géométrique}{}
     Soit $p \in ]0, 1[$. Une variable aléatoire $X$ suit la loi géométrique de paramètre $p$ ssi 
     \begin{itemize}
         \item $X(\Omega) = \N^*$
@@ -853,7 +853,7 @@ Donc $X \sim \mathcal G(p)$.
 La loi géométrique est appelée loi du premier succès car elle modélise le nombre d'essais nécessaires pour obtenir le premier succès
 dans une suite d'expériences de Bernoulli indépendantes.
 
-\begin{definition}{loi de poisson }{}
+\begin{definition}{Loi de poisson }{}
     Soit $\lambda > 0$. On dit qu'une variable aléatoire discrète $X$ suit la loi de 
     Poisson de paramètre $\lambda$ ssi 
     \begin{itemize}
@@ -898,7 +898,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Loi conditionnelle}
 
-\begin{definition}{loi conditionnelle}{}
+\begin{definition}{Loi conditionnelle}{}
     Soit $X$ une variable aléatoire discrète et $A \in \mathcal A$ un évènement tel que $P(A) \neq 0$.
 
     On définit la loi conditionnelle de $X$ sachant $A$ par $\forall x \in X(\Omega)$,
@@ -907,7 +907,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Couples de variables aléatoires discrètes }
 
-\begin{theoreme}{couple de variables aléatoires discrètes}{}
+\begin{theoreme}{Couple de variables aléatoires discrètes}{}
     Soient $X$ et $Y$ deux variables aléatoires discrètes sur $(\Omega, \mathcal A, P)$, on définit 
     leur couple $(X, Y)$ par l'application 
     $$\fonction{(X, Y)}{\Omega}{X(\Omega) \times Y(\Omega)}{\omega}{(X(\omega), Y(\omega))}$$
@@ -936,14 +936,14 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     la composée de deux variables aléatoires discrètes, et donc en est une. 
 \end{corollaire}
 
-\begin{definition}{lois conjointes et lois marginales}{}
+\begin{definition}{Lois conjointes et lois marginales}{}
     Soient $X, Y$ deux variables aléatoires discrètes sur $(\Omega, \mathcal A, P)$.
     La loi de la variable aléatoire discrète $(X, Y)$ est appelée loi conjointe. 
 
     Les lois de $X$ et $Y$ sont appelées lois marginales.
 \end{definition}
 
-\begin{proposition}{lois marginales à partir de la loi conjointe}{}
+\begin{proposition}{Lois marginales à partir de la loi conjointe}{}
     On peut calculer les lois marginales à partir de la loi conjointe : en effet, si 
     $x \in X(\Omega)$, 
     \begin{align}
@@ -998,7 +998,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \end{exemple}
 
-\begin{definition}{indépendance de variables aléatoires discrètes}{}
+\begin{definition}{Indépendance de variables aléatoires discrètes}{}
     Deux variables aléatoires discrètes $(X, Y)$ sont indépendantes ssi 
     $\forall (x, y) \in X(\Omega) \times Y(\Omega), \, P((X, Y) = (x, y)) = P(X = x) \cdot P(Y = y)$.
 
@@ -1010,7 +1010,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     $P((X \in A) \cap (Y \in B)) = P(X \in A) \cdot P(Y \in B)$.
 \end{corollaire}
 
-\begin{proposition}{indépendance par composition}{}
+\begin{proposition}{Indépendance par composition}{}
     Soit $X$ une variable aléatoire discrète à valeurs dans $E$, et 
     $Y$ une variable aléatoire discrète à valeurs dans $F$. 
 
@@ -1032,7 +1032,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Extension aux familles de n variables }
 
-\begin{proposition}{n-uplet de variables aléatoires discrètes}{}
+\begin{proposition}{N-uplet de variables aléatoires discrètes}{}
     Soient $(X_1, \dots, X_n)$ des variables aléatoires discrètes sur 
     $(\Omega, \mathcal A, P)$. On définit leur $n$-uplet 
     $\fonction{(X_1, \dots, X_n)}{\Omega}{X_1(\Omega) \times \cdots \times X_n(\Omega)}{\omega}{(X_1(\omega), \dots, X_n(\omega))}$.
@@ -1046,7 +1046,7 @@ Les résultats du 2) se généralisent à ce cas.
 
 \subsection{Lemme des coalitions} 
 
-\begin{theoreme}{lemme des coalitions}{}
+\begin{theoreme}{Lemme des coalitions}{}
     Soient $X_1, \dots, X_n$ des variables aléatoires discrètes indépendantes. 
     Soit $m \in \ninter{1}{n - 1}$, et $f : X_1(\Omega) \times \cdots \times X_m(\Omega) \to E$,
     $g : X_{m + 1}(\Omega) \times \cdots \times X_n(\Omega) \to F$.
@@ -1070,7 +1070,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Variables aléatoires à valeurs positives}
 
-\begin{definition}{espérance d'une variable aléatoire positive}{}
+\begin{definition}{Espérance d'une variable aléatoire positive}{}
     Soit $X$ une variable aléatoire discrète à valeurs dans $\R^+ \cup \{+\infty\}$.
 
     L'espérance de $X$ est définie comme étant la somme dans $[0, + \infty]$ 
@@ -1091,7 +1091,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     Cette somme a bien un sens, car la famille est composée de réels positifs.
 \end{remarque}
 
-\begin{proposition}{espérance vad sur N }{}
+\begin{proposition}{Espérance vad sur N }{}
     Soit $X$ une variable aléatoire discrète à valeurs dans $\N \cup \{+\infty\}$. Alors
     $$ E(X) = \sum_{n = 1}^{+ \infty} P(X \geqslant n) $$
 \end{proposition}
@@ -1117,7 +1117,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \end{proof}
 
-\begin{proposition}{espérance loi uniforme}{}
+\begin{proposition}{Espérance loi uniforme}{}
     Soient $a, b \in \N$ et $X \sim \mathcal U(\ninter{a}{b})$. Alors
     $$ E(X) = \frac{a + b}{2} $$
 \end{proposition}
@@ -1139,7 +1139,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \end{proof}
 
-\begin{proposition}{espérance loi de Bernoulli}{}
+\begin{proposition}{Espérance loi de Bernoulli}{}
     Soit $p \in ]0, 1[$ et $X \sim \mathcal B(p)$. Alors 
     $$ E(X) = p $$
 \end{proposition}
@@ -1149,7 +1149,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     Donc $E(X) = 0 \cdot P(X = 0) + 1 \cdot P(X = 1) = p$.
 \end{proof}
 
-\begin{proposition}{espérance loi binomiale}{}
+\begin{proposition}{Espérance loi binomiale}{}
     Soit $n \geqslant 1$ et $p \in ]0, 1[$, et $X \sim \mathcal B(n, p)$. Alors 
     $$ E(X) = n p $$
 \end{proposition}
@@ -1176,7 +1176,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
         
 \end{proof}
 
-\begin{proposition}{espérance loi géométrique}{}
+\begin{proposition}{Espérance loi géométrique}{}
     Soit $p \in ]0, 1[$ et $X \sim \mathcal G(p)$. Alors 
     $$ E(X) = \frac 1 p $$
 \end{proposition}
@@ -1195,7 +1195,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \end{proof}
 
-\begin{proposition}{espérance loi de Poisson}{}
+\begin{proposition}{Espérance loi de Poisson}{}
     Soit $\lambda > 0$ et $X \sim \mathcal P(\lambda)$. Alors 
     $$ E(X) = \lambda $$
 \end{proposition}
@@ -1212,7 +1212,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Variables aléatoires discrètes à valeurs complexes}
 
-\begin{definition}{espérance d'une variable aléatoire discrète complexe}{}
+\begin{definition}{Espérance d'une variable aléatoire discrète complexe}{}
     Une variable aléatoire discrète dans $\C$ est dite d'espérance finie ssi 
     $(x(P(X = x)))_{x \in X(\Omega)}$ est sommable dans $\C$. On définit alors 
     son espérance par 
@@ -1224,14 +1224,14 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     $\displaystyle \sum_{x \in X(\Omega)} |x| P(X = x) < + \infty   $.
 \end{definition}
 
-\begin{definition}{variables centrées}{}
+\begin{definition}{Variables centrées}{}
     Soit $X \in L^1$. On dit que $X$ est centrée ssi 
     $$ E(X) = 0 $$    
 \end{definition}
 
 \subsection{Formule de transfert}
 
-\begin{theoreme}{formule de transfert}{}
+\begin{theoreme}{Formule de transfert}{}
     Soit $X$ une variable aléatoire discrète, et soit $f : X(\Omega) \to \C$.
     Alors $f \circ X$ que l'on note $f(X)$ est une variable aléatoire discrète complexe. 
 
@@ -1271,7 +1271,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Propriétés de l'espérance}
 
-\begin{proposition}{espace vectoriel et linéarité}{}
+\begin{proposition}{Espace vectoriel et linéarité}{}
     $L^1$ est un $\C$-espace vectoriel, et l'espérance est linéaire, c'est à dire si 
     $X, Y \in L^1$, et $\alpha, \beta \in \C$, alors
     $$ E(\alpha X + \beta Y) = \alpha E(X) + \beta E(Y) $$
@@ -1326,7 +1326,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 
 
-\begin{proposition}{positivité de l'espérance}{}
+\begin{proposition}{Positivité de l'espérance}{}
     Soit $X \in L^1$ telle que $X \geqslant 0$, alors $E(X) \geqslant 0$.    
 \end{proposition}
 
@@ -1336,7 +1336,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     Donc $E(X)$ est somme de réels positifs, donc $E(X) \geqslant 0$.
 \end{proof}
 
-\begin{proposition}{croissance de l'espérance}{}
+\begin{proposition}{Croissance de l'espérance}{}
     Soient $X, Y \in L^1$ telles que $X \leqslant Y$, alors 
     $$ E(X) \leqslant E(Y) $$
     
@@ -1353,7 +1353,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     $E(Y) - E(X) \geqslant 0$, donc $E(X) \leqslant E(Y)$.
 \end{proof}
 
-\begin{proposition}{inégalité triangulaire de l'espérance}{}
+\begin{proposition}{Inégalité triangulaire de l'espérance}{}
     Soit $X \in L^1$, alors $|X| \in L^1$ et
     $$ |E(X)| \leqslant E(|X|) $$
     
@@ -1378,7 +1378,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     \end{align} 
 \end{proof}
 
-\begin{proposition}{critère de nullité espérance}{}
+\begin{proposition}{Critère de nullité espérance}{}
     Soit $X \in L^1$ telle que $X \geqslant 0$. Alors 
     $$ E(X) = 0 \iff P(X = 0) = 1 $$
     
@@ -1397,7 +1397,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     Or $\displaystyle 1 = \sum_{x \in X(\Omega)} P(X = x)$ donc $P(X = 0) = 1$.
 \end{proof}
 
-\begin{proposition}{majoration et vad dans $L^1$}{}
+\begin{proposition}{Majoration et vad dans $L^1$}{}
     Soit $X, Y$ deux variables aléatoires discrètes complexes. Si 
     $|X| \leqslant Y$ et $Y \in L^1$, alors $X \in L^1$.
 \end{proposition}
@@ -1415,7 +1415,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Cas des variables aléatoires indépendantes }
 
-\begin{theoreme}{espérance du produit de variables indépendantes}{}
+\begin{theoreme}{Espérance du produit de variables indépendantes}{}
     Soient $X, Y \in L^1$ telles que $X \sqcup Y$. Alors 
     $XY \in L^1$ et $E(XY) = E(X) E(Y)$.
 \end{theoreme}
@@ -1475,7 +1475,7 @@ considérées dans ce paragraphe sont réelles.
 
 \subsection{Variables aléatoires possédant un moment d'ordre 2 }
 
-\begin{definition}{moment d'ordre 2}{}
+\begin{definition}{Moment d'ordre 2}{}
     Soit $X$ une variable aléatoire discrète réelle. 
 
     On dit que $X$ possède un moment d'ordre 2 ssi $X^2 \in L^1$, c'est à dire que
@@ -1487,7 +1487,7 @@ considérées dans ce paragraphe sont réelles.
 
 
 
-\begin{proposition}{relation entre L2 et L1}{}
+\begin{proposition}{Relation entre L2 et L1}{}
     Soit $X$ une variable aléatoire discrète réelle possédant un moment d'ordre $2$, 
     alors $X$ est d'espérance finie, c'est à dire $L^2 \subset L^1$.
 \end{proposition}
@@ -1503,7 +1503,7 @@ considérées dans ce paragraphe sont réelles.
     Donc $X \in L^1$. 
 \end{proof}
 
-\begin{proposition}{nature de L2}{}
+\begin{proposition}{Nature de L2}{}
     $L^2$ est un $\R$-espace vectoriel. 
 \end{proposition}
 
@@ -1532,7 +1532,7 @@ considérées dans ce paragraphe sont réelles.
 
 \subsection{Inégalité de Cauchy-Schwarz }
 
-\begin{theoreme}{inégalité de Cauchy-Schwarz}{}
+\begin{theoreme}{Inégalité de Cauchy-Schwarz}{}
     Soient $X, Y \in L^2$, alors $XY \in L^1$ et
     $$ (E(XY))^2 \leqslant E(X^2) E(Y^2) $$
 \end{theoreme}
@@ -1568,7 +1568,7 @@ considérées dans ce paragraphe sont réelles.
     L'inégalité devient $0 \leqslant 0$, ce qui est toujours vérifié.
 \end{proof}
 
-\begin{proposition}{cas d'égalité de Cauchy-Schwarz}{}
+\begin{proposition}{Cas d'égalité de Cauchy-Schwarz}{}
     Soient $X, Y \in L^2$, alors $E(XY)^2 = E(X^2) E(Y^2)$ ssi 
     $\begin{cases}
         P(X = 0) = 1 \\
@@ -1590,7 +1590,7 @@ considérées dans ce paragraphe sont réelles.
 
 \subsection{Variance et écart type }
 
-\begin{definition}{variance et écart type}{}
+\begin{definition}{Variance et écart type}{}
     Soit $X \in L^2$. On définit la variance de $X$ par : 
     $$V(X) = E\left( (X - E(X))^2 \right) $$
 
@@ -1600,7 +1600,7 @@ considérées dans ce paragraphe sont réelles.
     On dit que $X$ est réduite ssi $\sigma(X) = 1$. 
 \end{definition}
 
-\begin{proposition}{critère de nullité de la variance}{}
+\begin{proposition}{Critère de nullité de la variance}{}
     Soit $X \in L^2$, alors $V(X) = 0$ ssi 
     $\exists a \in \R$, $P(X = a) = 1$.
 \end{proposition}
@@ -1615,7 +1615,7 @@ considérées dans ce paragraphe sont réelles.
     $E((X - a)^2) = 0$ or $(X - a)^2 \geqslant 0$, donc $P((X - a)^2 = 0) = 1$.
 \end{proof}
 
-\begin{proposition}{affine de la variance}{}
+\begin{proposition}{Affine de la variance}{}
     Soit $X \in L^2$, $a, b \in \R$. Alors $V(a X + b) = a^2 V(X)$ et 
     $\sigma(a X + b) = |a| \sigma(X)$.
 \end{proposition}
@@ -1639,7 +1639,7 @@ considérées dans ce paragraphe sont réelles.
     $\sigma(Y) = \frac{\sigma(X)}{\sigma(X)} = 1$.
 \end{proof}
 
-\begin{proposition}{formule de König - Huygens}{}
+\begin{proposition}{Formule de König - Huygens}{}
     Soit $X \in L^2$, alors
     $$ V(X) = E(X^2) - (E(X))^2 $$
 \end{proposition}
@@ -1655,7 +1655,7 @@ considérées dans ce paragraphe sont réelles.
 
 \subsubsection{Variance des lois classiques }
 
-\begin{proposition}{variance loi de Bernoulli}{}
+\begin{proposition}{Variance loi de Bernoulli}{}
     Soit $p \in ]0, 1[$ et $X \sim \mathcal B(p)$. Alors 
     $$ V(X) = p(1 - p) $$
 \end{proposition}
@@ -1669,7 +1669,7 @@ considérées dans ce paragraphe sont réelles.
 \end{proof}
 
 
-\begin{proposition}{variance loi binomiale}{}
+\begin{proposition}{Variance loi binomiale}{}
     Soit $n \geqslant 1$ et $p \in ]0, 1[$, et $X \sim \mathcal B(n, p)$. Alors 
     $$ V(X) = n p (1 - p) $$
 \end{proposition}
@@ -1700,7 +1700,7 @@ considérées dans ce paragraphe sont réelles.
     \end{align}
 \end{proof}
 
-\begin{proposition}{variance loi géométrique}{}
+\begin{proposition}{Variance loi géométrique}{}
     Soit $p \in ]0, 1[$ et $X \sim \mathcal G(p)$. Alors 
     $$ V(X) = \frac{1 - p}{p^2} $$
 \end{proposition}
@@ -1728,7 +1728,7 @@ considérées dans ce paragraphe sont réelles.
     \end{align}
 \end{proof}
 
-\begin{proposition}{variance et espérance loi de Poisson}{}
+\begin{proposition}{Variance et espérance loi de Poisson}{}
     Soit $\lambda > 0$ et $X \sim \mathcal P(\lambda)$. Alors 
     $$ V(X) = \lambda $$
 \end{proposition}
@@ -1750,14 +1750,14 @@ considérées dans ce paragraphe sont réelles.
 
 \subsection{Covariance }
 
-\begin{definition}{covariance}{}
+\begin{definition}{Covariance}{}
     Soient $X, Y \in L^2$. On définit leur covariance par : 
     $$ \cov(X, Y) = E\left( (X - E(X))(Y - E(Y)) \right) $$
 
     En particulier, $\cov(X, X) = V(X)$.
 \end{definition}
 
-\begin{proposition}{formule de la covariance}{}
+\begin{proposition}{Formule de la covariance}{}
     Soient $X, Y \in L^2$. Alors 
     $$ \cov(X, Y) = E(XY) - E(X) E(Y) $$
 \end{proposition}
@@ -1771,13 +1771,13 @@ considérées dans ce paragraphe sont réelles.
     \end{align}
 \end{proof}
 
-\begin{definition}{décorrélation}{}
+\begin{definition}{Décorrélation}{}
     Soient $X, Y \in L^2$. On dit que $X$ et $Y$ sont \textbf{décorellées} ssi 
     $$ \cov(X, Y) = 0 $$
     c'est à dire ssi $E(XY) = E(X) E(Y)$.
 \end{definition}
 
-\begin{proposition}{indépendance et décorellation}{}
+\begin{proposition}{Indépendance et décorellation}{}
     Si $X$ et $Y$ sont indépendantes, alors elles sont décorellées, donc $\cov(X, Y) = 0$.
 \end{proposition}
 
@@ -1785,7 +1785,7 @@ considérées dans ce paragraphe sont réelles.
     La réciproque est fausse. 
 \end{remarque}
 
-\begin{theoreme}{variance de la somme de variables}{}
+\begin{theoreme}{Variance de la somme de variables}{}
     Soient $(X_i)_{1 \leqslant i \leqslant n}$ suite de $L^2$. Alors 
     $$ V\left( \sum_{i = 1}^n X_i \right) = \sum_{i = 1}^n V(X_i) + 2 \sum_{1 \leqslant i < j \leqslant n} \cov(X_i, X_j) $$
 \end{theoreme}
@@ -1806,7 +1806,7 @@ considérées dans ce paragraphe sont réelles.
 \section{Inégalités probabilistes }
 \subsection{Inégalité de Markov}
 
-\begin{proposition}{inégalité de Markov}{}
+\begin{proposition}{Inégalité de Markov}{}
     Soit $X \in L^1$ et $a > 0$, alors 
     $$ P(|X| \geqslant a) \leqslant \frac{E(|X|)}{a} $$
 \end{proposition}
@@ -1822,7 +1822,7 @@ considérées dans ce paragraphe sont réelles.
 
 \subsection{Inégalité de Bienaymé Tchebychev}
 
-\begin{theoreme}{inégalité de Bienaymé Tchebychev}{}
+\begin{theoreme}{Inégalité de Bienaymé Tchebychev}{}
     Soit $X \in L^2$. Notons $m = E(X)$ et $\sigma = \sigma(X)$.
     Alors $$\forall \varepsilon > 0, P(|X - m| \geqslant \varepsilon) \leqslant \frac{\sigma^2}{\varepsilon^2}$$
 \end{theoreme}
@@ -1837,7 +1837,7 @@ considérées dans ce paragraphe sont réelles.
 
 \subsection{Loi faible des grands nombres }
 
-\begin{proposition}{une inégalité de concentration}{}
+\begin{proposition}{Une inégalité de concentration}{}
     Soit $(X_n)_{n \in \N}$ suite de variables aléatoires iid de $L^2$. 
 
     Notons $\displaystyle S_n = \sum_{k = 1 }^{n } X_k$ et $\forall n \in \N, \, m = E(X_n)$ et $\sigma = \sigma(X_n)$.
@@ -1853,7 +1853,7 @@ considérées dans ce paragraphe sont réelles.
     $\displaystyle P\left( \left| \frac{S_n}{n} - m \right| \geqslant \varepsilon \right) = P(|X - E(X)| \geqslant \varepsilon) \leqslant \frac{\sigma^2}{n \varepsilon^2}$.
 \end{proof}
 
-\begin{proposition}{loi faible des grands nombres}{}
+\begin{proposition}{Loi faible des grands nombres}{}
     Soit $(X_n)_{n \in \N}$ suite iid de $L^2$. 
     $\displaystyle S_n = \sum_{k = 1 }^{ n } X_k$ et $m = E(X_n)$. Alors 
     $\forall \varepsilon > 0,$  $$P\left( \left| \frac{S_n}{n} - m \right| \geqslant \varepsilon \right) \xrightarrow[n \to + \infty]{} 0$$
@@ -1863,7 +1863,7 @@ considérées dans ce paragraphe sont réelles.
 
 Soit $(\Omega, \mathcal A, P)$ un espace probabilisé. 
 
-\begin{definition}{fonction génératrice}{}
+\begin{definition}{Fonction génératrice}{}
     Soit $X$ une variable aléatoire à valeurs dans $\N$.
 
     On définit pour tout $t \in \R$, lorsque cette série converge, 
@@ -1874,7 +1874,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     $$ G_X(t) = E(t^X) $$
 \end{definition}
 
-\begin{theoreme}{rayon de convergence et continuité fonction génératrice}{}
+\begin{theoreme}{Rayon de convergence et continuité fonction génératrice}{}
     Soit $X$ une variable aléatoire à valeurs dans $\N$. La série entière 
     $G_X$ a un rayon de convergence supérieur ou égal à 1. 
 
@@ -1891,7 +1891,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
 
 \subsection{Cas des lois usuelles }
 
-\begin{proposition}{fonction génératrice loi de Bernoulli}{}
+\begin{proposition}{Fonction génératrice loi de Bernoulli}{}
     Soit $p \in ]0, 1[$ et $X \sim \mathcal B(p)$. Alors 
     $$ G_X(t) = q + p t $$
     pour tout $t \in \R$, donc $R = + \infty$.
@@ -1906,7 +1906,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     \end{align}
 \end{proof}
 
-\begin{proposition}{fonction génératrice loi binomiale}{}
+\begin{proposition}{Fonction génératrice loi binomiale}{}
     Soit $n \geqslant 1$ et $p \in ]0, 1[$, et $X \sim \mathcal B(n, p)$. Alors 
     $$ G_X(t) = (1 - p + p t)^n $$
     pour tout $t \in \R$, donc $R = + \infty$.
@@ -1921,7 +1921,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     \end{align}
 \end{proof}
 
-\begin{proposition}{fonction génératrice loi géométrique}{}
+\begin{proposition}{Fonction génératrice loi géométrique}{}
     Soit $p \in ]0, 1[$ et $X \sim \mathcal G(p)$. Alors 
     $$ G_X(t) = \frac{pt}{1 - q t} $$
     pour tout $t \in \left]-\frac 1 q, \frac 1 q \right[$, donc 
@@ -1937,7 +1937,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     \end{align}
 \end{proof}
 
-\begin{proposition}{fonction génératrice loi de Poisson}{}
+\begin{proposition}{Fonction génératrice loi de Poisson}{}
     Soit $\lambda > 0$ et $X \sim \mathcal P(\lambda)$. Alors 
     $$ G_X(t) = e^{\lambda (t - 1)} $$
     pour tout $t \in \R$, donc $R = + \infty$.
@@ -1953,7 +1953,7 @@ Soit $(\Omega, \mathcal A, P)$ un espace probabilisé.
     \end{align}
 \end{proof}
 
-\begin{theoreme}{récupération de la loi à partir de la fonction génératrice}{}
+\begin{theoreme}{Récupération de la loi à partir de la fonction génératrice}{}
     Soit $X$ une variable aléatoire à valeurs dans $\N$ de fonction génératrice $G_X$.
     Alors $$\forall k \in \N, \, P(X = k) = \frac{G_X^{(k)}(0)}{k!}$$
 \end{theoreme}

@@ -14,7 +14,7 @@
     Cette série sera notée $\sum_{n \geqslant 0} u_n$.
 \end{definition}
 
-\begin{proposition}{structure ensemble des séries}{}
+\begin{proposition}{Structure ensemble des séries}{}
     L'ensemble des séries à termes dans $E$ est un $\K$-espace vectoriel.
 \end{proposition}
 
@@ -114,7 +114,7 @@
     Alors pour $n \geqslant 1$, on a $u_n = S_n - S_{n-1} \longrightarrow S - S = 0_E$.
 \end{proof}
 
-\begin{proposition}{structure ensemble des séries convergentes}{}
+\begin{proposition}{Structure ensemble des séries convergentes}{}
     L'ensemble des séries convergentes est un $\K$-espace vectoriel.
 
     Si on le note $C$, l'application $\fonction{}{C}{E}{\sum_{n \geqslant 0} u_n}{\sum_{n = 0}^{+\infty} u_n}$ 
@@ -136,7 +136,7 @@
 \end{proof}
 
 
-\begin{proposition}{convergence par les coordonnées}{}
+\begin{proposition}{Convergence par les coordonnées}{}
     On suppose $E$ de dimension finie, et posons $B = (b_1, \ldots, b_p)$ une base de $E$.
 
     Soit $\sum u_n$ une série de $E$. 
@@ -159,7 +159,7 @@
 
 \subsection{Exemples fondamentaux}
 
-\begin{theoreme}{série géométrique}{}
+\begin{theoreme}{Série géométrique}{}
     Soit $a \in \C$. Alors la série $\sum_{n \geqslant 0} a^n$ converge ssi $\abs{a} < 1$, 
     et on a $$\forall n_0 \in \N, \, \sum_{n = n_0}^{+ \infty} a^n = \frac{a^{n_0}}{1 - a}$$
 \end{theoreme}
@@ -231,7 +231,7 @@
 
 \end{proof}
 
-\begin{proposition}{série harmonique}{}
+\begin{proposition}{Série harmonique}{}
     $\displaystyle \sum_{n \geqslant 1} \frac 1 n$ diverge et (LHP)
     $\displaystyle \sum_{k = 1 }^{n } \frac 1 k = \ln(n) + \gamma + o(1)$ où $\gamma \approx 0,577$ est la constante d'Euler.
     Donc 
@@ -261,7 +261,7 @@ Savoir démontrer tout ça
     $\sum - b_n$ converge, donc $\sum b_n$ converge donc $(a_n)$ converge.
 \end{proof}
 
-\begin{proposition}{série exponentielle}{}
+\begin{proposition}{Série exponentielle}{}
     Pour $z \in \C$ la série $\sum_{n \geqslant 0} \frac{z^n}{n!}$ converge et a pour somme 
     $$e^z = \sum_{n = 0}^{+\infty} \frac{z^n}{n!}$$
 \end{proposition}
@@ -282,7 +282,7 @@ Savoir démontrer tout ça
     $$\abs{e^z - \sum_{k = 0 }^{n }\frac{z^k}{k!}} \leqslant \abs z ^n \sup_{t \in [0, 1]} \abs{e^{tz}} \frac{1}{(n + 1)!} \longrightarrow 0$$
 \end{proof}
 
-\begin{proposition}{série de Bertrand HP}{}
+\begin{proposition}{Série de Bertrand HP}{}
     Soient $a, b \in \R$. 
 
     Alors $\displaystyle \sum_{n \geqslant 2} \frac 1 {n^a(\ln(n))^b}$ converge ssi $a > 1$ ou $a = 1$ et $b > 1$.
@@ -382,7 +382,7 @@ $$\sum_{n = 0}^{+\infty} f_n = h$$
 
 \section{Convergence absolue }
 
-\begin{definition}{convergence absolue}{}
+\begin{definition}{Convergence absolue}{}
     Soit $(E, N)$ un espace vectoriel normé de \textbf{dimension finie} et $\sum_{n \leqslant 0} u_n$
     une série à termes dans $E$. 
 
@@ -396,7 +396,7 @@ $$\sum_{n = 0}^{+\infty} f_n = h$$
 \end{remarque}
 
 
-\begin{theoreme}{lien entre convergence et convergence absolue}{}
+\begin{theoreme}{Lien entre convergence et convergence absolue}{}
     Dans un evn de dimension finie, toute série absolument convergente est convergente.
 \end{theoreme}
 
@@ -475,7 +475,7 @@ et calculer $N(S_{\varphi(n)} - S_n)$
 
 \subsection{Complément HP }
 
-\begin{definition}{série critère de Cauchy HP}{}
+\begin{definition}{Série critère de Cauchy HP}{}
     Soit $\sum_{n \geqslant 0} u_n$ une série de $E$.
 
     On dit que cette série satisfait au critère de Cauchy ssi la suite $\displaystyle S_n = \sum_{k = 0}^n u_k$ 
@@ -484,7 +484,7 @@ et calculer $N(S_{\varphi(n)} - S_n)$
     $\displaystyle \sum_{k = n + 1}^{n + p} u_k$ s'appelle une tranche de Cauchy. 
 \end{definition}
 
-\begin{theoreme}{critère de Cauchy HP}{}
+\begin{theoreme}{Critère de Cauchy HP}{}
     Toute série convergente est de Cauchy, et la réciproque est vraie si $E$ est complet.
 \end{theoreme}
 
@@ -516,7 +516,7 @@ et calculer $N(S_{\varphi(n)} - S_n)$
 
 \subsection{Semi-convergence }
 
-\begin{definition}{série semi-convergente}{}
+\begin{definition}{Série semi-convergente}{}
     Soit $E$ un evn de dimension finie. On dit que la série $\sum u_n$ est semi-convergente 
     ssi $\sum u_n$ converge et $\sum N(u_n)$ diverge.
 \end{definition}
@@ -560,7 +560,7 @@ et calculer $N(S_{\varphi(n)} - S_n)$
     $S_{2n + 1} = S_{2n} + \frac{1}{2n + 1} \longrightarrow \ln(2)$ aussi, donc $S_n \longrightarrow \ln(2)$.
 \end{exemple}
 
-\begin{theoreme}{critère spécial des séries alternées}{}
+\begin{theoreme}{Critère spécial des séries alternées}{}
     Soit $(a_n)$ une suite de réels positifs telle que $a_n \longrightarrow 0$ et $(a_n)$ \textbf{décroît}. 
 
     Alors la série $\sum_{n \geqslant 0} (-1)^n a_n$ converge, et on a $\forall n \in \N$ : 
@@ -644,7 +644,7 @@ Par exemple $\fonction N {\mathscr M_p(\K)} {\R^+} A {p ||A||_\infty}$.
 
 On a alors $\forall A, B \in \mathscr M_p(\K), \, N(AB) \leqslant N(A) N(B)$.
 
-\begin{theoreme}{exponentielle de matrices}{}
+\begin{theoreme}{Exponentielle de matrices}{}
     Pour $A \in \mathscr M_p(\K)$, la série $\sum_{n \geqslant 0} \frac{A^n}{n!}$ converge absolument. 
     Sa somme est appelée exponentielle de $A$ et est notée 
     $$\displaystyle \operatorname{exp} A = e^A = \sum_{n = 0}^{+\infty} \frac{A^n}{n!}$$
@@ -834,7 +834,7 @@ Donc $\displaystyle f(n) + \int_{n_0}^{n} f(t) \text d t \leqslant S_n \leqslant
     La suite est donc majorée donc converge. 
 \end{proof}
 
-\begin{proposition}{conséquence HP }{}
+\begin{proposition}{Conséquence HP }{}
     Soit $f \in \mathscr C^{pm}([a, + \infty[, \R^+)$ décroissante. 
 
     Alors la série $\displaystyle \sum_{n \geqslant \lfloor a \rfloor + 1} f(n)$ converge ssi la suite 
@@ -851,7 +851,7 @@ Donc $\displaystyle f(n) + \int_{n_0}^{n} f(t) \text d t \leqslant S_n \leqslant
 
 \subsection{Rappels sur les séries à termes positifs }
 
-\begin{theoreme}{trucs de comparaison }{}
+\begin{theoreme}{Trucs de comparaison }{}
     Soient $\sum_{n \geqslant 0 } a_n$ et $\sum_{n \geqslant 0} b_n$ deux séries à termes positifs. Si 
     
     \begin{enumerate}
@@ -877,7 +877,7 @@ Si $a_n \sim b_n$, alors $\sum a_n$ et $\sum b_n$ sont de même nature.
 
 \subsection{Règle de d'Alembert }
 
-\begin{theoreme}{règle de d'Alembert}{}
+\begin{theoreme}{Règle de d'Alembert}{}
     Soit $(u_n)$ une suite de nombres réels ou complexes qui ne s'annule pas 
     à partir d'un certain rang. On suppose que $\ds \frac{|u_{n + 1}|}{|u_n|} \to \ell$.
     Alors : 
@@ -1124,7 +1124,7 @@ d'un certain rang.
     Donc $\displaystyle \sum_{k = 0}^{n } u_k = \sum_{k = 0}^{n } v_k + o\left( \sum_{k = 0}^{n } v_k \right) \sim \sum_{k = 0}^{n } v_k$.
 \end{proof} 
 
-\begin{proposition}{théorème de Cesaro}{}
+\begin{proposition}{Théorème de Cesaro}{}
     Soit $(a_n)$ telle que $a_n \longrightarrow \ell \in \overline \R$. Alors 
     $$\frac 1 n \sum_{k = 1}^{n } a_k \longrightarrow \ell$$
     

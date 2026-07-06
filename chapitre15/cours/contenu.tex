@@ -152,7 +152,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
     ou que $\ds \int_a^{+ \infty} f(t) \dt$ converge abolument ssi $\ds \int_a^{+ \infty} |f(t)| \dt$ converge.
 \end{definition}
 
-\begin{proposition}{relation entre convergence et convergence absolue}{}
+\begin{proposition}{Relation entre convergence et convergence absolue}{}
     Soit $f \in \mc{pm}([a, + \infty[, \R)$ de signe constant. Alors 
     $\ds \int_a^{+ \infty} f$ converge absolument ssi elle converge. 
 \end{proposition}
@@ -164,7 +164,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
     limite en $+ \infty$ ssi $\int_a^x f$ en a une.
 \end{proof}
 
-\begin{proposition}{indépendance du point de départ}{}
+\begin{proposition}{Indépendance du point de départ}{}
     Soit $b \geqslant a$ et $f \in \mc{pm}([a, + \infty[, \K)$. 
     $f$ est intégrable sur $[b, + \infty[$ ssi elle est intégrable sur $[a, + \infty[$.
     On dira alors que $f$ est intégrable en $+ \infty$.
@@ -410,7 +410,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 \end{exemple}
 
 
-\begin{theoreme}{intégrales classiques}{}
+\begin{theoreme}{Intégrales classiques}{}
     
     \begin{itemize}
         \item $\ds \int_0^1 \frac{1}{t^\alpha} \dt$ converge ssi $\alpha < 1$
@@ -432,7 +432,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 \end{proof}
 
 
-\begin{proposition}{cas des fonctions positives}{}
+\begin{proposition}{Cas des fonctions positives}{}
     Si $f \in \mc{pm}(I, \R^+)$, alors pour $c \in I$, $\fonction{F}{I}{\R}{x}{\int_c^x f(t) \dt}$ est croissante
     et donc $F$ admet des limites dans $\bar \R$ en $a$ et $b$.
 
@@ -475,7 +475,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 \end{proof}
 
 
-\begin{theoreme}{convergence absolue implique convergence}{}
+\begin{theoreme}{Convergence absolue implique convergence}{}
     Soit $f \in \mc{pm}(I, \K)$. Si $\ds \int_{a }^{b } |f(t)| \dt$ converge, alors 
     $\ds \int_{a }^{b } f(t) \dt$ converge. Ainsi, la convergence absolue 
     implique la convergence.
@@ -537,7 +537,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 \end{proof}
 
 
-\begin{theoreme}{de comparaison à gauche}{}
+\begin{theoreme}{De comparaison à gauche}{}
     Soient $f, g \in \mc {pm}(]a, b], \K)$. 
     
     \begin{itemize}
@@ -547,7 +547,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
     \end{itemize}
 \end{theoreme}
 
-\begin{theoreme}{comparaison à droite}{}
+\begin{theoreme}{Comparaison à droite}{}
     Soit $f, g \in \mc{pm}([a, b[, \K)$. 
     
     \begin{itemize}
@@ -608,7 +608,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 
 \subsection{Propriétés de l'intégrale généralisée }
 
-\begin{proposition}{propriétés de l'intégrale généralisée}{}
+\begin{proposition}{Propriétés de l'intégrale généralisée}{}
     L'intégrale généralisée est linéaire, positive, croissante et vérifie la relation 
     de Chasles. 
 \end{proposition}
@@ -646,7 +646,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
     $$ \int_{a }^{b } f = \lim_{x \to b} F(x) - \lim_{x \to a} F(x) = \left( \lim_{x \to b} F(x) - F(c) \right) + \left( F(c) - \lim_{x \to a} F(x) \right) = \int_{c }^{b } f + \int_{a }^{c } f $$
 \end{proof}
 
-\begin{theoreme}{intégration par parties}{}
+\begin{theoreme}{Intégration par parties}{}
     Soient $u, v : I \to \K $. On suppose que :
     \begin{itemize}
         \item $u, v \in  \mc 1 (I, \K)$
@@ -688,7 +688,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
     $$\ds \int_{0}^{1} \ln(t) \dt = \left[ t \ln (t) \right]_0^1 - \int_0^1 t \cdot \frac 1 t \dt = - \left[ t \right]_0^1 = -1$$
 \end{exemple}
 
-\begin{theoreme}{changement de variable}{}
+\begin{theoreme}{Changement de variable}{}
     Soit $f \in \mc {pm} (]a, b[, \K)$ et $\varphi : ]\alpha, \beta[ \to ]a, b[$. 
     On suppose que : 
     \begin{itemize}
@@ -991,7 +991,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 \section{Passage à la limite sous l'intégrale}
 \subsection{Théorème de convergence dominée }
 
-\begin{theoreme}{théorème de convergence dominée}{}
+\begin{theoreme}{Théorème de convergence dominée}{}
     Soit $(f_n)_{n \in \N}$ une suite de fonctions de $\mc {pm}(I, \K)$. On suppose que :
     \begin{itemize}
         \item $(f_n)_{n \in \N}$ converge simplement sur $I$ vers une fonction $f \in \mc {pm}(I, \K)$
@@ -1077,7 +1077,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
     $$a_n \xrightarrow[n \to + \infty]{} 1$$
 \end{exemple}
 
-\begin{theoreme}{convergence dominée pour les séries de fonctions}{}
+\begin{theoreme}{Convergence dominée pour les séries de fonctions}{}
     Soit $\sum_{n \geqslant 0} u_n$ une série de fonctions continues par morceaux de $I$ dans $\K$. 
     On suppose que : 
     \begin{itemize}
@@ -1150,7 +1150,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 
 \subsubsection{Conséquence pour les limites d'intégrales à paramètre}
 
-\begin{proposition}{convergence dominée pour les intégrales à paramètre}{}
+\begin{proposition}{Convergence dominée pour les intégrales à paramètre}{}
     On considère $J$ intervalle réel et pour $x \in J$, $\fonction {f_x}{I}{\K}{t}{f_x(t)}$
     et on posera souvent $\fonction {f} {J \times I}{\K}{(x, t)}{f(x, t) = f_x(t)}$.
 
@@ -1215,7 +1215,7 @@ Soit $a \in \R$ et $f \in \mc{pm} ([a, + \infty[, \K)$
 
 \subsection{Théorème d'intégration terme à terme}
 
-\begin{theoreme}{intégration terme à terme pour les fonctions positives}{}
+\begin{theoreme}{Intégration terme à terme pour les fonctions positives}{}
     Soit $(f_n)_{n \in \N}$ une suite de fonctions. On suppose que : 
     \begin{itemize}
         \item Les $f_n$ sont dans $\mathscr L^1(I, \R^+)$
@@ -1276,7 +1276,7 @@ et on a l'égalité entre la somme de la série des intégrales et l'intégrale 
     Donc $\ds A = 2 \zeta(3)$ où $\zeta$ est la fonction de Riemann.
 \end{exemple}
 
-\begin{theoreme}{intégration terme à terme, cas général}{}
+\begin{theoreme}{Intégration terme à terme, cas général}{}
     Soit $(f_n)_{n \in \N}$ suite de fonctions de $\mathscr L^1(I, \K)$. Supposons que :
     \begin{itemize}
         \item La série de fonctions $\sum_{n \geqslant 0} f_n$ converge simplement sur $I$
@@ -1337,7 +1337,7 @@ pour $x \in A$ fixé, $\fonction {f(x, \cdot)}{I}{\K}{t}{f(x, t)}$ et pour $t \i
 
 \subsection{Continuité }
 
-\begin{theoreme}{continuité de l'intégrale à paramètre}{}
+\begin{theoreme}{Continuité de l'intégrale à paramètre}{}
     Soit $A \subset E$ espace vectoriel normé de dimension finie, $I$ intervalle réel tel que 
     $\mathring I \neq \emptyset$, et $f : A \times I \to E$. 
 
@@ -1379,7 +1379,7 @@ pour $x \in A$ fixé, $\fonction {f(x, \cdot)}{I}{\K}{t}{f(x, t)}$ et pour $t \i
     Donc $F$ est continue en $a$, donc sur $A$. 
 \end{proof}
 
-\begin{theoreme}{cas local}{}
+\begin{theoreme}{Cas local}{}
     Dans le théorème précédent, on peut se contenter d'une hypothèse de domination locale qui 
     peut être : 
     \begin{itemize}
@@ -1413,7 +1413,7 @@ pour $x \in A$ fixé, $\fonction {f(x, \cdot)}{I}{\K}{t}{f(x, t)}$ et pour $t \i
 
 \subsection{Dérivation }
 
-\begin{theoreme}{formule de Leibniz}{}
+\begin{theoreme}{Formule de Leibniz}{}
     Soient $I$ et $A$ des intervalles réels d'intérieurs non vides, et $f : A \times I \to K$. 
     On suppose que :
     \begin{itemize}
@@ -1457,7 +1457,7 @@ pour $x \in A$ fixé, $\fonction {f(x, \cdot)}{I}{\K}{t}{f(x, t)}$ et pour $t \i
     donc $F'$ continue. 
 \end{proof}
 
-\begin{theoreme}{formule de Leibniz, cas local}{}
+\begin{theoreme}{Formule de Leibniz, cas local}{}
     On peut remplacer l'hypothèse de domination par une hypothèse locale qui est pour tout segment 
     $S \subset A$ il existe $\varphi_S$ continue par morceaux intégrable telle que 
     $\forall x \in S, \forall t \in I$,
@@ -1465,7 +1465,7 @@ pour $x \in A$ fixé, $\fonction {f(x, \cdot)}{I}{\K}{t}{f(x, t)}$ et pour $t \i
     en particulier si $A = \R$, il suffit de le vérifier pour tout segment du type $[-b, b]$ avec $b > 0$.
 \end{theoreme}
 
-\begin{theoreme}{formule de Leibniz, cas général}{}
+\begin{theoreme}{Formule de Leibniz, cas général}{}
     Soient $I, A$ intervalles réels d'intérieurs non vides et $\fonction {f}{A \times I}{K}{(x, t)}{f(x, t)}$ 
 
     Soit $k \geqslant 1$. On suppose que : 

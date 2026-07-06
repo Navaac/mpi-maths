@@ -38,7 +38,7 @@
     \end{itemize}
 \end{theoreme}
 
-\begin{proposition}{coordonnées dans une base orthonormale}{}
+\begin{proposition}{Coordonnées dans une base orthonormale}{}
     Soit $B = (e_1, \dots, e_p)$ une base orthonormale de $E$. Alors pour tout 
     $x \in E$, ses coordonnées dans cette base sont les $\langle x, e_j \rangle$. 
     Ainsi, 
@@ -82,7 +82,7 @@ Ce produit scalaire n'est pas complètement au programme.
 \section{Matrices orthogonales}
 \subsection{Définition et caractérisation} 
 
-\begin{definition}{matrice orthogonale}{}
+\begin{definition}{Matrice orthogonale}{}
     \index{Matrice!orthogonale}
     Soit $A \in \mathscr M_n(\R)$. On dit que $A$ est orthogonale ssi $A^\top A = I_n$.
 \end{definition}
@@ -93,7 +93,7 @@ Ce produit scalaire n'est pas complètement au programme.
     $A$ est orthogonale ssi $A^\top$ est orthogonale.
 \end{remarque}
 
-\begin{proposition}{caractérisation des matrices orthogonales par les colonnes}{}
+\begin{proposition}{Caractérisation des matrices orthogonales par les colonnes}{}
     Soit $A \in \mathscr M_n(\R)$. Notons $C_1, \dots, C_n$ ses colonnes (resp ses lignes). 
     Alors $A$ est orthogonale ssi les $(C_1, \dots, C_n)$ (resp les lignes) forment une base orthonormale de $\R^n$,
     identifiée à $\mathscr M_{n,1}(\R)$ (resp de $\R^n$ identifiée à $\mathscr M_{1,n}(\R)$).
@@ -226,7 +226,7 @@ que cette méthode soit HP.}
     $A A^T = I_n$ donc $\det A \det A^T = 1$ et $\det A^T = \det A$ donc $(\det A)^2 = 1$ et $\det A = \pm 1$.
 \end{proof}
 
-\begin{theoreme}{groupe spécial orthogonal}{}
+\begin{theoreme}{Groupe spécial orthogonal}{}
     \index{Groupe!spécial orthogonal}
     L'ensemble $SO(n) = SO_n(\R) = \mathcal O^+(n)$ des matrices orthogonales de déterminant $1$ est un 
     sous-groupe de $\mathcal O(n)$ appelé groupe spécial orthogonal. 
@@ -360,7 +360,7 @@ que cette méthode soit HP.}
     Si $E = \R^n$ on décide en général que la base canonique est directe. 
 \end{definition}
 
-\begin{proposition}{indépendance déterminant base}{}
+\begin{proposition}{Indépendance déterminant base}{}
     Soient $B$ et $B'$ deux bases orthonormées directes de $E$. Alors on a : 
     $$\det_B = \det_{B'}$$
     On le note $\operatorname{Det}$. 
@@ -490,7 +490,7 @@ Soit $A \in O(3)$. Alors $\exists P \in SO(3)$, $A = PA'P^{-1}$ où
 
 Soit $E$ un espace euclidien. 
 
-\begin{theoreme}{représentation des formes linéaires}{}
+\begin{theoreme}{Représentation des formes linéaires}{}
     L'application $\fonction{}{E}{E^*}{x}{\fonction{\varphi_x}{E}{\R}{y}{\langle x, y \rangle}}$ est un isomorphisme 
     d'espaces vectoriels. 
 
@@ -544,7 +544,7 @@ Soit $E$ un espace euclidien.
     on a donc $u^*(\alpha_1 y_1 + \alpha_2 y_2) = \alpha_1 u^*(y_1) + \alpha_2 u^*(y_2)$.
 \end{proof}
 
-\begin{proposition}{adjoint de l'adjoint}{}
+\begin{proposition}{Adjoint de l'adjoint}{}
     $\fonction{\varphi}{\mathscr L(E)}{\mathscr L(E)}{u}{u^*}$ est linéaire et involutive (i.e. $(u^*)^* = u$).
 \end{proposition}
 
@@ -569,7 +569,7 @@ Soit $E$ un espace euclidien.
     Donc $(u^*)^*(y) = u(y)$ et $(u^*)^* = u$.
 \end{proof}
 
-\begin{proposition}{adjoint d'une composée}{}
+\begin{proposition}{Adjoint d'une composée}{}
     $\forall u, v \in \mathscr L(E)$, alors $(u \circ v)^* = v^* \circ u^*$.
 \end{proposition}
 
@@ -589,7 +589,7 @@ Soit $E$ un espace euclidien.
     également vrai pour tout $y$ donc $v^* \circ u^* = (u \circ v)^*$.
 \end{proof}
 
-\begin{proposition}{matrice de l'adjoint dans une base orthonormale}{}
+\begin{proposition}{Matrice de l'adjoint dans une base orthonormale}{}
     Si $B$ est une base orthonormale de $E$, alors 
     $$M_B(u^*) = (M_B(u))^T$$
 \end{proposition}
@@ -621,7 +621,7 @@ Voici une autre démonstration, non donnée en cours mais parfois plus intuitive
     D'où le résultat, puisque vrai pour tout $i, j$.
 \end{proof}
 
-\begin{theoreme}{stabilité orthogonal}{}
+\begin{theoreme}{Stabilité orthogonal}{}
     Soit $u \in \mathscr L(E)$ et $F$ un sous-espace vectoriel de $E$ stable par $u$. 
     Alors $F^\perp$ est stable par $u^*$.
 \end{theoreme}
@@ -707,7 +707,7 @@ On a alors $s(x) = f_1 - f_2$.
     \end{pmatrix}$ est la matrice de $s$ dans la base canonique.
 \end{exemple}
 
-\begin{proposition}{nature symétrie orthogonale}{}
+\begin{proposition}{Nature symétrie orthogonale}{}
     Une symétrie orthogonale est une isométrie vectorielle.
 \end{proposition}
 
@@ -854,7 +854,7 @@ $M_B(u) = \begin{pmatrix}
 
 Soit $E$ un plan euclidien orienté. 
 
-\begin{theoreme}{rotation}{}
+\begin{theoreme}{Rotation}{}
     \index{Rotation}
     Soit $u \in SO(E)$ c'est à dire une rotation vectorielle de $E$. 
     Alors $\exists ! \theta \in ]- \pi, \pi]$ tel que pour toute base orthonormale directe
@@ -883,7 +883,7 @@ $$M_B(u) = \begin{pmatrix}
     Or $SO(2)$ est commutatif, donc $P^{-1} M_{B_0}(u) P = M_{B_0}(u)$ et $M_B(u) = M_{B_0}(u)$.
 \end{proof}
 
-\begin{theoreme}{angle orienté de vecteurs}{}
+\begin{theoreme}{Angle orienté de vecteurs}{}
     Soient $x$ et $y$ deux vecteurs non nuls d'un plan euclidien $E$. Alors 
     \begin{itemize}
         \item Il existe une unique rotation $r_\theta$ telle que $r_\theta\left( \frac x {\| x \|} \right) = \frac y {\| y \|}$
@@ -992,7 +992,7 @@ $$\Det(x, y) = \| x \| \| y \| \sin \theta$$
 
 \subsection{Réduction des isométries }
 
-\begin{proposition}{stabilité orthogonal endo orthogonal}{}
+\begin{proposition}{Stabilité orthogonal endo orthogonal}{}
     Soit $u \in \mathcal O(E)$ et $F$ sous-espace vectoriel de $E$ stable par $u$. Alors 
     $F^\perp$ est stable par $u$. 
 \end{proposition}
@@ -1037,7 +1037,7 @@ $$\Det(x, y) = \| x \| \| y \| \sin \theta$$
     et par le même argument que précédemment $u(F) = F$, or $u(E) = E$ et donc $u(F^\perp) = F^\perp$. 
 \end{proof}
 
-\begin{proposition}{spectre isométrie vectorielle}{}
+\begin{proposition}{Spectre isométrie vectorielle}{}
     Soit $u \in \mathcal O(E)$. Alors $\Sp (u) \subset \{ -1, 1 \}$
 \end{proposition}
 
@@ -1047,7 +1047,7 @@ $$\Det(x, y) = \| x \| \| y \| \sin \theta$$
     Alors $\| u(x) \|  = \| x \|$ et donc $|\lambda| \| x \| = \| x \|$ et $\lambda \in \{ -1, 1 \}$.
 \end{proof}
 
-\begin{theoreme}{réduction des isométries vectorielles}{}
+\begin{theoreme}{Réduction des isométries vectorielles}{}
     Soit $u \in \mathcal O(E)$. Alors il existe $p, q, r \in \N$, 
     $\theta_1, \dots, \theta_r \in \R$ et $B$ base orthonormée de $E$ telle que $n = p + q + 2r$ et 
     $$M_B(u) = \begin{pmatrix}
@@ -1295,13 +1295,13 @@ c'est à dire que son déterminant est 1 et qu'elle est orthogonale.
 
 \section{Endomorphismes autoadjoints}
 
-\begin{definition}{endomorphisme autoadjoint}{}
+\begin{definition}{Endomorphisme autoadjoint}{}
     \index{Endomorphisme autoadjoint}
     Soit $u \in \mathscr L(E)$. On dit que $u$ est autoadjoint ssi $u^* = u$.
     On dit parfois que $u$ est symétrique. 
 \end{definition}
 
-\begin{theoreme}{nature ensemble des endomorphismes autoadjoints}{}
+\begin{theoreme}{Nature ensemble des endomorphismes autoadjoints}{}
     L'ensemble des endomorphismes autoadjoints de $E$ est un sous-espace vectoriel
     de $\mathscr L(E)$ noté $\mathscr S(E)$. 
 \end{theoreme}
@@ -1318,7 +1318,7 @@ c'est à dire que son déterminant est 1 et qu'elle est orthogonale.
 
 \subsection{Caractérisation matricielle}
 
-\begin{proposition}{caractérisation matricielle endomorphisme autoadjoint}{}
+\begin{proposition}{Caractérisation matricielle endomorphisme autoadjoint}{}
     Soit $u \in \mathscr L(E)$ et $B$ une base orthonormée de $E$. 
     Alors $u$ est autoadjoint ssi $M_B(u)$ est 
     symétrique. 
@@ -1338,7 +1338,7 @@ c'est à dire que son déterminant est 1 et qu'elle est orthogonale.
 
 \subsection{Cas des projecteurs }
 
-\begin{proposition}{projecteurs autoadjoints}{}
+\begin{proposition}{Projecteurs autoadjoints}{}
     Soit $p \in \mathscr L(E)$ un projecteur. Alors $p = p^*$ ssi 
     $\Ker p \perp \im p$, c'est à dire ssi $p$ est un projecteur orthogonal. 
     Ainsi, un projecteur est autoadjoint ssi il est orthogonal.
@@ -1485,7 +1485,7 @@ c'est à dire que son déterminant est 1 et qu'elle est orthogonale.
 
 \subsection{Théorème spectral}
 
-\begin{theoreme}{spectral}{}
+\begin{theoreme}{Spectral}{}
     Soit $E$ un espace euclidien et $u \in \mathscr L(E)$. Alors $u$ est 
     autoadjoint ssi $u$ est diagonalisble dans une base orthonormée. 
     En particulier, en ce cas en notant $\Sp(u) = \{\lambda_1, \dots, \lambda_p\}$, on a 
@@ -1625,7 +1625,7 @@ $A = PDP^\perp$.
 
 \subsection{Endomorphismes autoadjoints positifs}
 
-\begin{definition}{endomorphisme autoadjoint positif}{}
+\begin{definition}{Endomorphisme autoadjoint positif}{}
     Soit $u \in \mathscr S(E)$ endomorphisme autoadjoint de $E$. On dit que 
     $u$ est positif (resp défini positif) ssi $\forall x \in E$, 
     $\langle u(x), x \rangle \geqslant 0$ (resp $\langle u(x), x \rangle  \geqslant 0$ et 
