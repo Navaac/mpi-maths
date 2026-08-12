@@ -68,6 +68,10 @@
 \definecolor{ideabar}{RGB}{255,165,0}
 \definecolor{exobg}{RGB}{245,247,250}
 \definecolor{exoframe}{RGB}{100,110,120}
+\definecolor{orange_des_definitions}{RGB}{255, 236, 218}
+\definecolor{orange_des_exemples}{RGB}{255, 145, 10}
+\definecolor{orange_des_theoremes}{RGB}{255, 229, 204}
+
 
 % =============================================================================
 % COMPTEURS ET CHAPITRES
@@ -123,6 +127,62 @@
 \newtcbtheorem[use counter=coursenv, number within=chapitre]{corollaire}{Corollaire}{propstyle}{cor}
 \newtcbtheorem[use counter=coursenv, number within=chapitre]{definition}{Définition}{defstyle}{def}
 \newtcbtheorem[use counter=coursenv, number within=chapitre]{propriete}{Propriété}{propstyle}{propiete}
+
+%[V Style
+\newtcbtheorem[use counter = coursenv]
+					{Vproposition}{Proposition}
+					{colframe = black,
+					theorem style = plain,
+					fonttitle = \bfseries,
+					sharp corners,
+					boxrule=.3mm,
+					breakable,
+					coltitle = orange!110,
+					drop shadow = orange!48,
+					smart shadow arc = false,
+					colback = white}{}
+
+\newtcbtheorem[use counter = coursenv]
+					{Vtheoreme}{Théorème}
+					{colframe = black,
+					sharp corners,
+					breakable,
+					theorem style = plain,
+					fonttitle = \bfseries,
+					coltitle = orange!90!black,
+					boxrule = .2mm,
+					drop shadow = orange!48,
+					smart shadow arc = false,
+					colback = orange_des_theoremes}{}
+
+\newtcbtheorem[use counter = coursenv]
+					{Vdefinition}{Définition}
+					{interior style = {left color = orange_des_definitions, right color = white},
+					sharp corners,
+					breakable,
+					coltitle = orange!90!black,
+					boxrule = .2mm,
+					fonttitle = \bfseries,
+					theorem style = plain,
+					colframe = orange_des_definitions
+				}{}
+
+\newtcbtheorem[use counter = coursenv]{Vexemple}{Exemple}
+					{sharp corners,
+					%theorem style = plain,
+					fonttitle = \bfseries,
+					attach boxed title to top left = {yshift = 0mm, xshift = 0mm},
+					boxed title style = {sharp corners, boxrule = 0.1pt, borderline west={1pt}{0pt}{orange_des_exemples}},
+					%varwidth boxed title,
+					coltitle = orange_des_exemples,
+					breakable,
+					boxrule = 0.1pt,
+					pad at break = 2mm,
+					colbacktitle = white,
+					colback = white,
+					colframe = orange_des_exemples,
+					borderline west={1pt}{0pt}{orange_des_exemples}}{}
+%V Style]
 
 \newtcolorbox{theorement}[2][]{theoremstyle, fonttitle=\bfseries, title={Théorème~\refstepcounter{coursenv}\thecoursenv}, #1}
 \newtcolorbox{propositionnt}[2][]{propstyle, fonttitle=\bfseries, title={Proposition~\refstepcounter{coursenv}\thecoursenv}, #1}
