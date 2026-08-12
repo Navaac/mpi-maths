@@ -19,6 +19,9 @@
 \RequirePackage{mathpazo}
 \RequirePackage{hyperref}
 \RequirePackage{tikz}
+\RequirePackage{lmodern}
+\RequirePackage{fontspec}
+\RequirePackage{stmaryrd}
 \RequirePackage{fontawesome5}
 \RequirePackage{graphicx}
 \RequirePackage{marginnote}
@@ -117,6 +120,7 @@
     left=6pt, right=6pt, top=6pt, bottom=6pt,
     fonttitle=\bfseries
   },
+  enhanced,
   propstyle/.style={thmbase, colback=bluebox!5, colframe=bluebox},
   theoremstyle/.style={thmbase, colback=greenbox!5, colframe=greenbox},
   defstyle/.style={thmbase, colback=redbox!5, colframe=redbox}
@@ -135,7 +139,7 @@
 					theorem style = plain,
 					fonttitle = \bfseries,
 					sharp corners,
-					boxrule=.3mm,
+					boxrule=.2mm,
 					breakable,
 					coltitle = orange!110,
 					drop shadow = orange!48,
@@ -159,6 +163,7 @@
 					{Vdefinition}{Définition}
 					{interior style = {left color = orange_des_definitions, right color = white},
 					sharp corners,
+					colback = white,
 					breakable,
 					coltitle = orange!90!black,
 					boxrule = .2mm,
@@ -167,21 +172,30 @@
 					colframe = orange_des_definitions
 				}{}
 
-\newtcbtheorem[use counter = coursenv]{Vexemple}{Exemple}
-					{sharp corners,
-					%theorem style = plain,
-					fonttitle = \bfseries,
-					attach boxed title to top left = {yshift = 0mm, xshift = 0mm},
-					boxed title style = {sharp corners, boxrule = 0.1pt, borderline west={1pt}{0pt}{orange_des_exemples}},
-					%varwidth boxed title,
-					coltitle = orange_des_exemples,
-					breakable,
-					boxrule = 0.1pt,
-					pad at break = 2mm,
-					colbacktitle = white,
-					colback = white,
-					colframe = orange_des_exemples,
-					borderline west={1pt}{0pt}{orange_des_exemples}}{}
+\newtcolorbox{Vexemple}[1][]{
+  enhanced,
+  breakable,
+  enhanced jigsaw,
+  pad at break=2mm,
+  colback=white,
+  coltitle = orange_des_exemples,
+  colbacktitle = white,
+  colframe=orange_des_exemples,
+  attach boxed title to top left = {yshift = 0mm, xshift = 0mm},
+  boxed title style = {sharp corners, boxrule = 0.1pt, borderline west={1pt}{0pt}{orange_des_exemples}},
+  boxrule=0.1pt,
+  left=8pt,
+  right=0pt,
+  top=6pt,
+  bottom=6pt,
+  borderline west={2pt}{0pt}{orange_des_exemples},
+  title={},
+  before upper={
+    \textbf{\color{orange_des_exemples}Exemple}
+    \par\vspace{0.2em}
+  },
+  #1
+}
 %V Style]
 
 \newtcolorbox{theorement}[2][]{theoremstyle, fonttitle=\bfseries, title={Théorème~\refstepcounter{coursenv}\thecoursenv}, #1}
