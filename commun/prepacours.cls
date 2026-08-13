@@ -73,6 +73,7 @@
 \definecolor{exoframe}{RGB}{100,110,120}
 \definecolor{orange_des_definitions}{RGB}{255, 236, 218}
 \definecolor{orange_des_exemples}{RGB}{255, 145, 10}
+\definecolor{sectionorange}{RGB}{255, 145, 10}
 \definecolor{orange_des_theoremes}{RGB}{255, 229, 204}
 
 
@@ -133,8 +134,9 @@
 \newtcbtheorem[use counter=coursenv, number within=chapitre]{propriete}{Propriété}{propstyle}{propiete}
 
 %[V Style
-\newtcbtheorem[use counter = coursenv]
-					{Vproposition}{Proposition}
+
+\newtcbtheorem[use counter = coursenv, number within = chapitre]
+					{Vproposition}{Proposition}%Don't delete this, don't ask why
 					{colframe = black,
 					theorem style = plain,
 					fonttitle = \bfseries,
@@ -146,8 +148,23 @@
 					smart shadow arc = false,
 					colback = white}{}
 
-\newtcbtheorem[use counter = coursenv]
-					{Vtheoreme}{Théorème}
+\newtcbtheorem[use counter = coursenv, number within = chapitre]
+					{Vcorollaire}{Corollaire}%Don't delete this, don't ask why
+					{colframe = black,
+					theorem style = plain,
+					fonttitle = \bfseries,
+					sharp corners,
+					boxrule=.2mm,
+					breakable,
+					coltitle = orange!110,
+					drop shadow = orange!48,
+					smart shadow arc = false,
+					colback = white}{}
+
+
+
+\newtcbtheorem[use counter = coursenv, number within = chapitre]
+					{Vtheoreme}{Théorème}%Don't delete this, don't ask why
 					{colframe = black,
 					sharp corners,
 					breakable,
@@ -159,8 +176,8 @@
 					smart shadow arc = false,
 					colback = orange_des_theoremes}{}
 
-\newtcbtheorem[use counter = coursenv]
-					{Vdefinition}{Définition}
+\newtcbtheorem[use counter = coursenv, number within = chapitre]
+					{Vdefinition}{Définition}%Don't delete this, don't ask why
 					{interior style = {left color = orange_des_definitions, right color = white},
 					sharp corners,
 					colback = white,
@@ -172,7 +189,7 @@
 					colframe = orange_des_definitions
 				}{}
 
-\newtcolorbox{Vexemple}[1][]{
+\newtcolorbox{Vexemple}[1][]{%Don't delete this, don't ask why
   enhanced,
   breakable,
   enhanced jigsaw,
@@ -206,8 +223,8 @@
 \theoremstyle{remark}
 \newtheorem*{remarque}{Remarque}
 
-\newtcolorbox{exemple}[1][]{
-  enhanced, breakable, enhanced jigsaw, pad at break=2mm,
+\newtcolorbox{exemple}[1][]{%Added by style.py
+	enhanced, breakable, enhanced jigsaw, pad at break=2mm,
   colback=white, colframe=white, boxrule=0pt,
   left=8pt, right=0pt, top=6pt, bottom=6pt,
   borderline west={2pt}{0pt}{examplebar},
