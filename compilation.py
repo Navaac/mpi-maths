@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -13,8 +12,8 @@ C_CHAPITRES_DIR = BUILD_DIR + "chapitres/"
 C_COURS_DIR = BUILD_DIR + "cours/"
 C_TD_DIR = BUILD_DIR + "TDs/"
 C_INTEGRALE_DIR = BUILD_DIR + "integrale/"
+LATEX_COMPILER = "lualatex"
 
-LATEX_COMPILER = "pdflatex"
 GARBAGE_EXTENSIONS = {
     ".aux", ".log", ".toc", ".out", ".synctex.gz", 
     ".fls", ".fdb_latexmk", ".lof", ".lot", ".bcf", ".run.xml"
@@ -26,8 +25,65 @@ parser.add_argument("-ch", "--chapitres", default="all", help="Chapters to compi
 parser.add_argument("-m", "--mode", default="chapitre", help="What to compile, default : chapitre, options : chapitre, cours, TD." )
 parser.add_argument("-he", "--halt_on_error", action='store_true', help="Wether the compilation stops or not when a file gets an error while compiling.")
 parser.add_argument("-a", "--all", action='store_true', help='Whether to compile all files or not.')
+parser.add_argument("-v", "--vstyle", action='store_true', help='Compiles with V Style then restores the default style.')
 
 args = parser.parse_args()
+
+
+
+def SetVStyle():
+    with open("commun/prepacours.cls","r") as file:
+        data = file.read()
+
+        #Making the default style obsolete
+    data = data.replace(r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{theoreme}{Théorème}{theoremstyle}{thm}", "%I used to be thm DO NOT DELETE (from style.py)")
+    data = data.replace(r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{proposition}{Proposition}{propstyle}{prop}", "%I used to be prop DO NOT DELETE (from style.py)")
+    data = data.replace(r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{corollaire}{Corollaire}{propstyle}{cor}", "%I used to be cor DO NOT DELETE (from style.py)")
+    data = data.replace(r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{definition}{Définition}{defstyle}{def}", "%I used to be def DO NOT DELETE (from style.py)")
+    data = data.replace("{exemple}[1][]{%Added by style.py", "{I_used_to_be_exemple_DO_NOT_DELETE_from_style_py}[1][]{%Added by style.py")
+    
+        #Adding the new style
+    data = data.replace("{Vproposition}{Proposition}%Don't delete this, don't ask why", "{proposition}{Proposition}%Don't delete this, don't ask why")
+    data = data.replace("{Vdefinition}{Définition}%Don't delete this, don't ask why", "{definition}{Définition}%Don't delete this, don't ask why")
+    data = data.replace("{Vtheoreme}{Théorème}%Don't delete this, don't ask why", "{theoreme}{Théorème}%Don't delete this, don't ask why")
+    data = data.replace("{Vcorollaire}{Corollaire}%Don't delete this, don't ask why", "{corollaire}{Corollaire}%Don't delete this, don't ask why")
+    data = data.replace("{Vexemple}[1][]{%Don't delete this, don't ask why", "{exemple}[1][]{%Don't delete this, don't ask why")
+    
+        #Fixing the chapter/section colors
+    data = data.replace(r"\color{sectionblue}", r"\color{sectionorange}")
+
+        #Writing
+    with open("commun/prepacours.cls","w") as file:
+        file.write(data)
+
+def SetDefault():
+    with open("commun/prepacours.cls","r") as file:
+        data = file.read()
+
+
+        #(Re)Adding the Default style
+    data = data.replace("%I used to be thm DO NOT DELETE (from style.py)", r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{theoreme}{Théorème}{theoremstyle}{thm}")
+    data = data.replace("%I used to be prop DO NOT DELETE (from style.py)", r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{proposition}{Proposition}{propstyle}{prop}")
+    data = data.replace("%I used to be cor DO NOT DELETE (from style.py)", r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{corollaire}{Corollaire}{propstyle}{cor}")
+    data = data.replace("%I used to be def DO NOT DELETE (from style.py)", r"\newtcbtheorem[use counter=coursenv, number within=chapitre]{definition}{Définition}{defstyle}{def}")
+    data = data.replace("{I_used_to_be_exemple_DO_NOT_DELETE_from_style_py}[1][]{%Added by style.py", "{exemple}[1][]{%Added by style.py")
+
+        #Making V Style obsolete
+    data = data.replace("{proposition}{Proposition}%Don't delete this, don't ask why", "{Vproposition}{Proposition}%Don't delete this, don't ask why")
+    data = data.replace("{definition}{Définition}%Don't delete this, don't ask why", "{Vdefinition}{Définition}%Don't delete this, don't ask why")
+    data = data.replace("{theoreme}{Théorème}%Don't delete this, don't ask why", "{Vtheoreme}{Théorème}%Don't delete this, don't ask why")
+    data = data.replace("{corollaire}{Corollaire}%Don't delete this, don't ask why", "{Vcorollaire}{Corollaire}%Don't delete this, don't ask why")
+    data = data.replace("{exemple}[1][]{%Don't delete this, don't ask why", "{Vexemple}[1][]{%Don't delete this, don't ask why")
+ 
+        #Fixing the chapter/section colors
+    data = data.replace(r"\color{sectionorange}", r"\color{sectionblue}")
+
+        #Writing
+    with open("commun/prepacours.cls","w") as file:
+        file.write(data)
+
+
+
 
 def clean_dir (dir) :
     for file in dir.iterdir():
@@ -55,6 +111,11 @@ def compile_file (file, output_dir, cwd_path) :
         if args.halt_on_error:
             exit(1)
     return
+
+if args.vstyle:
+    SetVStyle()
+
+print("vstyle =", args.vstyle)
 
 chapters_path = Path(CHAPTERS_LOCATION).resolve()
 
@@ -125,6 +186,10 @@ if args.all :
     clean_dir(c_chapters_dir)
     clean_dir(c_cours_dir)
     clean_dir(c_TDs_dir)
+    if args.vstyle:
+        SetDefault()
+        print("V Style used for compilation. It will not work for chapter 0 because it uses its own prepacours.cls\n Some rare boxes may also have the default style because of how they were written, and I don't want to spend time fixing them when I could be playing MORROWIND instead\n")
+
     print("Compilation finished, pdf are in the build subdir.")
     exit(0)
 
@@ -211,4 +276,10 @@ else :
             print("ERROR: invalid input for mode field.")
             exit(1)
         
+if args.vstyle:
+    SetDefault()
+    print("V Style used for compilation. It will not work for chapter 0 because it uses its own prepacours.cls\n Some rare boxes may also have the default style because of how they were written, and I don't want to spend time fixing them when I could be playing MORROWIND instead\n")
+
+
+
 print("Compilation finished, pdf are in the build subdir.")
