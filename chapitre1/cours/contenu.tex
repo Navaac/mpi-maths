@@ -14,8 +14,8 @@ On rappelle ici quelques résultats démontrés en sup.
     \begin{itemize}
         \item $|x| = 0$ ssi $x = 0$
         \item $|xy| = |x| \times |y|$
-        \item $|x + y| \leqslant |x| + |y|$
-        \item $ | |x| - |y| | \leqslant |x + y|$
+        \item $|x + y| \leqslant |x| + |y|$ (inégalité triangulaire)
+        \item $ | |x| - |y| | \leqslant |x + y|$ (inégalité triangulaire renversée)
     \end{itemize}
 \end{proposition}
 
@@ -128,7 +128,7 @@ Soit $\mathbb K = \R$ ou $\C$ et $E$ un espace vectoriel sur $\K$.
         \item Inégalité triangulaire : $\forall u, v \in E, N(u + v) \leqslant N(u) + N(v)$
     \end{itemize}
 
-    $(E, N)$ est alors appelé espace vectoriel normé.
+    $(E, N)$ est alors appelé espace vectoriel normé (evn).
 \end{definition}
 
 \begin{exemple}
@@ -187,6 +187,10 @@ Soit $\mathbb K = \R$ ou $\C$ et $E$ un espace vectoriel sur $\K$.
         \item $d_N (u + w, v + w) = d_N (u, v)$
     \end{enumerate}
 \end{proposition}
+
+\begin{remarque}
+    (HP) Un ensemble muni de $d : E^2 \mapsto \R^{+}$ vérifiant 1., 2. et 3. est appelé \textbf{espace métrique}.
+\end{remarque}
 
 \begin{proof}~\\
 
@@ -274,6 +278,73 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     $$\inter{a}{b} = \{\lambda a + (1 - \lambda)b, \lambda \in [0, 1]\}$$
 \end{definition}
 
+\begin{theoreme}{Rappel}{}
+    Les parties convexes de $\R$ sont les intervalles.
+\end{theoreme}
+
+
+\begin{definition}{Épigraphe d'une fonction}{}
+    Soit $I$ un intervalle de $\R$ et $f \in \R^{I}$.
+    On définit l'épigraphe de $f$ :
+
+    \[ E_f = \{(x,y) \in \R^2, x \in I et y \geqslant f(x)\}\]     
+\end{definition}
+
+\begin{proposition}{}{}
+    $f$ telle que définie au dessus est convexe ssi son épigraphe est convexe.
+\end{proposition}
+
+\begin{proof}
+    Preuve laissée au lecteur.
+\end{proof}
+
+\begin{proposition}{Convexité des boules}{}
+    Toute boule d'un espace vectoriel normé est convexe. 
+\end{proposition}
+
+
+\idee{
+    Astuce du taupin, utiliser la distance au centre
+    en faisant apparaitre le rayon.
+}
+
+\begin{proof}~\\
+    \begin{itemize}
+        \item \uline{Boule fermée :}
+
+        Soit $\omega \in E$, $R > 0$ et $A = B'( \omega, R)$
+    
+        Soient $a, b \in A, \lambda \in \inter{0}{1}$ et $c = \lambda a + (1 - \lambda)b$
+
+        \begin{align*}
+            N(c - \omega) & = N(\lambda a + (1 - \lambda)b - \lambda \omega - (1 - \lambda) \omega) \\
+            & = N(\lambda(a - \omega) + (1 - \lambda)(b - \omega)) \\
+            & \leqslant \, |\lambda| N(a - \omega) + |1 - \lambda| N(b - \omega) \\
+            & \leqslant \lambda R + (1 - \lambda)R = R \\
+        \end{align*}
+
+        \item \underline{Boule ouverte :}
+
+        Soit $\omega  \in E, R > 0, A = B(\omega, R)$. 
+
+        Soient $a, b \in A, \lambda \in \inter{0}{1}$ et $c = \lambda a + (1 - \lambda)b$.
+
+        Montrons que $c \in A$. 
+        \begin{itemize}
+            \item si $\lambda = 0, c = b$ donc $c \in A$
+            \item si $\lambda = 1, c = a$ donc $c \in A$
+            \item sinon, 
+                \begin{align*}
+                    d(\omega, c) & = N(\lambda a + (1 - \lambda) b - \omega) \\
+                    & = N(\lambda a + (1 - \lambda) b - (\lambda + 1- \lambda) \omega) \\
+                    & = N(\lambda(a - \omega) + (1 - \lambda) (b - \omega)) \\
+                    & \leqslant \, |\lambda| N(a - \omega) + (1 - \lambda)N(b - \omega) \\
+                    & < (\lambda + 1 - \lambda) R = R
+                \end{align*}
+        \end{itemize}
+    \end{itemize}
+\end{proof}
+
 \begin{definition}{Barycentre - HP}{}
     \\Soient $a_1, \dots, a_n \in E$ et $\lambda_1, \dots, \lambda_n \in \inter{0}{1}$
     tels que $\sum_{i = 1}^n \lambda_i = 1$.
@@ -358,17 +429,17 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     Soit $x \in C$, qui s'écrit $\displaystyle x = \sum_{ i = 1}^{n }\lambda_i a_i$ où 
     $\displaystyle \sum_{i = 1}^{n } \lambda_i = 1$ et $a_i \in A$
 
-    \quad \underline{Si $n = 1$ :} $x = a_i$ ou $a_1 \in A$
+    \underline{Si $n = 1$ :} $x = a_i$ ou $a_1 \in A$
     or $A \subset B$ donc $x \in B$
 
-    \quad \underline{Si $n = 2$: } $x = \lambda_1 a_1 + \lambda_2 a_2$ ou $a_1, a_2 \in A$ et 
+    \underline{Si $n = 2$: } $x = \lambda_1 a_1 + \lambda_2 a_2$ ou $a_1, a_2 \in A$ et 
     $\lambda_1 + \lambda_2 = 1$. 
 
     Donc $x = \lambda_1 a_1 + (1 - \lambda)a_2$. 
 
-    Or $a_1, a_2 \in B$ et $B$ convexe donc $x \in B$. 
+    Or $a_1, a_2 \in B$ et $B$ convexe donc $x \in B$. \\
 
-    \uline{Preuve par récurrence :}
+    \uline{Hérédité :}
 
     Supposons que l'on a le résultat pour tout $x \in C$ correspondant à une combinaison
     linéaire de $(n - 1)$ éléments de $B$. 
@@ -418,53 +489,6 @@ Soit $(E, N)$ un espace vectoriel normé et $d$ la distance associée à $N$.
     Or $\displaystyle \sum_{i = 1}^{n }\frac{\beta_i }{S } = 1$. 
 \end{exemple}
 
-\begin{proposition}{Convexité des boules}{}
-    Toute boule d'un espace vectoriel normé est convexe. 
-\end{proposition}
-
-
-\idee{
-    Astuce du taupin, utiliser la distance au centre
-    en faisant apparaitre le rayon.
-}
-
-\begin{proof}~\\
-    \begin{itemize}
-        \item \uline{Boule fermée :}
-
-        Soit $\omega \in E$, $R > 0$ et $A = B'( \omega, R)$
-    
-        Soient $a, b \in A, \lambda \in \inter{0}{1}$ et $c = \lambda a + (1 - \lambda)b$
-
-        \begin{align*}
-            N(c - \omega) & = N(\lambda a + (1 - \lambda)b - \lambda \omega - (1 - \lambda) \omega) \\
-            & = N(\lambda(a - \omega) + (1 - \lambda)(b - \omega)) \\
-            & \leqslant \, |\lambda| N(a - \omega) + |1 - \lambda| N(b - \omega) \\
-            & \leqslant \lambda R + (1 - \lambda)R = R \\
-        \end{align*}
-
-        \item \underline{Boule ouverte :}
-
-        Soit $\omega  \in E, R > 0, A = B(\omega, R)$. 
-
-        Soient $a, b \in A, \lambda \in \inter{0}{1}$ et $c = \lambda a + (1 - \lambda)b$.
-
-        Montrons que $c \in A$. 
-        \begin{itemize}
-            \item si $\lambda = 0, c = b$ donc $c \in A$
-            \item si $\lambda = 1, c = a$ donc $c \in A$
-            \item sinon, 
-                \begin{align*}
-                    d(\omega, c) & = N(\lambda a + (1 - \lambda) b - \omega) \\
-                    & = N(\lambda a + (1 - \lambda) b - (\lambda + 1- \lambda) \omega) \\
-                    & = N(\lambda(a - \omega) + (1 - \lambda) (b - \omega)) \\
-                    & \leqslant \, |\lambda| N(a - \omega) + (1 - \lambda)N(b - \omega) \\
-                    & < (\lambda + 1 - \lambda) R = R
-                \end{align*}
-        \end{itemize}
-    \end{itemize}
-\end{proof}
-
 \subsection{Parties et applications bornées}
 
 
@@ -477,7 +501,7 @@ Soit $(E, N)$ un espace vectoriel normé sur $\K$.
     c'est à dire ssi $\exists M > 0, A \subset B'(0, M)$.
 \end{definition}
 
-\begin{theoreme}{Diamètre}{}
+\begin{theoreme}{Diamètre - LHP}{}
     \\Soit $A \subset E$ non vide et bornée. 
     Alors $B = \{d(x, y), (x, y) \in A^2\}$ est une partie de $\R$ non vide et majorée.\\
 
@@ -610,6 +634,10 @@ Soit $(E, N)$ un espace vectoriel normé sur $\K$.
 
 Soit $E$ un $\K$-espace vectoriel. 
 
+\begin{definition}{LHP}
+    Soient $N_1$ et $N_2$ des normes sur $E$, on dit que $N_1$ est plus fine que $N_2$ si $\exists \beta > 0$ tel que $\forall u \in E$, $N_2(u) \leqslant \beta N_1(u)$.    
+\end{definition}
+
 \begin{definition}{Normes équivalentes}{}
     Soient $N_1$ et $N_2$ deux normes sur $E$. On dit que $N_1$ et $N_2$ sont équivalentes ssi $ \exists \alpha > 0, \exists \beta > 0, $
     $$\forall x \in E, \, \beta N_2(x) \leqslant N_1(x) \leqslant \alpha N_2(x)$$
@@ -681,7 +709,7 @@ Soit $E$ un $\K$-espace vectoriel.
 \end{proposition}
 
 \begin{remarque}
-    Une suite qui marche souvent est $(x^n)_{n \in \N}$.
+    Une suite qui fonctionne souvent est $(x^n)_{n \in \N}$.
 \end{remarque}
 
 \idee{
@@ -689,7 +717,8 @@ Soit $E$ un $\K$-espace vectoriel.
 }
 
 \begin{proof}
-    Si $N_1$ et $N_2$ avaient été équivalentes on aurait eu 
+    Si $N_1$ et $N_2$ avaient été équivalentes on aurait eu :
+    
     $\exists \alpha, \beta > 0, \forall x \in E, \alpha N_1(x) \leqslant N_2(x) \leqslant \beta N_1(x)$
     en particulier $\forall n \in \N, \alpha \leqslant \frac{N_2(u_n)}{N_1(u_n)} \leqslant \beta$
 
@@ -712,13 +741,13 @@ Soit $E$ un $\K$-espace vectoriel.
     $|| u ||_\infty \leqslant |x| + |y| \leqslant 2 ||u||_\infty$
     donc $|| u ||_\infty \leqslant ||u||_1 \leqslant 2 ||u||_\infty$
 
-    Donc $|| \cdot ||_\infty$ et $|| \cdot ||_1$ équivalentes. \\
+    Donc $|| \cdot ||_\infty$ et $|| \cdot ||_1$ sont équivalentes. \\
 
     On peut montrer de même les autres équivalences.
 \end{exemple}
 
 \begin{exemple}[Normes dans $\mathscr{C}{([0, 1], \R)}$]
-    On a les mêmes genre de normes sur les fonctions avec les intégrales ou le sup. 
+    On a le même genre de normes sur les fonctions avec les intégrales ou le sup. 
 
     $|| f ||_1 = \int_{0}^{1} \mid f(t) \mid \text d t \leqslant \int_{0}^{1} ||f||_\infty \leqslant ||f ||_\infty$
 
@@ -729,21 +758,21 @@ Soit $E$ un $\K$-espace vectoriel.
     Alors $\int_{0}^{1} x^n \text d x = \left[\frac {x^n + 1}{n+ 1}\right] = \frac 1 {n + 1}$
     et $||f_n|| = 1$
 
-    Donc $\frac{||f_n||_1}{||f_n||_\infty} \limit{n}{+ \infty} 0$ : les normes ne sont pas équivalentes. 
+    Donc $\frac{||f_n||_1}{||f_n||_\infty} \limit{n}{+ \infty} 0$ : les normes ne sont pas équivalentes. \\
 
     De même, la norme infinie est plus fine que la norme 2, et $x^n$ montre aussi 
     que les normes infinies et 2 ne sont pas équivalentes.
 
     $\frac{||f_n||_1}{||f_n||_2} = \frac{\sqrt{2n + 1}}{n+1} \sim \sqrt{\frac 2 n} \limit{n}{+ \infty} 0$
 
-    Donc elles ne sont pas équivalentes. 
+    Donc elles ne sont pas équivalentes. \\
 
-    Comme $(f, g) \mapsto \int_{0}^{1}fg = <f, g>$ est un produit scalaire, on 
+    Comme $(f, g) \mapsto \int_{0}^{1}fg = \langle f, g \rangle$ est un produit scalaire, on 
     a par Cauchy Schwarz : 
 
-    $||f||_1 = \int_{0}^{1} \mid f \mid \times 1 = <\mid f \mid, 1>$
+    $||f||_1 = \int_{0}^{1} |f| \times 1 = \langle |f|, 1 \rangle$
 
-    Donc norme 2 plus fine que norme 1. 
+        Donc la norme 2 est plus fine que la norme 1. 
 \end{exemple}
 
 \begin{theorement}{}{}
@@ -933,7 +962,7 @@ Soit $E$ un $\K$-espace vectoriel.
 \end{proof}
 
 \begin{definitionnt}{}{}
-    \\On note $\ell^1(\K) = \{(u_n)_{n \in \N} \in \K^n \mid \sum_{n \leqslant 0} |u_n| ~ \text{est une suite convergente} ~ \}$
+    \\On note $\ell^1(\K) = \{(u_n)_{n \in \N} \in \K^n \mid \sum_{n \geqslant 0} |u_n| ~ \text{est une suite convergente} ~ \}$
 \end{definitionnt}
 
 \begin{theoreme}{Norme 1 suites}{}
@@ -1051,11 +1080,11 @@ Soit $E$ un $\R$-espace vectoriel muni d'un produit scalaire $\langle \cdot , \c
     est un $\R$-espace vectoriel appelé espace des suites de carré sommable. 
 \end{theoreme}
 
-\idee{
-    cheat code avec l'identité remarquable.
-}
 
-\begin{proof}~\\
+\begin{proof}~
+    \idee{
+        Cheat code avec l'identité remarquable.
+    }
     \begin{itemize}
         \item $E \subset \R^{\N}$
         
@@ -1080,7 +1109,7 @@ Soit $E$ un $\R$-espace vectoriel muni d'un produit scalaire $\langle \cdot , \c
 \end{theoreme}
 
 \begin{proof}
-    Par la démo précédente, $\langle u, v \rangle$ existe, est bilinéaire symétrique par calcul 
+    Par la démonstration précédente, $\langle u, v \rangle$ existe, et est bilinéaire symétrique par calcul 
     facile et $u_n = 0$ si la norme est nulle. 
 \end{proof}
 
@@ -1147,7 +1176,7 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
 
     Donc $|\langle u, v \rangle|^2 \leqslant \langle u, u \rangle \langle v, v \rangle$
 
-    Donc $\mid \langle u, v \rangle \leqslant ||u||_2 \cdot ||v||_2$ qui est l'inégalité de Cauchy Schwarz. 
+    Donc $|\langle u, v \rangle| \leqslant ||u||_2 \cdot ||v||_2$ qui est l'inégalité de Cauchy Schwarz. 
 
 \end{proof}
 
@@ -1191,7 +1220,7 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
     Si $u = (u_1, \dots, u_n)$, $\displaystyle ||u||_2 = \sqrt{\sum_{i = 1}^{n} |u_i|^2}$
     définit une norme. 
 
-    C'est la norme euclidienne (resp hermitienne) canonique si $\K = \R$ (resp $\C$). 
+    C'est la norme euclidienne (resp. hermitienne) canonique si $\K = \R$ (resp. $\C$). 
 
     Elle provient du produit scalaire défini par : 
 
@@ -1209,7 +1238,7 @@ Soit $E = \mathscr C(\inter{a}{b}, \R)$.
     
     On pose $\ds ||u_n||_2 = \sqrt{\sum_{n = 0 }^{+ \infty} |u_n|^2}$
 
-    C'est une norme euclidienne (resp hermitienne) si $\K = \R$ (resp $\C$) issue
+    C'est une norme euclidienne (resp. hermitienne) si $\K = \R$ (resp. $\C$) issue
     du produit scalaire $\ds \langle u_n, v_n \rangle = \sum_{n = 0}^{+ \infty} u_n v_n \text{si } \K = \R$
     $\ds \langle u_n, v_n \rangle = \sum_{n = 0}^{+ \infty} u_n \overline{v_n} \text{si } \K = \C$
 
