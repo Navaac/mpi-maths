@@ -50,7 +50,7 @@ On prendra $(E, N)$ un espace vectoriel normé sur $\K$.
 
     \uline{Unicité de la limite :}
 
-    \vspace{0.2em} Si $\ell_1$ et $\ell_2$ conviennet : 
+    \vspace{0.2em} Si $\ell_1$ et $\ell_2$ conviennent : 
 
     Il existe $n_0$ tel que $\forall n \geqslant n_0$, $|u_n - \ell_1| \leqslant \varepsilon$ et $\forall n > n_1, |u_n - \ell_2| \leqslant \varepsilon$.
 
@@ -127,7 +127,7 @@ On prendra $(E, N)$ un espace vectoriel normé sur $\K$.
 \subsection{Théorèmes liés à l'ordre dans $\R$}
 
 \begin{theoreme}{}{}
-    Soit $(u_n)_{n \in \N} \in \K^{\N}$, $\ell \in \K$, et $(\alpha_n)_{n \in \N} \in \R^{\N}$ 
+    Soit $(u_n)_{n \in \N} \in \K^{\N}$, $\ell \in \K$, et $(\alpha_n)_{n \in \N} \in \R^{\N}$ \\
     
     Si $\left\{ \begin{array}{lcl}
         \exists n_0 \in \N, & \forall n \geqslant n_0, & \mid u_n - \ell \mid \leqslant \alpha_n \\
@@ -201,6 +201,10 @@ On prendra $(E, N)$ un espace vectoriel normé sur $\K$.
     et $\forall n \in \N, u_n \leqslant \ell \leqslant v_n$
 \end{theorement}
 
+\begin{theorement}{Lien suites-séries}{}
+    Soit $(u_n)$ une suite réelle, alors $(u_n)$ converge ssi $\Sigma_{n>0} (u_{n+1} - u_n)$ converge.
+\end{theorement}
+
 \begin{exemple}
     Soient $a < b \in \R$. On pose $u_0 = a, v_0 = b$ 
     et $\forall n \in \N, \, u_{n+1} = \sqrt{u_n v_n}$ et $v_{n+1} = \frac{u_n + v_n} 2$.
@@ -244,13 +248,13 @@ On prendra $(E, N)$ un espace vectoriel normé sur $\K$.
     un $\C$-espace vectoriel de dimension 2. 
 \end{propositionnt}
 
-\idee{
-    On construit une base avec des suites géométriques, et utilisation d'un isomorphisme.
-}
-
 \begin{proof}
     En effet, $\fonction{}{E}{\C^2}{(u_n)}{(u_0, u_1)}$ est un isomorphisme. 
 
+    \idee{
+        On construit une base avec des suites géométriques, et utilisation d'un isomorphisme.
+    }
+    
     Une suite géométrique $(r^n)_{n \in \N}$ où $r \neq 0$ est dans $E$ ssi elle vérifie
     l'équation caractéristique $r^2 = ar + b$ (1).
 
@@ -306,7 +310,7 @@ sur $n$.
 
 \paragraph{Point fixe}
 
-Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell$ est un point fixe de $f$. 
+Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell$ est un point fixe de $f$. \\
 
 \begin{remarque}
     Hors programme. 
@@ -454,7 +458,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 \subsection{Convergence et divergence}
 
 \begin{definition}{}{}
-    Soit $(u_n)_{n \in \N} \in E^{\N}$ et $\ell \in E$. 
+    Soit $(u_n)_{n \in \N} \in E^{\N}$ et $\ell \in E$. \\
 
     Alors les assertions suivantes sont équivalentes : 
 
@@ -462,10 +466,10 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
         \item $\forall \varepsilon > 0, \, \exists n_0 \in \N, \, \forall n \in \N, \, n \geqslant n_0 \, \Rightarrow N(u_n - \ell) \leqslant \varepsilon$
         \item La suite réelle positive $(N(u_n - \ell))_{n \in \N}$ converge vers 0.
         \item En notant pour $\varepsilon > 0, \, M_\varepsilon = \{n \in \N, \, N(u_n - l) > \varepsilon\}$ on a
-            $\forall \varepsilon > 0, \, M_\varepsilon$ est fini.
+            $\forall \varepsilon > 0, \, M_\varepsilon$ est fini. \\
     \end{enumerate}
 
-    On a (1) $\iff$ (2) par def de la limite de la suite réelle positive $(N(u_n - \ell))$.
+    On a (1) $\iff$ (2) par définition de la limite de la suite réelle positive $(N(u_n - \ell))$.
 
     (2) $\iff$ (3) par l'équivalence analogue pour les suites réelles.\\
 
@@ -504,7 +508,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
 \end{proof}
 
 \begin{definitionnt}{Convergence}{}
-    Soit $(u_n)_{n \in \N} \in E^{\N}$. On dit que $(u_n)$ est convergente ssi 
+    Soit $(u_n)_{n \in \N} \in E^{\N}$. On dit que $(u_n)$ est convergente pour N ssi 
     $\exists \ell \in E, \, u_n \limit{n}{+\infty} \ell$. \\
 
     Dans le cas contraire, on dit que $(u_n)$ diverge.
@@ -530,7 +534,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
     Posons $K' = \max(K, N(u_0), \ldots, N(u_{n_0 - 1}))$, alors $\forall n \in \N, \, N(u_n) \leqslant K'$.
 \end{proof}
 
-\subsubsection{Invariance par changement de norme}
+\subsection{Invariance par changement de norme}
 
 \begin{theorement}{}{}
     Soient $N_1$ et $N_2$ deux normes sur $E$. 
@@ -541,11 +545,15 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
     $$ u_n \limit{n}{+\infty} \ell \text{ pour } N_1 \iff u_n \limit{n}{+\infty} \ell \text{ pour } N_2 $$
 \end{theorement}
 
-\idee{
-    utiliser la def des normes équivalentes. 
-}
+\begin{remarque}
+    Si $E$ est de dimension finie, toutes les normes étant équivalentes, on n'a pas besoin de préciser pour quelle norme une suite converge.
+\end{remarque}
 
 \begin{proof}
+    \idee{
+        utiliser la def des normes équivalentes. 
+    }
+    
     Supposons $N_1$ et $N_2$ équivalentes.
 
     Soit $(u_n)_{n \in \N} \in E^{\N}$ et $\ell \in E$.
@@ -595,7 +603,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
     $N_1(u_n) =  \frac 1 {\sqrt n} \to 0$ donc $u_n \to 0$ pour $n_1$
 \end{proof}
 
-\subsubsection{Application à la dimension finie}
+\subsection{Application à la dimension finie}
 
 \begin{theoreme}{}{}
     Soit $(E, N)$ un espace vectoriel normé de dimension finie. La convergence d'une suite $(u_n)$ de $E$
@@ -606,7 +614,7 @@ Si $(u_n)$ converge vers $\ell$ et si $f$ continue alors $f(\ell) = \ell$. $\ell
     Toutes les normes sont équivalentes en dimension finie. 
 \end{proof}
 
-\paragraph{Conséquences :}
+\textbf{Conséquences :}
 
 Soit $B = (e_1, \dots, e_p)$ une base de $E$.
 
@@ -615,7 +623,7 @@ et $\displaystyle \ell = \sum_{j = 1}^{p} \ell_j e_j$
 
 Alors $u_n \limit{n}{+ \infty} l$ ssi $\forall j \in \ninter{1}{p}, \; x_{n, j} \limit{n}{+ \infty} \ell_j$
 
-Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordonnée par coordonnée. 
+Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtient coordonnée par coordonnée. 
 
 
 \begin{proof}
@@ -628,16 +636,14 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     $\forall j, |x_{n, j} - \ell_j| \to 0$ ssi $\forall j, \; x_{n, j} \ell_j$. 
 \end{proof}
 
-\subsubsection{Espace produit}
+\subsection{Espace produit}
 
 \begin{definition}{}{}
-    Soient $(E_1, N_1), \dots, (E_p, N_p)$un espace produit muni de $N_\infty$ la norme produit. 
+    Soient $(E_1, N_1), \dots, (E_p, N_p)$ un espace produit muni de $N_\infty$ la norme produit. 
+    Soit $(u_n)_{n \in \N}$ suite de $E$ et $\ell \in E$.
 
-    Soit $(u_n)_{n \in \N}$ suite de $E$ et $\ell \in E$. 
-
-    En notant $\forall n, \; u_n = (u_{n, 1}, \dots, u_{n, p})$ et $\ell = (\ell_1, \dots, \ell_p)$. 
-
-    Alors $u_n \to l$ pour $N_\infty$ ssi $\forall j \in \ninter 1 p$, 
+    En notant $\forall n, \; u_n = (u_{n, 1}, \dots, u_{n, p})$ et $\ell = (\ell_1, \dots, \ell_p)$, 
+    alors $u_n \to l$ pour $N_\infty$ ssi $\forall j \in \ninter 1 p$, 
     $$u_{n, j} \to l_j$$
 \end{definition}
 
@@ -666,7 +672,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 
 \begin{proposition}{Somme et produit par un scalaire}{}
     Soient $(u_n)_{n \in \N}$, $(v_n)_{n \in \N}, (\lambda_n) _{n \in \N} \in E^{\N}$ 
-    et $\alpha, \beta \in \K$ avec $\ell_1, \ell_2 \in E$. 
+    et $\alpha, \beta \in \K$ avec $\ell_1, \ell_2 \in E$ :
 
     \begin{enumerate}
         \item Si $u_n \limit{n}{+\infty} \ell_1$ et $v_n \limit{n}{+\infty} \ell_2$, alors 
@@ -700,32 +706,31 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 
 \begin{proof}
     Soit $n \in \N$ :
-
-    1. $N((u_n + v_n) - (\ell_1 + \ell_2)) \leqslant N(u_n - \ell_1) + N(v_n - \ell_2)$
-
-    \avspace 2. $N(\lambda_n u_n- 0) \leqslant \underbrace{|\lambda_n|}_{\text{bornée}} \underbrace{N(u_n - 0)}_{\rightarrow 0}$
-
-    \avspace 3. $N(\lambda_n u_n - 0) \leqslant \underbrace{|\lambda_n|}_{\rightarrow 0} \underbrace{N(u_n)}_{\text{suite bornée}}$
-
-    4. \begin{align*}
-        N(\lambda_n u_n - \alpha \ell) & = N(\lambda_n u_n - \lambda_n \ell + \lambda_n \ell - \alpha \ell) \\
-        & \leqslant N(\lambda_n (u_n - \ell)) + N((\lambda_n - \alpha) \ell) \\
-        & \leqslant \underbrace{|\lambda_n|}_{\text{bornée}} \underbrace{N(u_n - \ell)}_{\rightarrow 0} + \underbrace{|\lambda_n - \alpha|}_{\rightarrow 0} N(\ell) 
-    \end{align*}
-
-
-    5. Par 1. et 4.
-
-    6. $|N(u_n) - N(\ell)| \leqslant N(u_n - \ell)$ (seconde inégalité triangulaire)
-
+    \begin{enumerate}
+        \item $N((u_n + v_n) - (\ell_1 + \ell_2)) \leqslant N(u_n - \ell_1) + N(v_n - \ell_2)$
+        \item $N(\lambda_n u_n- 0) \leqslant \underbrace{|\lambda_n|}_{\text{bornée}} \underbrace{N(u_n - 0)}_{\rightarrow 0}$
+        \item $N(\lambda_n u_n - 0) \leqslant \underbrace{|\lambda_n|}_{\rightarrow 0} \underbrace{N(u_n)}_{\text{suite bornée}}$
+        \item 
+        \begin{align*}
+            N(\lambda_n u_n - \alpha \ell) & = N(\lambda_n u_n - \lambda_n \ell + \lambda_n \ell - \alpha \ell) \\
+            & \leqslant N(\lambda_n (u_n - \ell)) + N((\lambda_n - \alpha) \ell) \\
+            & \leqslant \underbrace{|\lambda_n|}_{\text{bornée}} \underbrace{N(u_n - \ell)}_{\rightarrow 0} + \underbrace{|\lambda_n - \alpha|}_{\rightarrow 0} N(\ell) 
+        \end{align*}
+        \item Par 1. et 4.
+        \item $|N(u_n) - N(\ell)| \leqslant N(u_n - \ell)$ (seconde inégalité triangulaire)
+    \end{enumerate}
 \end{proof}
 
 
-\subsection{Suites extraites}
+\section{Suites extraites}
 
 \begin{definition}{Extracteur}{}
-    On appelle extracteur toute application $\varphi : \N \to \N$ strictement croissante.
+    On appelle extracteur (ou extractrice) toute application $\varphi : \N \to \N$ strictement croissante.
 \end{definition}
+
+\begin{exemple}
+    $\varphi (n) = n +1$ et $\varphi (n) = 2n + 1$ sont des extracteurs.    
+\end{exemple}
 
 \begin{proposition}{Relation d'ordre etracteur et identité}{}
     Si $\varphi$ est un extracteur, alors $\forall n \in \N, \, \varphi(n) \geqslant n$.
@@ -733,7 +738,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 
 
 \idee{
-    par récurrence
+    par récurrence.
 }
 
 \begin{proof}
@@ -759,11 +764,16 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     $\forall n \in \N, \, v_n = u_{\varphi(n)}$.
 \end{definition}
 
+\begin{exemple}
+    $(u_{2n})$ et $(u_{2n + 1})$ sont des suites extraites de $(u_n)$. \\
 
-\subsubsection{Valeur d'adhérence}
+    Une suite extraite de $(u_{\varphi(n)})$ est de la forme $(u_{\psi (\varphi (n))})$.
+\end{exemple}
+
+\subsection{Valeur d'adhérence}
 
 \begin{theorement}{}{}
-    Soit $(u_n)_{n \in \N} \in E^{\N}$ et $a \in E$.
+    Soit $(u_n)_{n \in \N} \in E^{\N}$ et $a \in E$. \\
 
     Alors les assertions suivantes sont équivalentes :
 
@@ -778,7 +788,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 \end{theorement}
 
 \idee{
-    (1) $\Rightarrow$ (2) : utiliser la def de la limite pour l'extractrice.
+    (1) $\Rightarrow$ (2) : utiliser la définition de la limite pour l'extractrice.
 
     (2) $\Rightarrow$ (1) : construire par récurrence l'extractrice.
 }
@@ -790,7 +800,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     Supposons 1, c'est à dire $u_{\varphi(n)} \limit{n}{+\infty} a$.
 
     Soit $\varepsilon > 0$ et $G_\varepsilon = \{n \in \N, N(u_n - a) \leqslant \varepsilon\}$.
-    Par def de la limite, il existe $n_0 \in \N, \, \forall n \geqslant n_0, \, N(u_{\varphi(n)} - a) \leqslant \varepsilon$, 
+    Par définition de la limite, il existe $n_0 \in \N, \, \forall n \geqslant n_0, \, N(u_{\varphi(n)} - a) \leqslant \varepsilon$, 
     c'est à dire $\varphi(n) \in G_\varepsilon$.
 
     Donc $\{\varphi(n), n \geqslant n_0\} \subset G_\varepsilon$.
@@ -867,9 +877,6 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     Le deuxième point s'obtient par contraposée.
 \end{proof}
 
-
-\subsubsection{Cas particuliers}
-
 \begin{proposition}{}{}
     Soit $(u_n)_{n \in \N} \in E^{\N}$ et $\ell \in E$.
 
@@ -881,8 +888,11 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     Posons $a_n = N(u_n - \ell) \in \R$ et on utilise le résultat analogue pour les suites réelles.
 \end{proof}
 
+\begin{exemple}
+    $u_n = (-1)^n + \frac 1 {n+1}$, $u_{2n} \to 1$ et $u_{2n + 1} \to -1$ donc $(u_n)$ diverge.
+\end{exemple}
 
-\subsubsection{Théorème de Bolzano-Weierstrass}
+\subsection{Cas de la dimension finie}
 
 \begin{theorement}{Bolzano-Weierstrass}{}
     Soit $E$ un $\K$-espace vectoriel normé de dimension finie. Alors de toute suite
@@ -891,14 +901,8 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     
 \end{theorement}
 
-\idee{
-    Cas $E = \R$ : construction de la suite des bornes supérieures des 
-    queues de la suite. 
 
-    Autres cas : réduction au cas réel par extraction coordonnée par coordonnée.
-}
-
-\begin{proof}
+\begin{proof}~\\
     \uline{Dans $E = \R$ :}
 
     Soit $(u_n)_{n \N} \in \R^{\N}$ bornée, donc $\forall n \in \N, \, a \leqslant u_n \leqslant b$. 
@@ -907,6 +911,13 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 
     $E_n$ est non vide et majoré par $b$ donc $x_n$ existe, et $x_n \in [a, b]$.
 
+    \idee{
+        Cas $E = \R$ : construction de la suite des bornes supérieures des 
+        queues de la suite. 
+
+        Autres cas : réduction au cas réel par extraction coordonnée par coordonnée.
+    }
+    
     Or $E_{n + 1} \subset E_n$ donc $x_n$ qui est un majorant de $E_n$ est aussi un majorant de $E_{n + 1}$.
 
     Donc $x_{n + 1} \leqslant x_n$ et $(x_n)$ est décroissante minorée, donc converge. 
@@ -932,9 +943,9 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 
     Donc $k \in G_\varepsilon$ et $k \geqslant n_1 \geqslant N$.
 
-    Donc $G_\varepsilon$ n'est pas majoré, donc infini, donc $\ell$ est une valeur d'adhérence de $(u_n)$.
+    Donc $G_\varepsilon$ n'est pas majoré, donc infini, donc $\ell$ est une valeur d'adhérence de $(u_n)$. \\
 
-    \qquad \svspace \uline{Dans $E = \C$ :}
+    \uline{Dans $E = \C$ :}
 
     Soit $(z_n)_{n \in \N} \in \C^{\N}$ bornée. 
 
@@ -954,9 +965,9 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     Or $\varphi \circ \psi$ est un extracteur.
 
     Donc $x_{\varphi \circ \psi(n)}$ est une suite extraite de $(x_{\varphi(n)})$ qui converge
-    donc $z_{\varphi \circ \psi(n)} = x_{\varphi \circ \psi(n)} + i y_{\varphi \circ \psi(n)}$ converge. 
+    donc $z_{\varphi \circ \psi(n)} = x_{\varphi \circ \psi(n)} + i y_{\varphi \circ \psi(n)}$ converge. \\
 
-    \avspace \qquad \uline{Dans $E$ un $\K$ ev de dimension finie $p$ :}
+    \uline{Dans $E$ un $\K$ ev de dimension finie $p$ :}
 
     \svspace $B = (b_1, \dots, b_p)$ une base de $E$.
 
@@ -981,8 +992,6 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 
 \begin{remarque} (HP) $\ell$ est appelée limite supérieure de la suite $(u_n)$.
 \end{remarque}
-
-\subsubsection{Conséquence }
 
 \begin{theoreme}{Convergence avec valeur d'adhérence}{}
     Une suite bornée d'un $\K$-espace vectoriel de dimension finie converge ssi elle possède
@@ -1026,7 +1035,7 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
 
 \end{proof}
 
-\subsection{Complément hors programme (suites de Cauchy)}
+\section{Complément hors programme (suites de Cauchy)}
 
 \begin{definition}{Suite de Cauchy}{}
     Soit $(u_n)_{n \in \N} \in E^{\N}$. On dit que cette suite est de Cauchy ssi 
@@ -1104,4 +1113,6 @@ Ainsi en dimension finie la convergence d'une suite de vecteurs s'obtien coordon
     Donc $u_n \limit{n}{+\infty} \ell$.
 \end{proof}
 
-
+\begin{remarque}
+    On dit que $E$ est complet (et même de Banach).
+\end{remarque}
