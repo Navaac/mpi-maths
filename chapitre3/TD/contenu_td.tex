@@ -12,7 +12,7 @@ Montrer que $\mathbb{Z}$ est fermé dans $\mathbb{R}$ de 4 manières différente
 \end{exercice}
 
 % --- Exercice 2 (Source: EXERCICE 34 analyse) ---
-\begin{exercice}
+\begin{exercice}[Exercice 34 Analyse]
 Soit $A$ une partie non vide d'un espace vectoriel normé $E$.
 \begin{enumerate}
     \item Rappeler la définition d'un point adhérent à $A$, en termes de voisinages ou de boules.
@@ -23,7 +23,7 @@ Soit $A$ une partie non vide d'un espace vectoriel normé $E$.
 \end{exercice}
 
 % --- Exercice 3 (Source: EXERCICE 44 analyse) ---
-\begin{exercice}
+\begin{exercice}[Exercice 44 Analyse]
 Soit $E$ un espace vectoriel normé. Soient $A$ et $B$ deux parties non vides de $E$.
 \begin{enumerate}
     \item 
@@ -41,7 +41,7 @@ Soit $E$ un espace vectoriel normé. Soient $A$ et $B$ deux parties non vides de
 \end{exercice}
 
 % --- Exercice 4 (Source: EXERCICE 45 analyse) ---
-\begin{exercice}
+\begin{exercice}[Exercice 45 Analyse]
 Les questions 1 et 2 sont indépendantes. Soit $E$ un espace vectoriel normé. Soit $A$ une partie non vide de $E$. On note $\overline{A}$ l'adhérence de $A$.
 \begin{enumerate}
     \item 
@@ -68,7 +68,7 @@ Soit $A$ une partie non vide de $E$ un evn. On note pour $x \in E$, $d_{A}(x)$ l
 \end{exercice}
 
 % --- Exercice 6 (Source: EXERCICE 35 analyse) ---
-\begin{exercice}
+\begin{exercice}[Exercice 35 Analyse]
 $E$ et $F$ désignent deux espaces vectoriels normés.
 \begin{enumerate}
     \item Soient $f$ une application de $E$ dans $F$ et $a$ un point de $E$. On considère les propositions suivantes :
@@ -82,8 +82,9 @@ $E$ et $F$ désignent deux espaces vectoriels normés.
 \end{exercice}
 
 % --- Exercice 7 (Source: EXERCICE 41 analyse) ---
-\begin{exercice}
-Énoncer quatre théorèmes différents ou méthodes permettant de prouver qu'une partie d'un espace vectoriel normé est fermée et pour chacun d'eux, donner un exemple concret d'utilisation dans $\mathbb{R}^{2}$.
+\begin{exercice}[Exercice 41 Analyse]
+Énoncer quatre théorèmes différents ou méthodes permettant de prouver qu'une partie d'un espace vectoriel normé est fermée et pour chacun d'eux, donner un exemple concret d'utilisation dans $\mathbb{R}^{2}$. \\
+
 \textit{Remarques :}
 1. On utilisera au moins une fois des suites.
 2. On pourra utiliser au plus une fois le passage au complémentaire.
@@ -145,7 +146,7 @@ On munit $M_{n}(\mathbb{R})$ de la norme $N(A) = \max \{|a_{ij}|, i,j \in \{1,\d
 \end{exercice}
 
 % --- Exercice 15 (Source: EXERCICE 36 analyse) ---
-\begin{exercice}
+\begin{exercice}[Exercice 36 Analyse]
 Soient $E, F$ deux espaces vectoriels normés sur le corps $\mathbb{R}$.
 \begin{enumerate}
     \item Démontrer que si $f$ est une application linéaire de $E$ dans $F$, alors les propriétés suivantes sont deux à deux équivalentes :
@@ -165,7 +166,7 @@ Montrer que l'application qui à une fonction $f$ de $E$ associe son unique prim
 \end{exercice}
 
 % --- Exercice 17 (Source: EXERCICE 54 analyse) ---
-\begin{exercice}
+\begin{exercice}[Exercice 54 Analyse]
 Soit $E$ l'ensemble des suites à valeurs réelles qui convergent vers 0.
 \begin{enumerate}
     \item Prouver que $E$ est un sous-espace vectoriel de l'espace vectoriel des suites à valeurs réelles.
@@ -283,36 +284,36 @@ Utiliser la fonction déterminant pour montrer que ni $GL_{n}(\mathbb{R})$ ni le
 
 % --- Correction 1 ---
 \begin{correction}{1}
-\textbf{1. Par le complémentaire :}
+\begin{enumerate}
+    \item \textbf{Par le complémentaire :}
 $\mathbb{R} \setminus \mathbb{Z} = \bigcup_{k \in \mathbb{Z}} ]k, k+1[$.
 Chaque intervalle $]k, k+1[ = B(k+\frac{1}{2}, \frac{1}{2})$ est une boule ouverte, donc un ouvert.
 Une réunion d'ouverts étant ouverte, le complémentaire de $\mathbb{Z}$ est ouvert, donc $\mathbb{Z}$ est fermé.
-
-\textbf{2. Par l'image réciproque :}
+    \item \textbf{Par l'image réciproque :}
 Considérons $f : x \mapsto \sin(\pi x)$.
 $f$ est continue sur $\mathbb{R}$.
 $\mathbb{Z} = \{ x \in \mathbb{R}, f(x)=0 \} = f^{-1}(\{0\})$.
 $\{0\}$ est un fermé (singleton dans un espace séparé). L'image réciproque d'un fermé par une application continue est un fermé. Donc $\mathbb{Z}$ est fermé.
-
-\textbf{3. Par caractérisation séquentielle :}
+    \item \textbf{Par caractérisation séquentielle :}
 Soit $(u_{n})$ une suite d'éléments de $\mathbb{Z}$ qui converge vers $\ell \in \mathbb{R}$.
 Une suite convergente de Cauchy : $\exists N, \forall p,q \ge N, |u_{p} - u_{q}| < \epsilon$.
 Prenons $\epsilon = \frac{1}{2}$.
 Si $u_{p}, u_{q} \in \mathbb{Z}$ et $|u_{p} - u_{q}| < \frac{1}{2}$, alors $u_{p} = u_{q}$.
 La suite est donc stationnaire à partir d'un certain rang : $\exists N, \forall n \ge N, u_{n} = C \in \mathbb{Z}$.
 Donc $\ell = C \in \mathbb{Z}$. $\mathbb{Z}$ est séquentiellement fermé.
-
-\textbf{4. Autre méthode (voisinage) :}
+    \item \textbf{Autre méthode (voisinage) :}
 Montrons que le complémentaire $A = \mathbb{R} \setminus \mathbb{Z}$ est ouvert.
 Soit $a \in A$. $a \notin \mathbb{Z}$, donc $\lfloor a \rfloor < a < \lfloor a \rfloor + 1$.
 Posons $R = \min(a - \lfloor a \rfloor, \lfloor a \rfloor + 1 - a)$.
 Alors $B(a, R) \subset ]\lfloor a \rfloor, \lfloor a \rfloor + 1[ \subset \mathbb{R} \setminus \mathbb{Z}$.
 Donc $A$ est ouvert.
+\end{enumerate}
 \end{correction}
 
 % --- Correction 5 (Exercice 2 dans le PDF) ---
 \begin{correction}{5}
- \textbf{a) Distance nulle et adhérence :}
+\begin{enumerate}
+    \item \textbf{Distance nulle et adhérence :}
 On note $W = \{x \in E, d_{A}(x) = 0\}$.
 Soit $x \in E$.
 $x \in W \iff \inf_{a \in A} \|x-a\| = 0$
@@ -321,7 +322,7 @@ $\iff \forall \epsilon > 0, A \cap B(x, \epsilon) \neq \emptyset$
 $\iff x \in \overline{A}$.
 Donc $W = \overline{A}$.
 
-\textbf{b) Égalité des distances :}
+    \item \textbf{Égalité des distances :}
 Supposons $d_{A} = d_{B}$.
 Alors $\forall x, d_{A}(x)=0 \iff d_{B}(x)=0$.
 D'après a), cela signifie $x \in \overline{A} \iff x \in \overline{B}$. Donc $\overline{A} = \overline{B}$.
@@ -335,25 +336,58 @@ En passant à l'infimum sur $y \in \overline{A}$, on a $d_{\overline{A}}(x) \ge 
 D'où l'égalité.
 Si $\overline{A} = \overline{B}$, alors $d_{A} = d_{\overline{A}} = d_{\overline{B}} = d_{B}$.
 
-\textbf{c) Injectivité :}
+    \item \textbf{Injectivité :}
 Soient $A, B \in \mathcal{F}$ (fermés non vides).
 Si $d_{A} = d_{B}$, alors d'après b), $\overline{A} = \overline{B}$.
 Comme $A$ et $B$ sont fermés, $A = \overline{A}$ et $B = \overline{B}$.
 Donc $A = B$. L'application est injective.
+\end{enumerate}
 \end{correction}
 
 % --- Correction 9 (Exercice 4 du PDF) ---
 \begin{correction}{9}
- On s'intéresse à la continuité en $(0,0)$.
-On sait que $\forall a,b \in \mathbb{R}, (|a|-|b|)^{2} \ge 0 \implies a^{2}+b^{2} \ge 2|ab|$.
-Donc $|ab| \le \frac{1}{2}(a^{2}+b^{2})$.
-Et $\sqrt{|xy|} \le \frac{1}{\sqrt{2}} \sqrt{x^{2}+y^{2}}$.
-Cependant, l'inégalité utile ici est plutôt : $\sqrt{|x|} \le \sqrt{|x|+|y|}$ et $\sqrt{|y|} \le \sqrt{|x|+|y|}$.
+On s'intéresse à la continuité en $(0,0)$.
+
+L'inégalité utile ici est : $\sqrt{|x|} \le \sqrt{|x|+|y|}$ et $\sqrt{|y|} \le \sqrt{|x|+|y|}$.
 Donc $\frac{\sqrt{|x|}}{\sqrt{|x|+|y|}} \le 1$.
+
 Ainsi $|f(x,y)| = \sqrt{|y|} \frac{\sqrt{|x|}}{\sqrt{|x|+|y|}} \le \sqrt{|y|}$.
 Quand $(x,y) \to (0,0)$, $\sqrt{|y|} \to 0$.
 Donc $\lim_{(x,y) \to (0,0)} f(x,y) = 0 = f(0,0)$.
 La fonction est continue en $(0,0)$.
+\end{correction}
+
+\begin{correction}{10}
+\begin{itemize}
+    \item $f$ est clairement continue par théorèmes d'opérations.
+    \[
+        \forall (x,y) \in \R^2 | f(x,y) - f(0,0)| = \frac{|x^3 + y^3|}{|x^2 + y^2|} 
+        \leqslant | x \frac {x^2} {x^2 + y^2} + y \frac{y^2}{x^2 + y^2} | 
+        \leqslant ||x| + |y||
+    \]
+
+    \item $g$ est clairement continue par théorèmes d'opérations.
+    \item Soit $\Delta$ la première bissectrice, $\Delta$ est un fermé.
+    Soit $(x_0, y_0) \in \R^2$, $h$ est définie par la formule 2 sur un voisinage donc continue en $(x_0,y_0)$.
+
+    Soit $(x,y) \in \R^2$, si $x \not \equal y$, $\frac 1 {x - y} (\sin x - \sin y) = [\frac{\sin{x-y}t + y}{x - y}]_0^1 = \int_0^1 \cos{(x-y)t + y}~dt$ 
+    
+    Si $x \equal y$, $h(x,y) = \int_0^1 \cos{(x-y)t + y}~dt$
+
+    Soit $(x_0, y_0) \in \R^2$ et $(x,y) \in \R$, $|h(x,y) - h(x_0,y_0)| \leqslant \int_0^1 |t(x-y) + y - (t(x_0 - y_0) + y_0)|dt \leqslant 2 ||(x,y) - (x_0,y_0)||_1$. Donc elle est continue.
+\end{itemize}
+\end{correction}
+
+\begin{correction}{11}
+    $f$ est continue sur $E$. \\
+
+    Alors $f(E) \subset B(0,1)$ car $\forall x \in E, \frac 1 {1 - ||x||} < 1$, cherchons $f^{-1}$ :\\
+
+    Soit $y \in B(0,1)$, $x \in E$, que $ y = \frac 1 {1 + ||x||}$, \\
+
+    Donc $||x|| = \frac{||y||}{1 - ||y||}$ \\
+
+    Donc $x = \frac y {1 - ||y||}$. Donc $f^{-1} : y \mapsto \frac y {1 - ||y||}$ est continue.
 \end{correction}
 
 % --- Correction 18 (Exercice 11 du PDF) ---
