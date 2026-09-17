@@ -2,9 +2,9 @@ Dans ce chapitre, on se place dans $\K = \R$ ou $\C$ et $(E, N)$ est un espace v
 
 \section{Topologie d'un espace vectoriel normé}
 
-\subsection{Ouverts }
+\subsection{Ouverts}
 
-\begin{definition}{Partie ouverte }{}
+\begin{definition}{Partie ouverte}{}
     Soit $A \subset E$. On dit que $A$ est ouverte ou que $A$ est un ouvert ssi 
     $$ \forall a \in A, \, \exists R > 0, \, B(a, R) \subset A.$$
 \end{definition}
@@ -14,7 +14,7 @@ Dans ce chapitre, on se place dans $\K = \R$ ou $\C$ et $(E, N)$ est un espace v
 \end{propositionnt}
 
 \idee{
-    Prendre un point de B, et trouver le rayon pour avoir une boule entièrement dans B.
+    Prendre un point de B et trouver le rayon pour avoir une boule entièrement dans B.
 }
 
 \begin{proof}
@@ -22,7 +22,7 @@ Dans ce chapitre, on se place dans $\K = \R$ ou $\C$ et $(E, N)$ est un espace v
 
     Notons $A = B(\omega, R)$.
 
-    Soit $a \in A$, et posons $R' = \frac{R - d(a, \omega)}{2}$. 
+    Soit $a \in A$, posons $R' = \frac{R - d(a, \omega)}{2}$. 
 
     Puisque $a \in A$, on a $R' > 0$.
 
@@ -43,12 +43,10 @@ Dans ce chapitre, on se place dans $\K = \R$ ou $\C$ et $(E, N)$ est un espace v
     ouverte, donc un ouvert de $\R$.
 \end{exemple}
 
-\subsection{Stabilité}
-
 \marginenote{Remarque}{Le caractère fini de l'intersection évite des contre-exemples du type $]0, \frac 1 n[$, 
 dont l'intersection infinie est $\{0\}$.}
 
-\lvspace \avspace \begin{proposition}{Opérations sur les ouverts}{}
+\begin{proposition}{Opérations sur les ouverts}{}
     \begin{itemize}
         \item Toute réunion d'ouverts est un ouvert.
         \item Toute intersection \textbf{finie} d'ouverts est un ouvert.
@@ -56,19 +54,13 @@ dont l'intersection infinie est $\{0\}$.}
     \end{itemize}
 \end{proposition}
 
-\restaurergeometrie
-
-\idee{
-    1. utiliser la def 
-
-    2. idem
-
-
-}
-
-
-\begin{proof}
+\begin{proof}~\\
     \uline{Réunion :}
+    \idee{
+        1. utiliser la définition 
+
+        2. idem
+    }
 
     \svspace Soit $I$ un ensemble non vide tel que $\forall i \in I, \, A_i$ est un ouvert de $E$, et 
     $\displaystyle B = \bigcup_{i \in I} A_i$.
@@ -76,9 +68,9 @@ dont l'intersection infinie est $\{0\}$.}
     Soit $x \in B$. Il existe $i \in I$ tel que $x \in A_i$.
 
     Or $A_i$ est un ouvert, donc il existe $R > 0$ tel que $B(x, R) \subset A_i \subset B$, 
-    donc $B$ est un ouvert.
+    donc $B$ est un ouvert. \\
 
-    \avspace \qquad \uline{Intersection : }
+    \uline{Intersection :}
 
     \svspace Soit $x \in B$. 
 
@@ -90,9 +82,9 @@ dont l'intersection infinie est $\{0\}$.}
 
     Soit $y \in B(x, R)$. Alors $\forall i \in \ninter 1 n, \, y \in B(x, R_i)$, donc $y \in A_i$.
 
-    Donc $y \in B$, et $B(x, R) \subset B$. Donc $B$ est un ouvert.
+    Donc $y \in B$, et $B(x, R) \subset B$. Donc $B$ est un ouvert. \\
 
-    \avspace \qquad \uline{Produit cartésien : }
+    \uline{Produit cartésien :}
 
     \svspace Soit $(E_1, N_1), \dots, (E_p, N_p)$ des espaces vectoriels normés, et 
     $A_1 \subset E_1, \dots, A_p \subset E_p$ des ouverts.
@@ -117,36 +109,6 @@ dont l'intersection infinie est $\{0\}$.}
     Donc $y_j \in A_j$, donc $y \in B$.
 
 \end{proof}
-
-
-\subsubsection{Voisinages}
-
-\begin{definition}{Voisinage}{}
-    Soit $a \in E$ et $A \subset E$. On dit que $A$ est un voisinage de $a$ ssi
-    $$ \exists R > 0, \, B(a, R) \subset A$$
-\end{definition}
-
-\begin{remarque}
-    En particulier, comme $a \in B(a, R)$, si $A$ est un voisinage de $a$, alors $a \in A$.
-\end{remarque}
-
-
-\begin{exemple}
-    $\R^+$ est un voisinage de $3$ car $[2, 4] \subset \R^+$.
-\end{exemple}
-
-\begin{proposition}{Caractérisation des ouverts avec voisinages}{}
-    Soit $A \subset E$. Alors $A$ est un ouvert ssi $A$ est un voisinage de chacun de ses points.
-\end{proposition}
-
-\begin{proposition}{Voisinages de l'infini}{}
-    Soient $E = \R, \, A \subset \R$. On dit que $A$ est un voisinage de $+\infty$
-    ssi $\exists c \in \R, \, [c, +\infty[ \subset A$. 
-
-    On dit que $A$ est un voisinage de $-\infty$ ssi 
-    $\exists c \in \R, \, ]-\infty, c] \subset A$.
-\end{proposition}
-
 
 \subsection{Fermés}
 
@@ -173,8 +135,8 @@ dont l'intersection infinie est $\{0\}$.}
     $\Rightarrow$ : par l'absurde, on suppose la limite dans le complémentaire. 
 }
 
-\begin{proof}
-    Montrons $\Rightarrow$. Supposons donc que $B$ est un fermé.
+\begin{proof}~\\
+    $\Rightarrow$ Supposons que $B$ est un fermé.
 
     Soit $(u_n)$ une suite d'éléments de $B$ qui converge vers $\ell \in E$.
 
@@ -188,9 +150,9 @@ dont l'intersection infinie est $\{0\}$.}
 
     En particulier, $d(u_{n_0}, \ell) \leqslant \frac R 2 < R$, donc $u_{n_0} \in A$, or $u_{n_0} \in B$, ce qui est absurde.
 
-    Donc $\ell \not \in A$, donc $\ell \in B$.
+    Donc $\ell \not \in A$, donc $\ell \in B$. \\
 
-    \avspace $\Leftarrow$ Supposons maintenant que $B$ n'est pas fermé. Donc $A$ n'est pas ouvert, ce qui s'écrit : 
+    $\Leftarrow$ Supposons maintenant que $B$ n'est pas fermé. Donc $A$ n'est pas ouvert, ce qui s'écrit : 
 
     $$\exists a \in A, \, \forall R > 0, \, \exists x \in B(a, R) \text{ tel que } x \not \in A$$
 
@@ -236,9 +198,6 @@ dont l'intersection infinie est $\{0\}$.}
     Pour la sphère, la preuve est identique, en remplaçant $\leqslant$ par $=$.
 \end{proof}
 
-
-\subsubsection{Stabilité }
-
 \begin{proposition}{Opérations sur les fermés}{}
     \begin{itemize}
         \item Toute réunion \textbf{finie} de fermés est un fermé.
@@ -250,14 +209,13 @@ dont l'intersection infinie est $\{0\}$.}
 Astuce pour ne pas inverser avec les ouverts : se rappeler que chaque ensemble est l'union des singletons 
 de ses éléments, or tout ensemble n'est pas fermé. 
 
-\idee{
-    Utiliser la définition de fermé avec les ouverts. 
-
-    Pour le produit cartésien, utiliser la caractérisation séquentielle.
-}
-
 \begin{proof}
     Soit $B_1, \dots, B_n$ des fermés de $E$, et $\displaystyle C = \bigcup_{i=1}^n B_i$.
+    \idee{
+        Utiliser la définition de fermé avec les ouverts. 
+
+        Pour le produit cartésien, utiliser la caractérisation séquentielle.
+    }
 
     Ainsi, $E \setminus C = \underbrace{\bigcap_{i=1}^n \underbrace{(E \setminus B_i)}_{\text{ouverts}}}_{\text{ouverts}}$.
 
@@ -293,9 +251,8 @@ de ses éléments, or tout ensemble n'est pas fermé.
 \end{proof}
 
 
-\qquad \uline{Conséquence : }
-
-\svspace Tout ensemble fini est fermé, car réunion finie de singletons.
+\textbf{\uline{Conséquence :}}
+Tout ensemble fini est fermé, car réunion finie de singletons.
 
 \begin{theoreme}{Hors programme}{}
     Les seules parties à la fois ouvertes et fermées de $E$ sont $\emptyset$ et $E$.
@@ -341,7 +298,7 @@ de ses éléments, or tout ensemble n'est pas fermé.
     Donc $A \cap B \neq \emptyset$ absurde.
 \end{proof}
 
-\begin{theoreme}{Nature sous espace vectoriel de dimension finie}{}
+\begin{theoreme}{Nature des sous-espaces vectoriels de dimension finie}{}
     Tout sous espace vectoriel de dimension finie de $E$ est un fermé. 
 \end{theoreme}
 
@@ -387,6 +344,33 @@ Montrons qu'au contraire, cela n'est pas vrai en dimension infinie.
     Donc $H$ n'est pas fermé.
 \end{proof}
 
+\subsection{Voisinages}
+
+\begin{definition}{Voisinage}{}
+    Soit $a \in E$ et $A \subset E$. On dit que $A$ est un voisinage de $a$ ssi
+    $$ \exists R > 0, \, B(a, R) \subset A$$
+\end{definition}
+
+\begin{remarque}
+    En particulier, comme $a \in B(a, R)$, si $A$ est un voisinage de $a$, alors $a \in A$.
+\end{remarque}
+
+
+\begin{exemple}
+    $\R^+$ est un voisinage de $3$ car $[2, 4] \subset \R^+$.
+\end{exemple}
+
+\begin{proposition}{Caractérisation des ouverts avec voisinages}{}
+    Soit $A \subset E$. Alors $A$ est un ouvert ssi $A$ est un voisinage de chacun de ses points.
+\end{proposition}
+
+\begin{proposition}{Voisinages de l'infini}{}
+    Soient $E = \R, \, A \subset \R$. On dit que $A$ est un voisinage de $+\infty$
+    ssi $\exists c \in \R, \, [c, +\infty[ \subset A$. 
+
+    On dit que $A$ est un voisinage de $-\infty$ ssi 
+    $\exists c \in \R, \, ]-\infty, c] \subset A$.
+\end{proposition}
 
 \subsection{Intérieur, adhérence, frontière}
 
@@ -421,7 +405,7 @@ Montrons qu'au contraire, cela n'est pas vrai en dimension infinie.
     alors $a \in \mathring A$ donc par def, $\exists R > 0, \, B(a, R) \subset A$, donc $A$ est un ouvert.
 \end{proof}
 
-\begin{corollaire}{intérieur d'une boule fermée}{}
+\begin{corollaire}{Intérieur d'une boule fermée}{}
     Soit $\omega \in E, \, R_0 > 0$, et $A = B'(\omega, R_0)$, alors $\mathring{A} = B(\omega, R_0)$.
 \end{corollaire}
 
@@ -431,8 +415,7 @@ doit l'être à peu près).
 \idee{ Montrer l'inclusion, puis que les éléments de la sphère ne sont pas 
 intérieurs avec une suite. }
 
-\begin{proof}
-
+\begin{proof}~\\
     \uline{Preuve donnée en cours :}
     Soit $a \in B(\omega, R_0)$. 
 
@@ -463,9 +446,9 @@ intérieurs avec une suite. }
 
     Donc $y \not \in B(\omega, R_0)$, donc $x \not \in \mathring A$.
 
-    Donc $\mathring A = B(\omega, R_0)$
+    Donc $\mathring A = B(\omega, R_0)$ \\
 
-    \uindent{Preuve alternative }
+    \uline{Preuve alternative :}
 
     Si \( x \in B(\omega, R_0) \), alors \( d(x, \omega) < R_0 \).
     Posons \( \varepsilon = R_0 - d(x, \omega) > 0 \).
@@ -531,7 +514,7 @@ intérieurs avec une suite. }
 \end{theoreme}
 
 \begin{proof}
-    Soit $x \in E$ adhérent à $A$. 
+    $\Rightarrow$ Soit $x \in E$ adhérent à $A$. 
 
     Alors $\forall R > 0, \, \exists a \in A, \, d(x, a) < R$.
 
@@ -539,12 +522,10 @@ intérieurs avec une suite. }
 
     Donc $a_n \limit n \infty x$.
 
-    Réciproquement, soit $x \in E$ tel qu'il existe une suite $(a_n)_{n \in \N}$ d'éléments 
+    $\Leftarrow$ Soit $x \in E$ tel qu'il existe une suite $(a_n)_{n \in \N}$ d'éléments 
     de $A$ qui converge vers $x$. 
 
-    Soit $R > 0$ 
-
-    Par def de la limite, $\exists n_0 \in \N, \, \forall n \geqslant n_0, \, d(x, a_n) < R$.
+    Soit $R > 0$, par définition de la limite, $\exists n_0 \in \N, \, \forall n \geqslant n_0, \, d(x, a_n) < R$.
 
     Donc $a_{n_0} \in B(x, R) \cap A$. 
 \end{proof}
@@ -561,16 +542,16 @@ intérieurs avec une suite. }
 
 \begin{proof}
     Soit $x \in A$. Pour tout $R > 0, \, x \in B(x, R) \cap A$ donc $x \in \overline{A}$.
-    Donc $A \subset \overline{A}$.
+    Donc $A \subset \overline{A}$. \\
 
-    \avspace Si $A$ est fermé. 
+    \uline{Si $A$ est fermé :} 
 
     Soit $y \in \overline{A}$. Alors il existe une suite $(a_n)_{n \in \N}$ d'éléments
     de $A$ qui converge vers $y$.
 
-    Or $A$ est fermé, donc $y \in A$, et $\overline{A} \subset A$ et donc $\overline{A} = A$.
+    Or $A$ est fermé, donc $y \in A$, et $\overline{A} \subset A$ et donc $\overline{A} = A$. \\
 
-    \qquad \avspace \uline{Si $\overline{A} = A$ : }
+    \uline{Si $\overline{A} = A$ : }
 
     \svspace Soit $(a_n)_{n \in \N}$ une suite d'éléments de $A$ qui converge vers $\ell \in E$.
 
@@ -590,9 +571,9 @@ intérieurs avec une suite. }
 
     $N(a_n - \omega) < R$, donc par passage à la limite, $N(x - \omega) \leqslant R$. 
 
-    Donc $x \in B'(\omega, R)$, et $\overline{B(\omega, R)} \subset B'(\omega, R)$.
+    Donc $x \in B'(\omega, R)$, et $\overline{B(\omega, R)} \subset B'(\omega, R)$. \\
 
-    \avspace \qquad \uline{Réciproquement : }
+    \uline{Réciproquement : }
 
     \svspace Soit $x \in B'(\omega, R)$.
 
@@ -649,10 +630,8 @@ intérieurs avec une suite. }
 \end{proof}
 
 
-\uindent{Bilan}
-
-\avspace Si $A \subset E$, alors
-$$\mathring A \subset A \subset \overline A$$
+\textbf{\uline{Bilan : }}
+Si $A \subset E$, alors $\mathring A \subset A \subset \overline A$
 
 
 \begin{proposition}{Hors programme}{}
@@ -746,30 +725,27 @@ $\overline A \cap \overline B = \{1\}$.
     Donc $\Fr A = \overline A \cap \overline{E \setminus A} = \Fr (E \setminus A)$ 
 \end{proof}
 
-\subsection{Partie dense }
+\subsection{Partie dense}
 
-\begin{definitionnt}{Partie dense inclusion}{}
+\begin{definitionnt}{Partie dense, inclusion}{}
     Soient $A, B \in \mathscr P(E)$.
 
     On dit que $A$ est dense dans $B$ ssi 
     $$A \subset B \subset \overline A$$
 \end{definitionnt}
 
-\begin{definitionnt}{Partie dense égalité}{}
-    Soit $A \in \mathscr P(E)$.
-
-    On dit que $A$ est dense dans $E$ ssi $\overline A = E$.
+\begin{definitionnt}{Partie dense, égalité}{}
+    Soit $A \in \mathscr P(E)$, on dit que $A$ est dense dans $E$ ssi $\overline A = E$.
 \end{definitionnt}
 
 \begin{exemple}
     \begin{enumerate}
         \item $\Q$ est dense dans $\R$.
         \item $\operatorname{GL}_p(\K)$ est dense dans $\mathcal M_p(\K)$.
-        \item Si $H$ est un hyperplan de $E$, alors $H$ est fermé ou dense
+        \item Si $H$ est un hyperplan de $E$, alors $H$ est fermé ou dense \\
     \end{enumerate}
 
-
-    \uindent{Preuve du 2. }
+    \uline{Preuve du 2. :}
 
     \svspace Soit $A \in \mathcal M_p(\K)$.
 
@@ -793,10 +769,10 @@ $\overline A \cap \overline B = \{1\}$.
 
     D'où $\exists n_0 \in \N, \, \forall n \geqslant n_0, \, \frac 1 n$ n'en est pas une racine. 
 
-    Donc $\forall n \geqslant n_0, \, B_n \in \operatorname{GL}_p(\K)$.
+    Donc $\forall n \geqslant n_0, \, B_n \in \operatorname{GL}_p(\K)$. \\
 
 
-    \uindent{Preuve du 3. }
+    \uline{Preuve du 3. }
 
     \svspace Soit $H$ un hyperplan de $E$. Si $\varphi$ est une forme linéaire non nulle
     telle que $H = \ker \varphi$.
@@ -855,7 +831,7 @@ $\overline A \cap \overline B = \{1\}$.
 \end{proof}
 
 
-\begin{corollaire}{invariance topologique en dimension finie}{}
+\begin{corollaire}{Invariance topologique en dimension finie}{}
     En dimension finie, ces notions topologiques ne dépendent pas du choix de la norme. 
 \end{corollaire}
 
@@ -924,11 +900,9 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
     Absurde car $U \cap V = \emptyset$.
 
-    Donc $V = W \cap A$.
+    Donc $V = W \cap A$. \\
 
-    \uindent{Réciproquement }
-
-    Supposons qu'il existe $W$ fermé tel que $V = W \cap A$. 
+    $\Leftarrow$ Supposons qu'il existe $W$ fermé tel que $V = W \cap A$. 
 
     Alors $U = A \setminus V = A \setminus (A \cap W)$
 
@@ -957,16 +931,14 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 }
 
 \begin{proof}
-    Supposons que $V$ est un fermé relatif de $A$. 
+    $\Rightarrow$ Supposons que $V$ est un fermé relatif de $A$. 
     Alors $V = \overline V \cap A$. 
 
     Soit $(a_n)_{n \in \N}$ une suite d'éléments de $V$ qui converge vers $\ell \in A$.
 
-    Alors $\ell \in \overline V$, donc $\ell \in \overline V \cap A$ donc $\ell \in V$.
+    Alors $\ell \in \overline V$, donc $\ell \in \overline V \cap A$ donc $\ell \in V$. \\
 
-    \uindent{Réciproquement }
-
-    \svspace Supposons que pour toute suite $(a_n)_{n \in \N}$ d'éléments de $V$ qui converge vers
+    $\Leftarrow$ Supposons que pour toute suite $(a_n)_{n \in \N}$ d'éléments de $V$ qui converge vers
     $\ell \in A$, on a $\ell \in V$, et montrons que $V = \overline V \cap A$. 
 
     On a $V \subset \overline V$ et $V \subset A$, donc $V \subset \overline V \cap A$.
@@ -1011,7 +983,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
 
 
-\section{Etude locale d'une application}
+\section{Étude locale d'une application}
 
 \begin{definition}{Limite}{}
     Soient $(E, N)$ et $(E', N')$ deux espaces vectoriels normés. 
@@ -1074,7 +1046,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
     Or \begin{align*}
         N(x - a) & \leqslant \alpha ||x - a|| \\
-        & \leqslant \alpha \eta ' \leqslant eta 
+        & \leqslant \alpha \eta ' \leqslant \eta
     \end{align*}
 
     Donc $N'(f(x) - \ell) \leqslant \gamma \varepsilon$, donc $||f(x) - \ell||' < \varepsilon$.
@@ -1107,7 +1079,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 \end{proof}
 
 
-\subsection{Extensions }
+\subsection{Extensions}
 
 \begin{definition}{Extension notion de limite}{}
     On étend la notion de limite aux cas suivants : 
@@ -1148,8 +1120,8 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
     $\Leftarrow$ même idée dans l'autre sens. 
 }
 
-\begin{proof}
-    Dans le cas $a \in E$, $\ell \in E'$. 
+\begin{proof}~\\
+    $\Rightarrow$ Dans le cas $a \in E$, $\ell \in E'$. 
 
     Supposons que $f(x) \limitnorme{N'}{x}{a} \ell$.
 
@@ -1161,11 +1133,9 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
     Donc $A \cap B(a, \eta) \subset f^{-1}(V)$. 
 
-    Donc $f^{-1}(V)$ est un voisinage relatif de $a$ vis à vis de $A$.
+    Donc $f^{-1}(V)$ est un voisinage relatif de $a$ vis à vis de $A$. \\
 
-    \uindent{Réciproquement }
-
-    \svspace Soit $\varepsilon > 0$. 
+    $\Leftarrow$ Soit $\varepsilon > 0$. 
 
     Considérons $V = B'(\ell, \varepsilon)$. Donc $V$ est bien un voisinage de $\ell$. 
 
@@ -1182,9 +1152,9 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
 
 
-\subsection{Caractérisation séquentielle }
+\subsection{Caractérisation séquentielle}
 
-\begin{theorement}{caractérisation séquentielle de la limite}{}
+\begin{theorement}{Caractérisation séquentielle de la limite}{}
     Soit $A \subset E$ non vide, $a \in \overline A$, $\ell \in E'$. 
 
     Alors $f(x) \limitnorme{N'}{x}{a} \ell$ ssi pour toute suite $(u_n)_{n \in \N}$ 
@@ -1198,7 +1168,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 }
 
 \begin{proof}
-    Supposons que $\forall \varepsilon > 0, \, \exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f(x) - \ell) \leqslant \varepsilon$ (1).
+    $\Rightarrow$ Supposons que $\forall \varepsilon > 0, \, \exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow N'(f(x) - \ell) \leqslant \varepsilon$ (1).
 
     Soit $(u_n)_{n \in \N}$ une suite d'éléments de $A$ qui converge vers $a$.
 
@@ -1211,11 +1181,9 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
     Alors on a (grâce au (2)) $N(u_n - a) \leqslant \eta$ donc (grâce au (1)) $N'(f(u_n) - \ell) \leqslant \varepsilon$.
 
-    Donc $f(u_n) \limitnorme{N'}{n}{\infty} \ell$.
+    Donc $f(u_n) \limitnorme{N'}{n}{\infty} \ell$. \\
 
-    \uindent{Réciproquement } raisonnons par contraposée. 
-
-    \svspace Supposons que $\exists \varepsilon > 0, \, \forall \eta > 0, \, \exists x \in A, \, d(x, a) \leqslant \eta $ et $d'(f(x), \ell) > \varepsilon$ (3).
+    $\Leftarrow$ Supposons que $\exists \varepsilon > 0, \, \forall \eta > 0, \, \exists x \in A, \, d(x, a) \leqslant \eta $ et $d'(f(x), \ell) > \varepsilon$ (3).
 
     Soit $n \in \N^*$. Cette phrase avec $\frac 1 n$ dans le rôle de $\eta$ fournit
     un $x_n \in A$ tel que $N(x_n - a) \leqslant \frac 1 n$ et $N'(f(x_n) - \ell) > \varepsilon$.
@@ -1229,7 +1197,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 \end{proof}
 
 
-\begin{theoreme}{Carac séquentielle continuité}{}
+\begin{theoreme}{Caractérisation séquentielle de la continuité}{}
     Soit $A \subset E$ non vide, $a \in A$. 
 
     Alors $f$ est continue en $a$ ssi pour toute suite $(u_n)_{n \in \N}$ d'éléments de $A$ 
@@ -1261,7 +1229,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
     De même pour les autres. 
 \end{proof}
 
-Conséquence : soient $f, g : A \subset E \to F$, $\lambda : A \to \K$, $\alpha \in \K, a \in A$. 
+\textbf{\uline{Conséquence :}} soient $f, g : A \subset E \to F$, $\lambda : A \to \K$, $\alpha \in \K, a \in A$. 
 
 Si $f$ et $g$ dont continues en $a$, $f + g$ et $\alpha f$ aussi. 
 
@@ -1289,8 +1257,7 @@ Si $f$ et $\lambda$ continues en a, $\lambda f$ aussi.
     Donc $N"(g(f(x)) - \ell) \leqslant \varepsilon$ par 2 avec $y = f(x)$
 \end{proof}
 
-Conséquence : 
-
+\textbf{\uline{Conséquence :}}
 Soit $f : A \subset E \to E'$ tel que $f(A) \subset B$, $g : B \to E"$ $a \in A$. Si $f$ continue en $a$ et $g$ continue en $f(a)$ alors $g \circ f$ continue en a 
 
 
@@ -1307,8 +1274,7 @@ muni de la norme produit $N'_\infty$, et $\fonction{f}{A\subset E}{E'}{x}{f(x) =
 
 \end{proposition}
 
-\uindent{Conséquence }
-
+\textbf{\uline{Conséquence :}}
 Soit $a \in A$. Alors $f$ est continue en $a$ ssi $\forall j \in \ninter{1}{p}, \, f_j$ est continue en $a$.
 
 \idee{
@@ -1328,7 +1294,7 @@ Soit $a \in A$. Alors $f$ est continue en $a$ ssi $\forall j \in \ninter{1}{p}, 
 
 \section{Continuité sur une partie}
 
-\begin{definition}{Continuité restriction sur une partie }{}
+\begin{definition}{Continuité restriction sur une partie}{}
     Soit $f: A \to E$, et soit $B \subset A$. On dit que $f$ est continue sur $B$ ssi 
     $\forall a \in B, \, f_{|B}$ est continue en $a$.
 \end{definition}
@@ -1361,7 +1327,7 @@ Soit $a \in A$. Alors $f$ est continue en $a$ ssi $\forall j \in \ninter{1}{p}, 
 
 \subsection{Théorèmes d'opérations}
 
-\begin{theorement}{vfv}{}
+\begin{theorement}{}{}
     Soit $f, g, : A \to E$, $\lambda : A \to \K$, $\alpha \in \K$.
 
     Si $f$ et $g$ sont continues sur $A$, alors $\alpha f + g$ et $\lambda f$ sont 
@@ -1369,11 +1335,10 @@ Soit $a \in A$. Alors $f$ est continue en $a$ ssi $\forall j \in \ninter{1}{p}, 
 \end{theorement}
 
 
-\uindent{Conséquence }
-
+\textbf{\uline{Conséquence :}}
 L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est un $\K$-espace vectoriel.
 
-\begin{theorement}{ff}{}
+\begin{theorement}{}{}
     Soit $f : A \to E'$, $g : B \subset E' \to E"$ tel que $f(A) \subset B$.
 
     Si $f \in \mathscr C(A, E')$ et $g \in \mathscr C(B, E")$, alors 
@@ -1433,7 +1398,7 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 
 \subsection{Continuité et image réciproque }
 
-\begin{theoreme}{Nature image réciproque fonction continue }{}
+\begin{theoreme}{Nature de l'image réciproque d'une fonction continue}{}
     Soit $f \in \mathscr C(A, E')$. Alors l'image réciproque d'un ouvert (resp. fermé) 
     de $E'$ par $f$ est un ouvert (resp. fermé) relatif de $A$.
 
@@ -1446,7 +1411,10 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 \end{remarque}
 
 \begin{proof}
-    Soit $f \in \mathscr C(A, E')$, soit $B \subset E'$ fermé. 
+    Soit $f \in \mathscr C(A, E')$. \\
+
+    \uline{Pour un fermé :}
+    Soit $B \subset E'$ fermé. 
 
     Montrons que $f^{-1}(B)$ est un fermé relatif de $A$.
 
@@ -1457,9 +1425,9 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 
     Donc $\ell \in f^{-1}(B)$. 
 
-    Donc $f^{-1}(B)$ est un fermé relatif de $A$.
+    Donc $f^{-1}(B)$ est un fermé relatif de $A$. \\
 
-    \uindent{Pour un ouvert }
+    \uline{Pour un ouvert :}
 
     \svspace Soit $U$ un ouvert de $E'$.
 
@@ -1569,9 +1537,10 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 
 
 \section{Continuité des applications (multi)linéaires}
+
 \subsection{Théorème : critère de continuité }
 
-\begin{theorement}{critère de continuité pour une application linéaire}{}
+\begin{theorement}{Critère de continuité pour une application linéaire}{}
     Soient $(E, N)$ et $(E', N')$ deux evn, et $ f \in \mathscr L(E, E')$.
 
     Alors $f$ est continue sur $E$ ssi 
@@ -1584,7 +1553,7 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
     $\Leftarrow$ Montrer $f$ lipschitzienne $\eta$.
 }
 
-\begin{proof} 
+\begin{proof}~\\
     $\Rightarrow$ Supposons que $f$ est continue sur $E$. En particulier, $f$ est 
     continue en $0_E$. Considérons $\varepsilon = 1$.
 
@@ -1672,8 +1641,7 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
     Donc par critère de continuité des applications linéaires, $f$ est continue.
 \end{proof}
 
-\uindent{Conséquence } 
-
+\textbf{\uline{Conséquence :}} 
 En dimension finie, les applications coordonnées sont continues car linéaires, donc 
 tout polynôme en les coordonnées est continu. 
 
@@ -1690,7 +1658,7 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
 \end{proof}
 
 
-\subsection{Norme subordonnée d'une application linéaire continue }
+\subsection{Norme subordonnée d'une application linéaire continue}
 
 \begin{definition}{Norme d'opérateur}{}
     Soient $(E, N)$, $(E', N')$ deux evn sur $\K$ et $f \in \mathscr L_c(E, E')$.
@@ -1750,7 +1718,7 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
 \end{proof}
 
 
-\begin{theoreme}{Norme d'opérateur est une norme }{}
+\begin{theoreme}{Norme d'opérateur est une norme}{}
     La norme d'opérateur $|||\cdot|||$ est une norme sur $\mathscr L_c(E, E')$.
 \end{theoreme}
 
@@ -1781,7 +1749,7 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
 \end{proof}
 
 
-\begin{proposition}{Sous-multiplicativité de la norme d'opérateur }{}
+\begin{proposition}{Sous-multiplicativité de la norme d'opérateur}{}
     Soient $(E, N)$, $(E', N')$, $(E", N")$ trois evn sur $\K$, et soient $f \in \mathscr L_c(E, E')$ et $g \in \mathscr L_c(E', E")$.
 
     Alors $g \circ f \in \mathscr L_c(E, E")$ et $|||g \circ f||| \leqslant |||g||| \cdot |||f|||$.
@@ -2029,9 +1997,9 @@ Démo non exigible
     $$\displaystyle A \subset \bigcup_{k=1}^n U_{i_k}$$
 \end{definition}
 
-\subsection{Propriétés des compacts }
+\subsection{Propriétés des compacts}
 
-\begin{proposition}{Propriétés des compacts }{}
+\begin{proposition}{Propriétés des compacts}{}
     \begin{enumerate}
         \item Un compact est fermé et borné.
         \item Un fermé relatif d'un compact est un compact.
@@ -2115,9 +2083,9 @@ Démo non exigible
 
 
 
-\subsection{Cas de la dimension finie }
+\subsection{Cas de la dimension finie}
 
-\begin{theoreme}{Compacts en dimension finie }{}
+\begin{theoreme}{Compacts en dimension finie}{}
     Si $(E, N)$ est un evn de dimension finie, tout fermé borné de $E$ est compact. Ainsi, en 
     dimension finie les compacts \textbf{sont} les fermés bornés. 
 \end{theoreme}
@@ -2147,7 +2115,7 @@ Démo non exigible
 \end{proof}
 
 
-\subsection{Compacité et continuité }
+\subsection{Compacité et continuité}
 
 \begin{theoreme}{Heine, uniforme continuité}{}
     Toute fonction continue sur un compact est uniformément continue. 
@@ -2213,7 +2181,7 @@ Démo non exigible
     Or $f(A)$ fermé donc $\sup(f(A)) \in f(A)$, donc c'est un max, idem pour l'inf. 
 \end{proof}
 
-\subsubsection{Equivalence des normes en dimension finie }
+\subsubsection{Equivalence des normes en dimension finie}
 
 Montrons le théorème d'équivalence des normes en dimension finie.
 
@@ -2263,9 +2231,9 @@ Démo non exigible.
 \end{proof}
 
 
-\section{Connexité par arcs }
+\section{Connexité par arcs}
 
-\begin{definition}{Chemin }{}
+\begin{definition}{Chemin}{}
     Soit $A \subset E$ non vide, soient $a, b \in A$. 
 
     On appelle chemin ou arc joignant $a$ à $b$ toute application continue $f$ de 
@@ -2276,7 +2244,7 @@ Démo non exigible.
 \subsection{Connexité par arcs }
 
 
-\begin{definition}{Connexité par arcs }{}
+\begin{definition}{Connexité par arcs}{}
     Soit $A \subset E$. 
     On dit que $A$ est connexe par arcs ssi $\forall (a, b) \in A^2, \, \exists f \in \mathscr C(\inter 0 1, A), f(0) = a \text{ et } f(1) = b$. 
 
@@ -2284,13 +2252,13 @@ Démo non exigible.
 \end{definition}
 
 
-\begin{definition}{Ensemble étoilé }{}
+\begin{definition}{Ensemble étoilé}{}
     Soit $A \subset E$.
     On dit que $A$ est étoilée par rapport à l'un de ses points ssi $\exists \omega \in A, 
     \, \forall a \in A, \inter a \omega \subset A$.
 \end{definition}
 
-\begin{proposition}{Liens entre convexité et étoilé }{}
+\begin{proposition}{Liens entre convexité et étoilé}{}
     Soit $A \subset E$ non vide. 
 
     Si $A$ est convexe, alors $A$ est étoilée par rapport à tous ses points. 
@@ -2298,7 +2266,7 @@ Démo non exigible.
     Si $A$ est étoilée par rapport à l'un de ses points, $A$ est connexe par arcs. 
 \end{proposition}
 
-\idee{poser la bonne fonction }
+\idee{poser la bonne fonction.}
 
 \begin{proof}
     1. par def de convexe car $A$ non vide. 
@@ -2323,7 +2291,7 @@ Démo non exigible.
     Donc $f$ est un chemin de $A$ joignant $x$ à $y$. Donc $A$ est connexe par arcs.
 \end{proof}
 
-\subsection{Relation d'équivalence }
+\subsection{Relation d'équivalence}
 
 \begin{theoreme}{Relation d'équivalence}{}
     Soit $A \subset E$ non vide.
@@ -2431,14 +2399,14 @@ Démo non exigible.
     donc $c \in A$ donc $A$ convexe donc $A$ est un intervalle.
 \end{proof}
 
-\begin{theoreme}{Théorème des valeurs intermédiaires }{}
+\begin{theoreme}{Théorème des valeurs intermédiaires}{}
     Soit $A \subset E$ connexe par arcs, $f \in \mathscr C(A, \R)$ et $a, b \in A$.
 
     Soit $x$ compris entre $f(a)$ et $f(b)$. Alors il existe $c \in A$ tel que $f(c) = x$.
     
 \end{theoreme}
 
-\idee{nature image d'un connexe par arcs dans R}
+\idee{nature image d'un connexe par arcs dans R.}
 
 \begin{proof}
     $f(a)$ est connexe par arcs car $A$ l'est et $f$ continue, or $f(a) \subset \R$ donc 
@@ -2467,7 +2435,7 @@ Démo non exigible.
     Toute partie connexe par arcs est connexe. 
 \end{proposition}
 
-\idee{absurde et TVI}
+\idee{absurde et TVI.}
 
 \begin{proof}
     Soit $A \subset E$ connexe par arcs et $f : A \to \{0, 1\}$ continue. Supposons $f$ non constante. 
