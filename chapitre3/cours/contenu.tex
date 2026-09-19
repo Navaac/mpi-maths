@@ -46,13 +46,17 @@ Dans ce chapitre, on se place dans $\K = \R$ ou $\C$ et $(E, N)$ est un espace v
 \marginenote{Remarque}{Le caractère fini de l'intersection évite des contre-exemples du type $]0, \frac 1 n[$, 
 dont l'intersection infinie est $\{0\}$.}
 
-\begin{proposition}{Opérations sur les ouverts}{}
+\begin{proposition}{Stabilité des ouverts}{}
     \begin{itemize}
         \item Toute réunion d'ouverts est un ouvert.
         \item Toute intersection \textbf{finie} d'ouverts est un ouvert.
         \item Tout produit cartésien \textbf{fini} d'ouverts est un ouvert.
     \end{itemize}
 \end{proposition}
+
+\begin{remarque}
+    Un espace dit \textit{topologique} vérifie les deux premières propriétés.
+\end{remarque}
 
 \begin{proof}~\\
     \uline{Réunion :}
@@ -107,8 +111,33 @@ dont l'intersection infinie est $\{0\}$.}
     Donc $\forall j \in \ninter 1 p, \, N_j(x_j - y_j) \leqslant R \leqslant R_j$, donc $y_j \in B(x_j, R_j)$.
 
     Donc $y_j \in A_j$, donc $y \in B$.
-
 \end{proof}
+
+\begin{definition}{Voisinage}{}
+    Soit $a \in E$ et $A \subset E$. On dit que $A$ est un voisinage de $a$ ssi
+    $$ \exists R > 0, \, B(a, R) \subset A$$
+\end{definition}
+
+\begin{remarque}
+    En particulier, comme $a \in B(a, R)$, si $A$ est un voisinage de $a$, alors $a \in A$.
+\end{remarque}
+
+
+\begin{exemple}
+    $\R^+$ est un voisinage de $3$ car $[2, 4] \subset \R^+$.
+\end{exemple}
+
+\begin{proposition}{Caractérisation des ouverts avec voisinages}{}
+    Soit $A \subset E$. Alors $A$ est un ouvert ssi $A$ est un voisinage de chacun de ses points.
+\end{proposition}
+
+\begin{proposition}{Voisinages de l'infini}{}
+    Soient $E = \R, \, A \subset \R$. On dit que $A$ est un voisinage de $+\infty$
+    ssi $\exists c \in \R, \, [c, +\infty[ \subset A$. 
+
+    On dit que $A$ est un voisinage de $-\infty$ ssi 
+    $\exists c \in \R, \, ]-\infty, c] \subset A$.
+\end{proposition}
 
 \subsection{Fermés}
 
@@ -198,7 +227,7 @@ dont l'intersection infinie est $\{0\}$.}
     Pour la sphère, la preuve est identique, en remplaçant $\leqslant$ par $=$.
 \end{proof}
 
-\begin{proposition}{Opérations sur les fermés}{}
+\begin{proposition}{Stabilité des fermés}{}
     \begin{itemize}
         \item Toute réunion \textbf{finie} de fermés est un fermé.
         \item Toute intersection quelconque de fermés est un fermé.
@@ -344,34 +373,6 @@ Montrons qu'au contraire, cela n'est pas vrai en dimension infinie.
     Donc $H$ n'est pas fermé.
 \end{proof}
 
-\subsection{Voisinages}
-
-\begin{definition}{Voisinage}{}
-    Soit $a \in E$ et $A \subset E$. On dit que $A$ est un voisinage de $a$ ssi
-    $$ \exists R > 0, \, B(a, R) \subset A$$
-\end{definition}
-
-\begin{remarque}
-    En particulier, comme $a \in B(a, R)$, si $A$ est un voisinage de $a$, alors $a \in A$.
-\end{remarque}
-
-
-\begin{exemple}
-    $\R^+$ est un voisinage de $3$ car $[2, 4] \subset \R^+$.
-\end{exemple}
-
-\begin{proposition}{Caractérisation des ouverts avec voisinages}{}
-    Soit $A \subset E$. Alors $A$ est un ouvert ssi $A$ est un voisinage de chacun de ses points.
-\end{proposition}
-
-\begin{proposition}{Voisinages de l'infini}{}
-    Soient $E = \R, \, A \subset \R$. On dit que $A$ est un voisinage de $+\infty$
-    ssi $\exists c \in \R, \, [c, +\infty[ \subset A$. 
-
-    On dit que $A$ est un voisinage de $-\infty$ ssi 
-    $\exists c \in \R, \, ]-\infty, c] \subset A$.
-\end{proposition}
-
 \subsection{Intérieur, adhérence, frontière}
 
 \begin{definition}{Point intérieur}{}
@@ -513,7 +514,7 @@ intérieurs avec une suite. }
     qui converge vers $x$.
 \end{theoreme}
 
-\begin{proof}
+\begin{proof}~\\
     $\Rightarrow$ Soit $x \in E$ adhérent à $A$. 
 
     Alors $\forall R > 0, \, \exists a \in A, \, d(x, a) < R$.
@@ -634,75 +635,81 @@ intérieurs avec une suite. }
 Si $A \subset E$, alors $\mathring A \subset A \subset \overline A$
 
 
-\begin{proposition}{Hors programme}{}
-    Soit $A \subset E, \, B \subset E$. Alors 
+\begin{proposition}{LHP}{}
+    Soit $A \subset E, \, B \subset E$. Alors :
+    \notedanger{Les inclusions réciproques ne sont pas vraies !}
     \begin{itemize}
         \item $\overline{E \setminus A} = E \setminus \mathring{A}$
+        \item $E \setminus \overline A = \mathring{\overparen{E \setminus A}}$
         \item $\overline{A \cup B} = \overline{A} \cup \overline{B}$
         \item $\overline{A \cap B} \subset \overline{A} \cap \overline{B}$
+        \item $\mathring A \cup \mathring B \subset \mathring{\overparen{A \cup B}}$ 
+        \item $\mathring{\overparen{B \cap A}} = \mathring A \cap \mathring B$
     \end{itemize} 
 \end{proposition}
 
 
-\begin{proof}
-    On a $\mathring A \subset A$. 
+\begin{proof}~\\
+    \begin{itemize}
+        \item $\subset$
+        On a $\mathring A \subset A$. 
 
-    Donc $E \setminus A \subset \underbrace{E \setminus \underbrace{\mathring A}_{\text{ouvert}}}_{\text{fermé}}$.
+        Donc $E \setminus A \subset \underbrace{E \setminus \underbrace{\mathring A}_{\text{ouvert}}}_{\text{fermé}}$.
 
-    Donc $\overline{E \setminus A} \subset E \setminus \mathring A$.
+        Donc $\overline{E \setminus A} \subset E \setminus \mathring A$. \\
 
+        $\supset$ $E \setminus A \subset \overline{E \setminus A}$
 
-    \uindent{Réciproquement }
+        Donc $E \setminus \overline{E \setminus A} \subset A$.
 
-    \svspace $E \setminus A \subset \overline{E \setminus A}$
+        Donc $E \setminus \overline{E \setminus A} \subset \mathring A$ 
 
-    Donc $E \setminus \overline{E \setminus A} \subset A$.
+        Donc $E \setminus \mathring A \subset \overline{E \setminus A}$. 
 
-    Donc $E \setminus \overline{E \setminus A} \subset \mathring A$ 
+        \item On applique la première égalité :
+        $E \setminus \mathring{\overparen{E \setminus A}} = \overline{E \ (E \ A)} = E \setminus \mathring{\overparen{E \setminus A}}$.
 
-    Donc $E \setminus \mathring A \subset \overline{E \setminus A}$. 
+        Donc $E \setminus \overline A = \mathring{\overparen{E \setminus A}}$.
 
-    \uindent {Deuxième point }
+        \item $\subset$ $A \subset \overline A$, et $B \subset \overline B$,
 
-    \svspace $A \subset \overline A$, et $B \subset \overline B$,
+        Donc $A \cup B \subset \underbrace{\overline A \cup \overline B}_{\text{fermé}}$.
 
-    Donc $A \cup B \subset \underbrace{\overline A \cup \overline B}_{\text{fermé}}$.
+        Donc $\overline{A \cup B} \subset \overline A \cup \overline B$. \\
 
-    Donc $\overline{A \cup B} \subset \overline A \cup \overline B$.
+        $\supset$ $A \subset A \cup B$, donc $A \subset \overline{A \cup B}$.
 
+        Donc $\overline A \subset \overline{A \cup B}$.
 
-    \uindent{Réciproquement }
+        De même, $\overline B \subset \overline{A \cup B}$.
 
-    \svspace $A \subset A \cup B$, donc $A \subset \overline{A \cup B}$.
+        Donc $\overline A \cup \overline B \subset \overline{A \cup B}$.
 
-    Donc $\overline A \subset \overline{A \cup B}$.
+        \item 
+        $A \cap B \subset A$, donc $A \cap B \subset \overline A$. 
 
-    De même, $\overline B \subset \overline{A \cup B}$.
+        Donc $\overline {A \cap B} \subset \overline A$.
 
-    Donc $\overline A \cup \overline B \subset \overline{A \cup B}$.
+        De même $\overline {A \cap B} \subset \overline B$.
 
-    \uindent{Troisième point }
+        Donc $\overline {A \cap B} \subset \overline A \cap \overline B$.
 
-    $A \cap B \subset A$, donc $A \cap B \subset \overline A$. 
+        \item $\mathring A \subset A$ et $\mathring B \subset B$ donc $\mathring A \cup \mathring B \subset A \cup B$.
 
-    Donc $\overline {A \cap B} \subset \overline A$.
+        Or comme $\mathring A \cup \mathring B$ est ouvert, $\mathring A \cup \mathring B \subset \mathring{\overparen{A \cup B}}$.
+        
+        \item
+        $E \setminus (\mathring A \cap \mathring B) = (E \setminus \mathring A) \cup (E \setminus \mathring B) = \overline{E \setminus A} \cup \overline{E \setminus B} = \overline{E \setminus (A \cap B)} = E \setminus \mathring{\overparen{A \cap B}}$
 
-    De même $\overline {A \cap B} \subset \overline B$.
-
-    Donc $\overline {A \cap B} \subset \overline A \cap \overline B$.
+        Donc $\mathring A \cap \mathring B = \mathring{\overparen{A \cap B}}$.
+    \end{itemize}
 \end{proof}
-
-\textbf{Attention}, l'inclusion réciproque n'est pas vraie : 
-
-Avec $E = \R$, $A = \interoo 0 1$, $B = \interoo 1 2$, on a 
-$\overline A = [0, 1]$, $\overline B = [1, 2]$, donc $A \cap B = \emptyset$, et 
-$\overline A \cap \overline B = \{1\}$.
 
 \begin{definition}{Frontière d'un ensemble}{}
     Soit $A \subset E$. 
 
     On appelle frontière de $A$ et on note $\operatorname{Fr}(A)$ la partie de $E$ définie 
-    par 
+    par :
     $$ \operatorname{Fr}(A) = \overline A \setminus \mathring A$$
 \end{definition}
 
@@ -817,7 +824,7 @@ $\overline A \cap \overline B = \{1\}$.
 \subsection{Invariance}
 
 \begin{theoreme}{Invariance topologique en dimension finie}{}
-    Les notions topologiques (ouverts, fermés, intérieur, adhérence, frontière) sont invariantes
+    Les notions topologiques (ouverts, fermés, intérieur, adhérence, frontière, densité) sont invariantes
     par remplacement de la norme par une norme équivalente. 
 \end{theoreme}
 
@@ -832,14 +839,13 @@ $\overline A \cap \overline B = \{1\}$.
 
 
 \begin{corollaire}{Invariance topologique en dimension finie}{}
-    En dimension finie, ces notions topologiques ne dépendent pas du choix de la norme. 
+    En dimension finie, ces notions topologiques ne dépendent pas du choix de la norme. Cela définit la topologie naturelle d'un espace vectoriel normé de dimension finie.
 \end{corollaire}
 
-
-
-\subsubsection{Topologie relative}
+\subsection{Topologie relative}
 
 Dans toute cette partie, on fixe $A$ partie non vide de $E$.
+On va définir dans ce qui suit la topologie relative à $A$, c'est à dire les ouverts relatifs de $A$, fermés relatifs de $A$ et voisinages relatifs d'un poinr vis-à-vis de $A$.
 
 \begin{definition}{Ouvert relatif}{}
     Soit $U \subset A$. On dit que $U$ est un ouvert relatif de $A$ 
@@ -1052,10 +1058,6 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
     Donc $N'(f(x) - \ell) \leqslant \gamma \varepsilon$, donc $||f(x) - \ell||' < \varepsilon$.
 \end{proof}
 
-
-
-\subsubsection{Cas où a appartient à A}
-
 \begin{theoreme}{Continuité en un point}{}
     Soit $f : A \subset E \to E'$, et $a \in A$, $\ell \in E'$. 
 
@@ -1085,20 +1087,24 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
     On étend la notion de limite aux cas suivants : 
     \begin{enumerate}
         \item Si $E = \R, \, a = + \infty, \, (E', N')$ quelconque, $\ell \in E'$, et $A \subset \R$ 
-            voisinage de $+ \infty$ et $f : A \to E'$.
+            voisinage de $+ \infty$ et $f : A \to E'$ :
 
             Alors $f(x) \limitnorme{N'}{x}{+ \infty} \ell$ ssi $\forall \varepsilon > 0, \, \exists c \in \R, \, \forall x \in A, \, x \geqslant c \Rightarrow N'(f(x) - \ell) \leqslant \varepsilon$.
 
-        \item Si $E = \R, a = - \infty, \, \ell \in E'$, et $A \subset \R$ voisinage de $- \infty$, et $f : A \to E'$.
+        \item Si $E = \R, a = - \infty, \, \ell \in E'$, et $A \subset \R$ voisinage de $- \infty$, et $f : A \to E'$ :
 
             Alors $f(x) \limitnorme{N'}{x}{- \infty} \ell$ ssi $\forall \varepsilon > 0, \, \exists c \in \R, \, \forall x \in A, \, x \leqslant c \Rightarrow N'(f(x) - \ell) \leqslant \varepsilon$.
         
-        \item Si $E = E' = \R$, et $f(x) \limit x {\pm \infty} \pm \infty$ cf première année. 
-        \item Soit $E$ un espace vectoriel normé, $A \subset E$, $a \in \overline A$, $E' = \R$ et $f: A \to \R$. Alors 
-            $f(x) \limit x a + \infty$ ssi $\forall c \in \R, \, \exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow f(x) \geqslant c$.
+        \item Si $E = E' = \R$, et $f(x) \limit x {\pm \infty} \pm \infty$ cf sup.
+        
+        \item Soit $E$ un espace vectoriel normé, $A \subset E$, $a \in \overline A$, $E' = \R$ et $f: A \to \R$ :
 
-        \item Mêmes hypothèses. Alors $f(x) \limit x a - \infty$ ssi $\forall c \in \R, \, \exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow f(x) \leqslant c$.
-        \item Soit $A \subset E$ non borné, $f : E \to F, \, \ell \in F$. Alors $f(x) \limitnorme{N'}{x}{+ \infty} \ell$ ssi $\forall \varepsilon > 0, \, \exists c \in \R, \, \forall x \in A, \, N(x) \geqslant c \Rightarrow N'(f(x) - \ell) \leqslant \varepsilon$.
+        Alors $f(x) \limit x a + \infty$ ssi $\forall c \in \R, \, \exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow f(x) \geqslant c$.
+
+        \item Mêmes hypothèses : Alors $f(x) \limit x a - \infty$ ssi $\forall c \in \R, \, \exists \eta > 0, \, \forall x \in A, \, N(x - a) \leqslant \eta \Rightarrow f(x) \leqslant c$.
+        \item Soit $A \subset E$ non borné, $f : E \to F, \, \ell \in F$ :
+
+        Alors $f(x) \limitnorme{N'}{x}{+ \infty} \ell$ ssi $\forall \varepsilon > 0, \, \exists c \in \R, \, \forall x \in A, \, N(x) \geqslant c \Rightarrow N'(f(x) - \ell) \leqslant \varepsilon$.
     \end{enumerate}
 \end{definition}
 
@@ -1155,7 +1161,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 \subsection{Caractérisation séquentielle}
 
 \begin{theorement}{Caractérisation séquentielle de la limite}{}
-    Soit $A \subset E$ non vide, $a \in \overline A$, $\ell \in E'$. 
+    Soit $A \subset E$ non vide, $a \in \overline A$, $\ell \in E'$ :
 
     Alors $f(x) \limitnorme{N'}{x}{a} \ell$ ssi pour toute suite $(u_n)_{n \in \N}$ 
     d'éléments de $A$ qui converge vers $a$, on a $f(u_n) \limitnorme{N'}{n}{\infty} \ell$.
@@ -1198,7 +1204,7 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 
 
 \begin{theoreme}{Caractérisation séquentielle de la continuité}{}
-    Soit $A \subset E$ non vide, $a \in A$. 
+    Soit $A \subset E$ non vide, $a \in A$. :
 
     Alors $f$ est continue en $a$ ssi pour toute suite $(u_n)_{n \in \N}$ d'éléments de $A$ 
     qui converge vers $a$ on a $f(u_n) \limitnorme{N'}{n}{\infty} f(a)$.
@@ -1207,10 +1213,10 @@ Dans toute cette partie, on fixe $A$ partie non vide de $E$.
 \subsection{Opérations}
 
 \begin{theoreme}{}{}
-    Soient $f, g : A \subset E \to F$, $\lambda : A \to \K$, $\alpha \in K$ et $\ell_1, \ell_2 \in F$. 
+    Soient $f, g : A \subset E \to F$, $\lambda : A \to \K$, $\alpha \in K$ et $\ell_1, \ell_2 \in F$, 
 
     Si $f(x) \limitnorme{N'}{x}{a} \ell_1$ et $g(x) \limitnorme{N'}{x}{a} \ell_2$, alors
-    $(f + g)(x) \limit x a \ell_1 + \ell_2$ et $\alpha f(x) \limit x a \alpha \ell_1$
+    $(f + g)(x) \limit x a \ell_1 + \ell_2$ et $\alpha f(x) \limit x a \alpha \ell_1$ \\
 
     Si $f(x) \limit x a \ell_1$ et $\lambda(x) \limit x a \alpha$, alors $(\lambda f)(x) \limit x a \alpha \ell_1$
 \end{theoreme}
@@ -1237,7 +1243,7 @@ Si $f$ et $\lambda$ continues en a, $\lambda f$ aussi.
 
 \begin{proposition}{}{}
     Soit $A \subset E$, $a \in \overline A$, $B \subset E'$, $b \in \overline B$ et 
-    $(E", N")$ un evn, et soit $\ell \in E"$, $f : A \to E'$ tel que $\forall x \in A, f(x) \in B$, $g: B \to E"$. 
+    $(E", N")$ un espace vectoriel normé, et soit $\ell \in E"$, $f : A \to E'$ tel que $\forall x \in A, f(x) \in B$, $g: B \to E"$. 
 
     Si $f(x) \limitnorme{N'}x a b \text{ et } g(y) \limitnorme{N"}y a \ell$ alors 
 
@@ -1287,7 +1293,8 @@ Soit $a \in A$. Alors $f$ est continue en $a$ ssi $\forall j \in \ninter{1}{p}, 
     ssi pour toute suite $(u_n)_{n \in \N}$ d'éléments de $A$ qui converge vers $a$, 
     $\forall j \in \ninter{1}{p}, \, f_j(u_n) \limitnorme{N'_j}{n}{\infty} \ell_j$.
 
-    ssi $\forall j \in \ninter{1}{p}, \, f_j(x) \limitnorme{N'_j}{x}{a} \ell_j$.
+
+    ssi $\forall j {Caractérisation - LHP}\in \ninter{1}{p}, \, f_j(x) \limitnorme{N'_j}{x}{a} \ell_j$.
 \end{proof}
 
 
@@ -1460,9 +1467,11 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 \end{remarque}
 
 \begin{proposition}{Lien entre lipschitzienne, uniforme continuité et continuité}{}
-    Toute applications lipschitzienne est uniformément continue. 
+    \begin{itemize}
+        \item Toute applications lipschitzienne est uniformément continue. 
 
-    Toute application uniformément continue est continue.
+        \item Toute application uniformément continue est continue.
+    \end{itemize}
 \end{proposition}
 
 \idee{
@@ -1481,7 +1490,7 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 \end{proof}
 
 \begin{proposition}{Nature applications coordonnées}{}
-    Dans un evn de dimension finie, les applications coordonnées sont lipschitziennes, 
+    Dans un espace vectoriel normé de dimension finie, les applications coordonnées sont lipschitziennes, 
     donc uniformément continues, donc continues. 
 \end{proposition}
 
@@ -1511,9 +1520,8 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 \end{proof}
 
 \begin{proposition}{Nature fonction distance à une partie}{}
-    Soit $A \subset E$ non vide, et $\fonction{f}{E}{R}{x}{d_A(x)}$. 
-
-    Alors $d_A$ est 1-lipschitzienne. 
+    Soit $A \subset E$ non vide, et $\fonction{f}{E}{R}{x}{d_A(x)}$,
+    alors $d_A$ est 1-lipschitzienne. 
 \end{proposition}
 
 \begin{proof}

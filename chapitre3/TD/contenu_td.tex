@@ -310,6 +310,48 @@ Donc $A$ est ouvert.
 \end{enumerate}
 \end{correction}
 
+\begin{correction}{2}
+\begin{enumerate}
+    \item Cours
+    \item Cours
+    
+    \item Soit $A$ un sous-espace vectoriel de $E$, montrons que $\overline{A} \subset E$ et que $\{0\} \in \overline{A}$
+
+    Soient $x,y^\in \overline{A}$, $\alpha,\beta \in \K$, par caractérisation séquentielle il existe $(u_n),(v_n) \in A^{\N}$ telles que $u_n \to x$ et $v_n \to y$
+    par théorème d'opération $\alpha u_n + \beta v_n \to \alpha x + \beta y$. Or $A$ est un sev donc $\alpha x + \beta y \in \overline{A}$
+
+    Donc $\overline{A}$ est un sev de $E$.
+    
+    \item $A \subset E$ convexe non vide. Soient $x,y \in \overline{A}$. Soit $z \in [x,y], \exists \lambda \in [0,1], z = \lambda x + (1 - \lambda)y$,
+    par caractérisation séquentielle, $\exists (u_n),(v_n) \in A^{\N}$ telles que $\lambda u_n + (1 - \lambda) v_n \to z$.
+    
+    $A$ convexe donc $z \in \overline{A}$. Donc $\overline{A}$ est convexe.
+\end{enumerate}
+\end{correction}
+
+\begin{correction}{3}
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \item Cours
+        \item Supposons que $A \subset B$, soit $x \in \overline{A}$, par caractérisation séquentielle, $\exists (u_n) \in A^{\N}$ telle que $u_n \to x$.
+        Or $A \subset B$ donc $(u_n)$ suite de $B$ donc $x \in \overline{B}$. Donc $\overline{A} \subset \overline{B}$.
+    \end{enumerate}
+
+    \item $A \subset A \cup B$
+    donc $\overline{A} \subset \overline{A \cup B}$, de même pour $B$
+    donc $\overline{A} \cup \overline{B} \subset \overline{A \cup B}$
+
+    Et $A \subset \overline A$ ... ok
+
+    \item
+    \begin{enumerate}
+        \item ...
+        \item ...
+    \end{enumerate}
+\end{enumerate}
+\end{correction}
+
 % --- Correction 5 (Exercice 2 dans le PDF) ---
 \begin{correction}{5}
 \begin{enumerate}
@@ -342,6 +384,22 @@ Si $d_{A} = d_{B}$, alors d'après b), $\overline{A} = \overline{B}$.
 Comme $A$ et $B$ sont fermés, $A = \overline{A}$ et $B = \overline{B}$.
 Donc $A = B$. L'application est injective.
 \end{enumerate}
+\end{correction}
+
+\begin{correction}{6}
+\begin{enumerate}
+    \item Cours (non trivial)
+    \item Cours (non trivial)
+\end{enumerate}
+\end{correction}
+
+\begin{correction}{7}
+\begin{itemize}
+    \item Par caractérisation séquentielle (ex: appliquée à $(0,0)$ est fermé)
+    \item Tout sous-espace vectoriel de dimension finie est fermé (ex: $\Vect(1,1)$ est fermé)
+    \item L'image réciproque d'un fermé par une application continue est un fermé (ex: $f : (x,y) \mapsto \sin^2(\pi x) + \sin^2(\pi y)$ donc $f^{-1}(\{0\} = \Z^2)$)
+    \item Complémentaire d'un ouvert
+\end{itemize}
 \end{correction}
 
 % --- Correction 9 (Exercice 4 du PDF) ---
@@ -388,6 +446,29 @@ La fonction est continue en $(0,0)$.
     Donc $||x|| = \frac{||y||}{1 - ||y||}$ \\
 
     Donc $x = \frac y {1 - ||y||}$. Donc $f^{-1} : y \mapsto \frac y {1 - ||y||}$ est continue.
+\end{correction}
+
+\begin{correction}{13}
+    On est en dimension finie, soit $B = (b_1, \dots, b_n)$ une base orthonormée.
+    Si $x = \Sigma_{i = 1}^n x_ib_i$ et $y = \Sigma_{i = 1}^n y_ib_i$,
+
+    $f(x,y) = \sqrt{\Sigma_{i = 1}^n x_i^2}\sqrt{\Sigma_{i = 1}^n} - | \Sigma_{i=1}^n x_iy_i|$ est continue par théorèmes d'opérations car s'exprime continûment en fonction des coordonnées.  
+
+    $\{(x,y) \in E^2 \mid (x,y)~libre\} = f^{-1}(\R^{*})$.
+\end{correction}
+\begin{correction}{14}
+\begin{enumerate}
+    \item À faire
+    \item $M_n(\R)$ est de dimension finie. Munissons le de la base des matrices élémentaires. Chacune des coordonées de l'image par $f,g$ ou $h$ s'exprime comme somme de produits de coordonées de l'antécédent. Donc elles sont continues par théorèmes d'opérations, donc $f,g$ et $h$ aussi.
+    \item $GL_n(\R)$ dense dans $M_n(\R)$ (voir exemple du cours). $GL_n(\R) = \det^{-1}(\R^{*})$, $\det$ est continu car pour toute matrice son déterminant est une somme de produits de coordonées.
+    $\R^{*}$ est un ouvert donc $GL_n(\R)$ est un ouvert.
+    \item $SL_n(\R)$ est le groupe spécial linéaire (groupe des matrices de déterminant 1). $SL_n(\R) = \det^{-1} (\{1\})$ donc $SL_n(\R)$ est un fermé.
+
+    Soit $A \in SL_n(\R)$, posons $\forall p \in \N^{*}, B_p (1 + \frac 1 p) A$.
+    $\det B_p = (1 + \frac 1 p)^n \det A \not \equal 1$. Donc $B_p \not \in SL_n(\R)$ et $B_p \to A$ donc $A \not \in \mathring{SL_n(\R)}$.
+
+    Donc $\mathring{SL_n(\R)} = \varnothing$.
+\end{enumerate}
 \end{correction}
 
 % --- Correction 18 (Exercice 11 du PDF) ---
