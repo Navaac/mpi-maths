@@ -473,28 +473,32 @@ La fonction est continue en $(0,0)$.
 
 % --- Correction 18 (Exercice 11 du PDF) ---
 \begin{correction}{18}
- Soit $E = \mathbb{R}[X]$ muni de $\|P\| = \max |a_{i}|$.
-1. $\varphi_{1}(P) = P(0) = a_{0}$.
-$|\varphi_{1}(P)| = |a_{0}| \le \|P\|$. Donc $\varphi_{1}$ est continue et $\|\varphi_{1}\| \le 1$.
-Pour $P=1$, $\varphi_{1}(1)=1$ et $\|1\|=1$, donc $|\varphi_{1}(1)| = 1 \cdot \|1\|$.
-La norme est atteinte, $\|\varphi_{1}\| = 1$.
+Soit $E = \mathbb{R}[X]$ muni de $\|P\| = \max |a_{i}|$.
 
-2. $\varphi_{2}(P) = \int_{0}^{1} P(t) dt = \sum_{i=0}^{n} \frac{a_{i}}{i+1}$.
-Considérons $P_{n} = \sum_{k=0}^{n} X^{k}$. $\|P_{n}\| = 1$.
-$\varphi_{2}(P_{n}) = \sum_{k=0}^{n} \frac{1}{k+1} \to +\infty$ quand $n \to \infty$.
-Le rapport $\frac{|\varphi_{2}(P_{n})|}{\|P_{n}\|}$ n'est pas borné.
-$\varphi_{2}$ n'est pas continue.
+\begin{enumerate}
+    \item $\varphi_{1}(P) = P(0) = a_{0}$.
+    $|\varphi_{1}(P)| = |a_{0}| \le \|P\|$. Donc $\varphi_{1}$ est continue et $\|\varphi_{1}\| \le 1$.
+    Pour $P=1$, $\varphi_{1}(1)=1$ et $\|1\|=1$, donc $|\varphi_{1}(1)| = 1 \cdot \|1\|$.
+    La norme est atteinte, $\|\varphi_{1}\| = 1$.
 
-3. $\varphi_{3}(P) = P(1) = \sum a_{i}$.
-De même avec $P_{n} = \sum_{k=0}^{n} X^{k}$, $\varphi_{3}(P_{n}) = n+1$.
-$\|P_{n}\| = 1$. Non borné. $\varphi_{3}$ non continue.
+    \item $\varphi_{2}(P) = \int_{0}^{1} P(t) dt = \sum_{i=0}^{n} \frac{a_{i}}{i+1}$.
+    Considérons $P_{n} = \sum_{k=0}^{n} X^{k}$. $\|P_{n}\| = 1$.
+    $\varphi_{2}(P_{n}) = \sum_{k=0}^{n} \frac{1}{k+1} \to +\infty$ quand $n \to \infty$.
+    Le rapport $\frac{|\varphi_{2}(P_{n})|}{\|P_{n}\|}$ n'est pas borné.
+    $\varphi_{2}$ n'est pas continue.
+
+    \item
+    $\varphi_{3}(P) = P(1) = \sum a_{i}$.
+    De même avec $P_{n} = \sum_{k=0}^{n} X^{k}$, $\varphi_{3}(P_{n}) = n+1$.
+    $\|P_{n}\| = 1$. Non borné. $\varphi_{3}$ non continue.
+\end{enumerate}
 \end{correction}
 
 % --- Correction 20 (Exercice 13 du PDF) ---
 \begin{correction}{20}
  Soit $B = \{x \in E, \|f(x)\| = 1\}$.
 Supposons $f$ continue. $x \mapsto \|f(x)\|$ est continue (composition).
-$B$ est l'image réciproque du fermé $\{1\}$ par une application continue, donc $B$ est fermé.
+$B$ est l'image réciproque du fermé $\{1\}$ par une application continue, donc $B$ est fermé. \\
 
 Réciproquement, supposons $B$ fermé. Supposons par l'absurde que $f$ n'est pas continue.
 Alors $f$ n'est pas bornée sur la boule unité.
@@ -505,13 +509,15 @@ Par linéarité, $\|f(u_{n})\| = \frac{\|f(x_{n})\|}{\|f(x_{n})\|} = 1$. Donc $u
 Mais $\|u_{n}\| = \frac{\|x_{n}\|}{\|f(x_{n})\|} < \frac{1}{n}$.
 Donc $u_{n} \to 0_{E}$.
 Puisque $B$ est fermé, la limite $0_{E}$ devrait appartenir à $B$.
-Or $\|f(0_{E})\| = 0 \neq 1$. Contradiction.
+Or $\|f(0_{E})\| = 0 \neq 1$. Contradiction. \\
+
 Donc $f$ est continue.
 \end{correction}
 
 % --- Correction 23 (Exercice 16 du PDF) ---
 \begin{correction}{23}
 Soit $A$ compact et $B$ fermé. Montrons que $A+B$ est fermé.
+
 Soit $(c_{n})$ une suite de $A+B$ convergeant vers $\ell$.
 $c_{n} = a_{n} + b_{n}$ avec $a_{n} \in A, b_{n} \in B$.
 Comme $A$ est compact, on peut extraire une sous-suite $(a_{\phi(n)})$ qui converge vers $a \in A$.
@@ -519,6 +525,7 @@ On a $b_{\phi(n)} = c_{\phi(n)} - a_{\phi(n)}$.
 $c_{\phi(n)} \to \ell$ (suite extraite convergente) et $a_{\phi(n)} \to a$.
 Donc $b_{\phi(n)} \to \ell - a$.
 Or $B$ est fermé, donc la limite $\ell - a$ appartient à $B$.
+
 Ainsi $\ell = a + (\ell - a) \in A + B$.
 $A+B$ est fermé.
 \end{correction}
@@ -547,19 +554,20 @@ Donc $K$ est compact.
 
 % --- Correction 26 (Exercice 19 du PDF) ---
 \begin{correction}{26}
+\begin{enumerate}
+    \item Soit $g : x \mapsto \|x-f(x)\|$. $g$ est continue sur le compact $A$, donc elle atteint son minimum en un point $x_{0}$.
+    Supposons $g(x_{0}) > 0$.
+    $g(f(x_{0})) = \|f(x_{0}) - f(f(x_{0}))\| \le k \|x_{0} - f(x_{0})\|$ (car $f$ $k$-lipschitzienne).
+    Donc $g(f(x_{0})) \le k g(x_{0}) < g(x_{0})$ (car $k < 1$).
+    Cela contredit le fait que $g(x_{0})$ est le minimum.
+    Donc $g(x_{0}) = 0$, soit $f(x_{0}) = x_{0}$. Existence du point fixe.
+    Unicité : Si $x, y$ sont points fixes, $\|x-y\| = \|f(x)-f(y)\| \le k \|x-y\|$.
+    $(1-k)\|x-y\| \le 0 \implies \|x-y\| = 0 \implies x=y$.
 
-1. Soit $g : x \mapsto \|x-f(x)\|$. $g$ est continue sur le compact $A$, donc elle atteint son minimum en un point $x_{0}$.
-Supposons $g(x_{0}) > 0$.
-$g(f(x_{0})) = \|f(x_{0}) - f(f(x_{0}))\| \le k \|x_{0} - f(x_{0})\|$ (car $f$ $k$-lipschitzienne).
-Donc $g(f(x_{0})) \le k g(x_{0}) < g(x_{0})$ (car $k < 1$).
-Cela contredit le fait que $g(x_{0})$ est le minimum.
-Donc $g(x_{0}) = 0$, soit $f(x_{0}) = x_{0}$. Existence du point fixe.
-Unicité : Si $x, y$ sont points fixes, $\|x-y\| = \|f(x)-f(y)\| \le k \|x-y\|$.
-$(1-k)\|x-y\| \le 0 \implies \|x-y\| = 0 \implies x=y$.
-
-2. $\|u_{n+1} - x_{0}\| = \|f(u_{n}) - f(x_{0})\| \le k \|u_{n} - x_{0}\|$.
-Par récurrence, $\|u_{n} - x_{0}\| \le k^{n} \|u_{0} - x_{0}\|$.
-Comme $k \in [0,1[$, $k^{n} \to 0$. Donc $u_{n} \to x_{0}$.
+    \item $\|u_{n+1} - x_{0}\| = \|f(u_{n}) - f(x_{0})\| \le k \|u_{n} - x_{0}\|$.
+    Par récurrence, $\|u_{n} - x_{0}\| \le k^{n} \|u_{0} - x_{0}\|$.
+    Comme $k \in [0,1[$, $k^{n} \to 0$. Donc $u_{n} \to x_{0}$.
+\end{enumerate}
 \end{correction}
 
 % --- Correction 27 (Exercice 20 du PDF) ---
@@ -606,28 +614,29 @@ La sphère est connexe par arcs.
 
 % --- Correction 30 (Exercice 23 du PDF) ---
 \begin{correction}{30}
+\begin{enumerate}
+    \item Soit $\phi(t) = (1-t)a + tc$ le segment reliant $a \in A$ à $c \notin A$.
+    Soit $E = \{ t \in [0,1], \phi(t) \in A \}$. $0 \in E$, donc $E$ non vide.
+    Soit $t_{0} = \sup E$.
+    Comme $A$ est fermé, $\phi(t_{0}) \in A$.
+    Comme $c \notin A$, $t_{0} < 1$.
+    Pour tout $\epsilon > 0$, il existe $t > t_{0}$ tel que $\phi(t) \notin A$ (sinon $t_{0}$ ne serait pas le sup).
+    Donc $\phi(t_{0})$ est limite de points hors de $A$ et est dans $A$.
+    C'est un point frontière. Donc $d = \phi(t_{0}) \in \text{Fr}(A)$.
 
-1. Soit $\phi(t) = (1-t)a + tc$ le segment reliant $a \in A$ à $c \notin A$.
-Soit $E = \{ t \in [0,1], \phi(t) \in A \}$. $0 \in E$, donc $E$ non vide.
-Soit $t_{0} = \sup E$.
-Comme $A$ est fermé, $\phi(t_{0}) \in A$.
-Comme $c \notin A$, $t_{0} < 1$.
-Pour tout $\epsilon > 0$, il existe $t > t_{0}$ tel que $\phi(t) \notin A$ (sinon $t_{0}$ ne serait pas le sup).
-Donc $\phi(t_{0})$ est limite de points hors de $A$ et est dans $A$.
-C'est un point frontière. Donc $d = \phi(t_{0}) \in \text{Fr}(A)$.
-
-2. Soient $x, y \in A$.
-Si le segment $[x,y] \subset A$, c'est fini.
-Sinon, il sort de $A$. Mais l'énoncé suggère d'utiliser la frontière.
-On peut relier tout point de $A$ à la frontière ? Non, pas forcément (ex : boule ouverte).
-Mais si $A$ est fermé et connexe par arcs... l'énoncé dit "dont la frontière est connexe par arcs".
-Si $A \neq E$ et $A \neq \emptyset$.
-Pour tout $a \in A$, peut-on le relier à la frontière ?
-Si $A$ est borné, on prend une demi-droite partant de $a$. Elle finit par sortir. Le point de sortie est sur la frontière.
-On relie $a$ à un point $d_{a} \in \text{Fr}(A)$ par un segment.
-On relie $b$ à un point $d_{b} \in \text{Fr}(A)$ par un segment.
-Comme $\text{Fr}(A)$ est connexe par arcs, on relie $d_{a}$ à $d_{b}$ par un chemin dans la frontière (donc dans $A$).
-Le chemin total relie $a$ à $b$ dans $A$.
+    \item Soient $x, y \in A$.
+    Si le segment $[x,y] \subset A$, c'est fini.
+    Sinon, il sort de $A$. Mais l'énoncé suggère d'utiliser la frontière.
+    On peut relier tout point de $A$ à la frontière ? Non, pas forcément (ex : boule ouverte).
+    Mais si $A$ est fermé et connexe par arcs... l'énoncé dit "dont la frontière est connexe par arcs".
+    Si $A \neq E$ et $A \neq \emptyset$.
+    Pour tout $a \in A$, peut-on le relier à la frontière ?
+    Si $A$ est borné, on prend une demi-droite partant de $a$. Elle finit par sortir. Le point de sortie est sur la frontière.
+    On relie $a$ à un point $d_{a} \in \text{Fr}(A)$ par un segment.
+    On relie $b$ à un point $d_{b} \in \text{Fr}(A)$ par un segment.
+    Comme $\text{Fr}(A)$ est connexe par arcs, on relie $d_{a}$ à $d_{b}$ par un chemin dans la frontière (donc dans $A$).
+    Le chemin total relie $a$ à $b$ dans $A$.
+\end{enumerate}
 \end{correction}
 
 % --- Correction 31 (Exercice 24 du PDF) ---
