@@ -1546,7 +1546,7 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 
 \section{Continuité des applications (multi)linéaires}
 
-\subsection{Théorème : critère de continuité }
+\subsection{Critère de continuité}
 
 \begin{theorement}{Critère de continuité pour une application linéaire}{}
     Soient $(E, N)$ et $(E', N')$ deux evn, et $ f \in \mathscr L(E, E')$.
@@ -1618,13 +1618,12 @@ L'ensemble $\mathscr C(A, E')$ des applications continues de $A$ dans $E'$ est u
 \end{exemple}
 
 \begin{definition}{Applications linéaires continues}{}
-    On pose $\mathscr L_c(E, E') = \mathscr L (E, E') \cap \mathscr C(E, E')$ l'espace vectoriel 
+    \\On pose $\mathscr L_c(E, E') = \mathscr L (E, E') \cap \mathscr C(E, E')$ l'espace vectoriel 
     des applications linéaires continues de $E$ dans $E'$.
 \end{definition}
 
 \begin{theoreme}{Continuité des applications linéaires en dimension finie}{}
     Si $E$ est de dimension finie, alors $\mathscr L_c(E, E') = \mathscr L(E, E')$.
-
     Ainsi toute application linéaire au départ d'un espace de dimension finie est continue
 \end{theoreme}
 
@@ -1669,12 +1668,12 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
 \subsection{Norme subordonnée d'une application linéaire continue}
 
 \begin{definition}{Norme d'opérateur}{}
-    Soient $(E, N)$, $(E', N')$ deux evn sur $\K$ et $f \in \mathscr L_c(E, E')$.
+    Soient $(E, N)$, $(E', N')$ deux espaces vectoriels normés sur $\K$ et $f \in \mathscr L_c(E, E')$.
 
     Alors par critère de continuité, $\left\{ \frac{N'(f(x))}{N(x)}, x \in E \setminus \{0\} \right\}$ est
     une partie de $\R^+$ majorée. 
 
-    On appelle norme d'opération (ou norme subordonnée, ou parfois norme triple) de $f$ le réel : 
+    On appelle norme d'opérateur (ou norme subordonnée, ou parfois norme triple) de $f$ le réel : 
     $$||f||_{op} = |||f||| = \sup \left\{ \frac{N'(f(x))}{N(x)}, x \in E \setminus \{0\} \right\} $$ 
 
 
@@ -1731,7 +1730,7 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
 \end{theoreme}
 
 
-\begin{proof}
+\begin{proof}~
     \begin{itemize}
         \item $|||\cdot|||$ est positive par définition.
         \item Supposons que $|||f||| = 0$, alors $\forall x \in E \setminus \{0\}, \, N'(f(x)) = 0$.
@@ -1758,7 +1757,7 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
 
 
 \begin{proposition}{Sous-multiplicativité de la norme d'opérateur}{}
-    Soient $(E, N)$, $(E', N')$, $(E", N")$ trois evn sur $\K$, et soient $f \in \mathscr L_c(E, E')$ et $g \in \mathscr L_c(E', E")$.
+    Soient $(E, N)$, $(E', N')$, $(E", N")$ trois espaces vectoriels normés sur $\K$, et soient $f \in \mathscr L_c(E, E')$ et $g \in \mathscr L_c(E', E")$.
 
     Alors $g \circ f \in \mathscr L_c(E, E")$ et $|||g \circ f||| \leqslant |||g||| \cdot |||f|||$.
 \end{proposition}
@@ -1778,8 +1777,6 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
     Donc $|||g \circ f||| \leqslant |||g||| \cdot |||f|||$.
 \end{proof}
 
-\subsubsection{Cas des endomorphismes }
-
 \begin{proposition}{Norme d'algèbre}{}
     Pour $f \in \mathscr L_c(E)$, on a $||||f||| = \sup \left\{ \frac{N(f(x))}{N(x)}, \, x \in E \setminus \{0\} \right\}$
     et $|||f|||$ est une norme qui vérifie : 
@@ -1789,15 +1786,12 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
     On dit que $|||\cdot|||$ est une norme d'algèbre. 
 \end{proposition}
 
-
-\subsubsection{Cas des matrices }
-
 \begin{proposition}{Norme matricielle}{}
-    On se place dans $\mathscr M_n(\K)$ et on munit $\K^n$ d'une norme $N$.
+    \\On se place dans $\mathscr M_n(\K)$ et on munit $\K^n$ d'une norme $N$.
 
     On définit pour $A \in \mathscr M_n(\K)$, $|||A||| = \sup \left\{ \frac{N(AX)}{N(X)}, X \in \K^n \setminus \{0\} \right\}$
     
-    Alors $|||\cdot|||$ est une norme d'algèbre sur $\mathscr M_n(\K)$, en particulier 
+    Alors $|||\cdot|||$ est une norme d'algèbre sur $\mathscr M_n(\K)$, et en en particulier : 
     $$\forall A, B \in \mathscr M_n(\K), \, |||AB||| \leqslant |||A||| \cdot |||B|||$$
 
     On dit aussi que $|||\cdot|||$ est une norme matricielle. 
@@ -1919,10 +1913,10 @@ Alors $|y_{i_0}| = \left|\sum_{j = 1 }^{n } | a_{i_0, j} | e^{i \theta_j e^{-i \
 Donc $|| AX||_\infty \geqslant k$, or $k$ majorant donc $k = |||AX |||_\infty$ et $k = \sup Z$. 
 
 
-\subsection{Applications multilinéaires }
+\subsection{Applications multilinéaires}
 
-\begin{theoreme}{Continuité application $p$-linéaire}{}
-    Soient $(E_1, N_1), \ldots, (E_p, N_p)$ et $(E', N')$ des evn et 
+\begin{theoreme}{Continuité applications $p$-linéaires}{}
+    Soient $(E_1, N_1), \ldots, (E_p, N_p)$ et $(E', N')$ des espaces vectoriels normés et 
     
     $\fonction{f}{E_1 \times \cdots \times E_p}{E'}{(x_1, \ldots, x_p)}{f(x_1, \ldots, x_p)}$ 
     $p$-linéaire. 
@@ -1930,12 +1924,12 @@ Donc $|| AX||_\infty \geqslant k$, or $k$ majorant donc $k = |||AX |||_\infty$ e
     Alors $f$ est continue ssi $$\exists c > 0, \, \forall (x_1, \ldots, x_p) \in E_1 \times \cdots \times E_p, \, N'(f(x_1, \ldots, x_p)) \leqslant c \prod_{i=1}^p N_i(x_i)$$
 \end{theoreme}
 
+\begin{proof}
+    Non exigible, non fait en classe.
+\end{proof}
 
-Démo non exigible 
-
-
-\begin{proposition}{Continuité application $p$-linéaire en dimension finie}{}
-    Soient $(E_1, N_1), \ldots, (E_p, N_p)$ des evn de dimension finie et $(E', N')$ un evn.
+\begin{proposition}{Continuité applications $p$-linéaires en dimension finie}{}
+    Soient $(E_1, N_1), \ldots, (E_p, N_p)$ des espaces vectoriels normés de dimension finie et $(E', N')$ un espace vectoriel normé.
 
     Alors si $f : E_1 \times \cdots \times E_p \to E'$ est $p$-linéaire, alors $f$ est continue.
 \end{proposition}
@@ -1959,17 +1953,16 @@ Démo non exigible
     \end{align*}
 
     Par le critère de continuité des applications $p$-linéaires, $f$ est continue.
-    
 \end{proof}
 
 \begin{exemple}
-    Soit $E$ un espace préhilbertien réel, muni de $<\cdot, \cdot>$ et de la norme $||\cdot||$ associée.
+    Soit $E$ un espace préhilbertien réel, muni de $\langle \cdot, \cdot \rangle$ et de la norme $||\cdot||$ associée.
 
-    Alors $<\cdot, \cdot>$ est continue de $E \times E$ dans $\R$. 
+    Alors $\langle \cdot, \cdot\rangle$ est continue de $E \times E$ dans $\R$. 
 
     En munissant $E$ de la norme $||\cdot||_2$. 
 
-    En effet, $\forall (x, y) \in E^2, \, |<x, y>| \leqslant ||x|| \cdot ||y||$ par inégalité de Cauchy-Schwarz,
+    En effet, $\forall (x, y) \in E^2, \, |\langle x, y\rangle| \leqslant ||x|| \cdot ||y||$ par inégalité de Cauchy-Schwarz,
     et la continuité par le critère. 
 
     \lvspace Soit $n, p, q \in \N^*$, $\fonction{}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n, q}(\K)}{(A, B)}{AB}$ est
@@ -1984,24 +1977,25 @@ Démo non exigible
 \end{exemple}
 
 
-\section{Compacts d'un espace vectoriel normé }
+\section{Compacts d'un espace vectoriel normé}
 
 \begin{definition}{Compact}{}
     Soit $A \subset E$. 
 
     On dit que $A$ est compact (ou que $A$ est un compact) ssi toute suite de $A$ possède une 
-    valeur d'adhérence dans $A$. 
+    valeur d'adhérence dans $A$.\\
 
     C'est à dire pour toute suite $(u_n)_{n \in \N}$ de $A$, on peut en extraire une suite 
     $(u_{\varphi(n)})_{n \in \N}$ telle que $u_{\varphi(n)} \to \ell \in A$.
 \end{definition}
 
 
-\begin{definition}{Borel-Lebesgue}{}
+\begin{definition}{Borel-Lebesgue - LHP}{}
     Soit $A \subset E$, alors
-    $A$ est un compact ssi de toute recouvrement de $A$ par des ouverts on peut extraire un sous 
-    recouvrement fini, c'est à dire pour toute famille $(U_i)_{i \in I}$ d'ouverts de $E$ 
-    telle que $\displaystyle A \subset \bigcup_{i \in I} U_i$, il existe $i_1, \ldots, i_n \in I$ tels que
+    $A$ est un compact ssi de toute recouvrement de $A$ par des ouverts on peut extraire un sous-recouvrement fini.
+
+    C'est à dire pour toute famille $(U_i)_{i \in I}$ d'ouverts de $E$ 
+    telle que $\displaystyle A \subset \bigcup_{i \in I} U_i$, il existe $i_1, \ldots, i_n \in I$ tels que :
     $$\displaystyle A \subset \bigcup_{k=1}^n U_{i_k}$$
 \end{definition}
 
@@ -2026,67 +2020,69 @@ Démo non exigible
     4. extractions successives
 }
 
-\begin{proof}
-    1. Soit $A \subset E$ un compact. Montrons que $A$ est fermé.
+\begin{proof}~
+    \begin{enumerate}
+        \item Soit $A \subset E$ un compact. Montrons que $A$ est fermé.
 
-    Soit $(u_n)_{n \in \N}$ une suite de $A$ qui converge vers $\ell \in E$.
+        Soit $(u_n)_{n \in \N}$ une suite de $A$ qui converge vers $\ell \in E$.
 
-    $A$ étant compact, il existe une sous-suite $(u_{\varphi(n)})_{n \in \N}$ qui converge vers
-    $\ell' \in A$. Or $u_{\varphi(n)} \to \ell$ donc $\ell = \ell' \in A$, donc $A$ est fermé.
+        $A$ étant compact, il existe une sous-suite $(u_{\varphi(n)})_{n \in \N}$ qui converge vers
+        $\ell' \in A$. Or $u_{\varphi(n)} \to \ell$ donc $\ell = \ell' \in A$, donc $A$ est fermé.
 
-    Supposons que $A$ n'est pas borné, pour tout $n \in \N$, il existe 
-    $x_n \in A$ tel que $N(x_n) > n$.
+        Supposons que $A$ n'est pas borné, pour tout $n \in \N$, il existe 
+        $x_n \in A$ tel que $N(x_n) > n$.
 
-    $A$ étant compact, on peut extraire de $(x_n)_{n \in \N}$ une sous-suite $(x_{\varphi(n)})_{n \in \N}$ qui converge vers $\ell \in A$.
+        $A$ étant compact, on peut extraire de $(x_n)_{n \in \N}$ une sous-suite $(x_{\varphi(n)})_{n \in \N}$ qui converge vers $\ell \in A$.
 
-    Donc $(x_{\varphi(n)})_{n \in \N}$ est bornée, or $\forall n \in \N, \, N(x_{\varphi(n)}) > \varphi(n) \geqslant n$, absurde 
+        Donc $(x_{\varphi(n)})_{n \in \N}$ est bornée, or $\forall n \in \N, \, N(x_{\varphi(n)}) > \varphi(n) \geqslant n$, absurde 
 
-    Donc $A$ est borné.
+        Donc $A$ est borné.
 
-    \lvspace 2. Soit $V$ un fermé relatif de $A$. Aors $V = \overline V \cap A$. Montrons 
-    que $V$ est compact. 
+        \item Soit $V$ un fermé relatif de $A$. Aors $V = \overline V \cap A$. Montrons 
+        que $V$ est compact. 
 
-    Soit $(u_n)_{n \in \N}$ une suite de $V$. $A$ étant compact, on peut en extraire 
-    une sous-suite $(u_{\varphi(n)})_{n \in \N}$ qui converge vers $\ell \in A$.
+        Soit $(u_n)_{n \in \N}$ une suite de $V$. $A$ étant compact, on peut en extraire 
+        une sous-suite $(u_{\varphi(n)})_{n \in \N}$ qui converge vers $\ell \in A$.
 
-    $u_{\varphi(n)} $ est une suite de $V$, donc $\ell \in \overline V$. Donc 
-    $\ell \in V$. Donc $V$ est compact.
+        $u_{\varphi(n)} $ est une suite de $V$, donc $\ell \in \overline V$. Donc 
+        $\ell \in V$. Donc $V$ est compact.
 
-    \lvspace 3. Toute suite convergente possède une unique valeur d'adhérence d'où $\Rightarrow$. 
+        \item Toute suite convergente possède une unique valeur d'adhérence d'où $\Rightarrow$. 
 
-    $\Leftarrow$ Soit $(u_n)_{n \in \N}$ une suite d'un compact $A$. Supposons qu'elle possède 
-    une unique valeur d'adhérence $a$.
+        $\Leftarrow$ Soit $(u_n)_{n \in \N}$ une suite d'un compact $A$. Supposons qu'elle possède 
+        une unique valeur d'adhérence $a$.
 
-    Supposons par l'absurde que $(u_n)_{n \in \N}$ ne converge pas vers $a$.
+        Supposons par l'absurde que $(u_n)_{n \in \N}$ ne converge pas vers $a$.
 
-    Alors $ \exists \varepsilon > 0, \, \forall N \in \N, \, \exists n \geqslant N, \, d(u_n, a) > \varepsilon$.
+        Alors $ \exists \varepsilon > 0, \, \forall N \in \N, \, \exists n \geqslant N, \, d(u_n, a) > \varepsilon$.
 
-    En particulier, $M_\varepsilon = \{ n \in \N, \, d(u_n, a) > \varepsilon \}$ est infini. 
+        En particulier, $M_\varepsilon = \{ n \in \N, \, d(u_n, a) > \varepsilon \}$ est infini. 
 
-    Numérotons $\varphi(0) < \varphi(1) < \ldots < \varphi(n) < \ldots$ les éléments
-    de $M_\varepsilon$. Alors $(u_{\varphi(n)})_{n \in \N}$ est une suite de $A$, donc 
-    possède une valeur d'adhérence $b \in A$ qui est aussi une valeur d'adhérence de 
-    $(u_n)_{n \in \N}$. Par hypothèse, $b = a$.
+        Numérotons $\varphi(0) < \varphi(1) < \ldots < \varphi(n) < \ldots$ les éléments
+        de $M_\varepsilon$. Alors $(u_{\varphi(n)})_{n \in \N}$ est une suite de $A$, donc 
+        possède une valeur d'adhérence $b \in A$ qui est aussi une valeur d'adhérence de 
+        $(u_n)_{n \in \N}$. Par hypothèse, $b = a$.
 
-    Or $\forall n \in \N, \, N(u_{\varphi(n)} - a) > \varepsilon$, 
-    donc à la limite $0 \geqslant \varepsilon$, absurde.
+        Or $\forall n \in \N, \, N(u_{\varphi(n)} - a) > \varepsilon$, 
+        donc à la limite $0 \geqslant \varepsilon$, absurde.
 
-    \lvspace 4. Soient $(E_1, N_1), \ldots, (E_p, N_p)$ des evn tels que 
-    $\forall i, \, A_i$ compact de $E_i$ et $A = A_1 \times \cdots \times A_p$. 
+        \item Soient $(E_1, N_1), \ldots, (E_p, N_p)$ des evn tels que 
+        $\forall i, \, A_i$ compact de $E_i$ et $A = A_1 \times \cdots \times A_p$. 
 
-    Soit $(u_n)_{n \in \N}$ une suite de $A$.
+        Soit $(u_n)_{n \in \N}$ une suite de $A$.
 
-    Notons $u_n = (u_{n, 1}, \ldots, u_{n, p})$ avec $(u_{n, 1})$ une suite de $A_1$, et $A_1$ est un compact. 
+        Notons $u_n = (u_{n, 1}, \ldots, u_{n, p})$ avec $(u_{n, 1})$ une suite de $A_1$, et $A_1$ est un compact. 
 
-    On peut donc en extraire une sous-suite $(u_{\varphi_1(n), 1})_{n \in \N}$ qui converge vers $\ell_1 \in A_1$.
+        On peut donc en extraire une sous-suite $(u_{\varphi_1(n), 1})_{n \in \N}$ qui converge vers $\ell_1 \in A_1$.
 
-    De même, on peut extraire de $(u_{\varphi_1(n), 2})_{n \in \N}$ une sous-suite bla bla bla 
+        De même, on peut extraire de $(u_{\varphi_1(n), 2})_{n \in \N}$ une sous-suite bla bla bla 
 
-    De proches en proches on obtient $u_{\varphi_1 \circ \ldots \circ \varphi_p(n)} \to \ell_p \in A_p$.+
+        De proches en proches on obtient $u_{\varphi_1 \circ \ldots \circ \varphi_p(n)} \to \ell_p \in A_p$.+
 
-    Donc $(u_{\varphi_1 \circ \ldots \circ \varphi_p(n)}) \to (\ell_1, \ldots, \ell_p) \in A$.
+        Donc $(u_{\varphi_1 \circ \ldots \circ \varphi_p(n)}) \to (\ell_1, \ldots, \ell_p) \in A$.
 
-    D'où $A$ compact. 
+        D'où $A$ compact. 
+    \end{enumerate}
 \end{proof}
 
 
@@ -2094,12 +2090,12 @@ Démo non exigible
 \subsection{Cas de la dimension finie}
 
 \begin{theoreme}{Compacts en dimension finie}{}
-    Si $(E, N)$ est un evn de dimension finie, tout fermé borné de $E$ est compact. Ainsi, en 
+    Si $(E, N)$ est un espace vectoriel normé de dimension finie, tout fermé borné de $E$ est compact. Ainsi, en 
     dimension finie les compacts \textbf{sont} les fermés bornés. 
 \end{theoreme}
 
 \idee{
-    Bolzano-Weierstrass
+    Bolzano-Weierstrass.
 }
 
 \begin{proof}
@@ -2112,10 +2108,10 @@ Démo non exigible
 \end{proof}
 
 
-\begin{theoreme}{Riesz, HP}{}
+\begin{theoreme}{Riesz - HP}{}
     Si $(E, N)$ est de dimension infinie, $B'(0, 1)$ n'est pas compacte. 
 
-    Ainsi un evn est de dimension finie ssi sa boule unité est compacte. 
+    Ainsi un espace vectoriel normé est de dimension finie ssi sa boule unité est compacte. 
 \end{theoreme}
 
 \begin{proof}
@@ -2312,25 +2308,25 @@ Démo non exigible.
     Alors $\mathcal R$ est une relation d'équivalence.
 \end{theoreme}
 
-\begin{proof}
+\begin{proof}~\\
     \uline{Réflexivité :}
 
     \svspace Soit $x \in A$. Posons $\fonction f {\inter 0 1} A t {f(t) = x}$. 
 
-    $f$ est continue à valeurs dans $A$, et $f(0) = x$, $f(1) = x$. Donc $x \mathcal R x$.
+    $f$ est continue à valeurs dans $A$, et $f(0) = x$, $f(1) = x$. Donc $x \mathcal R x$.\\
 
-    \uindent{Symétrie }
+    \uline{Symétrie :}
 
     \svspace Soient $x, y \in A$ tels que $x \mathcal R y$. Alors il existe $\fonction f {\inter 0 1} A t {f(t)}$
     telle que $f(0) = x$ et $f(1) = y$.
 
     Posons $\fonction g {\inter 0 1} A t {g(t) = f(1 - t)}$. On a bien $\forall t \in \inter 0 1, \, g(t) \in A$. 
 
-    $g$ est continue par composition, $g(0) = f(1) = y$ et $g(1) = f(0) = x$. 
+    $g$ est continue par composition, $g(0) = f(1) = y$ et $g(1) = f(0) = x$. \\
 
-    \uindent{Transitivité }
+    \uline{Transitivité :}
 
-    \svspace Soient $x, y, z \in A$ tels que $x \mathcal R y$ et $y \mathcal R z$.
+    Soient $x, y, z \in A$ tels que $x \mathcal R y$ et $y \mathcal R z$.
 
     Par hypothèse, il existe $f : \inter 0 1 \to A$ continue telle que $f(0) = x$ et $f(1) = y$, 
     et $g : \inter 0 1 \to A$ continue telle que $g(0) = y$ et $g(1) = z$.
@@ -2388,7 +2384,7 @@ Démo non exigible.
 
 \subsection{Application à \texorpdfstring{$\R$}{R}}
 
-\begin{theoreme}{Connexité par arcs dans R}{}
+\begin{theoreme}{Connexité par arcs dans $\R$}{}
     Les parties connexes par arcs de $\R$ sont les intervalles.
 \end{theoreme}
 
@@ -2430,16 +2426,16 @@ Démo non exigible.
     Or $\R^*$ n'est pas connexe par arcs donc par contraposée du théorème, $A$ non plus. 
 \end{exemple}
 
-\subsection{Complément HP}
+\subsection{Complément Hors Programme}
 
-\begin{definition}{Connexité HP}{}
+\begin{definition}{Connexité - HP}{}
     Soit $A \subset E$. 
 
     On dit que $A$ est connexe ssi toute application $f : A \to \{0, 1\}$ continue est constante. 
 
 \end{definition}
 
-\begin{proposition}{Connexité par arcs implique connexité HP}{}
+\begin{proposition}{Connexité par arcs implique connexité - HP}{}
     Toute partie connexe par arcs est connexe. 
 \end{proposition}
 
