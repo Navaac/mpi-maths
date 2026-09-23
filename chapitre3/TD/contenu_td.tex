@@ -471,6 +471,24 @@ La fonction est continue en $(0,0)$.
 \end{enumerate}
 \end{correction}
 
+\begin{correction}{16}
+$\varphi$ est bien un endomorphisme car une primitive d'une fonction continue est continue. \\
+
+\uline{Linéarité :}
+
+$\varphi{(0)} = 0$.
+Par la linéarité de la dérivation il est clair que $\varphi (\lambda f) = \lambda \varphi f$, de même $\varphi (f + g) = \varphi{(f)} + \varphi{(g)}$. Donc $\varphi$ est linéaire. \\
+
+\uline{Continuité :}
+
+Soit $f \in E$, $\| \varphi{(f)}\|_{\infty} \leqslant \|f\|_{\infty}$ (on majore pour tout $x \in [0,1]$).
+
+Si $f \not \equal 0$, on a montré que $\frac{\|\varphi{(f)}\|_{\infty}}{\|f\|_{\infty}} \leqslant 1$. Donc $|||\varphi||| \leqslant 1$. \\
+
+Soit $f = 1$ alors $\|f\|_{\infty} = 1$ et donc $\|\varphi{(f)}\|_{\infty} = 1$.
+Donc le majorant est atteint en f. Donc $|||\varphi||| = 1$.
+\end{correction}
+
 % --- Correction 18 (Exercice 11 du PDF) ---
 \begin{correction}{18}
 Soit $E = \mathbb{R}[X]$ muni de $\|P\| = \max |a_{i}|$.
@@ -512,6 +530,21 @@ Puisque $B$ est fermé, la limite $0_{E}$ devrait appartenir à $B$.
 Or $\|f(0_{E})\| = 0 \neq 1$. Contradiction. \\
 
 Donc $f$ est continue.
+\end{correction}
+
+\begin{correction}{21}
+\begin{enumerate}
+    \item il existe un $\alpha$ telle qu'elle n'est pas nulle, alors pour $a = \frac {\alpha} {\varphi{\alpha}}$, $\varphi{(a)} =1$.
+
+    $E = Vect(a) + H$ (analyse synthèse classique).
+
+    \item $\varphi{(H)} = \{0\}$ donc $H$ est fermé car image réciproque d'un fermé.
+
+    \item
+    \begin{enumerate}
+        \item ...
+    \end{enumerate}
+\end{enumerate}    
 \end{correction}
 
 % --- Correction 23 (Exercice 16 du PDF) ---

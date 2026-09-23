@@ -132,11 +132,14 @@ dont l'intersection infinie est $\{0\}$.}
 \end{proposition}
 
 \begin{proposition}{Voisinages de l'infini}{}
-    Soient $E = \R, \, A \subset \R$. On dit que $A$ est un voisinage de $+\infty$
-    ssi $\exists c \in \R, \, [c, +\infty[ \subset A$. 
+    Soient $E = \R, \, A \subset \R$.
+    \begin{itemize}
+        \item On dit que $A$ est un voisinage de $+\infty$
+        ssi $\exists c \in \R, \, [c, +\infty[ \subset A$. 
 
-    On dit que $A$ est un voisinage de $-\infty$ ssi 
-    $\exists c \in \R, \, ]-\infty, c] \subset A$.
+        \item On dit que $A$ est un voisinage de $-\infty$ ssi 
+        $\exists c \in \R, \, ]-\infty, c] \subset A$.
+    \end{itemize}
 \end{proposition}
 
 \subsection{Fermés}
@@ -154,7 +157,6 @@ dont l'intersection infinie est $\{0\}$.}
 \begin{theoreme}{Caractérisation séquentielle des fermés}{}
 
     Soit $B \subset E$. 
-
     $B$ est un fermé ssi pour toute suite $(u_n)_{n \in \N}$ d'éléments de $B$ qui converge 
     vers $\ell \in E$, on a $\ell \in B$.
 
@@ -166,7 +168,6 @@ dont l'intersection infinie est $\{0\}$.}
 
 \begin{proof}~\\
     $\Rightarrow$ Supposons que $B$ est un fermé.
-
     Soit $(u_n)$ une suite d'éléments de $B$ qui converge vers $\ell \in E$.
 
     Montrons que $\ell \in B$.
@@ -208,8 +209,8 @@ dont l'intersection infinie est $\{0\}$.}
     Considérons la boule fermée $\overline{B}(\omega, R)$.
 
     \begin{itemize}
-        \item Si $R > 0$, alors c'est une boule fermée
         \item Si $R = 0$, c'est un singleton. 
+        \item Si $R > 0$, alors c'est une boule fermée
     \end{itemize}
 
     Soit $(x_n)_{n \in \N}$ suite de $B$ qui converge vers $\ell \in E$.
@@ -302,10 +303,9 @@ Tout ensemble fini est fermé, car réunion finie de singletons.
     
     $S = \left\{\lambda b + (1 - \lambda )a, \, \lambda \in \inter 0 1\right\}$
 
-    Notons $C = \left\{\lambda \in \inter 0 1, \, \lambda b + (1 - \lambda )a \in A\right\}$
+    Notons $C = \left\{\lambda \in \inter 0 1 \ \mid \lambda b + (1 - \lambda )a \in A\right\}$
 
     Donc $0 \in C$, donc $C \neq \emptyset$.
-
     De plus, $C \subset \R$ non vide et borné. Posons alors $\lambda_0 = \sup C \in \R$, et 
     $d = \lambda_0 b + (1 - \lambda_0)a \in E$.
 
@@ -519,7 +519,7 @@ intérieurs avec une suite. }
 
     Alors $\forall R > 0, \, \exists a \in A, \, d(x, a) < R$.
 
-    Soit $n \in \N*$, avec $R = \frac 1 n$n cela fournit $a_n \in A$ tel que $d(x, a_n) < \frac 1 n$.
+    Soit $n \in \N^*$, avec $R = \frac 1 n$n cela fournit $a_n \in A$ tel que $d(x, a_n) < \frac 1 n$.
 
     Donc $a_n \limit n \infty x$.
 
@@ -556,11 +556,11 @@ intérieurs avec une suite. }
 
     \svspace Soit $(a_n)_{n \in \N}$ une suite d'éléments de $A$ qui converge vers $\ell \in E$.
 
-    Alors par caractérisation séquentielle, $\ell \in \overline{A} $ Donc $A$ fermé. 
+    Alors par caractérisation séquentielle, $\ell \in \overline{A}$. Donc $A$ fermé. 
 \end{proof}
 
 \begin{proposition}{Adhérence des boules}{}
-    Soit $\omega \in E$ et $R > 0$. Alors
+    Soit $\omega \in E$ et $R > 0$. Alors :
      $$\overline{B(\omega, R)} = B'(\omega, R)$$
 \end{proposition}
 
@@ -715,7 +715,6 @@ Si $A \subset E$, alors $\mathring A \subset A \subset \overline A$
 
 \begin{exemple}
     Si $A = \Q$, 
-
     $\mathring A = \emptyset$, $\overline A = \R$, donc $\operatorname{Fr}(A) = \R$.
 \end{exemple}
 
@@ -830,8 +829,7 @@ Si $A \subset E$, alors $\mathring A \subset A \subset \overline A$
 
 \begin{proof}
     La notion de fermé qui vient de la caractérisation séquentielle est invariante car la notion de 
-    limite de suire l'est. 
-
+    limite de suites l'est. 
     La notions d'ouvert ausi par complémentarité. 
 
     Les autres notions également car elles s'expriment en fonction des deux premières.
@@ -845,11 +843,11 @@ Si $A \subset E$, alors $\mathring A \subset A \subset \overline A$
 \subsection{Topologie relative}
 
 Dans toute cette partie, on fixe $A$ partie non vide de $E$.
-On va définir dans ce qui suit la topologie relative à $A$, c'est à dire les ouverts relatifs de $A$, fermés relatifs de $A$ et voisinages relatifs d'un poinr vis-à-vis de $A$.
+On va définir dans ce qui suit la topologie relative à $A$, c'est à dire les ouverts relatifs de $A$, fermés relatifs de $A$ et voisinages relatifs d'un point vis-à-vis de $A$.
 
 \begin{definition}{Ouvert relatif}{}
     Soit $U \subset A$. On dit que $U$ est un ouvert relatif de $A$ 
-    ssi $\forall a \in U, \, \exists R > 0, \, \forall x \in A, \, D(a, x) < R \Rightarrow x \in U$.
+    ssi $\forall a \in U, \, \exists R > 0, \, \forall x \in A, \, d(a, x) < R \Rightarrow x \in U$.
 
     C'est à dire $B(a, R) \cap A \subset U$.
  
@@ -1044,7 +1042,7 @@ On va définir dans ce qui suit la topologie relative à $A$, c'est à dire les 
     Supposons que $f(x) \limitnorme{N'} x a \ell$. Ainsi, $\forall \varepsilon > 0, \exists \eta > 0, \, \forall x \in A, \, N(x - a) < \eta \Rightarrow N'(f(x) - \ell) < \varepsilon$.
 
     Soit $\varepsilon > 0$, et posons $\eta' = \frac \eta \alpha$ où $\eta$ vient de la 
-    définitions de la limite avec $\gamma \varepsilon$ das le rôle de $\varepsilon$.
+    définitions de la limite avec $\gamma \varepsilon$ dans le rôle de $\varepsilon$.
 
     Soit $x \in A$. Supposons que $||x - a|| < \eta'$. 
 
@@ -1215,8 +1213,11 @@ On va définir dans ce qui suit la topologie relative à $A$, c'est à dire les 
 \begin{theoreme}{}{}
     Soient $f, g : A \subset E \to F$, $\lambda : A \to \K$, $\alpha \in K$ et $\ell_1, \ell_2 \in F$, 
 
-    Si $f(x) \limitnorme{N'}{x}{a} \ell_1$ et $g(x) \limitnorme{N'}{x}{a} \ell_2$, alors
-    $(f + g)(x) \limit x a \ell_1 + \ell_2$ et $\alpha f(x) \limit x a \alpha \ell_1$ \\
+    Si $f(x) \limitnorme{N'}{x}{a} \ell_1$ et $g(x) \limitnorme{N'}{x}{a} \ell_2$, alors :
+    \begin{itemize}
+        \item  $(f + g)(x) \limit x a \ell_1 + \ell_2$
+        \item $\alpha f(x) \limit x a \alpha \ell_1$ 
+    \end{itemize}
 
     Si $f(x) \limit x a \ell_1$ et $\lambda(x) \limit x a \alpha$, alors $(\lambda f)(x) \limit x a \alpha \ell_1$
 \end{theoreme}
@@ -1264,12 +1265,11 @@ Si $f$ et $\lambda$ continues en a, $\lambda f$ aussi.
 \end{proof}
 
 \textbf{\uline{Conséquence :}}
-Soit $f : A \subset E \to E'$ tel que $f(A) \subset B$, $g : B \to E"$ $a \in A$. Si $f$ continue en $a$ et $g$ continue en $f(a)$ alors $g \circ f$ continue en a 
-
+Soit $f : A \subset E \to E'$ tel que $f(A) \subset B$, $g : B \to E"$ $a \in A$. Si $f$ continue en $a$ et $g$ continue en $f(a)$ alors $g \circ f$ continue en $a$.
 
 \subsection{Cas des espaces vectoriels normés produits}
 
-Soient $(E'_1, N'_1), \ldots, (E'_p, N'_p)$ des evn, et $E' = E'_1 \times \cdots \times E'_p$.
+Soient $(E'_1, N'_1), \ldots, (E'_p, N'_p)$ des espaces vectoriels normés, et $E' = E'_1 \times \cdots \times E'_p$.
 muni de la norme produit $N'_\infty$, et $\fonction{f}{A\subset E}{E'}{x}{f(x) = (f_1(x), \ldots, f_p(x))}$.
 
 
@@ -1294,7 +1294,7 @@ Soit $a \in A$. Alors $f$ est continue en $a$ ssi $\forall j \in \ninter{1}{p}, 
     $\forall j \in \ninter{1}{p}, \, f_j(u_n) \limitnorme{N'_j}{n}{\infty} \ell_j$.
 
 
-    ssi $\forall j {Caractérisation - LHP}\in \ninter{1}{p}, \, f_j(x) \limitnorme{N'_j}{x}{a} \ell_j$.
+    ssi $\forall j \in \ninter{1}{p}, \, f_j(x) \limitnorme{N'_j}{x}{a} \ell_j$ (Caractérisation LHP).
 \end{proof}
 
 
@@ -1724,8 +1724,7 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
     Donc $\beta \in A$.
 \end{proof}
 
-
-\begin{theoreme}{Norme d'opérateur est une norme}{}
+\begin{theoreme}{La norme d'opérateur est une norme}{}
     La norme d'opérateur $|||\cdot|||$ est une norme sur $\mathscr L_c(E, E')$.
 \end{theoreme}
 
@@ -1763,7 +1762,7 @@ $\fonction {}{\mathscr M_{n, p}(\K) \times \mathscr M_{p, q}(\K)}{\mathscr M_{n,
 \end{proposition}
 
 \begin{proof}
-    Pour $x \in E, \, N'(f(x)) \leqslant |||f||| N(x)$ vrai si $x \neq 0$ par def 
+    Pour $x \in E, \, N'(f(x)) \leqslant |||f||| N(x)$ vrai si $x \neq 0$ par définition 
     de la norme d'opérateur, et si $x = 0$, $N'(f(0)) = N'(0) = 0$.
     Donc  
 
@@ -1916,6 +1915,7 @@ Donc $|| AX||_\infty \geqslant k$, or $k$ majorant donc $k = |||AX |||_\infty$ e
 \subsection{Applications multilinéaires}
 
 \begin{theoreme}{Continuité applications $p$-linéaires}{}
+
     Soient $(E_1, N_1), \ldots, (E_p, N_p)$ et $(E', N')$ des espaces vectoriels normés et 
     
     $\fonction{f}{E_1 \times \cdots \times E_p}{E'}{(x_1, \ldots, x_p)}{f(x_1, \ldots, x_p)}$ 
