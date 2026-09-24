@@ -227,6 +227,7 @@ Vérifier que $O(2)$, l'ensemble des matrices orthogonales, est un compact de $G
 \begin{exercice}
 Soit $A$ un compact et $B$ un fermé de l'evn $E$.
 Montrer que $A+B$ est un fermé de $E$.
+\textit{On pensera aux caractérisations séquentielles.}
 \end{exercice}
 
 % --- Exercice 24 (Source: Exercice 17) ---
@@ -534,33 +535,48 @@ Donc $f$ est continue.
 
 \begin{correction}{21}
 \begin{enumerate}
-    \item il existe un $\alpha$ telle qu'elle n'est pas nulle, alors pour $a = \frac {\alpha} {\varphi{\alpha}}$, $\varphi{(a)} =1$.
+    \item Il existe un $\alpha$ telle qu'elle n'est pas nulle, alors pour $a = \frac {\alpha} {\varphi{\alpha}}$, $\varphi{(a)} =1$.
 
     $E = Vect(a) + H$ (analyse synthèse classique).
 
-    \item $\varphi{(H)} = \{0\}$ donc $H$ est fermé car image réciproque d'un fermé.
+    \item $\varphi^{-1}{(\{0\})} = H$ donc $H$ est fermé car image réciproque d'un fermé pat une fonction continue.
 
     \item
     \begin{enumerate}
-        \item ...
+        \item Alors $\forall c, \exists x \in E, |\varphi(x)| > c\|x\|$.
+        Appliquons ceci à $c = n \in \N$.
+        
+        Il existe donc $x_n \in E$ tel que $\varphi(x_n)| > n \|x_n\|$.
+        Remarquons que $x_n \not = 0$.
+        Posons $u_n = \frac {x_n} {\|x_n\|}$.
+
+        Par linéarité de $\varphi$ on a $\varphi(u_n) > n$.
+
+        \item Posons $y_n = a - \frac {u_n} {\varphi(u_n)}$. Qui existe car $\varphi(u_n) > n$.
+        Par linéarité de $\varphi$ on a $\varphi(y_n) = 0$, donc $y_n \in H$.
+
+        Or $\|y_n - a\| \leqslant \frac 1 n \to 0$ donc $y_n \to a$. Donc $H$ non fermé.
     \end{enumerate}
 \end{enumerate}    
 \end{correction}
 
 % --- Correction 23 (Exercice 16 du PDF) ---
 \begin{correction}{23}
-Soit $A$ compact et $B$ fermé. Montrons que $A+B$ est fermé.
-
 Soit $(c_{n})$ une suite de $A+B$ convergeant vers $\ell$.
 $c_{n} = a_{n} + b_{n}$ avec $a_{n} \in A, b_{n} \in B$.
+
 Comme $A$ est compact, on peut extraire une sous-suite $(a_{\phi(n)})$ qui converge vers $a \in A$.
 On a $b_{\phi(n)} = c_{\phi(n)} - a_{\phi(n)}$.
 $c_{\phi(n)} \to \ell$ (suite extraite convergente) et $a_{\phi(n)} \to a$.
+
 Donc $b_{\phi(n)} \to \ell - a$.
 Or $B$ est fermé, donc la limite $\ell - a$ appartient à $B$.
 
 Ainsi $\ell = a + (\ell - a) \in A + B$.
-$A+B$ est fermé.
+$A+B$ est fermé. \\
+
+\textbf{Contre-exemple si $A$ est seulement fermé :} $\{(x, \frac 1 x), x \in \R^*\}$ est un fermé car image réciproque de $\{1\}$ par $f: x,y \mapsto xy$. 
+Soit $B = \{(x, 0), x \in \R\}$ un fermé car droite. $A + B = \R^2 \setminus B$, qui est donc ouvert...
 \end{correction}
 
 % --- Correction 24 (Exercice 17 du PDF) ---

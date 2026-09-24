@@ -744,6 +744,25 @@ Si $A \subset E$, alors $\mathring A \subset A \subset \overline A$
     Soit $A \in \mathscr P(E)$, on dit que $A$ est dense dans $E$ ssi $\overline A = E$.
 \end{definitionnt}
 
+\begin{proposition}{Caractérisation}{}
+    Soit $A \subset E$. $A$ est  dense dans $E$ ssi pour tout ouvert $U$ de $E$, $U \cap A \not \equal \varnothing$.     
+\end{proposition}
+
+\begin{proof}
+$A$ est dense dans $E$ ssi $\overline A = E$.
+
+$\Rightarrow$ Soit $U$ ouvert non vide de $E$.
+Alors $U \subset \overline A$.
+Soit $a \in U$, $a \in \overline A$.
+$U$ ouvert donc il existe $r > 0$ tel que $B(a,r) \subset U$.
+$a \in \overline A$ donc pour ce $r$, $B(a,r) \cap A \not \equal \varnothing$.
+Donc $U \cap A \not \equal \varnothing$. \\
+
+$\Leftarrow$ Supposons que $A$ rencontre tout ouvert.
+Soit $x \in E$. Soit $r > 0$, $B(x,r)$ est un ouvert donc $B(x,r) \cap A \not \equal \varnothing$.
+Donc $x \in \overline A$ donc $E = \overline A$.
+\end{proof}
+
 \begin{exemple}
     \begin{enumerate}
         \item $\Q$ est dense dans $\R$.
@@ -815,8 +834,6 @@ Si $A \subset E$, alors $\mathring A \subset A \subset \overline A$
 
     Posons $x_n = h_x + \lambda_x h_n$. On a bien $x_n \in H$, et $x_n \limit n \infty x$ 
     d'où $\overline H = E$.
-
-
 \end{exemple}
 
 
@@ -2237,6 +2254,8 @@ Démo non exigible.
 
 \section{Connexité par arcs}
 
+Dans ce paragraphe on prendra $\K = \R$.
+
 \begin{definition}{Chemin}{}
     Soit $A \subset E$ non vide, soient $a, b \in A$. 
 
@@ -2245,8 +2264,7 @@ Démo non exigible.
 \end{definition}
 
 
-\subsection{Connexité par arcs }
-
+\subsection{Connexité par arcs}
 
 \begin{definition}{Connexité par arcs}{}
     Soit $A \subset E$. 
@@ -2264,43 +2282,47 @@ Démo non exigible.
 
 \begin{proposition}{Liens entre convexité et étoilé}{}
     Soit $A \subset E$ non vide. 
-
-    Si $A$ est convexe, alors $A$ est étoilée par rapport à tous ses points. 
-
-    Si $A$ est étoilée par rapport à l'un de ses points, $A$ est connexe par arcs. 
+    \begin{enumerate}
+        \item Si $A$ est convexe, alors $A$ est étoilée par rapport à tous ses points. 
+        \item Si $A$ est étoilée par rapport à l'un de ses points, $A$ est connexe par arcs. 
+    \end{enumerate}
 \end{proposition}
 
-\idee{poser la bonne fonction.}
+\idee{Poser la bonne fonction.}
 
-\begin{proof}
-    1. par def de convexe car $A$ non vide. 
+\begin{proof}~
+    \begin{enumerate}
+        \item Par définition de convexe car $A$ non vide. 
 
-    \avspace 2. Supposons que $A$ est étoilée par rapport à $\omega \in A$.
+        \item Supposons que $A$ est étoilée par rapport à $\omega \in A$.
 
-    Alors si $x, y \in A$. Posons $f: \space \begin{array}{|ccc}
-    \inter 0 1 & \to & A \\
-    t & \mapsto & \left\{ \begin{array}{cc}
-        2t \omega + (1 - 2t)x & \text{ si } t \in \inter 0 {\frac 1 2} \\
-        (2 - 2t) \omega + (2t - 1)y & \text{ si } t \in \inter {\frac 1 2} 1        
-    \end{array} \right.
-  \end{array}$
+        Alors si $x, y \in A$. Posons $f: \space \begin{array}{|ccc}
+        \inter 0 1 & \to & A \\
+        t & \mapsto & \left\{ \begin{array}{cc}
+            2t \omega + (1 - 2t)x & \text{ si } t \in \inter 0 {\frac 1 2} \\
+            (2 - 2t) \omega + (2t - 1)y & \text{ si } t \in \inter {\frac 1 2} 1        
+        \end{array} \right.
+        \end{array}$
 
-    $f$ est bien continue sur $\interco 0 {\frac 1 2}$ et $\interoc {\frac 1 2} 1$ et 
-    $\displaystyle \lim_{t \to \frac 1 2^-} f(t) = \lim_{t \to \frac 1 2^+} f(t) = \omega$ donc $f$ est continue sur $\inter 0 1$.
+        $f$ est bien continue sur $\interco 0 {\frac 1 2}$ et $\interoc {\frac 1 2} 1$ et 
+        $\displaystyle \lim_{t \to \frac 1 2^-} f(t) = \lim_{t \to \frac 1 2^+} f(t) = \omega$ donc $f$ est continue sur $\inter 0 1$.
 
-    $\displaystyle \forall t \in \inter 0 {\frac 1 2}, \, f(t) \in \inter x \omega \subset A$ et
-    $\displaystyle \forall t \in \inter {\frac 1 2} 1, \, f(t) \in \inter \omega y \subset A$.
+        $\displaystyle \forall t \in \inter 0 {\frac 1 2}, \, f(t) \in \inter x \omega \subset A$ et
+        $\displaystyle \forall t \in \inter {\frac 1 2} 1, \, f(t) \in \inter \omega y \subset A$.
 
-    Donc $f$ est bien à valeurs dans $A$, et $f(0) = x$, $f(1) = y$. 
-    Donc $f$ est un chemin de $A$ joignant $x$ à $y$. Donc $A$ est connexe par arcs.
+        Donc $f$ est bien à valeurs dans $A$, et $f(0) = x$, $f(1) = y$. 
+        Donc $f$ est un chemin de $A$ joignant $x$ à $y$. Donc $A$ est connexe par arcs.
+    \end{enumerate}
 \end{proof}
+
+\textbf{\uline{Conséquence :}} tout partie convexe est connexe par arcs (l'ensemble vide est trivialement connexe par arcs).
 
 \subsection{Relation d'équivalence}
 
-\begin{theoreme}{Relation d'équivalence}{}
-    Soit $A \subset E$ non vide.
+\begin{theoreme}{Être joint par un chemin est une relation d'équivalence}{}
 
-    On définit la relation $\mathcal R_A$ sur $A$ par : 
+    Soit $A \subset E$ non vide.
+    On définit la relation $\mathcal R$ sur $A$ par : 
     $$\forall (a, b) \in A^2, \, a \mathcal R b \Leftrightarrow \exists f \in \mathscr C(\inter 0 1, A), f(0) = a \text{ et } f(1) = b$$
 
     ou plus simplement $\forall x, y \in A, \, x \mathcal R y$ ssi il existe un chemin de $A$ joignant $x$ à $y$.
@@ -2317,7 +2339,7 @@ Démo non exigible.
 
     \uline{Symétrie :}
 
-    \svspace Soient $x, y \in A$ tels que $x \mathcal R y$. Alors il existe $\fonction f {\inter 0 1} A t {f(t)}$
+    Soient $x, y \in A$ tels que $x \mathcal R y$. Alors il existe $\fonction f {\inter 0 1} A t {f(t)}$
     telle que $f(0) = x$ et $f(1) = y$.
 
     Posons $\fonction g {\inter 0 1} A t {g(t) = f(1 - t)}$. On a bien $\forall t \in \inter 0 1, \, g(t) \in A$. 
@@ -2341,24 +2363,24 @@ Démo non exigible.
     $A$ joignant $x$ à $z$. Donc $x \mathcal R z$.
 \end{proof}
 
-\begin{definition}{Composantes connexes par arcs }{}
+\begin{definition}{Composantes connexes par arcs}{}
     Avec ces notations, les classes d'équivalence de $\mathcal R_A$ sont appelées 
     les composantes connexes par arcs de $A$.
 \end{definition}
 
 \begin{exemple}
-    $A = R^*$ a deux composantes connexes par arcs : ${\R_+}^*$ et ${\R_-}^*$.
+    $A = R^*$ a deux composantes connexes par arcs : ${\R_+}^*$ et ${\R_-}^*$. \\
 
     En effet, si $x, y \in {\R_+}^*$, le segment $[x, y] \subset {\R_+}^*$ donc $x \mathcal R y$.
     De même pour ${\R_-}^*$.
 
     Soient $x \in {\R_+}^*$ et $y \in {\R_-}^*$, et montrons que non $x \mathcal{R} y$.
 
-    S'il existait $f \in \mathscr C(\inter 0 1, \R^*)$ telle que $f(0) = x$ et $f(1) = y$,
-    et par le TVI il existerait $t_0 \in \inter 0 1$ tel que $f(t_0) = 0$, absurde.
+    S'il existait $f \in \mathscr C(\inter 0 1, \R^*)$ telle que $f(0) = x$ et $f(1) = y$.
+    Par le TVI il existerait $t_0 \in \inter 0 1$ tel que $f(t_0) = 0$, absurde.
 \end{exemple}
 
-\begin{theoreme}{Image d'une partie connexe par arcs par une application continue }{}
+\begin{theoreme}{Image d'une partie connexe par arcs par une application continue}{}
     L'image d'une partie connexe par arcs par une application continue est connexe par arcs.
 \end{theoreme}
 
@@ -2366,20 +2388,20 @@ Démo non exigible.
     Soit $f : A \to E'$ continue où $A \subset E$. Supposons que 
     $A$ est connexe par arcs et montrons que $f(A)$ est connexe par arcs. 
 
-    Soient $a, b \in B = f(A)$. Il existe $x, y \in A$ tels que $f(x) = a$ et $f(y) = b$ or 
-    $A$ est connexe par arcs. 
-
+    Soient $a, b \in f(A)$. Il existe $x, y \in A$ tels que $f(x) = a$ et $f(y) = b$.
+     
+    Or $A$ est connexe par arcs. 
     Donc il existe $\varphi : \inter 0 1 \to A$ continue telle que $\varphi(0) = x$ et $\varphi(1) = y$.
 
-    Posons $\fonction \psi {\inter 0 1}{E'} t { f \circ \varphi(t)}$, on a bien 
+    Posons $\fonction \psi {\inter 0 1}{E'} t { (f \circ \varphi)(t)}$, on a bien 
 
     \begin{itemize}
-        \item $\forall t \in \inter 0 1, \, f \circ \varphi (t) \in B $ 
-        \item $\psi$ continue par composition 
-        \item $\psi(0) = 0, \, \psi(1) = b$
+        \item $\forall t \in \inter 0 1, \, (f \circ \varphi) (t) \in f(A) $ 
+        \item $\psi$ continue par composition d'applications continues
+        \item $\psi(0) = a, \, \psi(1) = b$
     \end{itemize}
 
-    Donc $\psi $ est un chemin de $B$ reliant $a$ à $b$. Donc $B$ est connexe par arcs.
+    Donc $\psi $ est un chemin de $f(A)$ reliant $a$ à $b$. Donc $f(A)$ est connexe par arcs.
 \end{proof}
 
 \subsection{Application à \texorpdfstring{$\R$}{R}}
@@ -2391,9 +2413,10 @@ Démo non exigible.
 \begin{proof}
     Soit $A \subset \R$. 
 
-    Si $A$ est un intervalle, alors $A$ est convexe donc $A$ est connexe par arcs. 
+    $\Leftarrow$ Si $A$ est un intervalle, alors $A$ est convexe donc $A$ est connexe par arcs.
 
-    Supposons que $A$ est connexe par arcs. 
+    \marginenote{Remarque}{On peut tuer la preuve en remarquant qu'un intervalle est convexe et donc que $A$ est étoilée par rapport à un de ses points et donc que $A$ est connexe par arcs.}
+    $\Rightarrow$ Supposons que $A$ est connexe par arcs. 
 
     Soient $a \leqslant b \in A$. Montrons que $[a, b] \subset A$.
 
@@ -2403,14 +2426,15 @@ Démo non exigible.
     donc $c \in A$ donc $A$ convexe donc $A$ est un intervalle.
 \end{proof}
 
-\begin{theoreme}{Théorème des valeurs intermédiaires}{}
+\textbf{\uline{Conséquence :}} Dans $\R$ être connexe par arcs est équivalent à être convexe.
+
+\begin{theoreme}{Théorème des Valeurs Intermédiaires}{}
     Soit $A \subset E$ connexe par arcs, $f \in \mathscr C(A, \R)$ et $a, b \in A$.
 
-    Soit $x$ compris entre $f(a)$ et $f(b)$. Alors il existe $c \in A$ tel que $f(c) = x$.
-    
+    Soit $x$ compris entre $f(a)$ et $f(b)$. Alors il existe $c \in A$ tel que $f(c) = x$.  
 \end{theoreme}
 
-\idee{nature image d'un connexe par arcs dans R.}
+\idee{Nature de l'image d'un connexe par arcs dans $\R$.}
 
 \begin{proof}
     $f(a)$ est connexe par arcs car $A$ l'est et $f$ continue, or $f(a) \subset \R$ donc 
@@ -2426,25 +2450,31 @@ Démo non exigible.
     Or $\R^*$ n'est pas connexe par arcs donc par contraposée du théorème, $A$ non plus. 
 \end{exemple}
 
-\subsection{Complément Hors Programme}
+\subsection{Complément Hors Programme (Connexité)}
 
 \begin{definition}{Connexité - HP}{}
     Soit $A \subset E$. 
-
     On dit que $A$ est connexe ssi toute application $f : A \to \{0, 1\}$ continue est constante. 
-
+    C'est-à-dire qu'il n'existe pas de partition de $A$ en deux fermés relatifs.
+    Une partie à la fois ouverte et fermée relative de $A$ est $\varnothing$ ou $A$.
 \end{definition}
+
+\begin{exemple}
+    Le département des Hautes-Alpes est connexe mais pas connexe par arcs.
+    La Vallée Étroite est non accessible l'hiver par un "chemin" en France... \\
+
+    Soit $A = \{(x, \sin{\frac 1 x}),~x > 0\} \bigcup \{(0,y),~y\in [-1,1]\}$. On démontre que $A$ n'est pas connexe par arcs mais on montrerait qu'elle est connexe. 
+\end{exemple}
 
 \begin{proposition}{Connexité par arcs implique connexité - HP}{}
     Toute partie connexe par arcs est connexe. 
 \end{proposition}
 
-\idee{absurde et TVI.}
-
 \begin{proof}
     Soit $A \subset E$ connexe par arcs et $f : A \to \{0, 1\}$ continue. Supposons $f$ non constante. 
 
     Alors $\exists a, b \in A$ tel que $f(a) = 0$ et $f(b) = 1$.
+    \idee{Absurde et TVI.}
 
     Il existe $\varphi : \inter 0 1 \to A$ continue telle que $\varphi(0) = a$ et $\varphi(1) = b$.
 
